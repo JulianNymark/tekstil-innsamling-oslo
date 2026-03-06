@@ -1,6 +1,20 @@
 "use client";
 
 import dynamic from "next/dynamic";
+import { useEffect, useState } from "react";
+
+interface Location {
+  address: string;
+  postnr: string;
+  description: string;
+  lat: number;
+  lon: number;
+}
+
+interface LocationsData {
+  updatedAt: string;
+  locations: Location[];
+}
 
 const Map = dynamic(() => import("./Map"), {
   ssr: false,
@@ -12,6 +26,22 @@ const Map = dynamic(() => import("./Map"), {
 });
 
 export default function Home() {
+  const [locations, setLocations] = useState<Location[]>([]);
+  const [updatedAt, setUpdatedAt] = useState<string | null>(null);
+
+  useEffect(() => {
+    fetch("/locations.json")
+      .then((res) => res.json())
+      .then((data: LocationsData | Location[]) => {
+        if ("locations" in data) {
+          setLocations(data.locations);
+          setUpdatedAt(data.updatedAt);
+        } else {
+          setLocations(data as Location[]);
+        }
+      });
+  }, []);
+
   return (
     <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black p-4 sm:p-8">
       <main className="flex min-h-screen w-full max-w-5xl flex-col items-center gap-12 py-16 px-4 bg-white dark:bg-zinc-950 rounded-3xl shadow-xl overflow-hidden border border-zinc-200 dark:border-zinc-800">
@@ -25,7 +55,7 @@ export default function Home() {
         </div>
 
         <div className="w-full">
-          <Map />
+          <Map locations={locations} />
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-4xl px-4">
@@ -49,17 +79,27 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="w-full max-w-4xl px-4 text-center">
+        <div className="w-full max-w-4xl px-4 text-center space-y-2">
           <p className="text-sm text-zinc-500 dark:text-zinc-500">
-            Ser du noe som ikke stemmer?{" "}
+            Ser du noe som ikke stemmer? en utdatert lokasjon?{" "}
             <a
               href="https://github.com/JulianNymark/tekstil-innsamling-oslo/issues/new/choose"
               className="underline hover:text-zinc-800 dark:hover:text-zinc-200 transition-colors"
             >
-              Meld fra om utdaterte lokasjoner her
+              Meld fra om hva som helst her
             </a>
             .
           </p>
+          {updatedAt && (
+            <p className="text-[10px] text-zinc-400 dark:text-zinc-600 uppercase tracking-widest font-medium">
+              Sist oppdatert:{" "}
+              {new Intl.DateTimeFormat("nb-NO", {
+                day: "numeric",
+                month: "long",
+                year: "numeric",
+              }).format(new Date(updatedAt))}
+            </p>
+          )}
         </div>
       </main>
     </div>

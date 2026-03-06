@@ -21,15 +21,11 @@ interface Location {
   lon: number;
 }
 
-export default function Map() {
-  const [locations, setLocations] = useState<Location[]>([]);
+interface MapProps {
+  locations: Location[];
+}
 
-  useEffect(() => {
-    fetch('/locations.json')
-      .then(res => res.json())
-      .then(data => setLocations(data));
-  }, []);
-
+export default function Map({ locations }: MapProps) {
   const osloCenter: [number, number] = [59.9139, 10.7522];
 
   return (
