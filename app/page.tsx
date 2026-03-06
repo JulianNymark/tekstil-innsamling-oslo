@@ -28,18 +28,27 @@ export default function Home() {
           <div className="p-6 bg-zinc-50 dark:bg-zinc-900 rounded-2xl border border-zinc-100 dark:border-zinc-800">
             <h2 className="text-xl font-bold mb-3">Hva kan leveres?</h2>
             <ul className="space-y-2 text-zinc-600 dark:text-zinc-400">
-              <li>• Klær og sko</li>
-              <li>• Sengetøy og gardiner</li>
-              <li>• Håndklær og kluter</li>
-              <li>• Duker og stoffrester</li>
+              <li>• Hele og brukbare klær, tekstiler og sko</li>
+              <li>• Utslitte og ødelagte klær og tekstiler</li>
+              <li>• Alt må være rent og tørt</li>
+              <li>• Leveres i lukket pose med dobbeltknute</li>
             </ul>
           </div>
           <div className="p-6 bg-zinc-50 dark:bg-zinc-900 rounded-2xl border border-zinc-100 dark:border-zinc-800">
-            <h2 className="text-xl font-bold mb-3">Husk!</h2>
-            <p className="text-zinc-600 dark:text-zinc-400">
-              Alt må være rent, tørt og pakket i tette plastposer før det legges i beholderen.
-            </p>
+            <h2 className="text-xl font-bold mb-3">Hva skal i restavfall?</h2>
+            <ul className="space-y-2 text-zinc-600 dark:text-zinc-400">
+              <li>• Vått, muggent eller svært skittent tøy</li>
+              <li>• Undertøy</li>
+              <li>• Ødelagte sko, vesker, belter og annet tilbehør</li>
+              <li>• Klær og sko fra Temu og Shein</li>
+            </ul>
           </div>
+        </div>
+
+        <div className="w-full max-w-4xl px-4 text-center">
+          <p className="text-sm text-zinc-500 dark:text-zinc-500">
+            Ser du noe som ikke stemmer? <a href="https://github.com/JulianNymark/tekstil-innsamling-oslo/issues/new/choose" className="underline hover:text-zinc-800 dark:hover:text-zinc-200 transition-colors">Meld fra om utdaterte bokser her</a>.
+          </p>
         </div>
       </main>
     </div>
