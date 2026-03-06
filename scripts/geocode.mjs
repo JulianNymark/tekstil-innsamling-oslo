@@ -1,7 +1,7 @@
 import fs from "fs";
 import path from "path";
 
-const LOCATIONS_FILE = path.join(process.cwd(), "app", "locations.txt");
+const LOCATIONS_FILE = path.join(process.cwd(), "data", "locations.txt");
 const OUTPUT_FILE = path.join(process.cwd(), "public", "locations.json");
 
 async function geocode(address, postnr) {
