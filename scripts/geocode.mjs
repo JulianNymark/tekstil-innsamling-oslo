@@ -63,10 +63,15 @@ async function run() {
     }
   }
 
+  const outputData = {
+    updatedAt: new Date().toISOString(),
+    locations: results,
+  };
+
   if (!fs.existsSync(path.dirname(OUTPUT_FILE))) {
     fs.mkdirSync(path.dirname(OUTPUT_FILE), { recursive: true });
   }
-  fs.writeFileSync(OUTPUT_FILE, JSON.stringify(results, null, 2));
+  fs.writeFileSync(OUTPUT_FILE, JSON.stringify(outputData, null, 2));
   console.log(`Finished! Saved ${results.length} locations to ${OUTPUT_FILE}`);
 }
 
