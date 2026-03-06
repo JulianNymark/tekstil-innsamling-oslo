@@ -1,10 +1,14 @@
-'use client';
+"use client";
 
-import dynamic from 'next/dynamic';
+import dynamic from "next/dynamic";
 
-const Map = dynamic(() => import('./Map'), { 
+const Map = dynamic(() => import("./Map"), {
   ssr: false,
-  loading: () => <div className="h-[600px] w-full bg-zinc-100 dark:bg-zinc-900 flex items-center justify-center text-zinc-500 rounded-xl">Loading map...</div>
+  loading: () => (
+    <div className="h-[600px] w-full bg-zinc-100 dark:bg-zinc-900 flex items-center justify-center text-zinc-500 rounded-xl">
+      Loading map...
+    </div>
+  ),
 });
 
 export default function Home() {
@@ -47,7 +51,14 @@ export default function Home() {
 
         <div className="w-full max-w-4xl px-4 text-center">
           <p className="text-sm text-zinc-500 dark:text-zinc-500">
-            Ser du noe som ikke stemmer? <a href="https://github.com/JulianNymark/tekstil-innsamling-oslo/issues/new/choose" className="underline hover:text-zinc-800 dark:hover:text-zinc-200 transition-colors">Meld fra om utdaterte bokser her</a>.
+            Ser du noe som ikke stemmer?{" "}
+            <a
+              href="https://github.com/JulianNymark/tekstil-innsamling-oslo/issues/new/choose"
+              className="underline hover:text-zinc-800 dark:hover:text-zinc-200 transition-colors"
+            >
+              Meld fra om utdaterte lokasjoner her
+            </a>
+            .
           </p>
         </div>
       </main>
