@@ -1,0 +1,2333 @@
+[
+  {
+    "address": "FRIMANNS GATE 26",
+    "postnr": "0165",
+    "description": "",
+    "lat": 59.919976,
+    "lon": 10.740322
+  },
+  {
+    "address": "HOLBERGS PLASS 4",
+    "postnr": "0166",
+    "description": "",
+    "lat": 59.919162,
+    "lon": 10.733964
+  },
+  {
+    "address": "GEITMYRSVEIEN 35",
+    "postnr": "0171",
+    "description": "",
+    "lat": 59.92996,
+    "lon": 10.744638
+  },
+  {
+    "address": "AKERSBAKKEN 30",
+    "postnr": "0172",
+    "description": "",
+    "lat": 59.923214,
+    "lon": 10.745393
+  },
+  {
+    "address": "BJERREGAARDS GATE 70 A",
+    "postnr": "0174",
+    "description": "",
+    "lat": 59.927273,
+    "lon": 10.749561
+  },
+  {
+    "address": "MARIDALSVEIEN 31",
+    "postnr": "0175",
+    "description": "VED PARKERINGSPLASS",
+    "lat": 59.925668,
+    "lon": 10.750865
+  },
+  {
+    "address": "MARIDALSVEIEN 13",
+    "postnr": "0178",
+    "description": "",
+    "lat": 59.922332,
+    "lon": 10.750947
+  },
+  {
+    "address": "CHRISTIAN KROHGS GATE 47",
+    "postnr": "0186",
+    "description": "",
+    "lat": 59.916485,
+    "lon": 10.759743
+  },
+  {
+    "address": "GRØNLANDSLEIRET 40",
+    "postnr": "0190",
+    "description": "",
+    "lat": 59.912518,
+    "lon": 10.760857
+  },
+  {
+    "address": "EGEDES GATE 1",
+    "postnr": "0192",
+    "description": "Står i enden av veien , ned mot St.Halvards gt.",
+    "lat": 59.906568,
+    "lon": 10.7701464
+  },
+  {
+    "address": "EKEBERGVEIEN 1 C",
+    "postnr": "0192",
+    "description": "",
+    "lat": 59.902915,
+    "lon": 10.768911
+  },
+  {
+    "address": "MOSSEVEIEN 186",
+    "postnr": "0193",
+    "description": "",
+    "lat": 59.8970792,
+    "lon": 10.7561193
+  },
+  {
+    "address": "TURBINVEIEN 2",
+    "postnr": "0195",
+    "description": "",
+    "lat": 59.904707,
+    "lon": 10.786693
+  },
+  {
+    "address": "KONOWS GATE 74",
+    "postnr": "0196",
+    "description": "VIS Á VIS SHELL",
+    "lat": 59.901844,
+    "lon": 10.790473
+  },
+  {
+    "address": "VALHALLVEIEN 9",
+    "postnr": "0196",
+    "description": "Plassert på hjørnet ved sandbeholder",
+    "lat": 59.900774,
+    "lon": 10.786589
+  },
+  {
+    "address": "ORMSUNDVEIEN 24",
+    "postnr": "0198",
+    "description": "",
+    "lat": 59.8763511,
+    "lon": 10.7630714
+  },
+  {
+    "address": "OBSERVATORIEGATA 5",
+    "postnr": "0254",
+    "description": "",
+    "lat": 59.9123091,
+    "lon": 10.7224949
+  },
+  {
+    "address": "BYGDØY ALLÉ 2",
+    "postnr": "0257",
+    "description": "Solli Plass mot Hydroparken.",
+    "lat": 59.91506,
+    "lon": 10.71522
+  },
+  {
+    "address": "URANIENBORGVEIEN 22",
+    "postnr": "0258",
+    "description": "",
+    "lat": 59.921902,
+    "lon": 10.721156
+  },
+  {
+    "address": "BRISKEBYVEIEN 1",
+    "postnr": "0259",
+    "description": "",
+    "lat": 59.9225815,
+    "lon": 10.7147571
+  },
+  {
+    "address": "FROGNERVEIEN 33",
+    "postnr": "0263",
+    "description": "Midlertidig flyttet over gaten grunnet jobb med trikkeskinner.",
+    "lat": 59.918953,
+    "lon": 10.710072
+  },
+  {
+    "address": "FREDERIK STANGS GATE 24",
+    "postnr": "0264",
+    "description": "",
+    "lat": 59.916928,
+    "lon": 10.708286
+  },
+  {
+    "address": "BYGDØY ALLÉ 77",
+    "postnr": "0265",
+    "description": "",
+    "lat": 59.918382,
+    "lon": 10.7049713
+  },
+  {
+    "address": "SOLHEIMGATA 2 C",
+    "postnr": "0267",
+    "description": "",
+    "lat": 59.9218332,
+    "lon": 10.7004474
+  },
+  {
+    "address": "INGAR NILSENS VEI 1",
+    "postnr": "0268",
+    "description": "Flyttet rundt hjørnet til Drammensveien. Gravearbeid.",
+    "lat": 59.920775,
+    "lon": 10.691727
+  },
+  {
+    "address": "LASSONS GATE 10",
+    "postnr": "0270",
+    "description": "Returpunkt i krysset Parkveien/Munkedamsveien/Lassons gate.",
+    "lat": 59.911776,
+    "lon": 10.719128
+  },
+  {
+    "address": "MUNKEDAMSVEIEN 92",
+    "postnr": "0270",
+    "description": "",
+    "lat": 59.911888,
+    "lon": 10.711908
+  },
+  {
+    "address": "DRAMMENSVEIEN 100",
+    "postnr": "0273",
+    "description": "",
+    "lat": 59.914391,
+    "lon": 10.718977
+  },
+  {
+    "address": "ENGEBRETS VEI 5",
+    "postnr": "0275",
+    "description": "",
+    "lat": 59.92754,
+    "lon": 10.676395
+  },
+  {
+    "address": "ST.EDMUNDS VEI 39",
+    "postnr": "0280",
+    "description": "",
+    "lat": 59.927125,
+    "lon": 10.670216
+  },
+  {
+    "address": "BESTUMVEIEN 30",
+    "postnr": "0281",
+    "description": "",
+    "lat": 59.92054,
+    "lon": 10.658972
+  },
+  {
+    "address": "HOFFSVEIEN 2",
+    "postnr": "0281",
+    "description": "Returpunkt ved rundkjøring inntil jernbane.",
+    "lat": 59.925646,
+    "lon": 10.6743272
+  },
+  {
+    "address": "BESTUMVEIEN 58",
+    "postnr": "0282",
+    "description": "",
+    "lat": 59.920244,
+    "lon": 10.651086
+  },
+  {
+    "address": "SØRVANGEN 21",
+    "postnr": "0282",
+    "description": "",
+    "lat": 59.918658,
+    "lon": 10.652188
+  },
+  {
+    "address": "ÅLMOVEIEN 17",
+    "postnr": "0282",
+    "description": "",
+    "lat": 59.921461,
+    "lon": 10.646084
+  },
+  {
+    "address": "SKOGBRYNET 39",
+    "postnr": "0283",
+    "description": "",
+    "lat": 59.918167,
+    "lon": 10.64762
+  },
+  {
+    "address": "STRØMSBORGVEIEN 46",
+    "postnr": "0286",
+    "description": "",
+    "lat": 59.895083,
+    "lon": 10.674441
+  },
+  {
+    "address": "BYGDØYVEIEN 20",
+    "postnr": "0287",
+    "description": "",
+    "lat": 59.917948,
+    "lon": 10.683931
+  },
+  {
+    "address": "MUSEUMSVEIEN 7",
+    "postnr": "0287",
+    "description": "Returpunkt i krysset ved Folkemuseet.",
+    "lat": 59.90687,
+    "lon": 10.688707
+  },
+  {
+    "address": "PILESTREDET 59",
+    "postnr": "0350",
+    "description": "",
+    "lat": 59.923361,
+    "lon": 10.731262
+  },
+  {
+    "address": "SPORVEISGATA 6 A",
+    "postnr": "0354",
+    "description": "",
+    "lat": 59.926658,
+    "lon": 10.73014
+  },
+  {
+    "address": "UNDERHAUGSVEIEN 15",
+    "postnr": "0354",
+    "description": "",
+    "lat": 59.924575,
+    "lon": 10.726625
+  },
+  {
+    "address": "PROFESSOR DAHLS GATE 16",
+    "postnr": "0355",
+    "description": "",
+    "lat": 59.923802,
+    "lon": 10.721199
+  },
+  {
+    "address": "ULLEVÅLSVEIEN 97 B",
+    "postnr": "0359",
+    "description": "",
+    "lat": 59.933304,
+    "lon": 10.732859
+  },
+  {
+    "address": "GØRBITZ GATE 2",
+    "postnr": "0360",
+    "description": "Plassert midt i krysset Gørbitz/Fagerborg langs betongpilarer",
+    "lat": 59.932565,
+    "lon": 10.727577
+  },
+  {
+    "address": "KIRKEVEIEN 106",
+    "postnr": "0361",
+    "description": "Står i Wilhelm Færdens vei",
+    "lat": 59.9343624,
+    "lon": 10.7281807
+  },
+  {
+    "address": "KIRKEVEIEN 98 C",
+    "postnr": "0361",
+    "description": "Står i Wilhelm Færdens vei vis a vis nr. 98C (Kirkevn.)",
+    "lat": 59.9343624,
+    "lon": 10.7281807
+  },
+  {
+    "address": "SUHMS GATE 1",
+    "postnr": "0362",
+    "description": "",
+    "lat": 59.929455,
+    "lon": 10.726395
+  },
+  {
+    "address": "NEUBERGGATA 11",
+    "postnr": "0367",
+    "description": "",
+    "lat": 59.9253742,
+    "lon": 10.7140485
+  },
+  {
+    "address": "NEUBERGGATA 21",
+    "postnr": "0367",
+    "description": "",
+    "lat": 59.926796,
+    "lon": 10.715711
+  },
+  {
+    "address": "MIDDELTHUNS GATE 21",
+    "postnr": "0368",
+    "description": "FROGNER STADION, VIS Á VIS NR. 21",
+    "lat": 59.927872,
+    "lon": 10.709994
+  },
+  {
+    "address": "MIDDELTHUNS GATE 29",
+    "postnr": "0368",
+    "description": "P-plass for Frognerparken.",
+    "lat": 59.929446,
+    "lon": 10.707529
+  },
+  {
+    "address": "SKØYENVEIEN 1",
+    "postnr": "0369",
+    "description": "",
+    "lat": 59.9348,
+    "lon": 10.693027
+  },
+  {
+    "address": "APALVEIEN 42",
+    "postnr": "0371",
+    "description": "",
+    "lat": 59.938442,
+    "lon": 10.716302
+  },
+  {
+    "address": "BLINDERNVEIEN 42",
+    "postnr": "0371",
+    "description": "Står helt nede ved T. banen",
+    "lat": 59.93933,
+    "lon": 10.718478
+  },
+  {
+    "address": "SOGNSVANNSVEIEN 51 D",
+    "postnr": "0372",
+    "description": "",
+    "lat": 59.955731,
+    "lon": 10.715674
+  },
+  {
+    "address": "BORGENVEIEN 66",
+    "postnr": "0373",
+    "description": "",
+    "lat": 59.943993,
+    "lon": 10.703861
+  },
+  {
+    "address": "RASMUS WINDERENS VEI 46",
+    "postnr": "0373",
+    "description": "",
+    "lat": 59.941309,
+    "lon": 10.708538
+  },
+  {
+    "address": "RASMUS WINDERENS VEI 6",
+    "postnr": "0373",
+    "description": "",
+    "lat": 59.940491,
+    "lon": 10.714869
+  },
+  {
+    "address": "VINDERNVEIEN 1",
+    "postnr": "0373",
+    "description": "Ved krysset Ivar Aasens vei.",
+    "lat": 59.9398188,
+    "lon": 10.7090928
+  },
+  {
+    "address": "HOLMENVEIEN 20",
+    "postnr": "0374",
+    "description": "",
+    "lat": 59.94343,
+    "lon": 10.697333
+  },
+  {
+    "address": "RISALLÉEN 21",
+    "postnr": "0374",
+    "description": "",
+    "lat": 59.947477,
+    "lon": 10.699689
+  },
+  {
+    "address": "SLEMDALSVINGEN 53",
+    "postnr": "0374",
+    "description": "",
+    "lat": 59.9488685,
+    "lon": 10.6997757
+  },
+  {
+    "address": "HEGGELIBAKKEN 2",
+    "postnr": "0375",
+    "description": "",
+    "lat": 59.936079,
+    "lon": 10.69064
+  },
+  {
+    "address": "HOFFSVEIEN 65",
+    "postnr": "0375",
+    "description": "BRL. FOR ELDRE",
+    "lat": 59.934193,
+    "lon": 10.679448
+  },
+  {
+    "address": "SKØYENVEIEN 18",
+    "postnr": "0375",
+    "description": "",
+    "lat": 59.931623,
+    "lon": 10.691306
+  },
+  {
+    "address": "HOLMENKOLLVEIEN 15",
+    "postnr": "0376",
+    "description": "",
+    "lat": 59.942169,
+    "lon": 10.682214
+  },
+  {
+    "address": "JENSMESSVEIEN 1",
+    "postnr": "0376",
+    "description": "Jensmessv/Arnebråtveien/Bernhard Herres Makrellbekken stasjon",
+    "lat": 59.9437475,
+    "lon": 10.6758607
+  },
+  {
+    "address": "SOLSKINNSVEIEN 2",
+    "postnr": "0376",
+    "description": "",
+    "lat": 59.940148,
+    "lon": 10.688556
+  },
+  {
+    "address": "VIGGO HANSTEENS VEI 1",
+    "postnr": "0376",
+    "description": "",
+    "lat": 59.937801,
+    "lon": 10.684517
+  },
+  {
+    "address": "GRÅBRØDREVEIEN 10",
+    "postnr": "0377",
+    "description": "",
+    "lat": 59.929226,
+    "lon": 10.670984
+  },
+  {
+    "address": "GRÅBRØDREVEIEN 2",
+    "postnr": "0377",
+    "description": "",
+    "lat": 59.929741,
+    "lon": 10.665443
+  },
+  {
+    "address": "JARLSBORGVEIEN 4",
+    "postnr": "0377",
+    "description": "HOFFSTUNET/JARLSBORGVEIEN",
+    "lat": 59.930484,
+    "lon": 10.673767
+  },
+  {
+    "address": "VESLEKROKEN 2",
+    "postnr": "0377",
+    "description": "",
+    "lat": 59.929112,
+    "lon": 10.662264
+  },
+  {
+    "address": "MORGEDALSVEGEN 37",
+    "postnr": "0378",
+    "description": "",
+    "lat": 59.940151,
+    "lon": 10.670692
+  },
+  {
+    "address": "SONDREVEGEN 9",
+    "postnr": "0378",
+    "description": "",
+    "lat": 59.935926,
+    "lon": 10.665969
+  },
+  {
+    "address": "HUSEBYBAKKEN 16",
+    "postnr": "0379",
+    "description": "",
+    "lat": 59.9343315,
+    "lon": 10.6717202
+  },
+  {
+    "address": "SØRBYHAUGEN 2 A",
+    "postnr": "0379",
+    "description": "",
+    "lat": 59.935954,
+    "lon": 10.677264
+  },
+  {
+    "address": "ULLERNCHAUSSEEN 82",
+    "postnr": "0380",
+    "description": "",
+    "lat": 59.9318491,
+    "lon": 10.6609581
+  },
+  {
+    "address": "ULLERNKAMMEN 13",
+    "postnr": "0380",
+    "description": "",
+    "lat": 59.9327785,
+    "lon": 10.6524495
+  },
+  {
+    "address": "ULLERN ALLÉ 6",
+    "postnr": "0381",
+    "description": "",
+    "lat": 59.926375,
+    "lon": 10.641896
+  },
+  {
+    "address": "HOFFSJEF LØVENSKIOLDS VEI 38",
+    "postnr": "0382",
+    "description": "",
+    "lat": 59.92999,
+    "lon": 10.642302
+  },
+  {
+    "address": "SKOGFARET 7",
+    "postnr": "0382",
+    "description": "",
+    "lat": 59.928148,
+    "lon": 10.639473
+  },
+  {
+    "address": "ULLERNKOLLEN 1",
+    "postnr": "0382",
+    "description": "",
+    "lat": 59.934895,
+    "lon": 10.650347
+  },
+  {
+    "address": "LYSEHAGAN 26",
+    "postnr": "0383",
+    "description": "På friområde",
+    "lat": 59.9296047,
+    "lon": 10.6339776
+  },
+  {
+    "address": "VÆKERØVEIEN 114",
+    "postnr": "0383",
+    "description": "Ned veien og forbi Rema 1000. Står til venstre på parkeringsplass med grusdekke.",
+    "lat": 59.934656,
+    "lon": 10.639043
+  },
+  {
+    "address": "MOLDEGATA 9",
+    "postnr": "0445",
+    "description": "Utenfor Meny",
+    "lat": 59.9436333,
+    "lon": 10.7619528
+  },
+  {
+    "address": "KIRKEVEIEN 167",
+    "postnr": "0450",
+    "description": "",
+    "lat": 59.935722,
+    "lon": 10.736135
+  },
+  {
+    "address": "SOGNSVEIEN 8",
+    "postnr": "0451",
+    "description": "",
+    "lat": 59.9362444,
+    "lon": 10.7318413
+  },
+  {
+    "address": "GENERAL BIRCHS GATE 16",
+    "postnr": "0454",
+    "description": "",
+    "lat": 59.93149,
+    "lon": 10.738312
+  },
+  {
+    "address": "ARMAUER HANSENS GATE 10",
+    "postnr": "0455",
+    "description": "",
+    "lat": 59.934131,
+    "lon": 10.73968
+  },
+  {
+    "address": "UELANDS GATE 61",
+    "postnr": "0456",
+    "description": "",
+    "lat": 59.93357,
+    "lon": 10.750125
+  },
+  {
+    "address": "KINGOS GATE 17",
+    "postnr": "0457",
+    "description": "",
+    "lat": 59.930063,
+    "lon": 10.751802
+  },
+  {
+    "address": "KINGOS GATE 17",
+    "postnr": "0457",
+    "description": "",
+    "lat": 59.930063,
+    "lon": 10.751802
+  },
+  {
+    "address": "SØREN JAABÆKS GATE 6",
+    "postnr": "0460",
+    "description": "Ved Iladalen kirke.",
+    "lat": 59.932929,
+    "lon": 10.751058
+  },
+  {
+    "address": "MARIDALSVEIEN 131",
+    "postnr": "0461",
+    "description": "",
+    "lat": 59.936206,
+    "lon": 10.755902
+  },
+  {
+    "address": "KRISTIANSANDS GATE 2",
+    "postnr": "0463",
+    "description": "",
+    "lat": 59.938268,
+    "lon": 10.752807
+  },
+  {
+    "address": "KONGSVINGERGATA 1 A",
+    "postnr": "0464",
+    "description": "KONGSVINGERGATA/STAVANGERGATA ved Hjemmets kolonihage",
+    "lat": 59.941065,
+    "lon": 10.751827
+  },
+  {
+    "address": "BJØLSENGATA 1",
+    "postnr": "0468",
+    "description": "",
+    "lat": 59.93964,
+    "lon": 10.758339
+  },
+  {
+    "address": "BJØLSENGATA 17",
+    "postnr": "0468",
+    "description": "",
+    "lat": 59.941714,
+    "lon": 10.757751
+  },
+  {
+    "address": "KONGSBERGGATA 12",
+    "postnr": "0468",
+    "description": "",
+    "lat": 59.941232,
+    "lon": 10.760178
+  },
+  {
+    "address": "MARIDALSVEIEN 175",
+    "postnr": "0469",
+    "description": "",
+    "lat": 59.940421,
+    "lon": 10.762048
+  },
+  {
+    "address": "MARIDALSVEIEN 175",
+    "postnr": "0469",
+    "description": "",
+    "lat": 59.940421,
+    "lon": 10.762048
+  },
+  {
+    "address": "VOGTS GATE 21",
+    "postnr": "0473",
+    "description": "",
+    "lat": 59.9311886,
+    "lon": 10.7616605
+  },
+  {
+    "address": "PRESIDENTGATA 5",
+    "postnr": "0474",
+    "description": "",
+    "lat": 59.932367,
+    "lon": 10.765614
+  },
+  {
+    "address": "JOHAN SVENDSENS GATE 1",
+    "postnr": "0475",
+    "description": "",
+    "lat": 59.934128,
+    "lon": 10.770217
+  },
+  {
+    "address": "TVERRBAKKEN 5",
+    "postnr": "0475",
+    "description": "",
+    "lat": 59.931389,
+    "lon": 10.770179
+  },
+  {
+    "address": "SANDAKERVEIEN 62",
+    "postnr": "0477",
+    "description": "",
+    "lat": 59.940362,
+    "lon": 10.769502
+  },
+  {
+    "address": "VOGTS GATE 45",
+    "postnr": "0477",
+    "description": "",
+    "lat": 59.933992,
+    "lon": 10.764322
+  },
+  {
+    "address": "NORDKAPPGATA 34",
+    "postnr": "0479",
+    "description": "Står inne i parken.",
+    "lat": 59.935665,
+    "lon": 10.775472
+  },
+  {
+    "address": "HANS NIELSEN HAUGES GATE 50",
+    "postnr": "0481",
+    "description": "",
+    "lat": 59.939072,
+    "lon": 10.780542
+  },
+  {
+    "address": "KYRRE GREPPS GATE 13",
+    "postnr": "0481",
+    "description": "",
+    "lat": 59.939472,
+    "lon": 10.776953
+  },
+  {
+    "address": "LILLOGATA 5 K",
+    "postnr": "0484",
+    "description": "På fortau til venstre i rundkjøring innerst i veien",
+    "lat": 59.943632,
+    "lon": 10.768092
+  },
+  {
+    "address": "ROLF WICKSTRØMS VEI 50",
+    "postnr": "0484",
+    "description": "Esso stasjonen Store Ringvei v/ Storo.",
+    "lat": 59.9530069,
+    "lon": 10.7685374
+  },
+  {
+    "address": "SANDAKERVEIEN 78",
+    "postnr": "0484",
+    "description": "",
+    "lat": 59.9437849,
+    "lon": 10.7707071
+  },
+  {
+    "address": "SANDAKERVEIEN 131",
+    "postnr": "0485",
+    "description": "",
+    "lat": 59.9473587,
+    "lon": 10.770772
+  },
+  {
+    "address": "GREFSENVEIEN 73",
+    "postnr": "0487",
+    "description": "Returpunktet ved trikkesløyfa på Disen stasjon.",
+    "lat": 59.94592,
+    "lon": 10.786297
+  },
+  {
+    "address": "KAPELLVEIEN 118",
+    "postnr": "0487",
+    "description": "",
+    "lat": 59.9510148,
+    "lon": 10.7797339
+  },
+  {
+    "address": "KAPELLVEIEN 31",
+    "postnr": "0487",
+    "description": "",
+    "lat": 59.949113,
+    "lon": 10.781974
+  },
+  {
+    "address": "KJELSÅSVEIEN 7",
+    "postnr": "0488",
+    "description": "Ved REMA 1000",
+    "lat": 59.942768,
+    "lon": 10.784874
+  },
+  {
+    "address": "KJELSÅSVEIEN 9",
+    "postnr": "0488",
+    "description": "",
+    "lat": 59.9512547,
+    "lon": 10.7926404
+  },
+  {
+    "address": "GREFSENKOLLVEIEN 15",
+    "postnr": "0490",
+    "description": "",
+    "lat": 59.9509076,
+    "lon": 10.7946215
+  },
+  {
+    "address": "KJELSÅSVEIEN 68",
+    "postnr": "0491",
+    "description": "",
+    "lat": 59.953783,
+    "lon": 10.791895
+  },
+  {
+    "address": "GAMLE KJELSÅSVEI 53",
+    "postnr": "0492",
+    "description": "",
+    "lat": 59.959718,
+    "lon": 10.784084
+  },
+  {
+    "address": "MIDTODDVEIEN 12",
+    "postnr": "0494",
+    "description": "",
+    "lat": 59.96444,
+    "lon": 10.784947
+  },
+  {
+    "address": "LACHMANNS VEI 54",
+    "postnr": "0495",
+    "description": "",
+    "lat": 59.969085,
+    "lon": 10.795409
+  },
+  {
+    "address": "MYRERSKOGVEIEN 15",
+    "postnr": "0495",
+    "description": "",
+    "lat": 59.960505,
+    "lon": 10.794671
+  },
+  {
+    "address": "KALLANDVEIEN 2",
+    "postnr": "0496",
+    "description": "",
+    "lat": 59.977984,
+    "lon": 10.809332
+  },
+  {
+    "address": "KALLANDVEIEN 2",
+    "postnr": "0496",
+    "description": "",
+    "lat": 59.977984,
+    "lon": 10.809332
+  },
+  {
+    "address": "KALLANDVEIEN 2",
+    "postnr": "0496",
+    "description": "",
+    "lat": 59.977984,
+    "lon": 10.809332
+  },
+  {
+    "address": "SCHOUS PLASS 8",
+    "postnr": "0552",
+    "description": "",
+    "lat": 59.920186,
+    "lon": 10.761049
+  },
+  {
+    "address": "SEILDUKSGATA 23 A",
+    "postnr": "0553",
+    "description": "",
+    "lat": 59.92539,
+    "lon": 10.760788
+  },
+  {
+    "address": "SOFIENBERGGATA 31",
+    "postnr": "0558",
+    "description": "",
+    "lat": 59.921815,
+    "lon": 10.764856
+  },
+  {
+    "address": "LAKKEGATA 75",
+    "postnr": "0560",
+    "description": "",
+    "lat": 59.919021,
+    "lon": 10.766246
+  },
+  {
+    "address": "HELGESENS GATE 84",
+    "postnr": "0563",
+    "description": "Plassert på vei mot Tøyenbadet.",
+    "lat": 59.922451,
+    "lon": 10.776966
+  },
+  {
+    "address": "SARS GATE 44",
+    "postnr": "0564",
+    "description": "",
+    "lat": 59.922328,
+    "lon": 10.772111
+  },
+  {
+    "address": "KARLSTADGATA 4",
+    "postnr": "0566",
+    "description": "HJØRNET KARLSTADGATA/RODES PLASS",
+    "lat": 59.923643,
+    "lon": 10.76719
+  },
+  {
+    "address": "FOUGNERS VEI 16",
+    "postnr": "0571",
+    "description": "Langs gjerde mot toglinje fra gangsti",
+    "lat": 59.927203,
+    "lon": 10.78291
+  },
+  {
+    "address": "SINSENVEIEN 6",
+    "postnr": "0572",
+    "description": "",
+    "lat": 59.929556,
+    "lon": 10.781587
+  },
+  {
+    "address": "BÅHUSVEIEN 10",
+    "postnr": "0573",
+    "description": "",
+    "lat": 59.931363,
+    "lon": 10.780145
+  },
+  {
+    "address": "FRYDENBERGVEIEN 39",
+    "postnr": "0575",
+    "description": "",
+    "lat": 59.9271453,
+    "lon": 10.787915
+  },
+  {
+    "address": "HOVINVEIEN 37",
+    "postnr": "0576",
+    "description": "",
+    "lat": 59.920832,
+    "lon": 10.791458
+  },
+  {
+    "address": "RINGGATA 1",
+    "postnr": "0577",
+    "description": "",
+    "lat": 59.915279,
+    "lon": 10.774704
+  },
+  {
+    "address": "JENS BJELKES GATE 37",
+    "postnr": "0578",
+    "description": "",
+    "lat": 59.915696,
+    "lon": 10.768359
+  },
+  {
+    "address": "GRENSEVEIEN 48",
+    "postnr": "0579",
+    "description": "",
+    "lat": 59.9238265,
+    "lon": 10.7918785
+  },
+  {
+    "address": "SPIREAVEIEN 19 A",
+    "postnr": "0580",
+    "description": "",
+    "lat": 59.933103,
+    "lon": 10.798863
+  },
+  {
+    "address": "SPIREAVEIEN 2",
+    "postnr": "0580",
+    "description": "",
+    "lat": 59.934446,
+    "lon": 10.804393
+  },
+  {
+    "address": "SPIREAVEIEN 7",
+    "postnr": "0580",
+    "description": "",
+    "lat": 59.935093,
+    "lon": 10.799782
+  },
+  {
+    "address": "ØKERNVEIEN 145",
+    "postnr": "0580",
+    "description": "ØKERN SENTER",
+    "lat": 59.928551,
+    "lon": 10.80467
+  },
+  {
+    "address": "HARALDRUDVEIEN 18",
+    "postnr": "0581",
+    "description": "",
+    "lat": 59.928046,
+    "lon": 10.824362
+  },
+  {
+    "address": "RISLØKKVEIEN 11",
+    "postnr": "0581",
+    "description": "",
+    "lat": 59.9272657,
+    "lon": 10.811982
+  },
+  {
+    "address": "LUNDLIVEIEN 12",
+    "postnr": "0584",
+    "description": "",
+    "lat": 59.936455,
+    "lon": 10.81174
+  },
+  {
+    "address": "BÅHUSVEIEN 46",
+    "postnr": "0585",
+    "description": "Ved parken inn fra Båhusveien.",
+    "lat": 59.934171,
+    "lon": 10.785038
+  },
+  {
+    "address": "LØRENVEIEN 2",
+    "postnr": "0585",
+    "description": "",
+    "lat": 59.936454,
+    "lon": 10.784248
+  },
+  {
+    "address": "LØRENVEIEN 38",
+    "postnr": "0585",
+    "description": "Flyttet til Lørenvn. 38 Europris",
+    "lat": 59.931418,
+    "lon": 10.790689
+  },
+  {
+    "address": "LILJEVEIEN 25 A",
+    "postnr": "0586",
+    "description": "PÅ FORTAUET, VENSTRE SIDE I RUNDKJØRINGEN",
+    "lat": 59.935019,
+    "lon": 10.79933
+  },
+  {
+    "address": "REFSTAD ALLÉ 24",
+    "postnr": "0586",
+    "description": "",
+    "lat": 59.941906,
+    "lon": 10.805342
+  },
+  {
+    "address": "RIBSTONVEIEN 1",
+    "postnr": "0586",
+    "description": "",
+    "lat": 59.934801,
+    "lon": 10.79352
+  },
+  {
+    "address": "RIBSTONVEIEN 35",
+    "postnr": "0586",
+    "description": "ØVERST I RUNDKJØRINGEN",
+    "lat": 59.936041,
+    "lon": 10.800102
+  },
+  {
+    "address": "DISENVEIEN 16",
+    "postnr": "0587",
+    "description": "",
+    "lat": 59.942202,
+    "lon": 10.798162
+  },
+  {
+    "address": "LOFTHUSVEIEN 47",
+    "postnr": "0588",
+    "description": "",
+    "lat": 59.944857,
+    "lon": 10.803659
+  },
+  {
+    "address": "BÅRD SKOLEMESTERS VEI 1",
+    "postnr": "0590",
+    "description": "Inn fra Årvollveien står på høyre side.",
+    "lat": 59.944664,
+    "lon": 10.814193
+  },
+  {
+    "address": "SELVBYGGERVEIEN 1",
+    "postnr": "0591",
+    "description": "",
+    "lat": 59.948907,
+    "lon": 10.819439
+  },
+  {
+    "address": "SELVBYGGERVEIEN 38",
+    "postnr": "0591",
+    "description": "",
+    "lat": 59.952124,
+    "lon": 10.822588
+  },
+  {
+    "address": "SIGURD IVERSENS VEI 42",
+    "postnr": "0591",
+    "description": "",
+    "lat": 59.921,
+    "lon": 10.665221
+  },
+  {
+    "address": "VEITVETVEIEN 9",
+    "postnr": "0596",
+    "description": "",
+    "lat": 59.943706,
+    "lon": 10.847278
+  },
+  {
+    "address": "SLETTELØKKA 34",
+    "postnr": "0597",
+    "description": "",
+    "lat": 59.948293,
+    "lon": 10.850667
+  },
+  {
+    "address": "ÅKEBERGVEIEN 22",
+    "postnr": "0650",
+    "description": "",
+    "lat": 59.9105017,
+    "lon": 10.7737101
+  },
+  {
+    "address": "HAGEGATA 36",
+    "postnr": "0653",
+    "description": "",
+    "lat": 59.913465,
+    "lon": 10.776647
+  },
+  {
+    "address": "SCHWEIGAARDS GATE 65",
+    "postnr": "0656",
+    "description": "Plassert langs gjerde ved trafostasjon",
+    "lat": 59.9070528,
+    "lon": 10.7756
+  },
+  {
+    "address": "ARNLJOT GELLINES VEI 29",
+    "postnr": "0657",
+    "description": "",
+    "lat": 59.905534,
+    "lon": 10.796778
+  },
+  {
+    "address": "ENEBAKKVEIEN 34",
+    "postnr": "0657",
+    "description": "",
+    "lat": 59.906238,
+    "lon": 10.785094
+  },
+  {
+    "address": "JORDALGATA 1",
+    "postnr": "0657",
+    "description": "STRØMSVEIEN,GALGEBERG",
+    "lat": 59.9083499,
+    "lon": 10.7813488
+  },
+  {
+    "address": "BISKOP JENS NILSSØNS GATE 5",
+    "postnr": "0659",
+    "description": "",
+    "lat": 59.906661,
+    "lon": 10.795614
+  },
+  {
+    "address": "ETTERSTADSLETTA 3",
+    "postnr": "0660",
+    "description": "Coop",
+    "lat": 59.909675,
+    "lon": 10.794968
+  },
+  {
+    "address": "GLADENGVEIEN 8",
+    "postnr": "0661",
+    "description": "",
+    "lat": 59.91629,
+    "lon": 10.789954
+  },
+  {
+    "address": "STÅLVERKSKROKEN 2",
+    "postnr": "0661",
+    "description": "",
+    "lat": 59.916609,
+    "lon": 10.790209
+  },
+  {
+    "address": "GRENSEVEIEN 66",
+    "postnr": "0663",
+    "description": "",
+    "lat": 59.918225,
+    "lon": 10.799686
+  },
+  {
+    "address": "ULVENVEIEN 114",
+    "postnr": "0665",
+    "description": "I krysset ved gravlunden.",
+    "lat": 59.920311,
+    "lon": 10.819712
+  },
+  {
+    "address": "TVETENVEIEN 70",
+    "postnr": "0666",
+    "description": "Hellerud T-bane",
+    "lat": 59.9128054,
+    "lon": 10.8247102
+  },
+  {
+    "address": "PETER AAS VEI 1",
+    "postnr": "0667",
+    "description": "",
+    "lat": 59.909457,
+    "lon": 10.829959
+  },
+  {
+    "address": "ØSTENSJØVEIEN 67",
+    "postnr": "0667",
+    "description": "",
+    "lat": 59.906693,
+    "lon": 10.819335
+  },
+  {
+    "address": "KRISTINS VEI 2",
+    "postnr": "0669",
+    "description": "Returpunktet i krysset Sigrid Undsets vei.",
+    "lat": 59.915975,
+    "lon": 10.835344
+  },
+  {
+    "address": "LAVRANS VEI 1",
+    "postnr": "0670",
+    "description": "Ved snuplassen.",
+    "lat": 59.920108,
+    "lon": 10.843535
+  },
+  {
+    "address": "VETLANDSVEIEN 17",
+    "postnr": "0671",
+    "description": "",
+    "lat": 59.91031,
+    "lon": 10.846978
+  },
+  {
+    "address": "HELLERUDVEIEN 1 A",
+    "postnr": "0672",
+    "description": "v/Rimi Hellerud.",
+    "lat": 59.917526,
+    "lon": 10.850993
+  },
+  {
+    "address": "HELLERUDVEIEN 53",
+    "postnr": "0672",
+    "description": "Settes innenfor sperringen i Hellerudveien. Hellerudveien/Trasoppveien.",
+    "lat": 59.908258,
+    "lon": 10.850888
+  },
+  {
+    "address": "HELLERUDVEIEN 61",
+    "postnr": "0672",
+    "description": "I krysset Hellerudveien/Hellerudfaret.",
+    "lat": 59.906526,
+    "lon": 10.850756
+  },
+  {
+    "address": "RUNDTJERNVEIEN 72",
+    "postnr": "0672",
+    "description": "",
+    "lat": 59.909953,
+    "lon": 10.861302
+  },
+  {
+    "address": "TROLLDALSVEIEN 3",
+    "postnr": "0672",
+    "description": "",
+    "lat": 59.910289,
+    "lon": 10.849578
+  },
+  {
+    "address": "HAGAPYNTEN 36",
+    "postnr": "0673",
+    "description": "",
+    "lat": 59.922675,
+    "lon": 10.853999
+  },
+  {
+    "address": "JOHAN CASTBERGS VEI 61",
+    "postnr": "0673",
+    "description": "",
+    "lat": 59.922134,
+    "lon": 10.868747
+  },
+  {
+    "address": "HAUGERUDVEIEN 22",
+    "postnr": "0674",
+    "description": "v/P-PLASS",
+    "lat": 59.919915,
+    "lon": 10.854203
+  },
+  {
+    "address": "LARSBRÅTVEIEN 32",
+    "postnr": "0674",
+    "description": "v/snuplassen",
+    "lat": 59.916432,
+    "lon": 10.861074
+  },
+  {
+    "address": "DR.DEDICHENS VEI 24",
+    "postnr": "0675",
+    "description": "",
+    "lat": 59.924914,
+    "lon": 10.864759
+  },
+  {
+    "address": "OLE MESSELTS VEI 10",
+    "postnr": "0676",
+    "description": "",
+    "lat": 59.924001,
+    "lon": 10.871208
+  },
+  {
+    "address": "MANGLERUDVEIEN 116",
+    "postnr": "0678",
+    "description": "",
+    "lat": 59.902357,
+    "lon": 10.818018
+  },
+  {
+    "address": "STEINBORGVEIEN 38",
+    "postnr": "0678",
+    "description": "",
+    "lat": 59.901304,
+    "lon": 10.803782
+  },
+  {
+    "address": "SANDSTUVEIEN 71",
+    "postnr": "0680",
+    "description": "",
+    "lat": 59.890057,
+    "lon": 10.809821
+  },
+  {
+    "address": "SOLBERGLIVEIEN 44",
+    "postnr": "0683",
+    "description": "",
+    "lat": 59.904932,
+    "lon": 10.840206
+  },
+  {
+    "address": "SOLBERGLIVEIEN 85",
+    "postnr": "0683",
+    "description": "",
+    "lat": 59.899801,
+    "lon": 10.842944
+  },
+  {
+    "address": "VETLANDSVEIEN 68",
+    "postnr": "0685",
+    "description": "Returpunkt flyttet til Kranveien /Vetlandlandsveien",
+    "lat": 59.90145,
+    "lon": 10.847666
+  },
+  {
+    "address": "SKØYENKROKEN 11",
+    "postnr": "0686",
+    "description": "",
+    "lat": 59.89839,
+    "lon": 10.840399
+  },
+  {
+    "address": "HELLERUDVEIEN 130",
+    "postnr": "0687",
+    "description": "",
+    "lat": 59.8925143,
+    "lon": 10.855749
+  },
+  {
+    "address": "ULSRUDVEIEN 35",
+    "postnr": "0687",
+    "description": "ULSRUD T-BANE",
+    "lat": 59.8910376,
+    "lon": 10.8503213
+  },
+  {
+    "address": "ØSTMARKVEIEN 25",
+    "postnr": "0687",
+    "description": "Rema 1000",
+    "lat": 59.892023,
+    "lon": 10.851272
+  },
+  {
+    "address": "OLAV NYGARDS VEG 194",
+    "postnr": "0688",
+    "description": "Ved snuplass.",
+    "lat": 59.886137,
+    "lon": 10.855913
+  },
+  {
+    "address": "BØLERLIA 52",
+    "postnr": "0689",
+    "description": "",
+    "lat": 59.87962,
+    "lon": 10.85244
+  },
+  {
+    "address": "BØLERBAKKEN 15",
+    "postnr": "0690",
+    "description": "",
+    "lat": 59.884722,
+    "lon": 10.843485
+  },
+  {
+    "address": "BØLERBAKKEN 2",
+    "postnr": "0690",
+    "description": "",
+    "lat": 59.885731,
+    "lon": 10.847133
+  },
+  {
+    "address": "ULSRUDVEIEN 27",
+    "postnr": "0690",
+    "description": "",
+    "lat": 59.888344,
+    "lon": 10.845866
+  },
+  {
+    "address": "UTMARKVEIEN 1",
+    "postnr": "0691",
+    "description": "",
+    "lat": 59.8832417,
+    "lon": 10.8456647
+  },
+  {
+    "address": "PAAL BERGS VEI 31",
+    "postnr": "0692",
+    "description": "",
+    "lat": 59.872674,
+    "lon": 10.839209
+  },
+  {
+    "address": "JOHAN SCHARFFENBERGS VEI 118",
+    "postnr": "0694",
+    "description": "v/RIMI SKULLERUD",
+    "lat": 59.86827,
+    "lon": 10.838037
+  },
+  {
+    "address": "JOHAN SCHARFFENBERGS VEI 99",
+    "postnr": "0694",
+    "description": "",
+    "lat": 59.863851,
+    "lon": 10.838186
+  },
+  {
+    "address": "VÆKERØVEIEN 205 A",
+    "postnr": "0751",
+    "description": "",
+    "lat": 59.948086,
+    "lon": 10.643745
+  },
+  {
+    "address": "SØRKEDALSVEIEN 193",
+    "postnr": "0754",
+    "description": "",
+    "lat": 59.9500581,
+    "lon": 10.6444222
+  },
+  {
+    "address": "EKRAVEIEN 38",
+    "postnr": "0756",
+    "description": "",
+    "lat": 59.954897,
+    "lon": 10.638348
+  },
+  {
+    "address": "NORDENGSTUBBEN 1",
+    "postnr": "0757",
+    "description": "",
+    "lat": 59.959687,
+    "lon": 10.633903
+  },
+  {
+    "address": "NILS COLLETT VOGTS VEI 6",
+    "postnr": "0766",
+    "description": "",
+    "lat": 59.961635,
+    "lon": 10.648471
+  },
+  {
+    "address": "STASJONSVEIEN 71",
+    "postnr": "0768",
+    "description": "Står ved Hovseter T- banestasjon, bussholdeplass",
+    "lat": 59.946669,
+    "lon": 10.653779
+  },
+  {
+    "address": "ARNEBRÅTVEIEN 118",
+    "postnr": "0771",
+    "description": "",
+    "lat": 59.9520636,
+    "lon": 10.6622016
+  },
+  {
+    "address": "STASJONSVEIEN 47",
+    "postnr": "0771",
+    "description": "",
+    "lat": 59.949061,
+    "lon": 10.665679
+  },
+  {
+    "address": "EDDAVEIEN 24",
+    "postnr": "0772",
+    "description": "",
+    "lat": 59.950247,
+    "lon": 10.67129
+  },
+  {
+    "address": "LYBEKKVEIEN 18",
+    "postnr": "0772",
+    "description": "Krysset Arnebråtveien og Lybekkveien ved garasjer",
+    "lat": 59.951194,
+    "lon": 10.665736
+  },
+  {
+    "address": "GAUPEFARET 4",
+    "postnr": "0773",
+    "description": "Ved JOKER",
+    "lat": 59.951472,
+    "lon": 10.679516
+  },
+  {
+    "address": "TRÅKKA 10",
+    "postnr": "0774",
+    "description": "",
+    "lat": 59.947705,
+    "lon": 10.682638
+  },
+  {
+    "address": "TRÅKKA 34",
+    "postnr": "0774",
+    "description": "",
+    "lat": 59.952706,
+    "lon": 10.682766
+  },
+  {
+    "address": "FROGNERSETERVEIEN 27",
+    "postnr": "0775",
+    "description": "SLEMDAL SENTER",
+    "lat": 59.950298,
+    "lon": 10.692617
+  },
+  {
+    "address": "FROGNERSETERVEIEN 51",
+    "postnr": "0776",
+    "description": "",
+    "lat": 59.957415,
+    "lon": 10.690018
+  },
+  {
+    "address": "GULLERÅSVEIEN 2",
+    "postnr": "0779",
+    "description": "KRYSSET GULLERÅSV/RISALLEEN",
+    "lat": 59.952763,
+    "lon": 10.69371
+  },
+  {
+    "address": "GULLERÅSVEIEN 9 A",
+    "postnr": "0779",
+    "description": "Plassert ved innkjøring til Heming-banen.",
+    "lat": 59.953717,
+    "lon": 10.696337
+  },
+  {
+    "address": "HULDREVEIEN 28",
+    "postnr": "0781",
+    "description": "",
+    "lat": 59.963746,
+    "lon": 10.693124
+  },
+  {
+    "address": "KRISTIANIASVINGEN 2",
+    "postnr": "0782",
+    "description": "",
+    "lat": 59.959067,
+    "lon": 10.684647
+  },
+  {
+    "address": "KRISTIANIASVINGEN 2",
+    "postnr": "0782",
+    "description": "",
+    "lat": 59.959067,
+    "lon": 10.684647
+  },
+  {
+    "address": "HOLMENKOLLVEIEN 99",
+    "postnr": "0784",
+    "description": "Ved krysset Holmenkollveien, rett bortenfor Rimi.",
+    "lat": 59.957157,
+    "lon": 10.673823
+  },
+  {
+    "address": "LILLEVANNSSKOGEN 30",
+    "postnr": "0788",
+    "description": "",
+    "lat": 59.9798412,
+    "lon": 10.6562992
+  },
+  {
+    "address": "VOKSENKOLLVEIEN 57 G",
+    "postnr": "0790",
+    "description": "",
+    "lat": 59.979703,
+    "lon": 10.66248
+  },
+  {
+    "address": "HOLMENKOLLVEIEN 160",
+    "postnr": "0791",
+    "description": "",
+    "lat": 59.971922,
+    "lon": 10.673152
+  },
+  {
+    "address": "VOKSENKOLLVEIEN 7",
+    "postnr": "0791",
+    "description": "",
+    "lat": 59.969918,
+    "lon": 10.668268
+  },
+  {
+    "address": "SOGNSVEIEN 61",
+    "postnr": "0851",
+    "description": "",
+    "lat": 59.945162,
+    "lon": 10.732655
+  },
+  {
+    "address": "JOHN COLLETTS ALLÉ 1",
+    "postnr": "0852",
+    "description": "",
+    "lat": 59.940489,
+    "lon": 10.730835
+  },
+  {
+    "address": "JUTULVEIEN 12",
+    "postnr": "0852",
+    "description": "",
+    "lat": 59.943137,
+    "lon": 10.739101
+  },
+  {
+    "address": "TÅSENVEIEN 28",
+    "postnr": "0853",
+    "description": "",
+    "lat": 59.944233,
+    "lon": 10.74793
+  },
+  {
+    "address": "SOGNSVEIEN 84",
+    "postnr": "0855",
+    "description": "",
+    "lat": 59.952673,
+    "lon": 10.726495
+  },
+  {
+    "address": "SOGNSVEIEN 102",
+    "postnr": "0857",
+    "description": "",
+    "lat": 59.955556,
+    "lon": 10.731313
+  },
+  {
+    "address": "ROLF E.STENERSENS ALLÉ 26",
+    "postnr": "0858",
+    "description": "",
+    "lat": 59.953183,
+    "lon": 10.729187
+  },
+  {
+    "address": "CARL KJELSENS VEI 21 B",
+    "postnr": "0860",
+    "description": "",
+    "lat": 59.961252,
+    "lon": 10.7446
+  },
+  {
+    "address": "JOHN BRANDTS VEI 4",
+    "postnr": "0860",
+    "description": "",
+    "lat": 59.9599459,
+    "lon": 10.7287521
+  },
+  {
+    "address": "SOGNSVEIEN 165",
+    "postnr": "0860",
+    "description": "",
+    "lat": 59.962942,
+    "lon": 10.7343
+  },
+  {
+    "address": "LANGMYRGRENDA 25",
+    "postnr": "0861",
+    "description": "",
+    "lat": 59.965167,
+    "lon": 10.747403
+  },
+  {
+    "address": "PEDER ANKERS VEI 7",
+    "postnr": "0861",
+    "description": "",
+    "lat": 59.963037,
+    "lon": 10.744801
+  },
+  {
+    "address": "OLAV M.TROVIKS VEI 32",
+    "postnr": "0864",
+    "description": "",
+    "lat": 59.964278,
+    "lon": 10.72896
+  },
+  {
+    "address": "NILS LAURITSSØNS VEI 34",
+    "postnr": "0870",
+    "description": "",
+    "lat": 59.947969,
+    "lon": 10.743239
+  },
+  {
+    "address": "TÅSENVEIEN 77",
+    "postnr": "0873",
+    "description": "",
+    "lat": 59.953824,
+    "lon": 10.752869
+  },
+  {
+    "address": "KONVALLVEIEN 29",
+    "postnr": "0875",
+    "description": "",
+    "lat": 59.953888,
+    "lon": 10.738559
+  },
+  {
+    "address": "NORDBERGVEIEN 1",
+    "postnr": "0875",
+    "description": "",
+    "lat": 59.9581458,
+    "lon": 10.7364382
+  },
+  {
+    "address": "NORDBERGVEIEN 64",
+    "postnr": "0875",
+    "description": "",
+    "lat": 59.957897,
+    "lon": 10.740215
+  },
+  {
+    "address": "SOLVANG KOLONIHAGER 551",
+    "postnr": "0875",
+    "description": "",
+    "lat": 59.9558545,
+    "lon": 10.7278963
+  },
+  {
+    "address": "NILS BAYS VEI 26",
+    "postnr": "0876",
+    "description": "",
+    "lat": 59.95287,
+    "lon": 10.743407
+  },
+  {
+    "address": "LANGÅSVEIEN 10",
+    "postnr": "0880",
+    "description": "",
+    "lat": 59.960738,
+    "lon": 10.760317
+  },
+  {
+    "address": "ØVRE LANGÅS VEI 1",
+    "postnr": "0880",
+    "description": "",
+    "lat": 59.965136,
+    "lon": 10.754477
+  },
+  {
+    "address": "KJELSÅSVEIEN 188",
+    "postnr": "0884",
+    "description": "",
+    "lat": 59.967064,
+    "lon": 10.768141
+  },
+  {
+    "address": "SAGADAMMEN 1",
+    "postnr": "0884",
+    "description": "",
+    "lat": 59.968498,
+    "lon": 10.776387
+  },
+  {
+    "address": "GAMLE MARIDALSVEI 2",
+    "postnr": "0890",
+    "description": "",
+    "lat": 59.996029,
+    "lon": 10.752689
+  },
+  {
+    "address": "KASAVEIEN 1",
+    "postnr": "0890",
+    "description": "",
+    "lat": 60.005159,
+    "lon": 10.773116
+  },
+  {
+    "address": "SØRBRÅTVEIEN 86",
+    "postnr": "0891",
+    "description": "PÅ IDRETTSPLASSEN VED SØRBRÅTEN VELHUS.",
+    "lat": 60.036591,
+    "lon": 10.806487
+  },
+  {
+    "address": "BREDTVETVEIEN 2",
+    "postnr": "0950",
+    "description": "",
+    "lat": 59.946062,
+    "lon": 10.861768
+  },
+  {
+    "address": "APALLØKKVEIEN 28",
+    "postnr": "0956",
+    "description": "",
+    "lat": 59.9552541,
+    "lon": 10.8600576
+  },
+  {
+    "address": "SANDÅSVEIEN 1",
+    "postnr": "0956",
+    "description": "",
+    "lat": 59.953602,
+    "lon": 10.857589
+  },
+  {
+    "address": "AMMERUDGRENDA 1",
+    "postnr": "0958",
+    "description": "",
+    "lat": 59.966803,
+    "lon": 10.870478
+  },
+  {
+    "address": "BERGENSVEIEN 37",
+    "postnr": "0963",
+    "description": "",
+    "lat": 59.966002,
+    "lon": 10.883978
+  },
+  {
+    "address": "RAGNHILD SCHIBBYES VEI 4",
+    "postnr": "0968",
+    "description": "I RUNDKJØRING VED ORIENTERINGSKART",
+    "lat": 59.974536,
+    "lon": 10.929167
+  },
+  {
+    "address": "VESTLISVINGEN 188",
+    "postnr": "0969",
+    "description": "",
+    "lat": 59.972508,
+    "lon": 10.928368
+  },
+  {
+    "address": "SAGSTUKROKEN 2",
+    "postnr": "0976",
+    "description": "",
+    "lat": 59.9539156,
+    "lon": 10.880017
+  },
+  {
+    "address": "VESTBYVEIEN 20",
+    "postnr": "0976",
+    "description": "",
+    "lat": 59.957545,
+    "lon": 10.888615
+  },
+  {
+    "address": "STIGENGA 19",
+    "postnr": "0979",
+    "description": "",
+    "lat": 59.950097,
+    "lon": 10.927872
+  },
+  {
+    "address": "STOVNERBAKKEN 2",
+    "postnr": "0980",
+    "description": "",
+    "lat": 59.9536313,
+    "lon": 10.9307008
+  },
+  {
+    "address": "IDAS VEI 54",
+    "postnr": "0981",
+    "description": "",
+    "lat": 59.950657,
+    "lon": 10.94479
+  },
+  {
+    "address": "OLAUS FJØRTOFTS VEI 130",
+    "postnr": "0982",
+    "description": "",
+    "lat": 59.959162,
+    "lon": 10.927091
+  },
+  {
+    "address": "NEDRE ROMMEN 5",
+    "postnr": "0988",
+    "description": "",
+    "lat": 59.962455,
+    "lon": 10.906306
+  },
+  {
+    "address": "FURUSETVEIEN 15",
+    "postnr": "1053",
+    "description": "",
+    "lat": 59.939224,
+    "lon": 10.891234
+  },
+  {
+    "address": "ULSHOLTVEIEN 15",
+    "postnr": "1053",
+    "description": "",
+    "lat": 59.94525,
+    "lon": 10.892947
+  },
+  {
+    "address": "GRANSDALEN 1",
+    "postnr": "1054",
+    "description": "",
+    "lat": 59.949633,
+    "lon": 10.894146
+  },
+  {
+    "address": "VESTRE HAUGEN 1",
+    "postnr": "1054",
+    "description": "",
+    "lat": 59.948528,
+    "lon": 10.902319
+  },
+  {
+    "address": "HØYBRÅTENVEIEN 14",
+    "postnr": "1055",
+    "description": "",
+    "lat": 59.946292,
+    "lon": 10.905378
+  },
+  {
+    "address": "ERLING MICHELSENS VEI 21",
+    "postnr": "1061",
+    "description": "",
+    "lat": 59.936822,
+    "lon": 10.903725
+  },
+  {
+    "address": "MUNKEBEKKEN 10",
+    "postnr": "1061",
+    "description": "",
+    "lat": 59.930004,
+    "lon": 10.919315
+  },
+  {
+    "address": "EDVARD MUNCHS VEI 27",
+    "postnr": "1063",
+    "description": "",
+    "lat": 59.938742,
+    "lon": 10.910744
+  },
+  {
+    "address": "LUDVIG KARSTENS VEI 14",
+    "postnr": "1064",
+    "description": "",
+    "lat": 59.933771,
+    "lon": 10.920284
+  },
+  {
+    "address": "HENRIK SØRENSENS VEI 39",
+    "postnr": "1065",
+    "description": "Flyttet ned i veien grunnet gravearbeid.",
+    "lat": 59.938915,
+    "lon": 10.920438
+  },
+  {
+    "address": "JERIKOVEIEN 17",
+    "postnr": "1067",
+    "description": "",
+    "lat": 59.933697,
+    "lon": 10.880565
+  },
+  {
+    "address": "BIKUBEN 11",
+    "postnr": "1086",
+    "description": "",
+    "lat": 59.943928,
+    "lon": 10.924058
+  },
+  {
+    "address": "HØYBRÅTENVEIEN 40",
+    "postnr": "1086",
+    "description": "",
+    "lat": 59.944737,
+    "lon": 10.911071
+  },
+  {
+    "address": "SKANSEVEIEN 16",
+    "postnr": "1086",
+    "description": "",
+    "lat": 59.941234,
+    "lon": 10.917243
+  },
+  {
+    "address": "FREDHEIMVEIEN 3",
+    "postnr": "1087",
+    "description": "v/POSTHUSET.",
+    "lat": 59.946924,
+    "lon": 10.924357
+  },
+  {
+    "address": "BREDES VEI 15",
+    "postnr": "1088",
+    "description": "",
+    "lat": 59.941759,
+    "lon": 10.933673
+  },
+  {
+    "address": "HELLINGA 19",
+    "postnr": "1151",
+    "description": "Står i krysset Hellinga/Bakkerudveien",
+    "lat": 59.870094,
+    "lon": 10.81014
+  },
+  {
+    "address": "CECILIE THORESENS VEI 3",
+    "postnr": "1153",
+    "description": "Ved Rema 1000",
+    "lat": 59.8784066,
+    "lon": 10.8081633
+  },
+  {
+    "address": "RASCHS VEI 38",
+    "postnr": "1153",
+    "description": "VED Mix",
+    "lat": 59.879664,
+    "lon": 10.80402
+  },
+  {
+    "address": "LANGBØLGEN 2",
+    "postnr": "1154",
+    "description": "",
+    "lat": 59.873117,
+    "lon": 10.813688
+  },
+  {
+    "address": "NYLÆNDE 5",
+    "postnr": "1154",
+    "description": "v/ICA SPARMAT.",
+    "lat": 59.876116,
+    "lon": 10.818407
+  },
+  {
+    "address": "MELLOMBØLGEN 62",
+    "postnr": "1157",
+    "description": "BERGKRYSTALLEN T.BANE",
+    "lat": 59.8662642,
+    "lon": 10.81704
+  },
+  {
+    "address": "LAMBERTSETERVEIEN 7",
+    "postnr": "1160",
+    "description": "Lambertseterveien 7 V/SPAR",
+    "lat": 59.870727,
+    "lon": 10.795462
+  },
+  {
+    "address": "CAPPELENS VEI 12",
+    "postnr": "1162",
+    "description": "",
+    "lat": 59.871968,
+    "lon": 10.788116
+  },
+  {
+    "address": "NORDSTRANDVEIEN 86",
+    "postnr": "1164",
+    "description": "",
+    "lat": 59.861517,
+    "lon": 10.819324
+  },
+  {
+    "address": "MIDTÅSEN 51",
+    "postnr": "1166",
+    "description": "",
+    "lat": 59.853322,
+    "lon": 10.795381
+  },
+  {
+    "address": "EKEBERGVEIEN 174",
+    "postnr": "1177",
+    "description": "",
+    "lat": 59.872876,
+    "lon": 10.790683
+  },
+  {
+    "address": "EKEBERGVEIEN 177 A",
+    "postnr": "1177",
+    "description": "",
+    "lat": 59.8751563,
+    "lon": 10.789305
+  },
+  {
+    "address": "MARIENLUNDVEIEN 2",
+    "postnr": "1178",
+    "description": "HOLTET STASJON",
+    "lat": 59.8847099,
+    "lon": 10.7840903
+  },
+  {
+    "address": "FRIERVEIEN 18",
+    "postnr": "1179",
+    "description": "Beholder står ved innkjøring til bom i Frierveien.",
+    "lat": 59.888735,
+    "lon": 10.775074
+  },
+  {
+    "address": "EKEBERGVEIEN 65",
+    "postnr": "1181",
+    "description": "",
+    "lat": 59.898283,
+    "lon": 10.773547
+  },
+  {
+    "address": "VARDEVEIEN 45",
+    "postnr": "1182",
+    "description": "",
+    "lat": 59.892005,
+    "lon": 10.793468
+  },
+  {
+    "address": "VÅRVEIEN 1",
+    "postnr": "1182",
+    "description": "Ligger på hjørnet Vårveien/Olleveien.",
+    "lat": 59.895703,
+    "lon": 10.787675
+  },
+  {
+    "address": "SANDSTUVEIEN 41",
+    "postnr": "1184",
+    "description": "Ved undergang nedenfor Brattlikollen T.Bane.",
+    "lat": 59.885936,
+    "lon": 10.800375
+  },
+  {
+    "address": "AGRONOMVEIEN 20 A",
+    "postnr": "1187",
+    "description": "",
+    "lat": 59.883454,
+    "lon": 10.823615
+  },
+  {
+    "address": "ENEBAKKVEIEN 289",
+    "postnr": "1187",
+    "description": "LILLE LANGERUD TORG V/RIMI",
+    "lat": 59.875904,
+    "lon": 10.8279
+  },
+  {
+    "address": "SKULLERUDVEIEN 59",
+    "postnr": "1188",
+    "description": "",
+    "lat": 59.866714,
+    "lon": 10.835754
+  },
+  {
+    "address": "NORDÅSSLØYFA 1",
+    "postnr": "1251",
+    "description": "",
+    "lat": 59.83128,
+    "lon": 10.783561
+  },
+  {
+    "address": "ÅSBRÅTEN 1",
+    "postnr": "1251",
+    "description": "V/BUSSTOPP (INNKJ.TIL VAKTMESTERENS VERKSTED/LAGER)",
+    "lat": 59.8280083,
+    "lon": 10.7822722
+  },
+  {
+    "address": "RAVNÅSVEIEN 38",
+    "postnr": "1254",
+    "description": "",
+    "lat": 59.836409,
+    "lon": 10.788171
+  },
+  {
+    "address": "SLOREÅSEN 35 A",
+    "postnr": "1257",
+    "description": "Plassert i rundkjøring",
+    "lat": 59.845024,
+    "lon": 10.795327
+  },
+  {
+    "address": "ASPERUDTOPPEN 1",
+    "postnr": "1258",
+    "description": "",
+    "lat": 59.838562,
+    "lon": 10.800868
+  },
+  {
+    "address": "LIAKOLLVEIEN 1 A",
+    "postnr": "1259",
+    "description": "",
+    "lat": 59.829358,
+    "lon": 10.798694
+  },
+  {
+    "address": "SVEAVEGEN 79",
+    "postnr": "1263",
+    "description": "",
+    "lat": 59.838149,
+    "lon": 10.804094
+  },
+  {
+    "address": "NEBBEJORDET 5",
+    "postnr": "1266",
+    "description": "",
+    "lat": 59.84342,
+    "lon": 10.812054
+  },
+  {
+    "address": "NEDRE PRINSDALS VEI 1",
+    "postnr": "1266",
+    "description": "",
+    "lat": 59.847151,
+    "lon": 10.803313
+  },
+  {
+    "address": "OLAVES HVERVENS VEI 10",
+    "postnr": "1266",
+    "description": "",
+    "lat": 59.842282,
+    "lon": 10.801408
+  },
+  {
+    "address": "ÅSLANDVEIEN 1",
+    "postnr": "1274",
+    "description": "",
+    "lat": 59.820524,
+    "lon": 10.841274
+  },
+  {
+    "address": "ENEBAKKVEIEN 418",
+    "postnr": "1279",
+    "description": "KLEMETSRUD SKOLE",
+    "lat": 59.835222,
+    "lon": 10.844227
+  },
+  {
+    "address": "LOFSRUDVEIEN 1",
+    "postnr": "1281",
+    "description": "",
+    "lat": 59.849684,
+    "lon": 10.826902
+  },
+  {
+    "address": "MARTA STEINSVIKS VEI 37",
+    "postnr": "1283",
+    "description": "Øverst i rundkjøring ved gangvei",
+    "lat": 59.853223,
+    "lon": 10.822853
+  },
+  {
+    "address": "GAMLE BYGDEVEI 44",
+    "postnr": "1284",
+    "description": "",
+    "lat": 59.854399,
+    "lon": 10.826131
+  }
+]
