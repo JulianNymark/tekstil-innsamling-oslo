@@ -2,6 +2,8 @@
 
 import dynamic from "next/dynamic";
 import { useEffect, useState } from "react";
+import TabBar from "./components/TabBar";
+import PoreChecker from "./components/PoreChecker";
 
 interface Location {
   address: string;
@@ -16,6 +18,8 @@ interface LocationsData {
   locations: Location[];
 }
 
+type Tab = "map" | "porechecker";
+
 const Map = dynamic(() => import("./Map"), {
   ssr: false,
   loading: () => (
@@ -28,6 +32,7 @@ const Map = dynamic(() => import("./Map"), {
 export default function Home() {
   const [locations, setLocations] = useState<Location[]>([]);
   const [updatedAt, setUpdatedAt] = useState<string | null>(null);
+  const [activeTab, setActiveTab] = useState<Tab>("map");
 
   useEffect(() => {
     fetch("/locations.json")
@@ -54,30 +59,46 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="w-full">
-          <Map locations={locations} />
+        {/* Tab Navigation */}
+        <div className="w-full max-w-md px-4">
+          <TabBar activeTab={activeTab} onTabChange={setActiveTab} />
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-4xl px-4">
-          <div className="p-6 bg-zinc-50 dark:bg-zinc-900 rounded-2xl border border-zinc-100 dark:border-zinc-800">
-            <h2 className="text-xl font-bold mb-3">Hva kan leveres?</h2>
-            <ul className="space-y-2 text-zinc-600 dark:text-zinc-400">
-              <li>• Hele og brukbare klær, tekstiler og sko</li>
-              <li>• Utslitte og ødelagte klær og tekstiler</li>
-              <li>• Alt må være rent og tørt</li>
-              <li>• Leveres i lukket pose med dobbeltknute</li>
-            </ul>
+        {/* Tab Content */}
+        {activeTab === "map" && (
+          <>
+            <div className="w-full">
+              <Map locations={locations} />
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-4xl px-4">
+              <div className="p-6 bg-zinc-50 dark:bg-zinc-900 rounded-2xl border border-zinc-100 dark:border-zinc-800">
+                <h2 className="text-xl font-bold mb-3">Hva kan leveres?</h2>
+                <ul className="space-y-2 text-zinc-600 dark:text-zinc-400">
+                  <li>• Hele og brukbare klær, tekstiler og sko</li>
+                  <li>• Utslitte og ødelagte klær og tekstiler</li>
+                  <li>• Alt må være rent og tørt</li>
+                  <li>• Leveres i lukket pose med dobbeltknute</li>
+                </ul>
+              </div>
+              <div className="p-6 bg-zinc-50 dark:bg-zinc-900 rounded-2xl border border-zinc-100 dark:border-zinc-800">
+                <h2 className="text-xl font-bold mb-3">Hva skal i restavfall?</h2>
+                <ul className="space-y-2 text-zinc-600 dark:text-zinc-400">
+                  <li>• Vått, muggent eller svært skittent tøy</li>
+                  <li>• Undertøy</li>
+                  <li>• Ødelagte sko, vesker, belter og annet tilbehør</li>
+                  <li>• Klær og sko fra Temu og Shein</li>
+                </ul>
+              </div>
+            </div>
+          </>
+        )}
+
+        {activeTab === "porechecker" && (
+          <div className="w-full max-w-4xl px-4">
+            <PoreChecker />
           </div>
-          <div className="p-6 bg-zinc-50 dark:bg-zinc-900 rounded-2xl border border-zinc-100 dark:border-zinc-800">
-            <h2 className="text-xl font-bold mb-3">Hva skal i restavfall?</h2>
-            <ul className="space-y-2 text-zinc-600 dark:text-zinc-400">
-              <li>• Vått, muggent eller svært skittent tøy</li>
-              <li>• Undertøy</li>
-              <li>• Ødelagte sko, vesker, belter og annet tilbehør</li>
-              <li>• Klær og sko fra Temu og Shein</li>
-            </ul>
-          </div>
-        </div>
+        )}
 
         <div className="w-full max-w-4xl px-4 text-center space-y-2">
           <p className="text-sm text-zinc-500 dark:text-zinc-500">

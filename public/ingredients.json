@@ -1,0 +1,3629 @@
+{
+  "version": "1.2.0",
+  "lastUpdated": "2026-05-23",
+  "sources": [
+    "Fulton JE Jr., J Soc Cosmet Chem 1989",
+    "Kligman AM & Mills OH, Arch Dermatol 1972",
+    "Draelos ZD & DiNardo JC, JAAD 2006",
+    "Nguyen SH & Maibach HI, Cutan Ocul Toxicol 2007",
+    "CosDNA Database",
+    "INCIDecoder",
+    "SkinSort",
+    "Acne.org",
+    "Platinum Skincare",
+    "Paula's Choice"
+  ],
+  "scale": {
+    "name": "Fulton Comedogenic Scale",
+    "range": "0-5",
+    "description": "0 = Non-comedogenic, 5 = Highly comedogenic. Based on rabbit ear assay (REA). Note: REA is more sensitive than human skin; ratings 4-5 may not correlate to human comedogenicity at formulation concentrations.",
+    "levels": {
+      "0": "Non-comedogenic — safe for acne-prone skin",
+      "1": "Very low risk — generally safe",
+      "2": "Low risk — usually safe; caution if very prone",
+      "3": "Moderate risk — avoid in leave-on products if acne-prone",
+      "4": "High risk — avoid on face",
+      "5": "Very high risk — avoid entirely"
+    }
+  },
+  "ingredients": [
+    {
+      "id": "isopropyl-myristate",
+      "inciName": "Isopropyl Myristate",
+      "commonNames": [
+        "IPM",
+        "Isopropyl tetradecanoate",
+        "1-Methylethyl tetradecanoate"
+      ],
+      "rating": 5,
+      "category": "Emollient",
+      "categoryGroup": "isopropyl_ester_series",
+      "function": [
+        "emollient",
+        "slip_agent",
+        "penetration_enhancer"
+      ],
+      "description": "Highly comedogenic emollient and penetration enhancer. One of the most tested positive controls in comedogenicity assays.",
+      "skinTypeNotes": {
+        "oily": "avoid",
+        "dry": "caution",
+        "sensitive": "avoid",
+        "acneProne": "avoid",
+        "normal": "caution"
+      },
+      "flags": [
+        "highly_comedogenic",
+        "penetration_enhancer"
+      ],
+      "evidenceLevel": "high",
+      "irritancy": 3
+    },
+    {
+      "id": "isopropyl-isostearate",
+      "inciName": "Isopropyl Isostearate",
+      "commonNames": [
+        "Isopropyl octadecanoate"
+      ],
+      "rating": 5,
+      "category": "Emollient",
+      "categoryGroup": "isopropyl_ester_series",
+      "function": [
+        "emollient"
+      ],
+      "description": "Highly comedogenic emollient ester. Part of the problematic isopropyl ester series.",
+      "skinTypeNotes": {
+        "oily": "avoid",
+        "dry": "caution",
+        "sensitive": "avoid",
+        "acneProne": "avoid",
+        "normal": "caution"
+      },
+      "flags": [
+        "highly_comedogenic"
+      ],
+      "evidenceLevel": "high",
+      "irritancy": 0
+    },
+    {
+      "id": "isopropyl-linoleate",
+      "inciName": "Isopropyl Linoleate",
+      "commonNames": [
+        "Isopropyl (Z,Z)-9,12-octadecadienoate"
+      ],
+      "rating": 5,
+      "category": "Emollient",
+      "categoryGroup": "isopropyl_ester_series",
+      "function": [
+        "emollient"
+      ],
+      "description": "Highly comedogenic emollient ester with unsaturated fatty acid.",
+      "skinTypeNotes": {
+        "oily": "avoid",
+        "dry": "caution",
+        "sensitive": "avoid",
+        "acneProne": "avoid",
+        "normal": "caution"
+      },
+      "flags": [
+        "highly_comedogenic"
+      ],
+      "evidenceLevel": "high",
+      "irritancy": 2
+    },
+    {
+      "id": "myristyl-myristate",
+      "inciName": "Myristyl Myristate",
+      "commonNames": [
+        "Tetradecyl tetradecanoate"
+      ],
+      "rating": 5,
+      "category": "Emollient",
+      "categoryGroup": "fatty_acid_ester",
+      "function": [
+        "emollient",
+        "thickener"
+      ],
+      "description": "Waxy emollient ester with very high comedogenic potential.",
+      "skinTypeNotes": {
+        "oily": "avoid",
+        "dry": "caution",
+        "sensitive": "avoid",
+        "acneProne": "avoid",
+        "normal": "caution"
+      },
+      "flags": [
+        "highly_comedogenic"
+      ],
+      "evidenceLevel": "high",
+      "irritancy": 2
+    },
+    {
+      "id": "laureth-4",
+      "inciName": "Laureth-4",
+      "commonNames": [
+        "PEG-4 lauryl ether",
+        "Brij 30",
+        "POE (4) lauryl ether"
+      ],
+      "rating": 5,
+      "category": "Surfactant",
+      "categoryGroup": "ethoxylated_alcohol",
+      "function": [
+        "surfactant",
+        "emulsifier"
+      ],
+      "description": "Ethoxylated lauryl alcohol with high comedogenic potential. Used as emulsifier and surfactant.",
+      "skinTypeNotes": {
+        "oily": "avoid",
+        "dry": "caution",
+        "sensitive": "avoid",
+        "acneProne": "avoid",
+        "normal": "caution"
+      },
+      "flags": [
+        "highly_comedogenic"
+      ],
+      "evidenceLevel": "high",
+      "irritancy": 2
+    },
+    {
+      "id": "oleth-3",
+      "inciName": "Oleth-3",
+      "commonNames": [
+        "PEG-3 oleyl ether",
+        "Volpo 3"
+      ],
+      "rating": 5,
+      "category": "Emulsifier",
+      "categoryGroup": "ethoxylated_alcohol",
+      "function": [
+        "emulsifier",
+        "surfactant"
+      ],
+      "description": "Ethoxylated oleyl alcohol emulsifier with high comedogenic rating.",
+      "skinTypeNotes": {
+        "oily": "avoid",
+        "dry": "caution",
+        "sensitive": "avoid",
+        "acneProne": "avoid",
+        "normal": "caution"
+      },
+      "flags": [
+        "highly_comedogenic"
+      ],
+      "evidenceLevel": "high",
+      "irritancy": 2
+    },
+    {
+      "id": "acetylated-lanolin-alcohol",
+      "inciName": "Acetylated Lanolin Alcohol",
+      "commonNames": [
+        "Acetylated wool wax alcohol",
+        "Acetulan",
+        "Lanolin alcohols, acetates"
+      ],
+      "rating": 5,
+      "category": "Emollient",
+      "categoryGroup": "lanolin_derivative",
+      "function": [
+        "emollient",
+        "conditioner"
+      ],
+      "description": "Acetylated derivative of lanolin alcohol. More comedogenic than regular lanolin. One of the worst offenders in the lanolin family.",
+      "skinTypeNotes": {
+        "oily": "avoid",
+        "dry": "caution",
+        "sensitive": "avoid",
+        "acneProne": "avoid",
+        "normal": "caution"
+      },
+      "flags": [
+        "highly_comedogenic",
+        "lanolin_derivative"
+      ],
+      "evidenceLevel": "high",
+      "irritancy": 2
+    },
+    {
+      "id": "isocetyl-stearate",
+      "inciName": "Isocetyl Stearate",
+      "commonNames": [
+        "Isohexadecyl octadecanoate"
+      ],
+      "rating": 5,
+      "category": "Emollient",
+      "categoryGroup": "fatty_acid_ester",
+      "function": [
+        "emollient"
+      ],
+      "description": "Branched-chain fatty acid ester with high comedogenic potential.",
+      "skinTypeNotes": {
+        "oily": "avoid",
+        "dry": "caution",
+        "sensitive": "avoid",
+        "acneProne": "avoid",
+        "normal": "caution"
+      },
+      "flags": [
+        "highly_comedogenic"
+      ],
+      "evidenceLevel": "high",
+      "irritancy": 0
+    },
+    {
+      "id": "coconut-oil",
+      "inciName": "Cocos Nucifera Oil",
+      "commonNames": [
+        "Coconut oil",
+        "Coconut butter",
+        "Copra oil"
+      ],
+      "rating": 4,
+      "category": "Emollient",
+      "categoryGroup": "plant_oil",
+      "function": [
+        "emollient",
+        "occlusive"
+      ],
+      "description": "Popular natural oil with high comedogenic potential due to high lauric acid content. Very occlusive.",
+      "skinTypeNotes": {
+        "oily": "avoid",
+        "dry": "caution",
+        "sensitive": "caution",
+        "acneProne": "avoid",
+        "normal": "caution"
+      },
+      "flags": [
+        "highly_comedogenic",
+        "occlusive",
+        "natural"
+      ],
+      "evidenceLevel": "high",
+      "irritancy": 1
+    },
+    {
+      "id": "cocoa-butter",
+      "inciName": "Theobroma Cacao Seed Butter",
+      "commonNames": [
+        "Cocoa butter",
+        "Cacao butter",
+        "Theobroma oil"
+      ],
+      "rating": 4,
+      "category": "Emollient",
+      "categoryGroup": "plant_butter",
+      "function": [
+        "emollient",
+        "occlusive"
+      ],
+      "description": "Rich plant butter with high comedogenic potential. Very occlusive and can trap sebum in pores.",
+      "skinTypeNotes": {
+        "oily": "avoid",
+        "dry": "caution",
+        "sensitive": "caution",
+        "acneProne": "avoid",
+        "normal": "caution"
+      },
+      "flags": [
+        "highly_comedogenic",
+        "occlusive",
+        "natural"
+      ],
+      "evidenceLevel": "high",
+      "irritancy": 0
+    },
+    {
+      "id": "isopropyl-palmitate",
+      "inciName": "Isopropyl Palmitate",
+      "commonNames": [
+        "IPP",
+        "Isopropyl hexadecanoate",
+        "Hexadecanoic acid isopropyl ester"
+      ],
+      "rating": 4,
+      "category": "Emollient",
+      "categoryGroup": "isopropyl_ester_series",
+      "function": [
+        "emollient",
+        "solvent"
+      ],
+      "description": "Part of the problematic isopropyl ester series. Highly comedogenic emollient.",
+      "skinTypeNotes": {
+        "oily": "avoid",
+        "dry": "caution",
+        "sensitive": "avoid",
+        "acneProne": "avoid",
+        "normal": "caution"
+      },
+      "flags": [
+        "highly_comedogenic"
+      ],
+      "evidenceLevel": "high",
+      "irritancy": 1
+    },
+    {
+      "id": "ethylhexyl-palmitate",
+      "inciName": "Ethylhexyl Palmitate",
+      "commonNames": [
+        "Octyl palmitate",
+        "2-Ethylhexyl palmitate",
+        "2-Ethylhexyl hexadecanoate"
+      ],
+      "rating": 4,
+      "category": "Emollient",
+      "categoryGroup": "fatty_acid_ester",
+      "function": [
+        "emollient",
+        "solvent"
+      ],
+      "description": "Common emollient ester with high comedogenic potential. Often used as silicone alternative.",
+      "skinTypeNotes": {
+        "oily": "avoid",
+        "dry": "caution",
+        "sensitive": "caution",
+        "acneProne": "avoid",
+        "normal": "caution"
+      },
+      "flags": [
+        "highly_comedogenic"
+      ],
+      "evidenceLevel": "high",
+      "irritancy": 0
+    },
+    {
+      "id": "acetylated-lanolin",
+      "inciName": "Acetylated Lanolin",
+      "commonNames": [
+        "Acetylated wool fat",
+        "Acetylated wool wax"
+      ],
+      "rating": 4,
+      "category": "Emollient",
+      "categoryGroup": "lanolin_derivative",
+      "function": [
+        "emollient",
+        "conditioner"
+      ],
+      "description": "Acetylated form of lanolin. More comedogenic than regular lanolin due to modification.",
+      "skinTypeNotes": {
+        "oily": "avoid",
+        "dry": "caution",
+        "sensitive": "caution",
+        "acneProne": "avoid",
+        "normal": "caution"
+      },
+      "flags": [
+        "highly_comedogenic",
+        "lanolin_derivative"
+      ],
+      "evidenceLevel": "high",
+      "irritancy": 0
+    },
+    {
+      "id": "lauric-acid",
+      "inciName": "Lauric Acid",
+      "commonNames": [
+        "Dodecanoic acid",
+        "Dodecoic acid",
+        "Dodecyl acid",
+        "Cocic acid"
+      ],
+      "rating": 4,
+      "category": "Fatty Acid",
+      "categoryGroup": "saturated_fatty_acid",
+      "function": [
+        "surfactant",
+        "emulsifier"
+      ],
+      "description": "Saturated fatty acid found in coconut oil and palm kernel oil. Has antimicrobial properties but is highly comedogenic.",
+      "skinTypeNotes": {
+        "oily": "avoid",
+        "dry": "caution",
+        "sensitive": "caution",
+        "acneProne": "avoid",
+        "normal": "caution"
+      },
+      "flags": [
+        "highly_comedogenic",
+        "antimicrobial"
+      ],
+      "evidenceLevel": "high",
+      "irritancy": 1
+    },
+    {
+      "id": "oleyl-alcohol",
+      "inciName": "Oleyl Alcohol",
+      "commonNames": [
+        "Octadecenol",
+        "Oleic alcohol",
+        "cis-9-Octadecen-1-ol"
+      ],
+      "rating": 4,
+      "category": "Fatty Alcohol",
+      "categoryGroup": "unsaturated_alcohol",
+      "function": [
+        "emollient",
+        "thickener"
+      ],
+      "description": "Unsaturated fatty alcohol derived from oleic acid. Highly comedogenic.",
+      "skinTypeNotes": {
+        "oily": "avoid",
+        "dry": "caution",
+        "sensitive": "caution",
+        "acneProne": "avoid",
+        "normal": "caution"
+      },
+      "flags": [
+        "highly_comedogenic"
+      ],
+      "evidenceLevel": "high",
+      "irritancy": 2
+    },
+    {
+      "id": "oleth-5",
+      "inciName": "Oleth-5",
+      "commonNames": [
+        "PEG-5 oleyl ether"
+      ],
+      "rating": 4,
+      "category": "Emulsifier",
+      "categoryGroup": "ethoxylated_alcohol",
+      "function": [
+        "emulsifier",
+        "surfactant"
+      ],
+      "description": "Ethoxylated oleyl alcohol with high comedogenic potential.",
+      "skinTypeNotes": {
+        "oily": "avoid",
+        "dry": "caution",
+        "sensitive": "caution",
+        "acneProne": "avoid",
+        "normal": "caution"
+      },
+      "flags": [
+        "highly_comedogenic"
+      ],
+      "evidenceLevel": "high",
+      "irritancy": 2
+    },
+    {
+      "id": "steareth-10",
+      "inciName": "Steareth-10",
+      "commonNames": [
+        "PEG-10 stearyl ether"
+      ],
+      "rating": 4,
+      "category": "Emulsifier",
+      "categoryGroup": "ethoxylated_alcohol",
+      "function": [
+        "emulsifier",
+        "surfactant"
+      ],
+      "description": "Ethoxylated stearyl alcohol emulsifier with high comedogenic rating.",
+      "skinTypeNotes": {
+        "oily": "avoid",
+        "dry": "caution",
+        "sensitive": "caution",
+        "acneProne": "avoid",
+        "normal": "caution"
+      },
+      "flags": [
+        "highly_comedogenic"
+      ],
+      "evidenceLevel": "high",
+      "irritancy": 2
+    },
+    {
+      "id": "wheat-germ-oil",
+      "inciName": "Triticum Vulgare Germ Oil",
+      "commonNames": [
+        "Wheat germ oil",
+        "Wheat oil"
+      ],
+      "rating": 5,
+      "category": "Emollient",
+      "categoryGroup": "plant_oil",
+      "function": [
+        "emollient",
+        "antioxidant"
+      ],
+      "description": "Highly comedogenic oil rich in vitamin E but problematic for acne-prone skin.",
+      "skinTypeNotes": {
+        "oily": "avoid",
+        "dry": "caution",
+        "sensitive": "avoid",
+        "acneProne": "avoid",
+        "normal": "caution"
+      },
+      "flags": [
+        "highly_comedogenic",
+        "natural",
+        "vitamin_e"
+      ],
+      "evidenceLevel": "high",
+      "irritancy": 0
+    },
+    {
+      "id": "linseed-oil",
+      "inciName": "Linum Usitatissimum Seed Oil",
+      "commonNames": [
+        "Flaxseed oil",
+        "Linseed oil",
+        "Flax oil"
+      ],
+      "rating": 4,
+      "category": "Emollient",
+      "categoryGroup": "plant_oil",
+      "function": [
+        "emollient"
+      ],
+      "description": "Oil from flax seeds with high comedogenic potential. Rich in omega-3 fatty acids but problematic for pores.",
+      "skinTypeNotes": {
+        "oily": "avoid",
+        "dry": "caution",
+        "sensitive": "caution",
+        "acneProne": "avoid",
+        "normal": "caution"
+      },
+      "flags": [
+        "highly_comedogenic",
+        "natural",
+        "omega_3"
+      ],
+      "evidenceLevel": "high",
+      "irritancy": 0
+    },
+    {
+      "id": "squalene",
+      "inciName": "Squalene",
+      "commonNames": [
+        "Spinacene",
+        "Supraene"
+      ],
+      "rating": 3,
+      "category": "Emollient",
+      "categoryGroup": "hydrocarbon",
+      "function": [
+        "emollient",
+        "antioxidant"
+      ],
+      "description": "Natural component of human sebum. Highly unstable and oxidizes easily, which can lead to comedogenic effects. DIFFERENT from squalane (hydrogenated, stable version).",
+      "skinTypeNotes": {
+        "oily": "avoid",
+        "dry": "caution",
+        "sensitive": "caution",
+        "acneProne": "avoid",
+        "normal": "caution"
+      },
+      "flags": [
+        "comedogenic",
+        "unstable",
+        "sebum_component"
+      ],
+      "evidenceLevel": "high",
+      "irritancy": 0
+    },
+    {
+      "id": "butyl-stearate",
+      "inciName": "Butyl Stearate",
+      "commonNames": [
+        "Butyl octadecanoate"
+      ],
+      "rating": 3,
+      "category": "Emollient",
+      "categoryGroup": "fatty_acid_ester",
+      "function": [
+        "emollient",
+        "solvent"
+      ],
+      "description": "Fatty acid ester with moderate comedogenic potential.",
+      "skinTypeNotes": {
+        "oily": "avoid",
+        "dry": "caution",
+        "sensitive": "caution",
+        "acneProne": "avoid",
+        "normal": "caution"
+      },
+      "flags": [
+        "comedogenic"
+      ],
+      "evidenceLevel": "high",
+      "irritancy": 0
+    },
+    {
+      "id": "decyl-oleate",
+      "inciName": "Decyl Oleate",
+      "commonNames": [
+        "Decyl (Z)-octadec-9-enoate"
+      ],
+      "rating": 3,
+      "category": "Emollient",
+      "categoryGroup": "fatty_acid_ester",
+      "function": [
+        "emollient"
+      ],
+      "description": "Fatty acid ester with moderate comedogenic potential.",
+      "skinTypeNotes": {
+        "oily": "avoid",
+        "dry": "caution",
+        "sensitive": "caution",
+        "acneProne": "avoid",
+        "normal": "caution"
+      },
+      "flags": [
+        "comedogenic"
+      ],
+      "evidenceLevel": "high",
+      "irritancy": 0
+    },
+    {
+      "id": "glycine-soja-oil",
+      "inciName": "Glycine Soja Oil",
+      "commonNames": [
+        "Soybean oil",
+        "Soya oil",
+        "Soy oil"
+      ],
+      "rating": 3,
+      "category": "Emollient",
+      "categoryGroup": "plant_oil",
+      "function": [
+        "emollient"
+      ],
+      "description": "Soybean oil with moderate comedogenic potential. Contains omega-6 fatty acids.",
+      "skinTypeNotes": {
+        "oily": "avoid",
+        "dry": "caution",
+        "sensitive": "caution",
+        "acneProne": "avoid",
+        "normal": "caution"
+      },
+      "flags": [
+        "comedogenic",
+        "natural",
+        "omega_6"
+      ],
+      "evidenceLevel": "medium",
+      "irritancy": 0
+    },
+    {
+      "id": "cottonseed-oil",
+      "inciName": "Gossypium Herbaceum Seed Oil",
+      "commonNames": [
+        "Cottonseed oil"
+      ],
+      "rating": 3,
+      "category": "Emollient",
+      "categoryGroup": "plant_oil",
+      "function": [
+        "emollient"
+      ],
+      "description": "Oil from cotton seeds with moderate comedogenic potential. Contains gossypol.",
+      "skinTypeNotes": {
+        "oily": "avoid",
+        "dry": "caution",
+        "sensitive": "caution",
+        "acneProne": "avoid",
+        "normal": "caution"
+      },
+      "flags": [
+        "comedogenic",
+        "natural"
+      ],
+      "evidenceLevel": "medium",
+      "irritancy": 0
+    },
+    {
+      "id": "hydrogenated-vegetable-oil",
+      "inciName": "Hydrogenated Vegetable Oil",
+      "commonNames": [
+        "Hydrogenated plant oil"
+      ],
+      "rating": 3,
+      "category": "Emollient",
+      "categoryGroup": "hydrogenated_oil",
+      "function": [
+        "emollient",
+        "occlusive"
+      ],
+      "description": "Hydrogenated vegetable oils with moderate comedogenic potential. Occlusive.",
+      "skinTypeNotes": {
+        "oily": "avoid",
+        "dry": "caution",
+        "sensitive": "caution",
+        "acneProne": "avoid",
+        "normal": "caution"
+      },
+      "flags": [
+        "comedogenic",
+        "occlusive"
+      ],
+      "evidenceLevel": "medium",
+      "irritancy": 0
+    },
+    {
+      "id": "myristic-acid",
+      "inciName": "Myristic Acid",
+      "commonNames": [
+        "Tetradecanoic acid",
+        "C14:0",
+        "Myristic acid"
+      ],
+      "rating": 3,
+      "category": "Fatty Acid",
+      "categoryGroup": "saturated_fatty_acid",
+      "function": [
+        "surfactant",
+        "emulsifier"
+      ],
+      "description": "Saturated fatty acid found in nutmeg and coconut oil. Moderately comedogenic.",
+      "skinTypeNotes": {
+        "oily": "avoid",
+        "dry": "caution",
+        "sensitive": "caution",
+        "acneProne": "avoid",
+        "normal": "caution"
+      },
+      "flags": [
+        "comedogenic",
+        "surfactant"
+      ],
+      "evidenceLevel": "high",
+      "irritancy": 0
+    },
+    {
+      "id": "oleic-acid",
+      "inciName": "Oleic Acid",
+      "commonNames": [
+        "Octadecenoic acid",
+        "Oleic acid",
+        "Omega-9 fatty acid"
+      ],
+      "rating": 3,
+      "category": "Fatty Acid",
+      "categoryGroup": "unsaturated_fatty_acid",
+      "function": [
+        "emollient",
+        "penetration_enhancer"
+      ],
+      "description": "Monounsaturated omega-9 fatty acid. Moderately comedogenic and can disrupt skin barrier at high concentrations.",
+      "skinTypeNotes": {
+        "oily": "avoid",
+        "dry": "caution",
+        "sensitive": "avoid",
+        "acneProne": "avoid",
+        "normal": "caution"
+      },
+      "flags": [
+        "comedogenic",
+        "barrier_disruptor",
+        "penetration_enhancer"
+      ],
+      "evidenceLevel": "high",
+      "irritancy": 0
+    },
+    {
+      "id": "evening-primrose-oil",
+      "inciName": "Oenothera Biennis Oil",
+      "commonNames": [
+        "Evening primrose oil",
+        "EPO"
+      ],
+      "rating": 3,
+      "category": "Emollient",
+      "categoryGroup": "plant_oil",
+      "function": [
+        "emollient"
+      ],
+      "description": "Oil from evening primrose seeds with moderate comedogenic potential. Contains GLA (gamma-linolenic acid).",
+      "skinTypeNotes": {
+        "oily": "avoid",
+        "dry": "caution",
+        "sensitive": "caution",
+        "acneProne": "avoid",
+        "normal": "caution"
+      },
+      "flags": [
+        "comedogenic",
+        "natural",
+        "omega_6"
+      ],
+      "evidenceLevel": "medium",
+      "irritancy": 0
+    },
+    {
+      "id": "sorbitan-oleate",
+      "inciName": "Sorbitan Oleate",
+      "commonNames": [
+        "Span 80",
+        "Sorbitan monooleate"
+      ],
+      "rating": 3,
+      "category": "Emulsifier",
+      "categoryGroup": "sorbitan_ester",
+      "function": [
+        "emulsifier",
+        "surfactant"
+      ],
+      "description": "Emulsifier derived from sorbitol and oleic acid. Moderately comedogenic.",
+      "skinTypeNotes": {
+        "oily": "avoid",
+        "dry": "caution",
+        "sensitive": "caution",
+        "acneProne": "avoid",
+        "normal": "caution"
+      },
+      "flags": [
+        "comedogenic",
+        "emulsifier"
+      ],
+      "evidenceLevel": "medium",
+      "irritancy": 0
+    },
+    {
+      "id": "stearic-acid",
+      "inciName": "Stearic Acid",
+      "commonNames": [
+        "Octadecanoic acid",
+        "C18:0",
+        "Stearic acid"
+      ],
+      "rating": 2,
+      "category": "Fatty Acid",
+      "categoryGroup": "saturated_fatty_acid",
+      "function": [
+        "emulsifier",
+        "thickener"
+      ],
+      "description": "Saturated fatty acid commonly used as emulsifier and thickener. Low to moderate comedogenic potential.",
+      "skinTypeNotes": {
+        "oily": "caution",
+        "dry": "safe",
+        "sensitive": "safe",
+        "acneProne": "caution",
+        "normal": "safe"
+      },
+      "flags": [
+        "low_comedogenic",
+        "emulsifier"
+      ],
+      "evidenceLevel": "high",
+      "irritancy": 0
+    },
+    {
+      "id": "palmitic-acid",
+      "inciName": "Palmitic Acid",
+      "commonNames": [
+        "Hexadecanoic acid",
+        "C16:0",
+        "Palmitic acid",
+        "Cetylic acid"
+      ],
+      "rating": 2,
+      "category": "Fatty Acid",
+      "categoryGroup": "saturated_fatty_acid",
+      "function": [
+        "emulsifier",
+        "thickener"
+      ],
+      "description": "Saturated fatty acid found in palm oil and animal fats. Low to moderate comedogenic potential.",
+      "skinTypeNotes": {
+        "oily": "caution",
+        "dry": "safe",
+        "sensitive": "safe",
+        "acneProne": "caution",
+        "normal": "safe"
+      },
+      "flags": [
+        "low_comedogenic",
+        "emulsifier"
+      ],
+      "evidenceLevel": "high",
+      "irritancy": 0
+    },
+    {
+      "id": "cetearyl-alcohol",
+      "inciName": "Cetearyl Alcohol",
+      "commonNames": [
+        "Cetostearyl alcohol",
+        "Cetyl-stearyl alcohol"
+      ],
+      "rating": 2,
+      "category": "Fatty Alcohol",
+      "categoryGroup": "fatty_alcohol",
+      "function": [
+        "emollient",
+        "thickener",
+        "emulsifier"
+      ],
+      "description": "Mixture of cetyl and stearyl alcohols. Low comedogenic potential. Generally well-tolerated.",
+      "skinTypeNotes": {
+        "oily": "safe",
+        "dry": "safe",
+        "sensitive": "safe",
+        "acneProne": "safe",
+        "normal": "safe"
+      },
+      "flags": [
+        "low_comedogenic",
+        "emulsifier"
+      ],
+      "evidenceLevel": "high",
+      "irritancy": 2
+    },
+    {
+      "id": "cetyl-alcohol",
+      "inciName": "Cetyl Alcohol",
+      "commonNames": [
+        "Hexadecanol",
+        "Palmityl alcohol",
+        "Cetylic alcohol"
+      ],
+      "rating": 2,
+      "category": "Fatty Alcohol",
+      "categoryGroup": "fatty_alcohol",
+      "function": [
+        "emollient",
+        "thickener"
+      ],
+      "description": "Fatty alcohol with low comedogenic potential. Commonly used as thickener and emollient.",
+      "skinTypeNotes": {
+        "oily": "safe",
+        "dry": "safe",
+        "sensitive": "safe",
+        "acneProne": "safe",
+        "normal": "safe"
+      },
+      "flags": [
+        "low_comedogenic"
+      ],
+      "evidenceLevel": "high",
+      "irritancy": 2
+    },
+    {
+      "id": "stearyl-alcohol",
+      "inciName": "Stearyl Alcohol",
+      "commonNames": [
+        "Octadecanol",
+        "1-Octadecanol"
+      ],
+      "rating": 2,
+      "category": "Fatty Alcohol",
+      "categoryGroup": "fatty_alcohol",
+      "function": [
+        "emollient",
+        "thickener"
+      ],
+      "description": "Fatty alcohol with low comedogenic potential. Used as thickener and emollient.",
+      "skinTypeNotes": {
+        "oily": "safe",
+        "dry": "safe",
+        "sensitive": "safe",
+        "acneProne": "safe",
+        "normal": "safe"
+      },
+      "flags": [
+        "low_comedogenic"
+      ],
+      "evidenceLevel": "high",
+      "irritancy": 2
+    },
+    {
+      "id": "ascorbyl-palmitate",
+      "inciName": "Ascorbyl Palmitate",
+      "commonNames": [
+        "Vitamin C palmitate",
+        "L-Ascorbic acid 6-palmitate"
+      ],
+      "rating": 2,
+      "category": "Antioxidant",
+      "categoryGroup": "vitamin_derivative",
+      "function": [
+        "antioxidant"
+      ],
+      "description": "Fat-soluble form of vitamin C (ascorbic acid). Low comedogenic potential but can be problematic for very acne-prone skin.",
+      "skinTypeNotes": {
+        "oily": "caution",
+        "dry": "safe",
+        "sensitive": "safe",
+        "acneProne": "caution",
+        "normal": "safe"
+      },
+      "flags": [
+        "low_comedogenic",
+        "vitamin_c",
+        "antioxidant"
+      ],
+      "evidenceLevel": "medium",
+      "irritancy": 0
+    },
+    {
+      "id": "triethanolamine",
+      "inciName": "Triethanolamine",
+      "commonNames": [
+        "TEA",
+        "Trolamine",
+        "2,2',2''-Nitrilotriethanol"
+      ],
+      "rating": 2,
+      "category": "pH Adjuster",
+      "categoryGroup": "amine",
+      "function": [
+        "ph_adjuster",
+        "emulsifier"
+      ],
+      "description": "pH adjuster and emulsifier with low comedogenic potential. Can be irritating to sensitive skin.",
+      "skinTypeNotes": {
+        "oily": "safe",
+        "dry": "safe",
+        "sensitive": "caution",
+        "acneProne": "safe",
+        "normal": "safe"
+      },
+      "flags": [
+        "low_comedogenic",
+        "irritant"
+      ],
+      "evidenceLevel": "medium",
+      "irritancy": 0
+    },
+    {
+      "id": "sodium-lauryl-sulfate",
+      "inciName": "Sodium Lauryl Sulfate",
+      "commonNames": [
+        "SLS",
+        "Sodium dodecyl sulfate",
+        "Dodecyl sodium sulfate",
+        "SDS"
+      ],
+      "rating": 5,
+      "category": "Surfactant",
+      "categoryGroup": "sulfate",
+      "function": [
+        "surfactant",
+        "cleansing_agent"
+      ],
+      "description": "Strong anionic surfactant. More irritating than comedogenic, but can disrupt skin barrier and contribute to acne. Rated 5 for irritation potential.",
+      "skinTypeNotes": {
+        "oily": "avoid",
+        "dry": "avoid",
+        "sensitive": "avoid",
+        "acneProne": "avoid",
+        "normal": "caution"
+      },
+      "flags": [
+        "highly_irritating",
+        "surfactant",
+        "barrier_disruptor"
+      ],
+      "evidenceLevel": "high",
+      "irritancy": 2
+    },
+    {
+      "id": "jojoba-oil",
+      "inciName": "Simmondsia Chinensis Seed Oil",
+      "commonNames": [
+        "Jojoba oil",
+        "Jojoba wax",
+        "Jojoba seed oil"
+      ],
+      "rating": 0,
+      "category": "Emollient",
+      "categoryGroup": "plant_oil",
+      "function": [
+        "emollient",
+        "conditioner"
+      ],
+      "description": "Liquid wax ester chemically similar to human sebum. Non-comedogenic and well-tolerated by most skin types.",
+      "skinTypeNotes": {
+        "oily": "safe",
+        "dry": "safe",
+        "sensitive": "safe",
+        "acneProne": "safe",
+        "normal": "safe"
+      },
+      "flags": [
+        "non_comedogenic",
+        "natural",
+        "sebum_like"
+      ],
+      "evidenceLevel": "high",
+      "irritancy": 0
+    },
+    {
+      "id": "squalane",
+      "inciName": "Squalane",
+      "commonNames": [
+        "Perhydrosqualene",
+        "Dodecahydrosqualene",
+        "Olive squalane"
+      ],
+      "rating": 0,
+      "category": "Emollient",
+      "categoryGroup": "hydrocarbon",
+      "function": [
+        "emollient",
+        "occlusive"
+      ],
+      "description": "Hydrogenated, stable form of squalene. Non-comedogenic and excellent emollient. Safe for all skin types.",
+      "skinTypeNotes": {
+        "oily": "safe",
+        "dry": "safe",
+        "sensitive": "safe",
+        "acneProne": "safe",
+        "normal": "safe"
+      },
+      "flags": [
+        "non_comedogenic",
+        "stable",
+        "sebum_component"
+      ],
+      "evidenceLevel": "high",
+      "irritancy": 0
+    },
+    {
+      "id": "argan-oil",
+      "inciName": "Argania Spinosa Kernel Oil",
+      "commonNames": [
+        "Argan oil",
+        "Moroccan oil"
+      ],
+      "rating": 0,
+      "category": "Emollient",
+      "categoryGroup": "plant_oil",
+      "function": [
+        "emollient",
+        "antioxidant"
+      ],
+      "description": "Non-comedogenic oil rich in vitamin E and fatty acids. Well-tolerated by most skin types.",
+      "skinTypeNotes": {
+        "oily": "safe",
+        "dry": "safe",
+        "sensitive": "safe",
+        "acneProne": "safe",
+        "normal": "safe"
+      },
+      "flags": [
+        "non_comedogenic",
+        "natural",
+        "vitamin_e"
+      ],
+      "evidenceLevel": "high",
+      "irritancy": 0
+    },
+    {
+      "id": "hemp-seed-oil",
+      "inciName": "Cannabis Sativa Seed Oil",
+      "commonNames": [
+        "Hemp seed oil",
+        "Hemp oil",
+        "Cannabis oil"
+      ],
+      "rating": 0,
+      "category": "Emollient",
+      "categoryGroup": "plant_oil",
+      "function": [
+        "emollient",
+        "conditioner"
+      ],
+      "description": "Non-comedogenic oil with ideal omega-6 to omega-3 ratio. Balances oil production and reduces inflammation.",
+      "skinTypeNotes": {
+        "oily": "safe",
+        "dry": "safe",
+        "sensitive": "safe",
+        "acneProne": "safe",
+        "normal": "safe"
+      },
+      "flags": [
+        "non_comedogenic",
+        "natural",
+        "anti_inflammatory",
+        "omega_3",
+        "omega_6"
+      ],
+      "evidenceLevel": "medium",
+      "irritancy": 0
+    },
+    {
+      "id": "grapeseed-oil",
+      "inciName": "Vitis Vinifera Seed Oil",
+      "commonNames": [
+        "Grapeseed oil",
+        "Grape seed oil"
+      ],
+      "rating": 1,
+      "category": "Emollient",
+      "categoryGroup": "plant_oil",
+      "function": [
+        "emollient",
+        "antioxidant"
+      ],
+      "description": "Light, non-comedogenic oil rich in linoleic acid. Good for oily and acne-prone skin.",
+      "skinTypeNotes": {
+        "oily": "safe",
+        "dry": "safe",
+        "sensitive": "safe",
+        "acneProne": "safe",
+        "normal": "safe"
+      },
+      "flags": [
+        "low_comedogenic",
+        "natural",
+        "antioxidant",
+        "omega_6"
+      ],
+      "evidenceLevel": "medium",
+      "irritancy": 0
+    },
+    {
+      "id": "sunflower-oil",
+      "inciName": "Helianthus Annuus Seed Oil",
+      "commonNames": [
+        "Sunflower oil",
+        "Sunflower seed oil"
+      ],
+      "rating": 0,
+      "category": "Emollient",
+      "categoryGroup": "plant_oil",
+      "function": [
+        "emollient"
+      ],
+      "description": "Non-comedogenic oil rich in linoleic acid. Light and well-tolerated.",
+      "skinTypeNotes": {
+        "oily": "safe",
+        "dry": "safe",
+        "sensitive": "safe",
+        "acneProne": "safe",
+        "normal": "safe"
+      },
+      "flags": [
+        "non_comedogenic",
+        "natural",
+        "omega_6"
+      ],
+      "evidenceLevel": "medium",
+      "irritancy": 0
+    },
+    {
+      "id": "safflower-oil",
+      "inciName": "Carthamus Tinctorius Seed Oil",
+      "commonNames": [
+        "Safflower oil",
+        "Safflower seed oil"
+      ],
+      "rating": 0,
+      "category": "Emollient",
+      "categoryGroup": "plant_oil",
+      "function": [
+        "emollient"
+      ],
+      "description": "Non-comedogenic oil very high in linoleic acid. Excellent for acne-prone skin.",
+      "skinTypeNotes": {
+        "oily": "safe",
+        "dry": "safe",
+        "sensitive": "safe",
+        "acneProne": "safe",
+        "normal": "safe"
+      },
+      "flags": [
+        "non_comedogenic",
+        "natural",
+        "omega_6"
+      ],
+      "evidenceLevel": "medium",
+      "irritancy": 0
+    },
+    {
+      "id": "rosehip-oil",
+      "inciName": "Rosa Canina Seed Oil",
+      "commonNames": [
+        "Rosehip oil",
+        "Rosehip seed oil",
+        "Dog rose oil"
+      ],
+      "rating": 1,
+      "category": "Emollient",
+      "categoryGroup": "plant_oil",
+      "function": [
+        "emollient",
+        "antioxidant"
+      ],
+      "description": "Low comedogenic oil rich in vitamin A and essential fatty acids. Good for most skin types.",
+      "skinTypeNotes": {
+        "oily": "safe",
+        "dry": "safe",
+        "sensitive": "caution",
+        "acneProne": "safe",
+        "normal": "safe"
+      },
+      "flags": [
+        "low_comedogenic",
+        "natural",
+        "vitamin_a",
+        "omega_3",
+        "omega_6"
+      ],
+      "evidenceLevel": "medium",
+      "irritancy": 0
+    },
+    {
+      "id": "glycerin",
+      "inciName": "Glycerin",
+      "commonNames": [
+        "Glycerine",
+        "Glycerol",
+        "Propane-1,2,3-triol"
+      ],
+      "rating": 0,
+      "category": "Humectant",
+      "categoryGroup": "polyol",
+      "function": [
+        "humectant",
+        "conditioner"
+      ],
+      "description": "Non-comedogenic humectant that draws moisture to the skin. Safe for all skin types.",
+      "skinTypeNotes": {
+        "oily": "safe",
+        "dry": "safe",
+        "sensitive": "safe",
+        "acneProne": "safe",
+        "normal": "safe"
+      },
+      "flags": [
+        "non_comedogenic",
+        "humectant"
+      ],
+      "evidenceLevel": "high",
+      "irritancy": 0
+    },
+    {
+      "id": "niacinamide",
+      "inciName": "Niacinamide",
+      "commonNames": [
+        "Vitamin B3",
+        "Nicotinamide",
+        "Vitamin B3 amide"
+      ],
+      "rating": 0,
+      "category": "Vitamin",
+      "categoryGroup": "vitamin",
+      "function": [
+        "conditioner",
+        "antioxidant"
+      ],
+      "description": "Non-comedogenic form of vitamin B3. Regulates sebum, reduces inflammation, and minimizes pores.",
+      "skinTypeNotes": {
+        "oily": "safe",
+        "dry": "safe",
+        "sensitive": "safe",
+        "acneProne": "safe",
+        "normal": "safe"
+      },
+      "flags": [
+        "non_comedogenic",
+        "sebum_regulating",
+        "anti_inflammatory",
+        "pore_minimizing"
+      ],
+      "evidenceLevel": "high",
+      "irritancy": 0
+    },
+    {
+      "id": "hyaluronic-acid",
+      "inciName": "Sodium Hyaluronate",
+      "commonNames": [
+        "Hyaluronic acid",
+        "HA",
+        "Hyaluronan"
+      ],
+      "rating": 0,
+      "category": "Humectant",
+      "categoryGroup": "glycosaminoglycan",
+      "function": [
+        "humectant",
+        "conditioner"
+      ],
+      "description": "Non-comedogenic humectant that can hold 1000x its weight in water. Excellent for all skin types.",
+      "skinTypeNotes": {
+        "oily": "safe",
+        "dry": "safe",
+        "sensitive": "safe",
+        "acneProne": "safe",
+        "normal": "safe"
+      },
+      "flags": [
+        "non_comedogenic",
+        "humectant",
+        "hydrating"
+      ],
+      "evidenceLevel": "high",
+      "irritancy": 0
+    },
+    {
+      "id": "dimethicone",
+      "inciName": "Dimethicone",
+      "commonNames": [
+        "Polydimethylsiloxane",
+        "PDMS",
+        "Silicone oil"
+      ],
+      "rating": 1,
+      "category": "Silicone",
+      "categoryGroup": "silicone",
+      "function": [
+        "emollient",
+        "occlusive",
+        "slip_agent"
+      ],
+      "description": "Low comedogenic silicone that provides slip and occlusion without heaviness. Generally well-tolerated.",
+      "skinTypeNotes": {
+        "oily": "safe",
+        "dry": "safe",
+        "sensitive": "safe",
+        "acneProne": "safe",
+        "normal": "safe"
+      },
+      "flags": [
+        "low_comedogenic",
+        "silicone",
+        "slip_agent"
+      ],
+      "evidenceLevel": "high",
+      "irritancy": 0
+    },
+    {
+      "id": "shea-butter",
+      "inciName": "Butyrospermum Parkii Butter",
+      "commonNames": [
+        "Shea butter",
+        "Shea",
+        "Karite butter"
+      ],
+      "rating": 0,
+      "category": "Emollient",
+      "categoryGroup": "plant_butter",
+      "function": [
+        "emollient",
+        "occlusive"
+      ],
+      "description": "Non-comedogenic plant butter rich in fatty acids and vitamins. Excellent emollient with anti-inflammatory properties.",
+      "skinTypeNotes": {
+        "oily": "safe",
+        "dry": "safe",
+        "sensitive": "safe",
+        "acneProne": "safe",
+        "normal": "safe"
+      },
+      "flags": [
+        "non_comedogenic",
+        "natural",
+        "anti_inflammatory",
+        "vitamin_e"
+      ],
+      "evidenceLevel": "high",
+      "irritancy": 0
+    },
+    {
+      "id": "aloe-vera",
+      "inciName": "Aloe Barbadensis Leaf Juice",
+      "commonNames": [
+        "Aloe vera",
+        "Aloe juice",
+        "Aloe extract"
+      ],
+      "rating": 0,
+      "category": "Soothing Agent",
+      "categoryGroup": "plant_extract",
+      "function": [
+        "soothing",
+        "conditioner",
+        "humectant"
+      ],
+      "description": "Non-comedogenic soothing agent with anti-inflammatory and hydrating properties.",
+      "skinTypeNotes": {
+        "oily": "safe",
+        "dry": "safe",
+        "sensitive": "safe",
+        "acneProne": "safe",
+        "normal": "safe"
+      },
+      "flags": [
+        "non_comedogenic",
+        "natural",
+        "anti_inflammatory",
+        "soothing"
+      ],
+      "evidenceLevel": "high",
+      "irritancy": 0
+    },
+    {
+      "id": "green-tea-extract",
+      "inciName": "Camellia Sinensis Leaf Extract",
+      "commonNames": [
+        "Green tea extract",
+        "Tea extract",
+        "EGCG"
+      ],
+      "rating": 0,
+      "category": "Antioxidant",
+      "categoryGroup": "plant_extract",
+      "function": [
+        "antioxidant",
+        "anti_inflammatory",
+        "soothing"
+      ],
+      "description": "Non-comedogenic antioxidant with anti-inflammatory and sebum-regulating properties.",
+      "skinTypeNotes": {
+        "oily": "safe",
+        "dry": "safe",
+        "sensitive": "safe",
+        "acneProne": "safe",
+        "normal": "safe"
+      },
+      "flags": [
+        "non_comedogenic",
+        "natural",
+        "antioxidant",
+        "anti_inflammatory",
+        "sebum_regulating"
+      ],
+      "evidenceLevel": "high",
+      "irritancy": 0
+    },
+    {
+      "id": "salicylic-acid",
+      "inciName": "Salicylic Acid",
+      "commonNames": [
+        "BHA",
+        "Beta hydroxy acid",
+        "2-Hydroxybenzoic acid"
+      ],
+      "rating": 0,
+      "category": "Exfoliant",
+      "categoryGroup": "hydroxy_acid",
+      "function": [
+        "exfoliant",
+        "anti_acne",
+        "pore_clearing"
+      ],
+      "description": "Non-comedogenic beta hydroxy acid that exfoliates inside pores. Excellent for acne-prone and oily skin.",
+      "skinTypeNotes": {
+        "oily": "safe",
+        "dry": "caution",
+        "sensitive": "caution",
+        "acneProne": "safe",
+        "normal": "safe"
+      },
+      "flags": [
+        "non_comedogenic",
+        "exfoliant",
+        "pore_clearing",
+        "anti_acne"
+      ],
+      "evidenceLevel": "high",
+      "irritancy": 0
+    },
+    {
+      "id": "tea-tree-oil",
+      "inciName": "Melaleuca Alternifolia Leaf Oil",
+      "commonNames": [
+        "Tea tree oil",
+        "Melaleuca oil",
+        "TTO"
+      ],
+      "rating": 0,
+      "category": "Antimicrobial",
+      "categoryGroup": "essential_oil",
+      "function": [
+        "antimicrobial",
+        "anti_inflammatory",
+        "antiseptic"
+      ],
+      "description": "Non-comedogenic essential oil with antimicrobial properties. Effective against acne-causing bacteria.",
+      "skinTypeNotes": {
+        "oily": "safe",
+        "dry": "caution",
+        "sensitive": "caution",
+        "acneProne": "safe",
+        "normal": "safe"
+      },
+      "flags": [
+        "non_comedogenic",
+        "natural",
+        "antimicrobial",
+        "anti_acne"
+      ],
+      "evidenceLevel": "high",
+      "irritancy": 0
+    },
+    {
+      "id": "zinc-oxide",
+      "inciName": "Zinc Oxide",
+      "commonNames": [
+        "ZnO",
+        "Zinc white"
+      ],
+      "rating": 0,
+      "category": "Mineral",
+      "categoryGroup": "mineral",
+      "function": [
+        "sunscreen",
+        "soothing",
+        "antimicrobial"
+      ],
+      "description": "Non-comedogenic mineral sunscreen agent with soothing and antimicrobial properties.",
+      "skinTypeNotes": {
+        "oily": "safe",
+        "dry": "safe",
+        "sensitive": "safe",
+        "acneProne": "safe",
+        "normal": "safe"
+      },
+      "flags": [
+        "non_comedogenic",
+        "mineral",
+        "sunscreen",
+        "soothing"
+      ],
+      "evidenceLevel": "high",
+      "irritancy": 0
+    },
+    {
+      "id": "titanium-dioxide",
+      "inciName": "Titanium Dioxide",
+      "commonNames": [
+        "TiO2",
+        "Titania"
+      ],
+      "rating": 0,
+      "category": "Mineral",
+      "categoryGroup": "mineral",
+      "function": [
+        "sunscreen",
+        "pigment"
+      ],
+      "description": "Non-comedogenic mineral sunscreen and pigment. Safe for all skin types.",
+      "skinTypeNotes": {
+        "oily": "safe",
+        "dry": "safe",
+        "sensitive": "safe",
+        "acneProne": "safe",
+        "normal": "safe"
+      },
+      "flags": [
+        "non_comedogenic",
+        "mineral",
+        "sunscreen",
+        "pigment"
+      ],
+      "evidenceLevel": "high",
+      "irritancy": 0
+    },
+    {
+      "id": "peg-16-lanolin",
+      "inciName": "PEG-16 Lanolin",
+      "commonNames": [
+        "Solulan 16",
+        "Ethoxylated lanolin"
+      ],
+      "rating": 4,
+      "irritancy": 3,
+      "category": "Emollient",
+      "categoryGroup": "lanolin_derivative",
+      "function": [
+        "emollient",
+        "conditioner"
+      ],
+      "description": "Ethoxylated lanolin with high comedogenic potential. Part of the problematic lanolin derivative family.",
+      "skinTypeNotes": {
+        "oily": "avoid",
+        "dry": "caution",
+        "sensitive": "avoid",
+        "acneProne": "avoid",
+        "normal": "caution"
+      },
+      "flags": [
+        "highly_comedogenic",
+        "lanolin_derivative",
+        "ethoxylated"
+      ],
+      "evidenceLevel": "high",
+      "sources": [
+        "Fulton 1989"
+      ]
+    },
+    {
+      "id": "laneth-10",
+      "inciName": "Laneth-10",
+      "commonNames": [
+        "PEG-10 lanolin",
+        "Ethoxylated lanolin alcohol"
+      ],
+      "rating": 2,
+      "irritancy": 1,
+      "category": "Emulsifier",
+      "categoryGroup": "lanolin_derivative",
+      "function": [
+        "emulsifier",
+        "surfactant"
+      ],
+      "description": "Ethoxylated lanolin alcohol with low comedogenic potential. Safer than lower ethoxylated versions.",
+      "skinTypeNotes": {
+        "oily": "safe",
+        "dry": "safe",
+        "sensitive": "safe",
+        "acneProne": "caution",
+        "normal": "safe"
+      },
+      "flags": [
+        "low_comedogenic",
+        "lanolin_derivative",
+        "ethoxylated"
+      ],
+      "evidenceLevel": "high",
+      "sources": [
+        "Fulton 1989"
+      ]
+    },
+    {
+      "id": "cetyl-acetate",
+      "inciName": "Cetyl Acetate",
+      "commonNames": [
+        "Hexadecyl acetate",
+        "Synthetic spermaceti"
+      ],
+      "rating": 4,
+      "irritancy": 2,
+      "category": "Emollient",
+      "categoryGroup": "fatty_acid_ester",
+      "function": [
+        "emollient",
+        "conditioner"
+      ],
+      "description": "Fatty acid ester with high comedogenic potential. Synthetic alternative to spermaceti wax.",
+      "skinTypeNotes": {
+        "oily": "avoid",
+        "dry": "caution",
+        "sensitive": "avoid",
+        "acneProne": "avoid",
+        "normal": "caution"
+      },
+      "flags": [
+        "highly_comedogenic"
+      ],
+      "evidenceLevel": "high",
+      "sources": [
+        "Fulton 1989"
+      ]
+    },
+    {
+      "id": "isostearyl-isostearate",
+      "inciName": "Isostearyl Isostearate",
+      "commonNames": [
+        "Isooctadecyl isooctadecanoate"
+      ],
+      "rating": 4,
+      "irritancy": 1,
+      "category": "Emollient",
+      "categoryGroup": "fatty_acid_ester",
+      "function": [
+        "emollient"
+      ],
+      "description": "Branched-chain fatty acid ester with high comedogenic potential. Used as emollient in cosmetics.",
+      "skinTypeNotes": {
+        "oily": "avoid",
+        "dry": "caution",
+        "sensitive": "avoid",
+        "acneProne": "avoid",
+        "normal": "caution"
+      },
+      "flags": [
+        "highly_comedogenic"
+      ],
+      "evidenceLevel": "high",
+      "sources": [
+        "Fulton 1989"
+      ]
+    },
+    {
+      "id": "myristyl-lactate",
+      "inciName": "Myristyl Lactate",
+      "commonNames": [
+        "Tetradecyl lactate"
+      ],
+      "rating": 4,
+      "irritancy": 2,
+      "category": "Emollient",
+      "categoryGroup": "fatty_acid_ester",
+      "function": [
+        "emollient",
+        "conditioner"
+      ],
+      "description": "Fatty acid ester with high comedogenic potential. Used as emollient and conditioning agent.",
+      "skinTypeNotes": {
+        "oily": "avoid",
+        "dry": "caution",
+        "sensitive": "avoid",
+        "acneProne": "avoid",
+        "normal": "caution"
+      },
+      "flags": [
+        "highly_comedogenic"
+      ],
+      "evidenceLevel": "high",
+      "sources": [
+        "Fulton 1989"
+      ]
+    },
+    {
+      "id": "stearyl-heptanoate",
+      "inciName": "Stearyl Heptanoate",
+      "commonNames": [
+        "Octadecyl heptanoate"
+      ],
+      "rating": 4,
+      "irritancy": 0,
+      "category": "Emollient",
+      "categoryGroup": "fatty_acid_ester",
+      "function": [
+        "emollient"
+      ],
+      "description": "Fatty acid ester with high comedogenic potential. Used as emollient in cosmetic formulations.",
+      "skinTypeNotes": {
+        "oily": "avoid",
+        "dry": "caution",
+        "sensitive": "avoid",
+        "acneProne": "avoid",
+        "normal": "caution"
+      },
+      "flags": [
+        "highly_comedogenic"
+      ],
+      "evidenceLevel": "high",
+      "sources": [
+        "Fulton 1989"
+      ]
+    },
+    {
+      "id": "isopropyl-lanolate",
+      "inciName": "Isopropyl Lanolate",
+      "commonNames": [
+        "Isopropyl lanolin fatty acid ester"
+      ],
+      "rating": 3,
+      "irritancy": 0,
+      "category": "Emollient",
+      "categoryGroup": "lanolin_derivative",
+      "function": [
+        "emollient",
+        "conditioner"
+      ],
+      "description": "Lanolin derivative with moderate comedogenic potential. Part of the isopropyl ester family.",
+      "skinTypeNotes": {
+        "oily": "avoid",
+        "dry": "caution",
+        "sensitive": "caution",
+        "acneProne": "avoid",
+        "normal": "caution"
+      },
+      "flags": [
+        "comedogenic",
+        "lanolin_derivative"
+      ],
+      "evidenceLevel": "medium",
+      "sources": [
+        "Fulton 1989"
+      ]
+    },
+    {
+      "id": "propylene-glycol",
+      "inciName": "Propylene Glycol",
+      "commonNames": [
+        "PG",
+        "1,2-Propanediol",
+        "Propane-1,2-diol"
+      ],
+      "rating": 0,
+      "irritancy": 0,
+      "category": "Humectant",
+      "categoryGroup": "polyol",
+      "function": [
+        "humectant",
+        "solvent",
+        "penetration_enhancer"
+      ],
+      "description": "Non-comedogenic humectant and solvent. Penetration enhancer that helps other ingredients absorb. Safe for most skin types but can be irritating at high concentrations.",
+      "skinTypeNotes": {
+        "oily": "safe",
+        "dry": "safe",
+        "sensitive": "caution",
+        "acneProne": "safe",
+        "normal": "safe"
+      },
+      "flags": [
+        "non_comedogenic",
+        "humectant",
+        "penetration_enhancer"
+      ],
+      "evidenceLevel": "high",
+      "sources": [
+        "Fulton 1989"
+      ]
+    },
+    {
+      "id": "butylene-glycol",
+      "inciName": "Butylene Glycol",
+      "commonNames": [
+        "BG",
+        "1,3-Butanediol",
+        "Butane-1,3-diol"
+      ],
+      "rating": 1,
+      "irritancy": 0,
+      "category": "Humectant",
+      "categoryGroup": "polyol",
+      "function": [
+        "humectant",
+        "solvent",
+        "conditioner"
+      ],
+      "description": "Very low comedogenic humectant and solvent. Gentler alternative to propylene glycol. Safe for most skin types.",
+      "skinTypeNotes": {
+        "oily": "safe",
+        "dry": "safe",
+        "sensitive": "safe",
+        "acneProne": "safe",
+        "normal": "safe"
+      },
+      "flags": [
+        "low_comedogenic",
+        "humectant"
+      ],
+      "evidenceLevel": "high",
+      "sources": [
+        "Fulton 1989"
+      ]
+    },
+    {
+      "id": "sodium-hyaluronate",
+      "inciName": "Sodium Hyaluronate",
+      "commonNames": [
+        "Hyaluronic acid salt",
+        "HA sodium salt"
+      ],
+      "rating": 0,
+      "irritancy": 0,
+      "category": "Humectant",
+      "categoryGroup": "glycosaminoglycan",
+      "function": [
+        "humectant",
+        "conditioner"
+      ],
+      "description": "Salt form of hyaluronic acid. Non-comedogenic humectant with excellent water-binding capacity. Different molecular weights penetrate different skin layers.",
+      "skinTypeNotes": {
+        "oily": "safe",
+        "dry": "safe",
+        "sensitive": "safe",
+        "acneProne": "safe",
+        "normal": "safe"
+      },
+      "flags": [
+        "non_comedogenic",
+        "humectant",
+        "hydrating"
+      ],
+      "evidenceLevel": "high",
+      "sources": [
+        "INCIDecoder"
+      ]
+    },
+    {
+      "id": "olive-oil",
+      "inciName": "Olea Europaea Fruit Oil",
+      "commonNames": [
+        "Olive oil",
+        "Extra virgin olive oil"
+      ],
+      "rating": 2,
+      "irritancy": 0,
+      "category": "Emollient",
+      "categoryGroup": "plant_oil",
+      "function": [
+        "emollient",
+        "antioxidant"
+      ],
+      "description": "Plant oil with low to moderate comedogenic potential. Rich in oleic acid. Rating varies by refinement level. Extra virgin has higher rating than refined.",
+      "skinTypeNotes": {
+        "oily": "caution",
+        "dry": "safe",
+        "sensitive": "safe",
+        "acneProne": "caution",
+        "normal": "safe"
+      },
+      "flags": [
+        "low_comedogenic",
+        "natural",
+        "omega_9"
+      ],
+      "evidenceLevel": "medium",
+      "sources": [
+        "Fulton 1989"
+      ]
+    },
+    {
+      "id": "sweet-almond-oil",
+      "inciName": "Prunus Amygdalus Dulcis Oil",
+      "commonNames": [
+        "Sweet almond oil",
+        "Almond oil"
+      ],
+      "rating": 2,
+      "irritancy": 0,
+      "category": "Emollient",
+      "categoryGroup": "plant_oil",
+      "function": [
+        "emollient",
+        "conditioner"
+      ],
+      "description": "Light plant oil with low comedogenic potential. Rich in vitamin E and fatty acids. Generally well-tolerated.",
+      "skinTypeNotes": {
+        "oily": "safe",
+        "dry": "safe",
+        "sensitive": "safe",
+        "acneProne": "safe",
+        "normal": "safe"
+      },
+      "flags": [
+        "low_comedogenic",
+        "natural",
+        "vitamin_e"
+      ],
+      "evidenceLevel": "medium",
+      "sources": [
+        "INCIDecoder"
+      ]
+    },
+    {
+      "id": "apricot-kernel-oil",
+      "inciName": "Prunus Armeniaca Kernel Oil",
+      "commonNames": [
+        "Apricot kernel oil",
+        "Apricot oil"
+      ],
+      "rating": 2,
+      "irritancy": 0,
+      "category": "Emollient",
+      "categoryGroup": "plant_oil",
+      "function": [
+        "emollient",
+        "conditioner"
+      ],
+      "description": "Light plant oil with low comedogenic potential. Similar to almond oil. Good for sensitive skin.",
+      "skinTypeNotes": {
+        "oily": "safe",
+        "dry": "safe",
+        "sensitive": "safe",
+        "acneProne": "safe",
+        "normal": "safe"
+      },
+      "flags": [
+        "low_comedogenic",
+        "natural"
+      ],
+      "evidenceLevel": "medium",
+      "sources": [
+        "Platinum Skincare"
+      ]
+    },
+    {
+      "id": "sesame-oil",
+      "inciName": "Sesamum Indicum Seed Oil",
+      "commonNames": [
+        "Sesame oil",
+        "Sesame seed oil"
+      ],
+      "rating": 2,
+      "irritancy": 0,
+      "category": "Emollient",
+      "categoryGroup": "plant_oil",
+      "function": [
+        "emollient",
+        "antioxidant"
+      ],
+      "description": "Plant oil with low comedogenic potential. Rich in sesamin and sesamolin. Used in traditional medicine.",
+      "skinTypeNotes": {
+        "oily": "safe",
+        "dry": "safe",
+        "sensitive": "safe",
+        "acneProne": "caution",
+        "normal": "safe"
+      },
+      "flags": [
+        "low_comedogenic",
+        "natural",
+        "antioxidant"
+      ],
+      "evidenceLevel": "medium",
+      "sources": [
+        "Fulton 1989"
+      ]
+    },
+    {
+      "id": "avocado-oil",
+      "inciName": "Persea Gratissima Oil",
+      "commonNames": [
+        "Avocado oil"
+      ],
+      "rating": 2,
+      "irritancy": 0,
+      "category": "Emollient",
+      "categoryGroup": "plant_oil",
+      "function": [
+        "emollient",
+        "antioxidant"
+      ],
+      "description": "Rich plant oil with low to moderate comedogenic potential. High in oleic acid. Rating varies by source (2-3).",
+      "skinTypeNotes": {
+        "oily": "caution",
+        "dry": "safe",
+        "sensitive": "safe",
+        "acneProne": "caution",
+        "normal": "safe"
+      },
+      "flags": [
+        "low_comedogenic",
+        "natural",
+        "vitamin_e"
+      ],
+      "evidenceLevel": "medium",
+      "sources": [
+        "Fulton 1989"
+      ]
+    },
+    {
+      "id": "peanut-oil",
+      "inciName": "Arachis Hypogaea Oil",
+      "commonNames": [
+        "Peanut oil",
+        "Groundnut oil"
+      ],
+      "rating": 2,
+      "irritancy": 0,
+      "category": "Emollient",
+      "categoryGroup": "plant_oil",
+      "function": [
+        "emollient"
+      ],
+      "description": "Plant oil with low comedogenic potential. Rich in fatty acids. Caution for those with nut allergies.",
+      "skinTypeNotes": {
+        "oily": "safe",
+        "dry": "safe",
+        "sensitive": "caution",
+        "acneProne": "safe",
+        "normal": "safe"
+      },
+      "flags": [
+        "low_comedogenic",
+        "natural",
+        "allergen"
+      ],
+      "evidenceLevel": "medium",
+      "sources": [
+        "Fulton 1989"
+      ]
+    },
+    {
+      "id": "corn-oil",
+      "inciName": "Zea Mays Oil",
+      "commonNames": [
+        "Corn oil",
+        "Maize oil"
+      ],
+      "rating": 3,
+      "irritancy": 0,
+      "category": "Emollient",
+      "categoryGroup": "plant_oil",
+      "function": [
+        "emollient"
+      ],
+      "description": "Plant oil with moderate comedogenic potential. High in linoleic acid but still moderately comedogenic.",
+      "skinTypeNotes": {
+        "oily": "avoid",
+        "dry": "caution",
+        "sensitive": "caution",
+        "acneProne": "avoid",
+        "normal": "caution"
+      },
+      "flags": [
+        "comedogenic",
+        "natural",
+        "omega_6"
+      ],
+      "evidenceLevel": "medium",
+      "sources": [
+        "Fulton 1989"
+      ]
+    },
+    {
+      "id": "beeswax",
+      "inciName": "Cera Alba",
+      "commonNames": [
+        "Beeswax",
+        "White wax",
+        "Yellow wax"
+      ],
+      "rating": 2,
+      "irritancy": 0,
+      "category": "Emollient",
+      "categoryGroup": "wax",
+      "function": [
+        "emollient",
+        "thickener",
+        "occlusive"
+      ],
+      "description": "Natural wax with low comedogenic potential. Rating varies by source (0-2). Generally safe but can be occlusive. Used as thickener and emollient.",
+      "skinTypeNotes": {
+        "oily": "caution",
+        "dry": "safe",
+        "sensitive": "safe",
+        "acneProne": "caution",
+        "normal": "safe"
+      },
+      "flags": [
+        "low_comedogenic",
+        "natural",
+        "occlusive"
+      ],
+      "evidenceLevel": "medium",
+      "sources": [
+        "Platinum Skincare"
+      ]
+    },
+    {
+      "id": "mineral-oil",
+      "inciName": "Paraffinum Liquidum",
+      "commonNames": [
+        "Mineral oil",
+        "Liquid paraffin",
+        "White mineral oil"
+      ],
+      "rating": 0,
+      "irritancy": 0,
+      "category": "Emollient",
+      "categoryGroup": "mineral_oil",
+      "function": [
+        "emollient",
+        "occlusive"
+      ],
+      "description": "Non-comedogenic mineral oil. Cosmetic-grade only. Excellent occlusive. Often wrongly feared due to confusion with industrial-grade mineral oil. Safe for all skin types.",
+      "skinTypeNotes": {
+        "oily": "safe",
+        "dry": "safe",
+        "sensitive": "safe",
+        "acneProne": "safe",
+        "normal": "safe"
+      },
+      "flags": [
+        "non_comedogenic",
+        "mineral",
+        "occlusive"
+      ],
+      "evidenceLevel": "high",
+      "sources": [
+        "Fulton 1989",
+        "INCIDecoder"
+      ]
+    },
+    {
+      "id": "petrolatum",
+      "inciName": "Petrolatum",
+      "commonNames": [
+        "Petroleum jelly",
+        "Vaseline",
+        "Mineral jelly"
+      ],
+      "rating": 0,
+      "irritancy": 0,
+      "category": "Emollient",
+      "categoryGroup": "mineral_oil",
+      "function": [
+        "emollient",
+        "occlusive"
+      ],
+      "description": "Non-comedogenic occlusive. Rating 0. Used in wound care and eczema treatment. Excellent barrier repair. Often wrongly feared.",
+      "skinTypeNotes": {
+        "oily": "safe",
+        "dry": "safe",
+        "sensitive": "safe",
+        "acneProne": "safe",
+        "normal": "safe"
+      },
+      "flags": [
+        "non_comedogenic",
+        "mineral",
+        "occlusive"
+      ],
+      "evidenceLevel": "high",
+      "sources": [
+        "Fulton 1989",
+        "INCIDecoder"
+      ]
+    },
+    {
+      "id": "carrageenan",
+      "inciName": "Carrageenan",
+      "commonNames": [
+        "Chondrus Crispus Extract",
+        "Irish moss extract",
+        "Seaweed extract"
+      ],
+      "rating": 5,
+      "irritancy": 2,
+      "category": "Thickener",
+      "categoryGroup": "seaweed_extract",
+      "function": [
+        "thickener",
+        "emulsifier"
+      ],
+      "description": "Seaweed-derived thickener with very high comedogenic potential. Can be problematic for acne-prone skin. Used in food and cosmetics.",
+      "skinTypeNotes": {
+        "oily": "avoid",
+        "dry": "caution",
+        "sensitive": "avoid",
+        "acneProne": "avoid",
+        "normal": "caution"
+      },
+      "flags": [
+        "highly_comedogenic",
+        "natural",
+        "seaweed"
+      ],
+      "evidenceLevel": "high",
+      "sources": [
+        "Platinum Skincare"
+      ]
+    },
+    {
+      "id": "algae-extract",
+      "inciName": "Algae Extract",
+      "commonNames": [
+        "Seaweed extract",
+        "Algin",
+        "Alginate",
+        "Alginic acid"
+      ],
+      "rating": 5,
+      "irritancy": 4,
+      "category": "Thickener",
+      "categoryGroup": "seaweed_extract",
+      "function": [
+        "thickener",
+        "conditioner",
+        "antioxidant"
+      ],
+      "description": "Seaweed-derived extract with very high comedogenic potential. Rich in iodine which can trigger breakouts. Used as thickener and conditioner.",
+      "skinTypeNotes": {
+        "oily": "avoid",
+        "dry": "caution",
+        "sensitive": "avoid",
+        "acneProne": "avoid",
+        "normal": "caution"
+      },
+      "flags": [
+        "highly_comedogenic",
+        "natural",
+        "seaweed",
+        "iodine"
+      ],
+      "evidenceLevel": "high",
+      "sources": [
+        "Platinum Skincare"
+      ]
+    },
+    {
+      "id": "sulfur",
+      "inciName": "Sulfur",
+      "commonNames": [
+        "Brimstone",
+        "Sulphur",
+        "Precipitated sulfur"
+      ],
+      "rating": 3,
+      "irritancy": 0,
+      "category": "Anti-Acne Agent",
+      "categoryGroup": "mineral",
+      "function": [
+        "anti_acne",
+        "antimicrobial",
+        "keratolytic"
+      ],
+      "description": "Mineral with moderate comedogenic rating but excellent anti-acne properties. Keratolytic agent that helps unclog pores. Used in acne treatments.",
+      "skinTypeNotes": {
+        "oily": "safe",
+        "dry": "caution",
+        "sensitive": "caution",
+        "acneProne": "safe",
+        "normal": "safe"
+      },
+      "flags": [
+        "comedogenic",
+        "anti_acne",
+        "antimicrobial",
+        "mineral"
+      ],
+      "evidenceLevel": "high",
+      "sources": [
+        "Fulton 1989"
+      ]
+    },
+    {
+      "id": "allantoin",
+      "inciName": "Allantoin",
+      "commonNames": [
+        "Comfrey extract",
+        "Urea derivative"
+      ],
+      "rating": 0,
+      "irritancy": 0,
+      "category": "Soothing Agent",
+      "categoryGroup": "plant_extract",
+      "function": [
+        "soothing",
+        "skin_protecting",
+        "keratolytic"
+      ],
+      "description": "Non-comedogenic soothing agent derived from comfrey. Promotes skin healing and cell regeneration. Safe for all skin types.",
+      "skinTypeNotes": {
+        "oily": "safe",
+        "dry": "safe",
+        "sensitive": "safe",
+        "acneProne": "safe",
+        "normal": "safe"
+      },
+      "flags": [
+        "non_comedogenic",
+        "natural",
+        "soothing",
+        "healing"
+      ],
+      "evidenceLevel": "high",
+      "sources": [
+        "Platinum Skincare"
+      ]
+    },
+    {
+      "id": "panthenol",
+      "inciName": "Panthenol",
+      "commonNames": [
+        "Vitamin B5",
+        "Provitamin B5",
+        "D-Panthenol"
+      ],
+      "rating": 0,
+      "irritancy": 0,
+      "category": "Vitamin",
+      "categoryGroup": "vitamin",
+      "function": [
+        "conditioner",
+        "humectant",
+        "soothing"
+      ],
+      "description": "Non-comedogenic form of vitamin B5. Humectant and soothing agent. Promotes wound healing and skin barrier repair. Safe for all skin types.",
+      "skinTypeNotes": {
+        "oily": "safe",
+        "dry": "safe",
+        "sensitive": "safe",
+        "acneProne": "safe",
+        "normal": "safe"
+      },
+      "flags": [
+        "non_comedogenic",
+        "humectant",
+        "soothing",
+        "healing"
+      ],
+      "evidenceLevel": "high",
+      "sources": [
+        "INCIDecoder"
+      ]
+    },
+    {
+      "id": "centella-asiatica",
+      "inciName": "Centella Asiatica Extract",
+      "commonNames": [
+        "Gotu kola",
+        "Tiger grass",
+        "Cica"
+      ],
+      "rating": 0,
+      "irritancy": 0,
+      "category": "Soothing Agent",
+      "categoryGroup": "plant_extract",
+      "function": [
+        "soothing",
+        "anti_inflammatory",
+        "antioxidant"
+      ],
+      "description": "Non-comedogenic plant extract with powerful soothing and healing properties. Rich in asiaticoside and madecassoside. Popular in K-beauty (cica).",
+      "skinTypeNotes": {
+        "oily": "safe",
+        "dry": "safe",
+        "sensitive": "safe",
+        "acneProne": "safe",
+        "normal": "safe"
+      },
+      "flags": [
+        "non_comedogenic",
+        "natural",
+        "anti_inflammatory",
+        "soothing",
+        "healing"
+      ],
+      "evidenceLevel": "high",
+      "sources": [
+        "INCIDecoder"
+      ]
+    },
+    {
+      "id": "ceramide",
+      "inciName": "Ceramide NP",
+      "commonNames": [
+        "Ceramide 3",
+        "Ceramide NP",
+        "N-stearoyl phytosphingosine"
+      ],
+      "rating": 0,
+      "irritancy": 0,
+      "category": "Lipid",
+      "categoryGroup": "ceramide",
+      "function": [
+        "skin_identical",
+        "barrier_repair",
+        "conditioner"
+      ],
+      "description": "Non-comedogenic skin-identical lipid. Essential component of skin barrier. Helps repair damaged barrier and retain moisture. Safe for all skin types.",
+      "skinTypeNotes": {
+        "oily": "safe",
+        "dry": "safe",
+        "sensitive": "safe",
+        "acneProne": "safe",
+        "normal": "safe"
+      },
+      "flags": [
+        "non_comedogenic",
+        "skin_identical",
+        "barrier_repair"
+      ],
+      "evidenceLevel": "high",
+      "sources": [
+        "INCIDecoder"
+      ]
+    },
+    {
+      "id": "peptide",
+      "inciName": "Palmitoyl Pentapeptide-4",
+      "commonNames": [
+        "Matrixyl",
+        "Peptide",
+        "Signal peptide"
+      ],
+      "rating": 0,
+      "irritancy": 0,
+      "category": "Peptide",
+      "categoryGroup": "peptide",
+      "function": [
+        "anti_ageing",
+        "cell_communicating"
+      ],
+      "description": "Non-comedogenic peptide that stimulates collagen production. Cell-communicating ingredient. Safe for all skin types including acne-prone.",
+      "skinTypeNotes": {
+        "oily": "safe",
+        "dry": "safe",
+        "sensitive": "safe",
+        "acneProne": "safe",
+        "normal": "safe"
+      },
+      "flags": [
+        "non_comedogenic",
+        "anti_ageing",
+        "cell_communicating"
+      ],
+      "evidenceLevel": "high",
+      "sources": [
+        "INCIDecoder"
+      ]
+    },
+    {
+      "id": "retinol",
+      "inciName": "Retinol",
+      "commonNames": [
+        "Vitamin A",
+        "Retinoid",
+        "Vitamin A alcohol"
+      ],
+      "rating": 0,
+      "irritancy": 0,
+      "category": "Vitamin",
+      "categoryGroup": "retinoid",
+      "function": [
+        "anti_ageing",
+        "cell_communicating",
+        "anti_acne"
+      ],
+      "description": "Non-comedogenic vitamin A derivative. Gold standard for anti-ageing and acne treatment. Can cause irritation during adjustment period (retinization).",
+      "skinTypeNotes": {
+        "oily": "safe",
+        "dry": "caution",
+        "sensitive": "caution",
+        "acneProne": "safe",
+        "normal": "safe"
+      },
+      "flags": [
+        "non_comedogenic",
+        "anti_ageing",
+        "anti_acne",
+        "cell_communicating"
+      ],
+      "evidenceLevel": "high",
+      "sources": [
+        "INCIDecoder"
+      ]
+    },
+    {
+      "id": "azelaic-acid",
+      "inciName": "Azelaic Acid",
+      "commonNames": [
+        "Dicarboxylic acid",
+        "Azelaic acid"
+      ],
+      "rating": 0,
+      "irritancy": 0,
+      "category": "Anti-Acne Agent",
+      "categoryGroup": "dicarboxylic_acid",
+      "function": [
+        "anti_acne",
+        "anti_inflammatory",
+        "antimicrobial"
+      ],
+      "description": "Non-comedogenic dicarboxylic acid. Excellent for acne and rosacea. Antimicrobial and anti-inflammatory properties. Safe for all skin types.",
+      "skinTypeNotes": {
+        "oily": "safe",
+        "dry": "safe",
+        "sensitive": "safe",
+        "acneProne": "safe",
+        "normal": "safe"
+      },
+      "flags": [
+        "non_comedogenic",
+        "anti_acne",
+        "anti_inflammatory",
+        "antimicrobial"
+      ],
+      "evidenceLevel": "high",
+      "sources": [
+        "INCIDecoder"
+      ]
+    },
+    {
+      "id": "mandelic-acid",
+      "inciName": "Mandelic Acid",
+      "commonNames": [
+        "Alpha hydroxy acid",
+        "AHA",
+        "Amygdalic acid"
+      ],
+      "rating": 0,
+      "irritancy": 0,
+      "category": "Exfoliant",
+      "categoryGroup": "hydroxy_acid",
+      "function": [
+        "exfoliant",
+        "anti_acne",
+        "anti_ageing"
+      ],
+      "description": "Non-comedogenic alpha hydroxy acid. Larger molecule than glycolic acid, gentler on skin. Good for sensitive and acne-prone skin.",
+      "skinTypeNotes": {
+        "oily": "safe",
+        "dry": "safe",
+        "sensitive": "caution",
+        "acneProne": "safe",
+        "normal": "safe"
+      },
+      "flags": [
+        "non_comedogenic",
+        "exfoliant",
+        "anti_acne",
+        "gentle"
+      ],
+      "evidenceLevel": "high",
+      "sources": [
+        "INCIDecoder"
+      ]
+    },
+    {
+      "id": "glycolic-acid",
+      "inciName": "Glycolic Acid",
+      "commonNames": [
+        "Alpha hydroxy acid",
+        "AHA",
+        "Hydroxyacetic acid"
+      ],
+      "rating": 0,
+      "irritancy": 0,
+      "category": "Exfoliant",
+      "categoryGroup": "hydroxy_acid",
+      "function": [
+        "exfoliant",
+        "anti_ageing",
+        "pore_clearing"
+      ],
+      "description": "Non-comedogenic alpha hydroxy acid. Smallest AHA molecule, penetrates deeply. Excellent for anti-ageing and pore clearing. Can be irritating at high concentrations.",
+      "skinTypeNotes": {
+        "oily": "safe",
+        "dry": "caution",
+        "sensitive": "caution",
+        "acneProne": "safe",
+        "normal": "safe"
+      },
+      "flags": [
+        "non_comedogenic",
+        "exfoliant",
+        "anti_ageing",
+        "pore_clearing"
+      ],
+      "evidenceLevel": "high",
+      "sources": [
+        "INCIDecoder"
+      ]
+    },
+    {
+      "id": "lactic-acid",
+      "inciName": "Lactic Acid",
+      "commonNames": [
+        "Alpha hydroxy acid",
+        "AHA",
+        "Milk acid"
+      ],
+      "rating": 0,
+      "irritancy": 0,
+      "category": "Exfoliant",
+      "categoryGroup": "hydroxy_acid",
+      "function": [
+        "exfoliant",
+        "humectant",
+        "anti_ageing"
+      ],
+      "description": "Non-comedogenic alpha hydroxy acid. Gentler than glycolic acid. Also acts as humectant. Good for sensitive skin.",
+      "skinTypeNotes": {
+        "oily": "safe",
+        "dry": "safe",
+        "sensitive": "caution",
+        "acneProne": "safe",
+        "normal": "safe"
+      },
+      "flags": [
+        "non_comedogenic",
+        "exfoliant",
+        "humectant",
+        "gentle"
+      ],
+      "evidenceLevel": "high",
+      "sources": [
+        "INCIDecoder"
+      ]
+    },
+    {
+      "id": "vitamin-c",
+      "inciName": "Ascorbic Acid",
+      "commonNames": [
+        "Vitamin C",
+        "L-Ascorbic acid",
+        "Pure vitamin C"
+      ],
+      "rating": 0,
+      "irritancy": 0,
+      "category": "Vitamin",
+      "categoryGroup": "vitamin",
+      "function": [
+        "antioxidant",
+        "anti_ageing",
+        "brightening"
+      ],
+      "description": "Non-comedogenic pure vitamin C. Potent antioxidant. Brightens skin and stimulates collagen. Unstable, requires proper formulation. Can be irritating at high concentrations.",
+      "skinTypeNotes": {
+        "oily": "safe",
+        "dry": "safe",
+        "sensitive": "caution",
+        "acneProne": "safe",
+        "normal": "safe"
+      },
+      "flags": [
+        "non_comedogenic",
+        "antioxidant",
+        "brightening",
+        "unstable"
+      ],
+      "evidenceLevel": "high",
+      "sources": [
+        "INCIDecoder"
+      ]
+    },
+    {
+      "id": "vitamin-e",
+      "inciName": "Tocopherol",
+      "commonNames": [
+        "Vitamin E",
+        "Tocopherol",
+        "Alpha-tocopherol"
+      ],
+      "rating": 0,
+      "irritancy": 0,
+      "category": "Vitamin",
+      "categoryGroup": "vitamin",
+      "function": [
+        "antioxidant",
+        "conditioner"
+      ],
+      "description": "Non-comedogenic vitamin E. Potent antioxidant. Protects skin from oxidative stress. Stable and well-tolerated. Note: Tocopheryl acetate (ester form) may be comedogenic for some.",
+      "skinTypeNotes": {
+        "oily": "safe",
+        "dry": "safe",
+        "sensitive": "safe",
+        "acneProne": "safe",
+        "normal": "safe"
+      },
+      "flags": [
+        "non_comedogenic",
+        "antioxidant",
+        "conditioner"
+      ],
+      "evidenceLevel": "high",
+      "sources": [
+        "INCIDecoder"
+      ]
+    },
+    {
+      "id": "bisabolol",
+      "inciName": "Bisabolol",
+      "commonNames": [
+        "Alpha-bisabolol",
+        "Levomenol",
+        "Chamomile extract"
+      ],
+      "rating": 0,
+      "irritancy": 0,
+      "category": "Soothing Agent",
+      "categoryGroup": "plant_extract",
+      "function": [
+        "soothing",
+        "anti_inflammatory",
+        "antimicrobial"
+      ],
+      "description": "Non-comedogenic soothing agent from chamomile. Anti-inflammatory and antimicrobial properties. Excellent for sensitive and irritated skin.",
+      "skinTypeNotes": {
+        "oily": "safe",
+        "dry": "safe",
+        "sensitive": "safe",
+        "acneProne": "safe",
+        "normal": "safe"
+      },
+      "flags": [
+        "non_comedogenic",
+        "natural",
+        "anti_inflammatory",
+        "soothing"
+      ],
+      "evidenceLevel": "high",
+      "sources": [
+        "INCIDecoder"
+      ]
+    },
+    {
+      "id": "beta-glucan",
+      "inciName": "Beta-Glucan",
+      "commonNames": [
+        "Oat beta-glucan",
+        "Yeast beta-glucan",
+        "Polysaccharide"
+      ],
+      "rating": 0,
+      "irritancy": 0,
+      "category": "Soothing Agent",
+      "categoryGroup": "polysaccharide",
+      "function": [
+        "soothing",
+        "antioxidant",
+        "conditioner"
+      ],
+      "description": "Non-comedogenic polysaccharide with soothing and antioxidant properties. Derived from oats or yeast. Excellent for sensitive skin.",
+      "skinTypeNotes": {
+        "oily": "safe",
+        "dry": "safe",
+        "sensitive": "safe",
+        "acneProne": "safe",
+        "normal": "safe"
+      },
+      "flags": [
+        "non_comedogenic",
+        "soothing",
+        "antioxidant"
+      ],
+      "evidenceLevel": "high",
+      "sources": [
+        "INCIDecoder"
+      ]
+    },
+    {
+      "id": "urea",
+      "inciName": "Urea",
+      "commonNames": [
+        "Carbamide",
+        "Urea"
+      ],
+      "rating": 0,
+      "irritancy": 0,
+      "category": "Humectant",
+      "categoryGroup": "natural_moisturizing_factor",
+      "function": [
+        "humectant",
+        "exfoliant",
+        "skin_identical"
+      ],
+      "description": "Non-comedogenic natural moisturizing factor (NMF). Humectant and mild exfoliant. At concentrations above 10%, acts as keratolytic. Safe for all skin types.",
+      "skinTypeNotes": {
+        "oily": "safe",
+        "dry": "safe",
+        "sensitive": "safe",
+        "acneProne": "safe",
+        "normal": "safe"
+      },
+      "flags": [
+        "non_comedogenic",
+        "humectant",
+        "skin_identical",
+        "exfoliant"
+      ],
+      "evidenceLevel": "high",
+      "sources": [
+        "INCIDecoder"
+      ]
+    },
+    {
+      "id": "ceramide-ap",
+      "inciName": "Ceramide AP",
+      "commonNames": [
+        "Ceramide 6",
+        "Ceramide AP"
+      ],
+      "rating": 0,
+      "irritancy": 0,
+      "category": "Lipid",
+      "categoryGroup": "ceramide",
+      "function": [
+        "skin_identical",
+        "barrier_repair",
+        "conditioner"
+      ],
+      "description": "Non-comedogenic skin-identical lipid. Essential component of skin barrier. Helps repair damaged barrier. Safe for all skin types.",
+      "skinTypeNotes": {
+        "oily": "safe",
+        "dry": "safe",
+        "sensitive": "safe",
+        "acneProne": "safe",
+        "normal": "safe"
+      },
+      "flags": [
+        "non_comedogenic",
+        "skin_identical",
+        "barrier_repair"
+      ],
+      "evidenceLevel": "high",
+      "sources": [
+        "INCIDecoder"
+      ]
+    },
+    {
+      "id": "cholesterol",
+      "inciName": "Cholesterol",
+      "commonNames": [
+        "Cholesterol",
+        "Skin lipid"
+      ],
+      "rating": 0,
+      "irritancy": 0,
+      "category": "Lipid",
+      "categoryGroup": "sterol",
+      "function": [
+        "emollient",
+        "skin_identical",
+        "barrier_repair"
+      ],
+      "description": "Non-comedogenic skin-identical lipid. Essential component of skin barrier. Often combined with ceramides and fatty acids for barrier repair.",
+      "skinTypeNotes": {
+        "oily": "safe",
+        "dry": "safe",
+        "sensitive": "safe",
+        "acneProne": "safe",
+        "normal": "safe"
+      },
+      "flags": [
+        "non_comedogenic",
+        "skin_identical",
+        "barrier_repair"
+      ],
+      "evidenceLevel": "high",
+      "sources": [
+        "INCIDecoder"
+      ]
+    },
+    {
+      "id": "sodium-pca",
+      "inciName": "Sodium PCA",
+      "commonNames": [
+        "Pyrrolidone carboxylic acid sodium salt",
+        "NMF"
+      ],
+      "rating": 0,
+      "irritancy": 0,
+      "category": "Humectant",
+      "categoryGroup": "natural_moisturizing_factor",
+      "function": [
+        "humectant",
+        "skin_identical"
+      ],
+      "description": "Non-comedogenic natural moisturizing factor. Excellent humectant. Part of skin's natural moisture barrier. Safe for all skin types.",
+      "skinTypeNotes": {
+        "oily": "safe",
+        "dry": "safe",
+        "sensitive": "safe",
+        "acneProne": "safe",
+        "normal": "safe"
+      },
+      "flags": [
+        "non_comedogenic",
+        "humectant",
+        "skin_identical"
+      ],
+      "evidenceLevel": "high",
+      "sources": [
+        "INCIDecoder"
+      ]
+    },
+    {
+      "id": "phytosphingosine",
+      "inciName": "Phytosphingosine",
+      "commonNames": [
+        "Sphingoid base",
+        "Skin lipid"
+      ],
+      "rating": 0,
+      "irritancy": 0,
+      "category": "Lipid",
+      "categoryGroup": "sphingolipid",
+      "function": [
+        "skin_identical",
+        "antimicrobial",
+        "conditioner"
+      ],
+      "description": "Non-comedogenic skin-identical lipid. Precursor to ceramides. Has antimicrobial properties. Safe for all skin types.",
+      "skinTypeNotes": {
+        "oily": "safe",
+        "dry": "safe",
+        "sensitive": "safe",
+        "acneProne": "safe",
+        "normal": "safe"
+      },
+      "flags": [
+        "non_comedogenic",
+        "skin_identical",
+        "antimicrobial"
+      ],
+      "evidenceLevel": "high",
+      "sources": [
+        "INCIDecoder"
+      ]
+    },
+    {
+      "id": "aqua",
+      "inciName": "Aqua",
+      "commonNames": [
+        "Water",
+        "Eau",
+        "Purified Water",
+        "Deionized Water"
+      ],
+      "rating": 0,
+      "irritancy": 0,
+      "category": "Solvent",
+      "categoryGroup": "water",
+      "function": [
+        "solvent",
+        "hydration"
+      ],
+      "description": "Non-comedogenic water. Universal solvent and hydrator. Base ingredient in most skincare formulations.",
+      "skinTypeNotes": {
+        "oily": "safe",
+        "dry": "safe",
+        "sensitive": "safe",
+        "acneProne": "safe",
+        "normal": "safe"
+      },
+      "flags": [
+        "non_comedogenic",
+        "essential"
+      ],
+      "evidenceLevel": "high",
+      "sources": [
+        "INCIDecoder"
+      ]
+    },
+    {
+      "id": "carbomer",
+      "inciName": "Carbomer",
+      "commonNames": [
+        "Carbopol",
+        "Polyacrylic acid"
+      ],
+      "rating": 0,
+      "irritancy": 0,
+      "category": "Thickener",
+      "categoryGroup": "polymer",
+      "function": [
+        "thickener",
+        "emulsion_stabilizer"
+      ],
+      "description": "Non-comedogenic polymer thickener. Creates gel textures. Neutralized with bases like triethanolamine or sodium hydroxide.",
+      "skinTypeNotes": {
+        "oily": "safe",
+        "dry": "safe",
+        "sensitive": "safe",
+        "acneProne": "safe",
+        "normal": "safe"
+      },
+      "flags": [
+        "non_comedogenic",
+        "thickener"
+      ],
+      "evidenceLevel": "high",
+      "sources": [
+        "Fulton 1989"
+      ]
+    },
+    {
+      "id": "xanthan-gum",
+      "inciName": "Xanthan Gum",
+      "commonNames": [
+        "Xanthan",
+        "Corn sugar gum"
+      ],
+      "rating": 0,
+      "irritancy": 0,
+      "category": "Thickener",
+      "categoryGroup": "polysaccharide",
+      "function": [
+        "thickener",
+        "emulsion_stabilizer",
+        "binder"
+      ],
+      "description": "Non-comedogenic polysaccharide thickener. Fermented from corn sugar. Used to stabilize emulsions and add texture.",
+      "skinTypeNotes": {
+        "oily": "safe",
+        "dry": "safe",
+        "sensitive": "safe",
+        "acneProne": "safe",
+        "normal": "safe"
+      },
+      "flags": [
+        "non_comedogenic",
+        "thickener",
+        "natural"
+      ],
+      "evidenceLevel": "high",
+      "sources": [
+        "INCIDecoder"
+      ]
+    },
+    {
+      "id": "phenoxyethanol",
+      "inciName": "Phenoxyethanol",
+      "commonNames": [
+        "2-Phenoxyethanol",
+        "Ethylene glycol phenyl ether"
+      ],
+      "rating": 0,
+      "irritancy": 0,
+      "category": "Preservative",
+      "categoryGroup": "preservative",
+      "function": [
+        "preservative",
+        "antimicrobial"
+      ],
+      "description": "Non-comedogenic preservative. Broad-spectrum antimicrobial. One of the most common preservatives in cosmetics. Safe at typical concentrations (<1%).",
+      "skinTypeNotes": {
+        "oily": "safe",
+        "dry": "safe",
+        "sensitive": "caution",
+        "acneProne": "safe",
+        "normal": "safe"
+      },
+      "flags": [
+        "non_comedogenic",
+        "preservative"
+      ],
+      "evidenceLevel": "high",
+      "sources": [
+        "INCIDecoder"
+      ]
+    },
+    {
+      "id": "ethylhexylglycerin",
+      "inciName": "Ethylhexylglycerin",
+      "commonNames": [
+        "Octoxyglycerin",
+        "Sensiva SC 50"
+      ],
+      "rating": 0,
+      "irritancy": 0,
+      "category": "Preservative",
+      "categoryGroup": "preservative",
+      "function": [
+        "preservative",
+        "conditioner",
+        "deodorant"
+      ],
+      "description": "Non-comedogenic preservative booster and skin conditioner. Often used with phenoxyethanol. Improves skin feel.",
+      "skinTypeNotes": {
+        "oily": "safe",
+        "dry": "safe",
+        "sensitive": "safe",
+        "acneProne": "safe",
+        "normal": "safe"
+      },
+      "flags": [
+        "non_comedogenic",
+        "preservative",
+        "conditioner"
+      ],
+      "evidenceLevel": "medium",
+      "sources": [
+        "INCIDecoder"
+      ]
+    },
+    {
+      "id": "disodium-edta",
+      "inciName": "Disodium EDTA",
+      "commonNames": [
+        "EDTA",
+        "Disodium ethylenediaminetetraacetate",
+        "Chelating agent"
+      ],
+      "rating": 0,
+      "irritancy": 0,
+      "category": "Chelating Agent",
+      "categoryGroup": "chelator",
+      "function": [
+        "chelating_agent",
+        "preservative_booster"
+      ],
+      "description": "Non-comedogenic chelating agent. Binds metal ions to improve preservative efficacy and product stability. Common in cosmetics.",
+      "skinTypeNotes": {
+        "oily": "safe",
+        "dry": "safe",
+        "sensitive": "safe",
+        "acneProne": "safe",
+        "normal": "safe"
+      },
+      "flags": [
+        "non_comedogenic",
+        "chelator"
+      ],
+      "evidenceLevel": "high",
+      "sources": [
+        "INCIDecoder"
+      ]
+    },
+    {
+      "id": "polysorbate-20",
+      "inciName": "Polysorbate 20",
+      "commonNames": [
+        "Tween 20",
+        "PEG-20 sorbitan laurate"
+      ],
+      "rating": 0,
+      "irritancy": 0,
+      "category": "Surfactant",
+      "categoryGroup": "ethoxylated_sorbitan",
+      "function": [
+        "surfactant",
+        "emulsifier",
+        "solubilizer"
+      ],
+      "description": "Non-comedogenic surfactant and solubilizer. Used to dissolve oils into water-based products. Low ethoxylation (20) is safe.",
+      "skinTypeNotes": {
+        "oily": "safe",
+        "dry": "safe",
+        "sensitive": "safe",
+        "acneProne": "safe",
+        "normal": "safe"
+      },
+      "flags": [
+        "non_comedogenic",
+        "emulsifier",
+        "solubilizer"
+      ],
+      "evidenceLevel": "medium",
+      "sources": [
+        "INCIDecoder"
+      ]
+    },
+    {
+      "id": "behentrimonium-methosulfate",
+      "inciName": "Behentrimonium Methosulfate",
+      "commonNames": [
+        "BTMS",
+        "Behentrimonium methyl sulfate"
+      ],
+      "rating": 0,
+      "irritancy": 0,
+      "category": "Conditioner",
+      "categoryGroup": "quaternary_ammonium",
+      "function": [
+        "conditioner",
+        "emulsifier",
+        "antistatic"
+      ],
+      "description": "Non-comedogenic conditioning agent and emulsifier. Quaternary ammonium compound. Provides slip and detangling in hair and skin products.",
+      "skinTypeNotes": {
+        "oily": "safe",
+        "dry": "safe",
+        "sensitive": "safe",
+        "acneProne": "safe",
+        "normal": "safe"
+      },
+      "flags": [
+        "non_comedogenic",
+        "conditioner",
+        "emulsifier"
+      ],
+      "evidenceLevel": "medium",
+      "sources": [
+        "INCIDecoder"
+      ]
+    },
+    {
+      "id": "sodium-lauroyl-lactylate",
+      "inciName": "Sodium Lauroyl Lactylate",
+      "commonNames": [
+        "SLL"
+      ],
+      "rating": 0,
+      "irritancy": 0,
+      "category": "Surfactant",
+      "categoryGroup": "fatty_acid_derivative",
+      "function": [
+        "surfactant",
+        "emulsifier",
+        "conditioner"
+      ],
+      "description": "Non-comedogenic mild surfactant and emulsifier. Derived from lactic acid and lauric acid. Gentle cleansing agent.",
+      "skinTypeNotes": {
+        "oily": "safe",
+        "dry": "safe",
+        "sensitive": "safe",
+        "acneProne": "safe",
+        "normal": "safe"
+      },
+      "flags": [
+        "non_comedogenic",
+        "surfactant",
+        "gentle"
+      ],
+      "evidenceLevel": "medium",
+      "sources": [
+        "INCIDecoder"
+      ]
+    },
+    {
+      "id": "potassium-phosphate",
+      "inciName": "Potassium Phosphate",
+      "commonNames": [
+        "Dipotassium phosphate",
+        "Monopotassium phosphate",
+        "pH buffer"
+      ],
+      "rating": 0,
+      "irritancy": 0,
+      "category": "pH Adjuster",
+      "categoryGroup": "phosphate",
+      "function": [
+        "ph_adjuster",
+        "buffer"
+      ],
+      "description": "Non-comedogenic pH adjuster and buffer. Used to maintain optimal pH in formulations. Safe for all skin types.",
+      "skinTypeNotes": {
+        "oily": "safe",
+        "dry": "safe",
+        "sensitive": "safe",
+        "acneProne": "safe",
+        "normal": "safe"
+      },
+      "flags": [
+        "non_comedogenic",
+        "ph_adjuster"
+      ],
+      "evidenceLevel": "high",
+      "sources": [
+        "INCIDecoder"
+      ]
+    },
+    {
+      "id": "dipotassium-phosphate",
+      "inciName": "Dipotassium Phosphate",
+      "commonNames": [
+        "DKP",
+        "Dipotassium hydrogen phosphate"
+      ],
+      "rating": 0,
+      "irritancy": 0,
+      "category": "pH Adjuster",
+      "categoryGroup": "phosphate",
+      "function": [
+        "ph_adjuster",
+        "buffer"
+      ],
+      "description": "Non-comedogenic pH adjuster and buffer. Used to maintain optimal pH in formulations. Safe for all skin types.",
+      "skinTypeNotes": {
+        "oily": "safe",
+        "dry": "safe",
+        "sensitive": "safe",
+        "acneProne": "safe",
+        "normal": "safe"
+      },
+      "flags": [
+        "non_comedogenic",
+        "ph_adjuster"
+      ],
+      "evidenceLevel": "high",
+      "sources": [
+        "INCIDecoder"
+      ]
+    },
+    {
+      "id": "peg-40-stearate",
+      "inciName": "PEG-40 Stearate",
+      "commonNames": [
+        "Polyoxyethylene 40 stearate",
+        "PEG 40 stearate"
+      ],
+      "rating": 0,
+      "irritancy": 0,
+      "category": "Emulsifier",
+      "categoryGroup": "ethoxylated_fatty_acid",
+      "function": [
+        "emulsifier",
+        "surfactant"
+      ],
+      "description": "Non-comedogenic emulsifier. High ethoxylation (40) makes it safe. Used to blend oil and water phases. Different from lower PEG stearates.",
+      "skinTypeNotes": {
+        "oily": "safe",
+        "dry": "safe",
+        "sensitive": "safe",
+        "acneProne": "safe",
+        "normal": "safe"
+      },
+      "flags": [
+        "non_comedogenic",
+        "emulsifier",
+        "ethoxylated"
+      ],
+      "evidenceLevel": "medium",
+      "sources": [
+        "INCIDecoder"
+      ]
+    },
+    {
+      "id": "glyceryl-stearate",
+      "inciName": "Glyceryl Stearate",
+      "commonNames": [
+        "GMS",
+        "Glyceryl monostearate",
+        "Monoacylglycerol"
+      ],
+      "rating": 0,
+      "irritancy": 0,
+      "category": "Emulsifier",
+      "categoryGroup": "fatty_acid_ester",
+      "function": [
+        "emulsifier",
+        "thickener",
+        "emollient"
+      ],
+      "description": "Non-comedogenic emulsifier and thickener. Combines glycerin and stearic acid. Self-emulsifying grades exist. Safe for all skin types.",
+      "skinTypeNotes": {
+        "oily": "safe",
+        "dry": "safe",
+        "sensitive": "safe",
+        "acneProne": "safe",
+        "normal": "safe"
+      },
+      "flags": [
+        "non_comedogenic",
+        "emulsifier",
+        "thickener"
+      ],
+      "evidenceLevel": "high",
+      "sources": [
+        "Fulton 1989",
+        "INCIDecoder"
+      ]
+    },
+    {
+      "id": "tocopheryl-acetate",
+      "inciName": "Tocopheryl Acetate",
+      "commonNames": [
+        "Vitamin E acetate",
+        "Tocopherol acetate"
+      ],
+      "rating": 0,
+      "irritancy": 0,
+      "category": "Vitamin",
+      "categoryGroup": "vitamin_derivative",
+      "function": [
+        "antioxidant",
+        "conditioner"
+      ],
+      "description": "Non-comedogenic vitamin E derivative. More stable than pure tocopherol. Antioxidant and skin conditioning properties. Converts to active vitamin E on skin.",
+      "skinTypeNotes": {
+        "oily": "safe",
+        "dry": "safe",
+        "sensitive": "safe",
+        "acneProne": "safe",
+        "normal": "safe"
+      },
+      "flags": [
+        "non_comedogenic",
+        "antioxidant",
+        "vitamin_e"
+      ],
+      "evidenceLevel": "high",
+      "sources": [
+        "INCIDecoder"
+      ]
+    },
+    {
+      "id": "ceramide-eop",
+      "inciName": "Ceramide EOP",
+      "commonNames": [
+        "Ceramide 1",
+        "Ceramide EOP",
+        "Esterified omega-hydroxy phytosphingosine"
+      ],
+      "rating": 0,
+      "irritancy": 0,
+      "category": "Lipid",
+      "categoryGroup": "ceramide",
+      "function": [
+        "skin_identical",
+        "barrier_repair",
+        "conditioner"
+      ],
+      "description": "Non-comedogenic skin-identical lipid. Essential component of skin barrier. The 'EOP' stands for Esterified Omega-hydroxy Phytosphingosine. Helps repair damaged barrier.",
+      "skinTypeNotes": {
+        "oily": "safe",
+        "dry": "safe",
+        "sensitive": "safe",
+        "acneProne": "safe",
+        "normal": "safe"
+      },
+      "flags": [
+        "non_comedogenic",
+        "skin_identical",
+        "barrier_repair"
+      ],
+      "evidenceLevel": "high",
+      "sources": [
+        "INCIDecoder"
+      ]
+    }
+  ]
+}
