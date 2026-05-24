@@ -1,6 +1,6 @@
 {
-  "version": "1.2.0",
-  "lastUpdated": "2026-05-23",
+  "version": "1.3.0",
+  "lastUpdated": "2026-05-24",
   "sources": [
     "Fulton JE Jr., J Soc Cosmet Chem 1989",
     "Kligman AM & Mills OH, Arch Dermatol 1972",
@@ -11,7 +11,11 @@
     "SkinSort",
     "Acne.org",
     "Platinum Skincare",
-    "Paula's Choice"
+    "Paula's Choice",
+    "Emmanuel.Skin GitHub (Open Source) - https://github.com/VincentEmmanuel/emmanuel.skin",
+    "Skincare Ingredient Scanner GitHub (Open Source) - https://github.com/ruupedev/skincare-ingredient-scanner",
+    "Comedogenic Ingredients GitHub (Open Source) - https://github.com/e-zob/comedogenic-ingredients",
+    "Manual research for sunscreen actives"
   ],
   "scale": {
     "name": "Fulton Comedogenic Scale",
@@ -78,6 +82,9 @@
           "url": "https://pubchem.ncbi.nlm.nih.gov/compound/Isopropyl-myristate",
           "type": "reference"
         }
+      ],
+      "sources": [
+        "our-database"
       ]
     },
     {
@@ -111,6 +118,9 @@
           "url": "https://incidecoder.com/ingredients/isopropyl-isostearate",
           "type": "database"
         }
+      ],
+      "sources": [
+        "our-database"
       ]
     },
     {
@@ -144,6 +154,9 @@
           "url": "https://incidecoder.com/ingredients/isopropyl-linoleate",
           "type": "database"
         }
+      ],
+      "sources": [
+        "our-database"
       ]
     },
     {
@@ -178,6 +191,9 @@
           "url": "https://incidecoder.com/ingredients/myristyl-myristate",
           "type": "database"
         }
+      ],
+      "sources": [
+        "our-database"
       ]
     },
     {
@@ -214,6 +230,9 @@
           "url": "https://incidecoder.com/ingredients/laureth-4",
           "type": "database"
         }
+      ],
+      "sources": [
+        "our-database"
       ]
     },
     {
@@ -249,6 +268,9 @@
           "url": "https://incidecoder.com/ingredients/oleth-3",
           "type": "database"
         }
+      ],
+      "sources": [
+        "our-database"
       ]
     },
     {
@@ -296,6 +318,9 @@
           "url": "https://www.cir-safety.org/sites/default/files/Lanolin.pdf",
           "type": "regulatory"
         }
+      ],
+      "sources": [
+        "our-database"
       ]
     },
     {
@@ -329,6 +354,9 @@
           "url": "https://incidecoder.com/ingredients/isocetyl-stearate",
           "type": "database"
         }
+      ],
+      "sources": [
+        "our-database"
       ]
     },
     {
@@ -377,6 +405,9 @@
           "url": "https://pubmed.ncbi.nlm.nih.gov/24320105/",
           "type": "study"
         }
+      ],
+      "sources": [
+        "our-database"
       ]
     },
     {
@@ -420,6 +451,9 @@
           "url": "https://pubmed.ncbi.nlm.nih.gov/34632684/",
           "type": "study"
         }
+      ],
+      "sources": [
+        "our-database"
       ]
     },
     {
@@ -456,6 +490,9 @@
           "url": "https://incidecoder.com/ingredients/isopropyl-palmitate",
           "type": "database"
         }
+      ],
+      "sources": [
+        "our-database"
       ]
     },
     {
@@ -492,6 +529,9 @@
           "url": "https://incidecoder.com/ingredients/ethylhexyl-palmitate",
           "type": "database"
         }
+      ],
+      "sources": [
+        "our-database"
       ]
     },
     {
@@ -528,6 +568,9 @@
           "url": "https://incidecoder.com/ingredients/acetylated-lanolin",
           "type": "database"
         }
+      ],
+      "sources": [
+        "our-database"
       ]
     },
     {
@@ -566,6 +609,9 @@
           "url": "https://incidecoder.com/ingredients/lauric-acid",
           "type": "database"
         }
+      ],
+      "sources": [
+        "our-database"
       ]
     },
     {
@@ -602,6 +648,9 @@
           "url": "https://incidecoder.com/ingredients/oleyl-alcohol",
           "type": "database"
         }
+      ],
+      "sources": [
+        "our-database"
       ]
     },
     {
@@ -636,6 +685,9 @@
           "url": "https://incidecoder.com/ingredients/oleth-5",
           "type": "database"
         }
+      ],
+      "sources": [
+        "our-database"
       ]
     },
     {
@@ -670,6 +722,9 @@
           "url": "https://incidecoder.com/ingredients/steareth-10",
           "type": "database"
         }
+      ],
+      "sources": [
+        "our-database"
       ]
     },
     {
@@ -707,6 +762,9 @@
           "url": "https://incidecoder.com/ingredients/triticum-vulgare-germ-oil",
           "type": "database"
         }
+      ],
+      "sources": [
+        "our-database"
       ]
     },
     {
@@ -744,6 +802,9 @@
           "url": "https://incidecoder.com/ingredients/linum-usitatissimum-seed-oil",
           "type": "database"
         }
+      ],
+      "sources": [
+        "our-database"
       ]
     },
     {
@@ -781,6 +842,9 @@
           "url": "https://incidecoder.com/ingredients/squalene",
           "type": "database"
         }
+      ],
+      "sources": [
+        "our-database"
       ]
     },
     {
@@ -815,6 +879,9 @@
           "url": "https://incidecoder.com/ingredients/butyl-stearate",
           "type": "database"
         }
+      ],
+      "sources": [
+        "our-database"
       ]
     },
     {
@@ -848,6 +915,9 @@
           "url": "https://incidecoder.com/ingredients/decyl-oleate",
           "type": "database"
         }
+      ],
+      "sources": [
+        "our-database"
       ]
     },
     {
@@ -856,7 +926,9 @@
       "commonNames": [
         "Soybean oil",
         "Soya oil",
-        "Soy oil"
+        "Soy oil",
+        "Glycine Soja (Soybean) Oil",
+        "Soybean Oil"
       ],
       "rating": 3,
       "category": "Emollient",
@@ -878,7 +950,11 @@
         "omega_6"
       ],
       "evidenceLevel": "medium",
-      "irritancy": 0
+      "irritancy": 0,
+      "sources": [
+        "our-database"
+      ],
+      "sourceUrls": []
     },
     {
       "id": "cottonseed-oil",
@@ -912,6 +988,9 @@
           "url": "https://incidecoder.com/ingredients/gossypium-herbaceum-seed-oil",
           "type": "database"
         }
+      ],
+      "sources": [
+        "our-database"
       ]
     },
     {
@@ -947,6 +1026,9 @@
           "url": "https://incidecoder.com/ingredients/hydrogenated-vegetable-oil",
           "type": "database"
         }
+      ],
+      "sources": [
+        "our-database"
       ]
     },
     {
@@ -984,6 +1066,9 @@
           "url": "https://incidecoder.com/ingredients/myristic-acid",
           "type": "database"
         }
+      ],
+      "sources": [
+        "our-database"
       ]
     },
     {
@@ -1022,6 +1107,9 @@
           "url": "https://incidecoder.com/ingredients/oleic-acid",
           "type": "database"
         }
+      ],
+      "sources": [
+        "our-database"
       ]
     },
     {
@@ -1058,6 +1146,9 @@
           "url": "https://incidecoder.com/ingredients/oenothera-biennis-oil",
           "type": "database"
         }
+      ],
+      "sources": [
+        "our-database"
       ]
     },
     {
@@ -1094,6 +1185,9 @@
           "url": "https://incidecoder.com/ingredients/sorbitan-oleate",
           "type": "database"
         }
+      ],
+      "sources": [
+        "our-database"
       ]
     },
     {
@@ -1131,6 +1225,9 @@
           "url": "https://incidecoder.com/ingredients/stearic-acid",
           "type": "database"
         }
+      ],
+      "sources": [
+        "our-database"
       ]
     },
     {
@@ -1169,6 +1266,9 @@
           "url": "https://incidecoder.com/ingredients/palmitic-acid",
           "type": "database"
         }
+      ],
+      "sources": [
+        "our-database"
       ]
     },
     {
@@ -1206,6 +1306,9 @@
           "url": "https://incidecoder.com/ingredients/cetearyl-alcohol",
           "type": "database"
         }
+      ],
+      "sources": [
+        "our-database"
       ]
     },
     {
@@ -1242,6 +1345,9 @@
           "url": "https://incidecoder.com/ingredients/cetyl-alcohol",
           "type": "database"
         }
+      ],
+      "sources": [
+        "our-database"
       ]
     },
     {
@@ -1277,6 +1383,9 @@
           "url": "https://incidecoder.com/ingredients/stearyl-alcohol",
           "type": "database"
         }
+      ],
+      "sources": [
+        "our-database"
       ]
     },
     {
@@ -1313,6 +1422,9 @@
           "url": "https://incidecoder.com/ingredients/ascorbyl-palmitate",
           "type": "database"
         }
+      ],
+      "sources": [
+        "our-database"
       ]
     },
     {
@@ -1350,6 +1462,9 @@
           "url": "https://incidecoder.com/ingredients/triethanolamine",
           "type": "database"
         }
+      ],
+      "sources": [
+        "our-database"
       ]
     },
     {
@@ -1394,6 +1509,9 @@
           "url": "https://health.ec.europa.eu/publications/sccs-notes-guidance-testing-cosmetic-ingredients-and-their-safety-evaluation-12th-revision_en",
           "type": "government"
         }
+      ],
+      "sources": [
+        "our-database"
       ]
     },
     {
@@ -1442,6 +1560,9 @@
           "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8197201/",
           "type": "study"
         }
+      ],
+      "sources": [
+        "our-database"
       ]
     },
     {
@@ -1490,6 +1611,9 @@
           "url": "https://journals.sagepub.com/doi/10.1177/10915818231204276",
           "type": "study"
         }
+      ],
+      "sources": [
+        "our-database"
       ]
     },
     {
@@ -1527,6 +1651,9 @@
           "url": "https://incidecoder.com/ingredients/argania-spinosa-kernel-oil",
           "type": "database"
         }
+      ],
+      "sources": [
+        "our-database"
       ]
     },
     {
@@ -1567,6 +1694,9 @@
           "url": "https://incidecoder.com/ingredients/cannabis-sativa-seed-oil",
           "type": "database"
         }
+      ],
+      "sources": [
+        "our-database"
       ]
     },
     {
@@ -1605,6 +1735,9 @@
           "url": "https://incidecoder.com/ingredients/vitis-vinifera-seed-oil",
           "type": "database"
         }
+      ],
+      "sources": [
+        "our-database"
       ]
     },
     {
@@ -1641,6 +1774,9 @@
           "url": "https://incidecoder.com/ingredients/helianthus-annuus-seed-oil",
           "type": "database"
         }
+      ],
+      "sources": [
+        "our-database"
       ]
     },
     {
@@ -1677,6 +1813,9 @@
           "url": "https://incidecoder.com/ingredients/carthamus-tinctorius-seed-oil",
           "type": "database"
         }
+      ],
+      "sources": [
+        "our-database"
       ]
     },
     {
@@ -1717,6 +1856,9 @@
           "url": "https://incidecoder.com/ingredients/rosa-canina-seed-oil",
           "type": "database"
         }
+      ],
+      "sources": [
+        "our-database"
       ]
     },
     {
@@ -1769,6 +1911,9 @@
           "url": "https://pubmed.ncbi.nlm.nih.gov/29192997/",
           "type": "study"
         }
+      ],
+      "sources": [
+        "our-database"
       ]
     },
     {
@@ -1813,24 +1958,27 @@
           "url": "https://pubmed.ncbi.nlm.nih.gov/22091554/",
           "type": "study"
         }
+      ],
+      "sources": [
+        "our-database"
       ]
     },
     {
-      "id": "hyaluronic-acid",
+      "id": "sodium-hyaluronate",
       "inciName": "Sodium Hyaluronate",
       "commonNames": [
-        "Hyaluronic acid",
-        "HA",
-        "Hyaluronan"
+        "Hyaluronic acid salt",
+        "HA sodium salt"
       ],
       "rating": 0,
+      "irritancy": 0,
       "category": "Humectant",
       "categoryGroup": "glycosaminoglycan",
       "function": [
         "humectant",
         "conditioner"
       ],
-      "description": "Non-comedogenic humectant that can hold 1000x its weight in water. Excellent for all skin types.",
+      "description": "Salt form of hyaluronic acid. Non-comedogenic humectant with excellent water-binding capacity. Different molecular weights penetrate different skin layers.",
       "skinTypeNotes": {
         "oily": "safe",
         "dry": "safe",
@@ -1844,7 +1992,9 @@
         "hydrating"
       ],
       "evidenceLevel": "high",
-      "irritancy": 0,
+      "sources": [
+        "our-database"
+      ],
       "sourceUrls": [
         {
           "name": "INCIDecoder",
@@ -1900,6 +2050,9 @@
           "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3654275/",
           "type": "study"
         }
+      ],
+      "sources": [
+        "our-database"
       ]
     },
     {
@@ -1939,6 +2092,9 @@
           "url": "https://incidecoder.com/ingredients/butyrospermum-parkii-butter",
           "type": "database"
         }
+      ],
+      "sources": [
+        "our-database"
       ]
     },
     {
@@ -1979,6 +2135,9 @@
           "url": "https://incidecoder.com/ingredients/aloe-barbadensis-leaf-juice",
           "type": "database"
         }
+      ],
+      "sources": [
+        "our-database"
       ]
     },
     {
@@ -2020,6 +2179,9 @@
           "url": "https://incidecoder.com/ingredients/camellia-sinensis-leaf-extract",
           "type": "database"
         }
+      ],
+      "sources": [
+        "our-database"
       ]
     },
     {
@@ -2065,6 +2227,9 @@
           "url": "https://pubmed.ncbi.nlm.nih.gov/22988671/",
           "type": "study"
         }
+      ],
+      "sources": [
+        "our-database"
       ]
     },
     {
@@ -2110,6 +2275,9 @@
           "url": "https://pubmed.ncbi.nlm.nih.gov/17305436/",
           "type": "study"
         }
+      ],
+      "sources": [
+        "our-database"
       ]
     },
     {
@@ -2154,6 +2322,9 @@
           "url": "https://www.fda.gov/drugs/understanding-over-counter-medicines/sunscreen-how-help-protect-your-skin-sun",
           "type": "government"
         }
+      ],
+      "sources": [
+        "our-database"
       ]
     },
     {
@@ -2197,6 +2368,9 @@
           "url": "https://www.fda.gov/drugs/understanding-over-counter-medicines/sunscreen-how-help-protect-your-skin-sun",
           "type": "government"
         }
+      ],
+      "sources": [
+        "our-database"
       ]
     },
     {
@@ -2229,7 +2403,7 @@
       ],
       "evidenceLevel": "high",
       "sources": [
-        "Fulton 1989"
+        "our-database"
       ],
       "sourceUrls": [
         {
@@ -2269,7 +2443,7 @@
       ],
       "evidenceLevel": "high",
       "sources": [
-        "Fulton 1989"
+        "our-database"
       ],
       "sourceUrls": [
         {
@@ -2307,7 +2481,7 @@
       ],
       "evidenceLevel": "high",
       "sources": [
-        "Fulton 1989"
+        "our-database"
       ],
       "sourceUrls": [
         {
@@ -2343,7 +2517,7 @@
       ],
       "evidenceLevel": "high",
       "sources": [
-        "Fulton 1989"
+        "our-database"
       ],
       "sourceUrls": [
         {
@@ -2380,7 +2554,7 @@
       ],
       "evidenceLevel": "high",
       "sources": [
-        "Fulton 1989"
+        "our-database"
       ],
       "sourceUrls": [
         {
@@ -2416,7 +2590,7 @@
       ],
       "evidenceLevel": "high",
       "sources": [
-        "Fulton 1989"
+        "our-database"
       ],
       "sourceUrls": [
         {
@@ -2454,7 +2628,7 @@
       ],
       "evidenceLevel": "medium",
       "sources": [
-        "Fulton 1989"
+        "our-database"
       ],
       "sourceUrls": [
         {
@@ -2496,7 +2670,7 @@
       ],
       "evidenceLevel": "high",
       "sources": [
-        "Fulton 1989"
+        "our-database"
       ],
       "sourceUrls": [
         {
@@ -2537,52 +2711,12 @@
       ],
       "evidenceLevel": "high",
       "sources": [
-        "Fulton 1989"
+        "our-database"
       ],
       "sourceUrls": [
         {
           "name": "INCIDecoder",
           "url": "https://incidecoder.com/ingredients/butylene-glycol",
-          "type": "database"
-        }
-      ]
-    },
-    {
-      "id": "sodium-hyaluronate",
-      "inciName": "Sodium Hyaluronate",
-      "commonNames": [
-        "Hyaluronic acid salt",
-        "HA sodium salt"
-      ],
-      "rating": 0,
-      "irritancy": 0,
-      "category": "Humectant",
-      "categoryGroup": "glycosaminoglycan",
-      "function": [
-        "humectant",
-        "conditioner"
-      ],
-      "description": "Salt form of hyaluronic acid. Non-comedogenic humectant with excellent water-binding capacity. Different molecular weights penetrate different skin layers.",
-      "skinTypeNotes": {
-        "oily": "safe",
-        "dry": "safe",
-        "sensitive": "safe",
-        "acneProne": "safe",
-        "normal": "safe"
-      },
-      "flags": [
-        "non_comedogenic",
-        "humectant",
-        "hydrating"
-      ],
-      "evidenceLevel": "high",
-      "sources": [
-        "INCIDecoder"
-      ],
-      "sourceUrls": [
-        {
-          "name": "INCIDecoder",
-          "url": "https://incidecoder.com/ingredients/sodium-hyaluronate",
           "type": "database"
         }
       ]
@@ -2617,7 +2751,7 @@
       ],
       "evidenceLevel": "medium",
       "sources": [
-        "Fulton 1989"
+        "our-database"
       ],
       "sourceUrls": [
         {
@@ -2657,7 +2791,7 @@
       ],
       "evidenceLevel": "medium",
       "sources": [
-        "INCIDecoder"
+        "our-database"
       ],
       "sourceUrls": [
         {
@@ -2696,7 +2830,7 @@
       ],
       "evidenceLevel": "medium",
       "sources": [
-        "Platinum Skincare"
+        "our-database"
       ],
       "sourceUrls": [
         {
@@ -2736,7 +2870,7 @@
       ],
       "evidenceLevel": "medium",
       "sources": [
-        "Fulton 1989"
+        "our-database"
       ],
       "sourceUrls": [
         {
@@ -2775,7 +2909,7 @@
       ],
       "evidenceLevel": "medium",
       "sources": [
-        "Fulton 1989"
+        "our-database"
       ],
       "sourceUrls": [
         {
@@ -2814,7 +2948,7 @@
       ],
       "evidenceLevel": "medium",
       "sources": [
-        "Fulton 1989"
+        "our-database"
       ],
       "sourceUrls": [
         {
@@ -2853,7 +2987,7 @@
       ],
       "evidenceLevel": "medium",
       "sources": [
-        "Fulton 1989"
+        "our-database"
       ],
       "sourceUrls": [
         {
@@ -2895,7 +3029,7 @@
       ],
       "evidenceLevel": "medium",
       "sources": [
-        "Platinum Skincare"
+        "our-database"
       ],
       "sourceUrls": [
         {
@@ -2936,8 +3070,7 @@
       ],
       "evidenceLevel": "high",
       "sources": [
-        "Fulton 1989",
-        "INCIDecoder"
+        "our-database"
       ],
       "sourceUrls": [
         {
@@ -2988,8 +3121,7 @@
       ],
       "evidenceLevel": "high",
       "sources": [
-        "Fulton 1989",
-        "INCIDecoder"
+        "our-database"
       ],
       "sourceUrls": [
         {
@@ -3040,7 +3172,7 @@
       ],
       "evidenceLevel": "high",
       "sources": [
-        "Platinum Skincare"
+        "our-database"
       ],
       "sourceUrls": [
         {
@@ -3084,7 +3216,7 @@
       ],
       "evidenceLevel": "high",
       "sources": [
-        "Platinum Skincare"
+        "our-database"
       ],
       "sourceUrls": [
         {
@@ -3127,7 +3259,7 @@
       ],
       "evidenceLevel": "high",
       "sources": [
-        "Fulton 1989"
+        "our-database"
       ],
       "sourceUrls": [
         {
@@ -3169,7 +3301,7 @@
       ],
       "evidenceLevel": "high",
       "sources": [
-        "Platinum Skincare"
+        "our-database"
       ],
       "sourceUrls": [
         {
@@ -3212,7 +3344,7 @@
       ],
       "evidenceLevel": "high",
       "sources": [
-        "INCIDecoder"
+        "our-database"
       ],
       "sourceUrls": [
         {
@@ -3256,7 +3388,7 @@
       ],
       "evidenceLevel": "high",
       "sources": [
-        "INCIDecoder"
+        "our-database"
       ],
       "sourceUrls": [
         {
@@ -3303,7 +3435,7 @@
       ],
       "evidenceLevel": "high",
       "sources": [
-        "INCIDecoder"
+        "our-database"
       ],
       "sourceUrls": [
         {
@@ -3349,7 +3481,7 @@
       ],
       "evidenceLevel": "high",
       "sources": [
-        "INCIDecoder"
+        "our-database"
       ],
       "sourceUrls": [
         {
@@ -3392,7 +3524,7 @@
       ],
       "evidenceLevel": "high",
       "sources": [
-        "INCIDecoder"
+        "our-database"
       ],
       "sourceUrls": [
         {
@@ -3439,7 +3571,7 @@
       ],
       "evidenceLevel": "high",
       "sources": [
-        "INCIDecoder"
+        "our-database"
       ],
       "sourceUrls": [
         {
@@ -3487,7 +3619,7 @@
       ],
       "evidenceLevel": "high",
       "sources": [
-        "INCIDecoder"
+        "our-database"
       ],
       "sourceUrls": [
         {
@@ -3530,7 +3662,7 @@
       ],
       "evidenceLevel": "high",
       "sources": [
-        "INCIDecoder"
+        "our-database"
       ],
       "sourceUrls": [
         {
@@ -3573,7 +3705,7 @@
       ],
       "evidenceLevel": "high",
       "sources": [
-        "INCIDecoder"
+        "our-database"
       ],
       "sourceUrls": [
         {
@@ -3616,7 +3748,7 @@
       ],
       "evidenceLevel": "high",
       "sources": [
-        "INCIDecoder"
+        "our-database"
       ],
       "sourceUrls": [
         {
@@ -3662,8 +3794,9 @@
       ],
       "evidenceLevel": "high",
       "sources": [
-        "INCIDecoder"
-      ]
+        "our-database"
+      ],
+      "sourceUrls": []
     },
     {
       "id": "bisabolol",
@@ -3698,7 +3831,7 @@
       ],
       "evidenceLevel": "high",
       "sources": [
-        "INCIDecoder"
+        "our-database"
       ],
       "sourceUrls": [
         {
@@ -3740,7 +3873,7 @@
       ],
       "evidenceLevel": "high",
       "sources": [
-        "INCIDecoder"
+        "our-database"
       ],
       "sourceUrls": [
         {
@@ -3782,7 +3915,7 @@
       ],
       "evidenceLevel": "high",
       "sources": [
-        "INCIDecoder"
+        "our-database"
       ],
       "sourceUrls": [
         {
@@ -3823,7 +3956,7 @@
       ],
       "evidenceLevel": "high",
       "sources": [
-        "INCIDecoder"
+        "our-database"
       ],
       "sourceUrls": [
         {
@@ -3864,7 +3997,7 @@
       ],
       "evidenceLevel": "high",
       "sources": [
-        "INCIDecoder"
+        "our-database"
       ],
       "sourceUrls": [
         {
@@ -3904,7 +4037,7 @@
       ],
       "evidenceLevel": "high",
       "sources": [
-        "INCIDecoder"
+        "our-database"
       ],
       "sourceUrls": [
         {
@@ -3945,7 +4078,7 @@
       ],
       "evidenceLevel": "high",
       "sources": [
-        "INCIDecoder"
+        "our-database"
       ],
       "sourceUrls": [
         {
@@ -3986,7 +4119,7 @@
       ],
       "evidenceLevel": "high",
       "sources": [
-        "INCIDecoder"
+        "our-database"
       ],
       "sourceUrls": [
         {
@@ -4025,7 +4158,7 @@
       ],
       "evidenceLevel": "high",
       "sources": [
-        "Fulton 1989"
+        "our-database"
       ],
       "sourceUrls": [
         {
@@ -4066,7 +4199,7 @@
       ],
       "evidenceLevel": "high",
       "sources": [
-        "INCIDecoder"
+        "our-database"
       ],
       "sourceUrls": [
         {
@@ -4105,7 +4238,7 @@
       ],
       "evidenceLevel": "high",
       "sources": [
-        "INCIDecoder"
+        "our-database"
       ],
       "sourceUrls": [
         {
@@ -4146,7 +4279,7 @@
       ],
       "evidenceLevel": "medium",
       "sources": [
-        "INCIDecoder"
+        "our-database"
       ],
       "sourceUrls": [
         {
@@ -4186,7 +4319,7 @@
       ],
       "evidenceLevel": "high",
       "sources": [
-        "INCIDecoder"
+        "our-database"
       ],
       "sourceUrls": [
         {
@@ -4227,7 +4360,7 @@
       ],
       "evidenceLevel": "medium",
       "sources": [
-        "INCIDecoder"
+        "our-database"
       ],
       "sourceUrls": [
         {
@@ -4268,7 +4401,7 @@
       ],
       "evidenceLevel": "medium",
       "sources": [
-        "INCIDecoder"
+        "our-database"
       ],
       "sourceUrls": [
         {
@@ -4308,7 +4441,7 @@
       ],
       "evidenceLevel": "medium",
       "sources": [
-        "INCIDecoder"
+        "our-database"
       ],
       "sourceUrls": [
         {
@@ -4348,7 +4481,7 @@
       ],
       "evidenceLevel": "high",
       "sources": [
-        "INCIDecoder"
+        "our-database"
       ],
       "sourceUrls": [
         {
@@ -4387,7 +4520,7 @@
       ],
       "evidenceLevel": "high",
       "sources": [
-        "INCIDecoder"
+        "our-database"
       ],
       "sourceUrls": [
         {
@@ -4427,7 +4560,7 @@
       ],
       "evidenceLevel": "medium",
       "sources": [
-        "INCIDecoder"
+        "our-database"
       ],
       "sourceUrls": [
         {
@@ -4469,8 +4602,7 @@
       ],
       "evidenceLevel": "high",
       "sources": [
-        "Fulton 1989",
-        "INCIDecoder"
+        "our-database"
       ],
       "sourceUrls": [
         {
@@ -4510,7 +4642,7 @@
       ],
       "evidenceLevel": "high",
       "sources": [
-        "INCIDecoder"
+        "our-database"
       ],
       "sourceUrls": [
         {
@@ -4552,7 +4684,7 @@
       ],
       "evidenceLevel": "high",
       "sources": [
-        "INCIDecoder"
+        "our-database"
       ],
       "sourceUrls": [
         {
@@ -4560,6 +4692,5665 @@
           "url": "https://incidecoder.com/ingredients/ceramide-eop",
           "type": "database"
         }
+      ]
+    },
+    {
+      "id": "coconut-oil",
+      "inciName": "Coconut Oil",
+      "commonNames": [
+        "Cocos Nucifera Oil",
+        "Cocos Nucifera (Coconut) Oil"
+      ],
+      "rating": 4,
+      "category": "Oil",
+      "description": "Very comedogenic despite being natural",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Emmanuel.Skin (Open Source)",
+          "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "emmanuel.skin"
+      ]
+    },
+    {
+      "id": "cocoa-butter",
+      "inciName": "Cocoa Butter",
+      "commonNames": [
+        "Theobroma Cacao Seed Butter",
+        "Theobroma Cacao"
+      ],
+      "rating": 4,
+      "category": "Butter",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Emmanuel.Skin (Open Source)",
+          "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "emmanuel.skin"
+      ]
+    },
+    {
+      "id": "coconut-butter",
+      "inciName": "Coconut Butter",
+      "commonNames": [],
+      "rating": 4,
+      "category": "Butter",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Emmanuel.Skin (Open Source)",
+          "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "emmanuel.skin"
+      ]
+    },
+    {
+      "id": "lanolin",
+      "inciName": "Lanolin",
+      "commonNames": [
+        "Acetylated Lanolin",
+        "Lanolin Alcohol",
+        "Adeps Lanae"
+      ],
+      "rating": 4,
+      "category": "Wax",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Emmanuel.Skin (Open Source)",
+          "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "emmanuel.skin"
+      ]
+    },
+    {
+      "id": "octyl-palmitate",
+      "inciName": "Octyl Palmitate",
+      "commonNames": [
+        "Ethylhexyl Palmitate"
+      ],
+      "rating": 4,
+      "category": "Emollient",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Emmanuel.Skin (Open Source)",
+          "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "emmanuel.skin"
+      ]
+    },
+    {
+      "id": "octyl-stearate",
+      "inciName": "Octyl Stearate",
+      "commonNames": [
+        "Ethylhexyl Stearate"
+      ],
+      "rating": 5,
+      "category": "Emollient",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Emmanuel.Skin (Open Source)",
+          "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "emmanuel.skin"
+      ]
+    },
+    {
+      "id": "sodium-laureth-sulfate",
+      "inciName": "Sodium Laureth Sulfate",
+      "commonNames": [
+        "SLES"
+      ],
+      "rating": 3,
+      "category": "Surfactant",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Emmanuel.Skin (Open Source)",
+          "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "emmanuel.skin"
+      ]
+    },
+    {
+      "id": "wheat-germ-oil",
+      "inciName": "Wheat Germ Oil",
+      "commonNames": [
+        "Triticum Vulgare Germ Oil"
+      ],
+      "rating": 5,
+      "category": "Oil",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Emmanuel.Skin (Open Source)",
+          "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "emmanuel.skin"
+      ]
+    },
+    {
+      "id": "linseed-oil",
+      "inciName": "Linseed Oil",
+      "commonNames": [
+        "Flaxseed Oil",
+        "Linum Usitatissimum Seed Oil"
+      ],
+      "rating": 4,
+      "category": "Oil",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Emmanuel.Skin (Open Source)",
+          "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "emmanuel.skin"
+      ]
+    },
+    {
+      "id": "soybean-oil",
+      "inciName": "Soybean Oil",
+      "commonNames": [
+        "Glycine Soja Oil"
+      ],
+      "rating": 3,
+      "category": "Oil",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Emmanuel.Skin (Open Source)",
+          "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "emmanuel.skin"
+      ]
+    },
+    {
+      "id": "corn-oil",
+      "inciName": "Corn Oil",
+      "commonNames": [
+        "Zea Mays Oil"
+      ],
+      "rating": 3,
+      "category": "Oil",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Emmanuel.Skin (Open Source)",
+          "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "emmanuel.skin"
+      ]
+    },
+    {
+      "id": "avocado-oil",
+      "inciName": "Avocado Oil",
+      "commonNames": [
+        "Persea Gratissima Oil"
+      ],
+      "rating": 2,
+      "category": "Oil",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Emmanuel.Skin (Open Source)",
+          "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "emmanuel.skin"
+      ]
+    },
+    {
+      "id": "almond-oil",
+      "inciName": "Almond Oil",
+      "commonNames": [
+        "Prunus Amygdalus Dulcis Oil",
+        "Sweet Almond Oil"
+      ],
+      "rating": 2,
+      "category": "Oil",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Emmanuel.Skin (Open Source)",
+          "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "emmanuel.skin"
+      ]
+    },
+    {
+      "id": "olive-oil",
+      "inciName": "Olive Oil",
+      "commonNames": [
+        "Olea Europaea Oil"
+      ],
+      "rating": 2,
+      "category": "Oil",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Emmanuel.Skin (Open Source)",
+          "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "emmanuel.skin"
+      ]
+    },
+    {
+      "id": "sesame-oil",
+      "inciName": "Sesame Oil",
+      "commonNames": [
+        "Sesamum Indicum Oil"
+      ],
+      "rating": 2,
+      "category": "Oil",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Emmanuel.Skin (Open Source)",
+          "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "emmanuel.skin"
+      ]
+    },
+    {
+      "id": "shea-butter",
+      "inciName": "Shea Butter",
+      "commonNames": [
+        "Butyrospermum Parkii Butter"
+      ],
+      "rating": 0,
+      "category": "Butter",
+      "description": "Generally non-comedogenic",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Emmanuel.Skin (Open Source)",
+          "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "emmanuel.skin"
+      ]
+    },
+    {
+      "id": "d--c-red-dyes",
+      "inciName": "D & C Red Dyes",
+      "commonNames": [
+        "Red 3",
+        "Red 17",
+        "Red 21",
+        "Red 27",
+        "Red 30",
+        "Red 36"
+      ],
+      "rating": 3,
+      "category": "Colorant",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Emmanuel.Skin (Open Source)",
+          "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "emmanuel.skin"
+      ]
+    },
+    {
+      "id": "petroleum-jelly",
+      "inciName": "Petroleum Jelly",
+      "commonNames": [
+        "Petrolatum",
+        "Vaseline"
+      ],
+      "rating": 0,
+      "category": "Occlusive",
+      "description": "Generally safe for most skin types",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Emmanuel.Skin (Open Source)",
+          "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "emmanuel.skin"
+      ]
+    },
+    {
+      "id": "mineral-oil",
+      "inciName": "Mineral Oil",
+      "commonNames": [
+        "Paraffinum Liquidum"
+      ],
+      "rating": 0,
+      "category": "Occlusive",
+      "description": "Generally non-comedogenic",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Emmanuel.Skin (Open Source)",
+          "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "emmanuel.skin"
+      ]
+    },
+    {
+      "id": "isostearyl-neopentanoate",
+      "inciName": "Isostearyl Neopentanoate",
+      "commonNames": [],
+      "rating": 3,
+      "category": "Emollient",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Emmanuel.Skin (Open Source)",
+          "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "emmanuel.skin"
+      ]
+    },
+    {
+      "id": "propylene-glycol-monostearate",
+      "inciName": "Propylene Glycol Monostearate",
+      "commonNames": [
+        "PG Monostearate"
+      ],
+      "rating": 4,
+      "category": "Emulsifier",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Emmanuel.Skin (Open Source)",
+          "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "emmanuel.skin"
+      ]
+    },
+    {
+      "id": "peg-8-stearate",
+      "inciName": "PEG-8 Stearate",
+      "commonNames": [],
+      "rating": 3,
+      "category": "Emulsifier",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Emmanuel.Skin (Open Source)",
+          "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "emmanuel.skin"
+      ]
+    },
+    {
+      "id": "peg-100-stearate",
+      "inciName": "PEG-100 Stearate",
+      "commonNames": [],
+      "rating": 1,
+      "category": "Emulsifier",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Emmanuel.Skin (Open Source)",
+          "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "emmanuel.skin"
+      ]
+    },
+    {
+      "id": "argan-oil",
+      "inciName": "Argan Oil",
+      "commonNames": [
+        "Argania Spinosa Kernel Oil"
+      ],
+      "rating": 0,
+      "category": "Oil",
+      "description": "Non-comedogenic, suitable for all skin types",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Emmanuel.Skin (Open Source)",
+          "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "emmanuel.skin"
+      ]
+    },
+    {
+      "id": "jojoba-oil",
+      "inciName": "Jojoba Oil",
+      "commonNames": [
+        "Simmondsia Chinensis Seed Oil"
+      ],
+      "rating": 2,
+      "category": "Oil",
+      "description": "Low comedogenic potential despite higher rating",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Emmanuel.Skin (Open Source)",
+          "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "emmanuel.skin"
+      ]
+    },
+    {
+      "id": "rosehip-seed-oil",
+      "inciName": "Rosehip Seed Oil",
+      "commonNames": [
+        "Rosa Canina Fruit Oil",
+        "Rosa Mosqueta Seed Oil"
+      ],
+      "rating": 1,
+      "category": "Oil",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Emmanuel.Skin (Open Source)",
+          "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "emmanuel.skin"
+      ]
+    },
+    {
+      "id": "grapeseed-oil",
+      "inciName": "Grapeseed Oil",
+      "commonNames": [
+        "Vitis Vinifera Seed Oil"
+      ],
+      "rating": 1,
+      "category": "Oil",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Emmanuel.Skin (Open Source)",
+          "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "emmanuel.skin"
+      ]
+    },
+    {
+      "id": "hemp-seed-oil",
+      "inciName": "Hemp Seed Oil",
+      "commonNames": [
+        "Cannabis Sativa Seed Oil"
+      ],
+      "rating": 0,
+      "category": "Oil",
+      "description": "Non-comedogenic, high in linoleic acid",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Emmanuel.Skin (Open Source)",
+          "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "emmanuel.skin"
+      ]
+    },
+    {
+      "id": "castor-oil",
+      "inciName": "Castor Oil",
+      "commonNames": [
+        "Ricinus Communis Seed Oil"
+      ],
+      "rating": 1,
+      "category": "Oil",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Emmanuel.Skin (Open Source)",
+          "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "emmanuel.skin"
+      ]
+    },
+    {
+      "id": "safflower-oil",
+      "inciName": "Safflower Oil",
+      "commonNames": [
+        "Carthamus Tinctorius Seed Oil"
+      ],
+      "rating": 0,
+      "category": "Oil",
+      "description": "Non-comedogenic",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Emmanuel.Skin (Open Source)",
+          "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "emmanuel.skin"
+      ]
+    },
+    {
+      "id": "sunflower-seed-oil",
+      "inciName": "Sunflower Seed Oil",
+      "commonNames": [
+        "Helianthus Annuus Seed Oil"
+      ],
+      "rating": 0,
+      "category": "Oil",
+      "description": "Non-comedogenic, high in linoleic acid",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Emmanuel.Skin (Open Source)",
+          "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "emmanuel.skin"
+      ]
+    },
+    {
+      "id": "apricot-kernel-oil",
+      "inciName": "Apricot Kernel Oil",
+      "commonNames": [
+        "Prunus Armeniaca Kernel Oil"
+      ],
+      "rating": 2,
+      "category": "Oil",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Emmanuel.Skin (Open Source)",
+          "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "emmanuel.skin"
+      ]
+    },
+    {
+      "id": "evening-primrose-oil",
+      "inciName": "Evening Primrose Oil",
+      "commonNames": [
+        "Oenothera Biennis Oil"
+      ],
+      "rating": 2,
+      "category": "Oil",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Emmanuel.Skin (Open Source)",
+          "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "emmanuel.skin"
+      ]
+    },
+    {
+      "id": "tea-tree-oil",
+      "inciName": "Tea Tree Oil",
+      "commonNames": [
+        "Melaleuca Alternifolia Leaf Oil"
+      ],
+      "rating": 0,
+      "category": "Oil",
+      "description": "Non-comedogenic, antibacterial properties",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Emmanuel.Skin (Open Source)",
+          "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "emmanuel.skin"
+      ]
+    },
+    {
+      "id": "neem-oil",
+      "inciName": "Neem Oil",
+      "commonNames": [
+        "Melia Azadirachta Seed Oil",
+        "Azadirachta Indica Seed Oil"
+      ],
+      "rating": 1,
+      "category": "Oil",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Emmanuel.Skin (Open Source)",
+          "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "emmanuel.skin"
+      ]
+    },
+    {
+      "id": "peanut-oil",
+      "inciName": "Peanut Oil",
+      "commonNames": [
+        "Arachis Hypogaea Oil"
+      ],
+      "rating": 2,
+      "category": "Oil",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Emmanuel.Skin (Open Source)",
+          "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "emmanuel.skin"
+      ]
+    },
+    {
+      "id": "rice-bran-oil",
+      "inciName": "Rice Bran Oil",
+      "commonNames": [
+        "Oryza Sativa Bran Oil"
+      ],
+      "rating": 2,
+      "category": "Oil",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Emmanuel.Skin (Open Source)",
+          "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "emmanuel.skin"
+      ]
+    },
+    {
+      "id": "cottonseed-oil",
+      "inciName": "Cottonseed Oil",
+      "commonNames": [
+        "Gossypium Herbaceum Seed Oil"
+      ],
+      "rating": 3,
+      "category": "Oil",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Emmanuel.Skin (Open Source)",
+          "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "emmanuel.skin"
+      ]
+    },
+    {
+      "id": "palm-oil",
+      "inciName": "Palm Oil",
+      "commonNames": [
+        "Elaeis Guineensis Oil"
+      ],
+      "rating": 4,
+      "category": "Oil",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Emmanuel.Skin (Open Source)",
+          "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "emmanuel.skin"
+      ]
+    },
+    {
+      "id": "marula-oil",
+      "inciName": "Marula Oil",
+      "commonNames": [
+        "Sclerocarya Birrea Seed Oil"
+      ],
+      "rating": 3,
+      "category": "Oil",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Emmanuel.Skin (Open Source)",
+          "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "emmanuel.skin"
+      ]
+    },
+    {
+      "id": "black-cumin-seed-oil",
+      "inciName": "Black Cumin Seed Oil",
+      "commonNames": [
+        "Nigella Sativa Seed Oil",
+        "Black Seed Oil"
+      ],
+      "rating": 2,
+      "category": "Oil",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Emmanuel.Skin (Open Source)",
+          "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "emmanuel.skin"
+      ]
+    },
+    {
+      "id": "borage-oil",
+      "inciName": "Borage Oil",
+      "commonNames": [
+        "Borago Officinalis Seed Oil"
+      ],
+      "rating": 2,
+      "category": "Oil",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Emmanuel.Skin (Open Source)",
+          "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "emmanuel.skin"
+      ]
+    },
+    {
+      "id": "cranberry-seed-oil",
+      "inciName": "Cranberry Seed Oil",
+      "commonNames": [
+        "Vaccinium Macrocarpon Seed Oil"
+      ],
+      "rating": 2,
+      "category": "Oil",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Emmanuel.Skin (Open Source)",
+          "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "emmanuel.skin"
+      ]
+    },
+    {
+      "id": "peach-kernel-oil",
+      "inciName": "Peach Kernel Oil",
+      "commonNames": [
+        "Prunus Persica Kernel Oil"
+      ],
+      "rating": 2,
+      "category": "Oil",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Emmanuel.Skin (Open Source)",
+          "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "emmanuel.skin"
+      ]
+    },
+    {
+      "id": "pumpkin-seed-oil",
+      "inciName": "Pumpkin Seed Oil",
+      "commonNames": [
+        "Cucurbita Pepo Seed Oil"
+      ],
+      "rating": 2,
+      "category": "Oil",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Emmanuel.Skin (Open Source)",
+          "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "emmanuel.skin"
+      ]
+    },
+    {
+      "id": "tamanu-oil",
+      "inciName": "Tamanu Oil",
+      "commonNames": [
+        "Calophyllum Inophyllum Seed Oil"
+      ],
+      "rating": 2,
+      "category": "Oil",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Emmanuel.Skin (Open Source)",
+          "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "emmanuel.skin"
+      ]
+    },
+    {
+      "id": "hazelnut-oil",
+      "inciName": "Hazelnut Oil",
+      "commonNames": [
+        "Corylus Avellana Seed Oil"
+      ],
+      "rating": 1,
+      "category": "Oil",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Emmanuel.Skin (Open Source)",
+          "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "emmanuel.skin"
+      ]
+    },
+    {
+      "id": "macadamia-nut-oil",
+      "inciName": "Macadamia Nut Oil",
+      "commonNames": [
+        "Macadamia Ternifolia Seed Oil"
+      ],
+      "rating": 2,
+      "category": "Oil",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Emmanuel.Skin (Open Source)",
+          "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "emmanuel.skin"
+      ]
+    },
+    {
+      "id": "carrot-seed-oil",
+      "inciName": "Carrot Seed Oil",
+      "commonNames": [
+        "Daucus Carota Sativa Seed Oil"
+      ],
+      "rating": 3,
+      "category": "Oil",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Emmanuel.Skin (Open Source)",
+          "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "emmanuel.skin"
+      ]
+    },
+    {
+      "id": "chia-seed-oil",
+      "inciName": "Chia Seed Oil",
+      "commonNames": [
+        "Salvia Hispanica Seed Oil"
+      ],
+      "rating": 3,
+      "category": "Oil",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Emmanuel.Skin (Open Source)",
+          "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "emmanuel.skin"
+      ]
+    },
+    {
+      "id": "kukui-nut-oil",
+      "inciName": "Kukui Nut Oil",
+      "commonNames": [
+        "Aleurites Moluccana Seed Oil"
+      ],
+      "rating": 2,
+      "category": "Oil",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Emmanuel.Skin (Open Source)",
+          "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "emmanuel.skin"
+      ]
+    },
+    {
+      "id": "moringa-oil",
+      "inciName": "Moringa Oil",
+      "commonNames": [
+        "Moringa Oleifera Seed Oil"
+      ],
+      "rating": 3,
+      "category": "Oil",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Emmanuel.Skin (Open Source)",
+          "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "emmanuel.skin"
+      ]
+    },
+    {
+      "id": "mink-oil",
+      "inciName": "Mink Oil",
+      "commonNames": [],
+      "rating": 3,
+      "category": "Oil",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Emmanuel.Skin (Open Source)",
+          "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "emmanuel.skin"
+      ]
+    },
+    {
+      "id": "abyssinian-seed-oil",
+      "inciName": "Abyssinian Seed Oil",
+      "commonNames": [
+        "Crambe Abyssinica Seed Oil"
+      ],
+      "rating": 0,
+      "category": "Oil",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Emmanuel.Skin (Open Source)",
+          "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "emmanuel.skin"
+      ]
+    },
+    {
+      "id": "black-currant-seed-oil",
+      "inciName": "Black Currant Seed Oil",
+      "commonNames": [
+        "Ribes Nigrum Seed Oil"
+      ],
+      "rating": 0,
+      "category": "Oil",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Emmanuel.Skin (Open Source)",
+          "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "emmanuel.skin"
+      ]
+    },
+    {
+      "id": "blueberry-seed-oil",
+      "inciName": "Blueberry Seed Oil",
+      "commonNames": [
+        "Vaccinium Corymbosum Seed Oil"
+      ],
+      "rating": 0,
+      "category": "Oil",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Emmanuel.Skin (Open Source)",
+          "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "emmanuel.skin"
+      ]
+    },
+    {
+      "id": "red-raspberry-seed-oil",
+      "inciName": "Red Raspberry Seed Oil",
+      "commonNames": [
+        "Rubus Idaeus Seed Oil"
+      ],
+      "rating": 0,
+      "category": "Oil",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Emmanuel.Skin (Open Source)",
+          "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "emmanuel.skin"
+      ]
+    },
+    {
+      "id": "watermelon-seed-oil",
+      "inciName": "Watermelon Seed Oil",
+      "commonNames": [
+        "Citrullus Lanatus Seed Oil"
+      ],
+      "rating": 0,
+      "category": "Oil",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Emmanuel.Skin (Open Source)",
+          "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "emmanuel.skin"
+      ]
+    },
+    {
+      "id": "babassu-oil",
+      "inciName": "Babassu Oil",
+      "commonNames": [
+        "Orbignya Oleifera Seed Oil"
+      ],
+      "rating": 1,
+      "category": "Oil",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Emmanuel.Skin (Open Source)",
+          "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "emmanuel.skin"
+      ]
+    },
+    {
+      "id": "broccoli-seed-oil",
+      "inciName": "Broccoli Seed Oil",
+      "commonNames": [
+        "Brassica Oleracea Italica Seed Oil"
+      ],
+      "rating": 1,
+      "category": "Oil",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Emmanuel.Skin (Open Source)",
+          "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "emmanuel.skin"
+      ]
+    },
+    {
+      "id": "camellia-seed-oil",
+      "inciName": "Camellia Seed Oil",
+      "commonNames": [
+        "Camellia Oleifera Seed Oil",
+        "Tea Seed Oil"
+      ],
+      "rating": 1,
+      "category": "Oil",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Emmanuel.Skin (Open Source)",
+          "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "emmanuel.skin"
+      ]
+    },
+    {
+      "id": "emu-oil",
+      "inciName": "Emu Oil",
+      "commonNames": [],
+      "rating": 1,
+      "category": "Oil",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Emmanuel.Skin (Open Source)",
+          "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "emmanuel.skin"
+      ]
+    },
+    {
+      "id": "acai-berry-oil",
+      "inciName": "Acai Berry Oil",
+      "commonNames": [
+        "Euterpe Oleracea Fruit Oil"
+      ],
+      "rating": 2,
+      "category": "Oil",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Emmanuel.Skin (Open Source)",
+          "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "emmanuel.skin"
+      ]
+    },
+    {
+      "id": "baobab-seed-oil",
+      "inciName": "Baobab Seed Oil",
+      "commonNames": [
+        "Adansonia Digitata Seed Oil"
+      ],
+      "rating": 2,
+      "category": "Oil",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Emmanuel.Skin (Open Source)",
+          "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "emmanuel.skin"
+      ]
+    },
+    {
+      "id": "brazil-nut-oil",
+      "inciName": "Brazil Nut Oil",
+      "commonNames": [
+        "Bertholletia Excelsa Seed Oil"
+      ],
+      "rating": 2,
+      "category": "Oil",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Emmanuel.Skin (Open Source)",
+          "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "emmanuel.skin"
+      ]
+    },
+    {
+      "id": "buriti-oil",
+      "inciName": "Buriti Oil",
+      "commonNames": [
+        "Mauritia Flexuosa Fruit Oil"
+      ],
+      "rating": 2,
+      "category": "Oil",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Emmanuel.Skin (Open Source)",
+          "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "emmanuel.skin"
+      ]
+    },
+    {
+      "id": "cherry-kernel-oil",
+      "inciName": "Cherry Kernel Oil",
+      "commonNames": [
+        "Prunus Avium Seed Oil"
+      ],
+      "rating": 2,
+      "category": "Oil",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Emmanuel.Skin (Open Source)",
+          "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "emmanuel.skin"
+      ]
+    },
+    {
+      "id": "mango-butter",
+      "inciName": "Mango Butter",
+      "commonNames": [
+        "Mangifera Indica Seed Butter"
+      ],
+      "rating": 2,
+      "category": "Butter",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Emmanuel.Skin (Open Source)",
+          "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "emmanuel.skin"
+      ]
+    },
+    {
+      "id": "beeswax",
+      "inciName": "Beeswax",
+      "commonNames": [
+        "Cera Alba",
+        "Cera Flava"
+      ],
+      "rating": 2,
+      "category": "Wax",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Emmanuel.Skin (Open Source)",
+          "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "emmanuel.skin"
+      ]
+    },
+    {
+      "id": "candelilla-wax",
+      "inciName": "Candelilla Wax",
+      "commonNames": [
+        "Euphorbia Cerifera Cera"
+      ],
+      "rating": 1,
+      "category": "Wax",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Emmanuel.Skin (Open Source)",
+          "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "emmanuel.skin"
+      ]
+    },
+    {
+      "id": "carnauba-wax",
+      "inciName": "Carnauba Wax",
+      "commonNames": [
+        "Copernicia Cerifera Cera"
+      ],
+      "rating": 1,
+      "category": "Wax",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Emmanuel.Skin (Open Source)",
+          "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "emmanuel.skin"
+      ]
+    },
+    {
+      "id": "cyclopentasiloxane",
+      "inciName": "Cyclopentasiloxane",
+      "commonNames": [
+        "D5"
+      ],
+      "rating": 0,
+      "category": "Silicone",
+      "description": "Volatile silicone, evaporates quickly",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Emmanuel.Skin (Open Source)",
+          "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "emmanuel.skin"
+      ]
+    },
+    {
+      "id": "cyclomethicone",
+      "inciName": "Cyclomethicone",
+      "commonNames": [],
+      "rating": 0,
+      "category": "Silicone",
+      "description": "Volatile silicone blend",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Emmanuel.Skin (Open Source)",
+          "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "emmanuel.skin"
+      ]
+    },
+    {
+      "id": "simethicone",
+      "inciName": "Simethicone",
+      "commonNames": [],
+      "rating": 1,
+      "category": "Silicone",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Emmanuel.Skin (Open Source)",
+          "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "emmanuel.skin"
+      ]
+    },
+    {
+      "id": "ceteareth-20",
+      "inciName": "Ceteareth-20",
+      "commonNames": [],
+      "rating": 4,
+      "category": "Emulsifier",
+      "description": "Can be comedogenic, especially combined with cetearyl alcohol",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Emmanuel.Skin (Open Source)",
+          "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "emmanuel.skin"
+      ]
+    },
+    {
+      "id": "polysorbate-60",
+      "inciName": "Polysorbate 60",
+      "commonNames": [
+        "Tween 60"
+      ],
+      "rating": 2,
+      "category": "Emulsifier",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Emmanuel.Skin (Open Source)",
+          "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "emmanuel.skin"
+      ]
+    },
+    {
+      "id": "polysorbate-80",
+      "inciName": "Polysorbate 80",
+      "commonNames": [
+        "Tween 80"
+      ],
+      "rating": 3,
+      "category": "Emulsifier",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Emmanuel.Skin (Open Source)",
+          "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "emmanuel.skin"
+      ]
+    },
+    {
+      "id": "glyceryl-stearate-se",
+      "inciName": "Glyceryl Stearate SE",
+      "commonNames": [],
+      "rating": 3,
+      "category": "Emulsifier",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Emmanuel.Skin (Open Source)",
+          "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "emmanuel.skin"
+      ]
+    },
+    {
+      "id": "glyceryl-stearate-nse",
+      "inciName": "Glyceryl Stearate NSE",
+      "commonNames": [],
+      "rating": 1,
+      "category": "Emulsifier",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Emmanuel.Skin (Open Source)",
+          "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "emmanuel.skin"
+      ]
+    },
+    {
+      "id": "oleth-10",
+      "inciName": "Oleth-10",
+      "commonNames": [],
+      "rating": 1,
+      "category": "Emulsifier",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Emmanuel.Skin (Open Source)",
+          "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "emmanuel.skin"
+      ]
+    },
+    {
+      "id": "peg-75-lanolin",
+      "inciName": "PEG-75 Lanolin",
+      "commonNames": [],
+      "rating": 3,
+      "category": "Emulsifier",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Emmanuel.Skin (Open Source)",
+          "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "emmanuel.skin"
+      ]
+    },
+    {
+      "id": "laureth-23",
+      "inciName": "Laureth-23",
+      "commonNames": [],
+      "rating": 3,
+      "category": "Emulsifier",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Emmanuel.Skin (Open Source)",
+          "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "emmanuel.skin"
+      ]
+    },
+    {
+      "id": "lanolin-alcohol",
+      "inciName": "Lanolin Alcohol",
+      "commonNames": [],
+      "rating": 2,
+      "category": "Fatty Alcohol",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Emmanuel.Skin (Open Source)",
+          "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "emmanuel.skin"
+      ]
+    },
+    {
+      "id": "vitamin-a-palmitate",
+      "inciName": "Vitamin A Palmitate",
+      "commonNames": [
+        "Retinyl Palmitate"
+      ],
+      "rating": 2,
+      "category": "Active",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Emmanuel.Skin (Open Source)",
+          "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "emmanuel.skin"
+      ]
+    },
+    {
+      "id": "sodium-chloride",
+      "inciName": "Sodium Chloride",
+      "commonNames": [
+        "Salt"
+      ],
+      "rating": 5,
+      "category": "Other",
+      "description": "Can clog pores in high concentrations",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Emmanuel.Skin (Open Source)",
+          "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "emmanuel.skin"
+      ]
+    },
+    {
+      "id": "capric-acid",
+      "inciName": "Capric Acid",
+      "commonNames": [
+        "Decanoic Acid"
+      ],
+      "rating": 2,
+      "category": "Fatty Acid",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Emmanuel.Skin (Open Source)",
+          "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "emmanuel.skin"
+      ]
+    },
+    {
+      "id": "benzoic-acid",
+      "inciName": "Benzoic Acid",
+      "commonNames": [],
+      "rating": 2,
+      "category": "Preservative",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Emmanuel.Skin (Open Source)",
+          "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "emmanuel.skin"
+      ]
+    },
+    {
+      "id": "camphor",
+      "inciName": "Camphor",
+      "commonNames": [],
+      "rating": 2,
+      "category": "Active",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Emmanuel.Skin (Open Source)",
+          "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "emmanuel.skin"
+      ]
+    },
+    {
+      "id": "talc",
+      "inciName": "Talc",
+      "commonNames": [
+        "Magnesium Silicate"
+      ],
+      "rating": 1,
+      "category": "Powder",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Emmanuel.Skin (Open Source)",
+          "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "emmanuel.skin"
+      ]
+    },
+    {
+      "id": "beta-carotene",
+      "inciName": "Beta Carotene",
+      "commonNames": [
+        "Provitamin A"
+      ],
+      "rating": 1,
+      "category": "Antioxidant",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Emmanuel.Skin (Open Source)",
+          "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "emmanuel.skin"
+      ]
+    },
+    {
+      "id": "colloidal-sulfur",
+      "inciName": "Colloidal Sulfur",
+      "commonNames": [
+        "Sulfur"
+      ],
+      "rating": 3,
+      "category": "Active",
+      "description": "Acne treatment ingredient",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Emmanuel.Skin (Open Source)",
+          "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "emmanuel.skin"
+      ]
+    },
+    {
+      "id": "dioctyl-succinate",
+      "inciName": "Dioctyl Succinate",
+      "commonNames": [],
+      "rating": 3,
+      "category": "Emollient",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Emmanuel.Skin (Open Source)",
+          "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "emmanuel.skin"
+      ]
+    },
+    {
+      "id": "sulfated-castor-oil",
+      "inciName": "Sulfated Castor Oil",
+      "commonNames": [
+        "Turkey Red Oil"
+      ],
+      "rating": 3,
+      "category": "Emulsifier",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Emmanuel.Skin (Open Source)",
+          "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "emmanuel.skin"
+      ]
+    },
+    {
+      "id": "sulfated-jojoba-oil",
+      "inciName": "Sulfated Jojoba Oil",
+      "commonNames": [],
+      "rating": 3,
+      "category": "Emulsifier",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Emmanuel.Skin (Open Source)",
+          "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "emmanuel.skin"
+      ]
+    },
+    {
+      "id": "red-algae",
+      "inciName": "Red Algae",
+      "commonNames": [
+        "Rhodophyta"
+      ],
+      "rating": 5,
+      "category": "Extract",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Emmanuel.Skin (Open Source)",
+          "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "emmanuel.skin"
+      ]
+    },
+    {
+      "id": "lithium-stearate",
+      "inciName": "Lithium Stearate",
+      "commonNames": [],
+      "rating": 1,
+      "category": "Emulsifier",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Emmanuel.Skin (Open Source)",
+          "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "emmanuel.skin"
+      ]
+    },
+    {
+      "id": "magnesium-stearate",
+      "inciName": "Magnesium Stearate",
+      "commonNames": [],
+      "rating": 1,
+      "category": "Emulsifier",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Emmanuel.Skin (Open Source)",
+          "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "emmanuel.skin"
+      ]
+    },
+    {
+      "id": "ethylparaben",
+      "inciName": "Ethylparaben",
+      "commonNames": [],
+      "rating": 0,
+      "category": "Preservative",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Emmanuel.Skin (Open Source)",
+          "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "emmanuel.skin"
+      ]
+    },
+    {
+      "id": "propylparaben",
+      "inciName": "Propylparaben",
+      "commonNames": [],
+      "rating": 0,
+      "category": "Preservative",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Emmanuel.Skin (Open Source)",
+          "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "emmanuel.skin"
+      ]
+    },
+    {
+      "id": "papain",
+      "inciName": "Papain",
+      "commonNames": [],
+      "rating": 0,
+      "category": "Enzyme",
+      "description": "Papaya enzyme, exfoliant",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Emmanuel.Skin (Open Source)",
+          "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "emmanuel.skin"
+      ]
+    },
+    {
+      "id": "aloe-vera",
+      "inciName": "Aloe Vera",
+      "commonNames": [
+        "Aloe Barbadensis Leaf Juice"
+      ],
+      "rating": 0,
+      "category": "Extract",
+      "description": "Soothing, non-comedogenic",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Emmanuel.Skin (Open Source)",
+          "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "emmanuel.skin"
+      ]
+    },
+    {
+      "id": "calendula",
+      "inciName": "Calendula",
+      "commonNames": [
+        "Calendula Officinalis Extract"
+      ],
+      "rating": 1,
+      "category": "Extract",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Emmanuel.Skin (Open Source)",
+          "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "emmanuel.skin"
+      ]
+    },
+    {
+      "id": "lanolin-oil",
+      "inciName": "Lanolin Oil",
+      "commonNames": [],
+      "rating": 1,
+      "category": "Emollient",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Emmanuel.Skin (Open Source)",
+          "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "emmanuel.skin"
+      ]
+    },
+    {
+      "id": "lanolin-wax",
+      "inciName": "Lanolin Wax",
+      "commonNames": [],
+      "rating": 1,
+      "category": "Wax",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Emmanuel.Skin (Open Source)",
+          "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "emmanuel.skin"
+      ]
+    },
+    {
+      "id": "polyethylene-glycol",
+      "inciName": "Polyethylene Glycol",
+      "commonNames": [
+        "PEG-400",
+        "PEG 400"
+      ],
+      "rating": 1,
+      "category": "Humectant",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Emmanuel.Skin (Open Source)",
+          "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "emmanuel.skin"
+      ]
+    },
+    {
+      "id": "acetone",
+      "inciName": "Acetone",
+      "commonNames": [],
+      "rating": 0,
+      "category": "Solvent",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Emmanuel.Skin (Open Source)",
+          "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "emmanuel.skin"
+      ]
+    },
+    {
+      "id": "magnesium-aluminum-silicate",
+      "inciName": "Magnesium Aluminum Silicate",
+      "commonNames": [],
+      "rating": 0,
+      "category": "Thickener",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Emmanuel.Skin (Open Source)",
+          "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "emmanuel.skin"
+      ]
+    },
+    {
+      "id": "coconut-oil-fractionated",
+      "inciName": "Coconut Oil (Fractionated)",
+      "commonNames": [
+        "Caprylic/Capric Triglyceride"
+      ],
+      "rating": 2,
+      "category": "Emollient",
+      "description": "Lower comedogenic rating than regular coconut oil",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Emmanuel.Skin (Open Source)",
+          "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "emmanuel.skin"
+      ]
+    },
+    {
+      "id": "ammonium-lauryl-sulfate",
+      "inciName": "Ammonium Lauryl Sulfate",
+      "commonNames": [],
+      "rating": 0,
+      "category": "Unknown",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Skincare Ingredient Scanner (Open Source)",
+          "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "skincare-ingredient-scanner"
+      ]
+    },
+    {
+      "id": "ammonium-laureth-sulfate",
+      "inciName": "Ammonium Laureth Sulfate",
+      "commonNames": [],
+      "rating": 0,
+      "category": "Unknown",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Skincare Ingredient Scanner (Open Source)",
+          "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "skincare-ingredient-scanner"
+      ]
+    },
+    {
+      "id": "sodium-c14-16-olefin-sulfonate",
+      "inciName": "Sodium C14-16 Olefin Sulfonate",
+      "commonNames": [],
+      "rating": 0,
+      "category": "Unknown",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Skincare Ingredient Scanner (Open Source)",
+          "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "skincare-ingredient-scanner"
+      ]
+    },
+    {
+      "id": "cocamidopropyl-betaine",
+      "inciName": "Cocamidopropyl Betaine",
+      "commonNames": [],
+      "rating": 2,
+      "category": "Unknown",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Skincare Ingredient Scanner (Open Source)",
+          "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "skincare-ingredient-scanner"
+      ]
+    },
+    {
+      "id": "sodium-coco-sulfate",
+      "inciName": "Sodium Coco-Sulfate",
+      "commonNames": [],
+      "rating": 0,
+      "category": "Unknown",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Skincare Ingredient Scanner (Open Source)",
+          "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "skincare-ingredient-scanner"
+      ]
+    },
+    {
+      "id": "disodium-laureth-sulfosuccinate",
+      "inciName": "Disodium Laureth Sulfosuccinate",
+      "commonNames": [],
+      "rating": 0,
+      "category": "Unknown",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Skincare Ingredient Scanner (Open Source)",
+          "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "skincare-ingredient-scanner"
+      ]
+    },
+    {
+      "id": "sodium-methyl-cocoyl-taurate",
+      "inciName": "Sodium Methyl Cocoyl Taurate",
+      "commonNames": [],
+      "rating": 0,
+      "category": "Unknown",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Skincare Ingredient Scanner (Open Source)",
+          "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "skincare-ingredient-scanner"
+      ]
+    },
+    {
+      "id": "sodium-lauroyl-sarcosinate",
+      "inciName": "Sodium Lauroyl Sarcosinate",
+      "commonNames": [],
+      "rating": 0,
+      "category": "Unknown",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Skincare Ingredient Scanner (Open Source)",
+          "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "skincare-ingredient-scanner"
+      ]
+    },
+    {
+      "id": "cocamidopropyl-hydroxysultaine",
+      "inciName": "Cocamidopropyl Hydroxysultaine",
+      "commonNames": [],
+      "rating": 0,
+      "category": "Unknown",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Skincare Ingredient Scanner (Open Source)",
+          "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "skincare-ingredient-scanner"
+      ]
+    },
+    {
+      "id": "sodium-lauroamphoacetate",
+      "inciName": "Sodium Lauroamphoacetate",
+      "commonNames": [],
+      "rating": 0,
+      "category": "Unknown",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Skincare Ingredient Scanner (Open Source)",
+          "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "skincare-ingredient-scanner"
+      ]
+    },
+    {
+      "id": "sodium-lauroyl-glutamate",
+      "inciName": "Sodium Lauroyl Glutamate",
+      "commonNames": [],
+      "rating": 0,
+      "category": "Unknown",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Skincare Ingredient Scanner (Open Source)",
+          "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "skincare-ingredient-scanner"
+      ]
+    },
+    {
+      "id": "sodium-cocoyl-isethionate",
+      "inciName": "Sodium Cocoyl Isethionate",
+      "commonNames": [],
+      "rating": 0,
+      "category": "Unknown",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Skincare Ingredient Scanner (Open Source)",
+          "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "skincare-ingredient-scanner"
+      ]
+    },
+    {
+      "id": "sodium-lauroyl-methyl-isethionate",
+      "inciName": "Sodium Lauroyl Methyl Isethionate",
+      "commonNames": [],
+      "rating": 0,
+      "category": "Unknown",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Skincare Ingredient Scanner (Open Source)",
+          "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "skincare-ingredient-scanner"
+      ]
+    },
+    {
+      "id": "lauryl-glucoside",
+      "inciName": "Lauryl Glucoside",
+      "commonNames": [],
+      "rating": 0,
+      "category": "Unknown",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Skincare Ingredient Scanner (Open Source)",
+          "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "skincare-ingredient-scanner"
+      ]
+    },
+    {
+      "id": "decyl-glucoside",
+      "inciName": "Decyl Glucoside",
+      "commonNames": [],
+      "rating": 0,
+      "category": "Unknown",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Skincare Ingredient Scanner (Open Source)",
+          "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "skincare-ingredient-scanner"
+      ]
+    },
+    {
+      "id": "coco-glucoside",
+      "inciName": "Coco-Glucoside",
+      "commonNames": [],
+      "rating": 0,
+      "category": "Unknown",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Skincare Ingredient Scanner (Open Source)",
+          "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "skincare-ingredient-scanner"
+      ]
+    },
+    {
+      "id": "pentylene-glycol",
+      "inciName": "Pentylene Glycol",
+      "commonNames": [],
+      "rating": 0,
+      "category": "Unknown",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Skincare Ingredient Scanner (Open Source)",
+          "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "skincare-ingredient-scanner"
+      ]
+    },
+    {
+      "id": "hyaluronic-acid",
+      "inciName": "Hyaluronic Acid",
+      "commonNames": [],
+      "rating": 0,
+      "category": "Unknown",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Skincare Ingredient Scanner (Open Source)",
+          "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "skincare-ingredient-scanner"
+      ]
+    },
+    {
+      "id": "citric-acid",
+      "inciName": "Citric Acid",
+      "commonNames": [],
+      "rating": 0,
+      "category": "Unknown",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Skincare Ingredient Scanner (Open Source)",
+          "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "skincare-ingredient-scanner"
+      ]
+    },
+    {
+      "id": "gluconolactone",
+      "inciName": "Gluconolactone",
+      "commonNames": [],
+      "rating": 0,
+      "category": "Unknown",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Skincare Ingredient Scanner (Open Source)",
+          "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "skincare-ingredient-scanner"
+      ]
+    },
+    {
+      "id": "retinaldehyde",
+      "inciName": "Retinaldehyde",
+      "commonNames": [],
+      "rating": 0,
+      "category": "Unknown",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Skincare Ingredient Scanner (Open Source)",
+          "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "skincare-ingredient-scanner"
+      ]
+    },
+    {
+      "id": "retinyl-palmitate",
+      "inciName": "Retinyl Palmitate",
+      "commonNames": [],
+      "rating": 0,
+      "category": "Unknown",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Skincare Ingredient Scanner (Open Source)",
+          "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "skincare-ingredient-scanner"
+      ]
+    },
+    {
+      "id": "tretinoin",
+      "inciName": "Tretinoin",
+      "commonNames": [],
+      "rating": 0,
+      "category": "Unknown",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Skincare Ingredient Scanner (Open Source)",
+          "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "skincare-ingredient-scanner"
+      ]
+    },
+    {
+      "id": "adapalene",
+      "inciName": "Adapalene",
+      "commonNames": [],
+      "rating": 0,
+      "category": "Unknown",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Skincare Ingredient Scanner (Open Source)",
+          "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "skincare-ingredient-scanner"
+      ]
+    },
+    {
+      "id": "tranexamic-acid",
+      "inciName": "Tranexamic Acid",
+      "commonNames": [],
+      "rating": 0,
+      "category": "Unknown",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Skincare Ingredient Scanner (Open Source)",
+          "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "skincare-ingredient-scanner"
+      ]
+    },
+    {
+      "id": "hydroquinone",
+      "inciName": "Hydroquinone",
+      "commonNames": [],
+      "rating": 0,
+      "category": "Unknown",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Skincare Ingredient Scanner (Open Source)",
+          "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "skincare-ingredient-scanner"
+      ]
+    },
+    {
+      "id": "dipotassium-glycyrrhizate",
+      "inciName": "Dipotassium Glycyrrhizate",
+      "commonNames": [],
+      "rating": 0,
+      "category": "Unknown",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Skincare Ingredient Scanner (Open Source)",
+          "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "skincare-ingredient-scanner"
+      ]
+    },
+    {
+      "id": "chamomile-extract",
+      "inciName": "Chamomile Extract",
+      "commonNames": [],
+      "rating": 0,
+      "category": "Unknown",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Skincare Ingredient Scanner (Open Source)",
+          "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "skincare-ingredient-scanner"
+      ]
+    },
+    {
+      "id": "witch-hazel",
+      "inciName": "Witch Hazel",
+      "commonNames": [],
+      "rating": 0,
+      "category": "Unknown",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Skincare Ingredient Scanner (Open Source)",
+          "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "skincare-ingredient-scanner"
+      ]
+    },
+    {
+      "id": "alcohol-denat",
+      "inciName": "Alcohol Denat.",
+      "commonNames": [],
+      "rating": 0,
+      "category": "Unknown",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Skincare Ingredient Scanner (Open Source)",
+          "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "skincare-ingredient-scanner"
+      ]
+    },
+    {
+      "id": "isopropyl-alcohol",
+      "inciName": "Isopropyl Alcohol",
+      "commonNames": [],
+      "rating": 0,
+      "category": "Unknown",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Skincare Ingredient Scanner (Open Source)",
+          "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "skincare-ingredient-scanner"
+      ]
+    },
+    {
+      "id": "benzyl-alcohol",
+      "inciName": "Benzyl Alcohol",
+      "commonNames": [],
+      "rating": 0,
+      "category": "Unknown",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Skincare Ingredient Scanner (Open Source)",
+          "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "skincare-ingredient-scanner"
+      ]
+    },
+    {
+      "id": "methylisothiazolinone",
+      "inciName": "Methylisothiazolinone",
+      "commonNames": [],
+      "rating": 0,
+      "category": "Unknown",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Skincare Ingredient Scanner (Open Source)",
+          "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "skincare-ingredient-scanner"
+      ]
+    },
+    {
+      "id": "methylchloroisothiazolinone",
+      "inciName": "Methylchloroisothiazolinone",
+      "commonNames": [],
+      "rating": 0,
+      "category": "Unknown",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Skincare Ingredient Scanner (Open Source)",
+          "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "skincare-ingredient-scanner"
+      ]
+    },
+    {
+      "id": "diazolidinyl-urea",
+      "inciName": "Diazolidinyl Urea",
+      "commonNames": [],
+      "rating": 0,
+      "category": "Unknown",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Skincare Ingredient Scanner (Open Source)",
+          "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "skincare-ingredient-scanner"
+      ]
+    },
+    {
+      "id": "imidazolidinyl-urea",
+      "inciName": "Imidazolidinyl Urea",
+      "commonNames": [],
+      "rating": 0,
+      "category": "Unknown",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Skincare Ingredient Scanner (Open Source)",
+          "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "skincare-ingredient-scanner"
+      ]
+    },
+    {
+      "id": "dmdm-hydantoin",
+      "inciName": "DMDM Hydantoin",
+      "commonNames": [],
+      "rating": 0,
+      "category": "Unknown",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Skincare Ingredient Scanner (Open Source)",
+          "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "skincare-ingredient-scanner"
+      ]
+    },
+    {
+      "id": "quaternium-15",
+      "inciName": "Quaternium-15",
+      "commonNames": [],
+      "rating": 0,
+      "category": "Unknown",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Skincare Ingredient Scanner (Open Source)",
+          "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "skincare-ingredient-scanner"
+      ]
+    },
+    {
+      "id": "bronopol",
+      "inciName": "Bronopol",
+      "commonNames": [],
+      "rating": 0,
+      "category": "Unknown",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Skincare Ingredient Scanner (Open Source)",
+          "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "skincare-ingredient-scanner"
+      ]
+    },
+    {
+      "id": "formaldehyde",
+      "inciName": "Formaldehyde",
+      "commonNames": [],
+      "rating": 0,
+      "category": "Unknown",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Skincare Ingredient Scanner (Open Source)",
+          "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "skincare-ingredient-scanner"
+      ]
+    },
+    {
+      "id": "methylparaben",
+      "inciName": "Methylparaben",
+      "commonNames": [],
+      "rating": 0,
+      "category": "Unknown",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Skincare Ingredient Scanner (Open Source)",
+          "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "skincare-ingredient-scanner"
+      ]
+    },
+    {
+      "id": "butylparaben",
+      "inciName": "Butylparaben",
+      "commonNames": [],
+      "rating": 0,
+      "category": "Unknown",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Skincare Ingredient Scanner (Open Source)",
+          "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "skincare-ingredient-scanner"
+      ]
+    },
+    {
+      "id": "benzylparaben",
+      "inciName": "Benzylparaben",
+      "commonNames": [],
+      "rating": 0,
+      "category": "Unknown",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Skincare Ingredient Scanner (Open Source)",
+          "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "skincare-ingredient-scanner"
+      ]
+    },
+    {
+      "id": "isobutylparaben",
+      "inciName": "Isobutylparaben",
+      "commonNames": [],
+      "rating": 0,
+      "category": "Unknown",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Skincare Ingredient Scanner (Open Source)",
+          "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "skincare-ingredient-scanner"
+      ]
+    },
+    {
+      "id": "sodium-benzoate",
+      "inciName": "Sodium Benzoate",
+      "commonNames": [],
+      "rating": 0,
+      "category": "Unknown",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Skincare Ingredient Scanner (Open Source)",
+          "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "skincare-ingredient-scanner"
+      ]
+    },
+    {
+      "id": "potassium-sorbate",
+      "inciName": "Potassium Sorbate",
+      "commonNames": [],
+      "rating": 0,
+      "category": "Unknown",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Skincare Ingredient Scanner (Open Source)",
+          "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "skincare-ingredient-scanner"
+      ]
+    },
+    {
+      "id": "dehydroacetic-acid",
+      "inciName": "Dehydroacetic Acid",
+      "commonNames": [],
+      "rating": 0,
+      "category": "Unknown",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Skincare Ingredient Scanner (Open Source)",
+          "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "skincare-ingredient-scanner"
+      ]
+    },
+    {
+      "id": "chlorphenesin",
+      "inciName": "Chlorphenesin",
+      "commonNames": [],
+      "rating": 0,
+      "category": "Unknown",
+      "description": "Preservative and biocide used in cosmetics at concentrations up to 0.3% (leave-on) and 0.32% (rinse-off). The CIR Expert Panel concluded it is safe in present practices of use and concentration.",
+      "skinTypeNotes": {},
+      "evidenceLevel": "high",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "CIR Safety Assessment (PDF)",
+          "url": "https://www.cir-safety.org/sites/default/files/Chlorp092012rep.pdf",
+          "type": "regulatory"
+        },
+        {
+          "name": "Sage Journals - Safety Assessment Publication",
+          "url": "https://journals.sagepub.com/doi/10.1177/1091581814526893",
+          "type": "study"
+        }
+      ],
+      "sources": [
+        "skincare-ingredient-scanner"
+      ]
+    },
+    {
+      "id": "caprylyl-glycol",
+      "inciName": "Caprylyl Glycol",
+      "commonNames": [],
+      "rating": 0,
+      "category": "Unknown",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Skincare Ingredient Scanner (Open Source)",
+          "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "skincare-ingredient-scanner"
+      ]
+    },
+    {
+      "id": "tetrasodium-edta",
+      "inciName": "Tetrasodium EDTA",
+      "commonNames": [],
+      "rating": 0,
+      "category": "Unknown",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Skincare Ingredient Scanner (Open Source)",
+          "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "skincare-ingredient-scanner"
+      ]
+    },
+    {
+      "id": "bht",
+      "inciName": "BHT",
+      "commonNames": [],
+      "rating": 0,
+      "category": "Unknown",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Skincare Ingredient Scanner (Open Source)",
+          "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "skincare-ingredient-scanner"
+      ]
+    },
+    {
+      "id": "bha",
+      "inciName": "BHA",
+      "commonNames": [],
+      "rating": 0,
+      "category": "Unknown",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Skincare Ingredient Scanner (Open Source)",
+          "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "skincare-ingredient-scanner"
+      ]
+    },
+    {
+      "id": "oxybenzone",
+      "inciName": "Oxybenzone",
+      "commonNames": [],
+      "rating": 0,
+      "category": "Unknown",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Skincare Ingredient Scanner (Open Source)",
+          "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "skincare-ingredient-scanner"
+      ]
+    },
+    {
+      "id": "octinoxate",
+      "inciName": "Octinoxate",
+      "commonNames": [],
+      "rating": 0,
+      "category": "Unknown",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Skincare Ingredient Scanner (Open Source)",
+          "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "skincare-ingredient-scanner"
+      ]
+    },
+    {
+      "id": "octisalate",
+      "inciName": "Octisalate",
+      "commonNames": [],
+      "rating": 0,
+      "category": "Unknown",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Skincare Ingredient Scanner (Open Source)",
+          "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "skincare-ingredient-scanner"
+      ]
+    },
+    {
+      "id": "homosalate",
+      "inciName": "Homosalate",
+      "commonNames": [],
+      "rating": 0,
+      "category": "Unknown",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Skincare Ingredient Scanner (Open Source)",
+          "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "skincare-ingredient-scanner"
+      ]
+    },
+    {
+      "id": "octocrylene",
+      "inciName": "Octocrylene",
+      "commonNames": [],
+      "rating": 0,
+      "category": "Unknown",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Skincare Ingredient Scanner (Open Source)",
+          "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "skincare-ingredient-scanner"
+      ]
+    },
+    {
+      "id": "avobenzone",
+      "inciName": "Avobenzone",
+      "commonNames": [],
+      "rating": 0,
+      "category": "Unknown",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Skincare Ingredient Scanner (Open Source)",
+          "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "skincare-ingredient-scanner"
+      ]
+    },
+    {
+      "id": "4-methylbenzylidene-camphor",
+      "inciName": "4-Methylbenzylidene Camphor",
+      "commonNames": [],
+      "rating": 0,
+      "category": "Unknown",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Skincare Ingredient Scanner (Open Source)",
+          "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "skincare-ingredient-scanner"
+      ]
+    },
+    {
+      "id": "triclosan",
+      "inciName": "Triclosan",
+      "commonNames": [],
+      "rating": 0,
+      "category": "Unknown",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Skincare Ingredient Scanner (Open Source)",
+          "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "skincare-ingredient-scanner"
+      ]
+    },
+    {
+      "id": "triclocarban",
+      "inciName": "Triclocarban",
+      "commonNames": [],
+      "rating": 0,
+      "category": "Unknown",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Skincare Ingredient Scanner (Open Source)",
+          "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "skincare-ingredient-scanner"
+      ]
+    },
+    {
+      "id": "diethyl-phthalate-dep",
+      "inciName": "Diethyl Phthalate (DEP)",
+      "commonNames": [],
+      "rating": 0,
+      "category": "Unknown",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Skincare Ingredient Scanner (Open Source)",
+          "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "skincare-ingredient-scanner"
+      ]
+    },
+    {
+      "id": "dibutyl-phthalate-dbp",
+      "inciName": "Dibutyl Phthalate (DBP)",
+      "commonNames": [],
+      "rating": 0,
+      "category": "Unknown",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Skincare Ingredient Scanner (Open Source)",
+          "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "skincare-ingredient-scanner"
+      ]
+    },
+    {
+      "id": "diethylhexyl-phthalate-dehp",
+      "inciName": "Diethylhexyl Phthalate (DEHP)",
+      "commonNames": [],
+      "rating": 0,
+      "category": "Unknown",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Skincare Ingredient Scanner (Open Source)",
+          "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "skincare-ingredient-scanner"
+      ]
+    },
+    {
+      "id": "nonylphenol-ethoxylates",
+      "inciName": "Nonylphenol Ethoxylates",
+      "commonNames": [],
+      "rating": 0,
+      "category": "Unknown",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Skincare Ingredient Scanner (Open Source)",
+          "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "skincare-ingredient-scanner"
+      ]
+    },
+    {
+      "id": "cyclohexasiloxane",
+      "inciName": "Cyclohexasiloxane",
+      "commonNames": [],
+      "rating": 1,
+      "category": "Unknown",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Skincare Ingredient Scanner (Open Source)",
+          "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "skincare-ingredient-scanner"
+      ]
+    },
+    {
+      "id": "phenyl-trimethicone",
+      "inciName": "Phenyl Trimethicone",
+      "commonNames": [],
+      "rating": 1,
+      "category": "Unknown",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Skincare Ingredient Scanner (Open Source)",
+          "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "skincare-ingredient-scanner"
+      ]
+    },
+    {
+      "id": "amodimethicone",
+      "inciName": "Amodimethicone",
+      "commonNames": [],
+      "rating": 1,
+      "category": "Unknown",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Skincare Ingredient Scanner (Open Source)",
+          "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "skincare-ingredient-scanner"
+      ]
+    },
+    {
+      "id": "polysilicone-11",
+      "inciName": "Polysilicone-11",
+      "commonNames": [],
+      "rating": 1,
+      "category": "Unknown",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Skincare Ingredient Scanner (Open Source)",
+          "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "skincare-ingredient-scanner"
+      ]
+    },
+    {
+      "id": "sunflower-oil",
+      "inciName": "Sunflower Oil",
+      "commonNames": [],
+      "rating": 0,
+      "category": "Unknown",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Skincare Ingredient Scanner (Open Source)",
+          "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "skincare-ingredient-scanner"
+      ]
+    },
+    {
+      "id": "sweet-almond-oil",
+      "inciName": "Sweet Almond Oil",
+      "commonNames": [],
+      "rating": 2,
+      "category": "Unknown",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Skincare Ingredient Scanner (Open Source)",
+          "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "skincare-ingredient-scanner"
+      ]
+    },
+    {
+      "id": "rosehip-oil",
+      "inciName": "Rosehip Oil",
+      "commonNames": [],
+      "rating": 1,
+      "category": "Unknown",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Skincare Ingredient Scanner (Open Source)",
+          "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "skincare-ingredient-scanner"
+      ]
+    },
+    {
+      "id": "capryliccapric-triglyceride",
+      "inciName": "Caprylic/Capric Triglyceride",
+      "commonNames": [],
+      "rating": 2,
+      "category": "Unknown",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Skincare Ingredient Scanner (Open Source)",
+          "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "skincare-ingredient-scanner"
+      ]
+    },
+    {
+      "id": "propanediol",
+      "inciName": "Propanediol",
+      "commonNames": [],
+      "rating": 0,
+      "category": "Unknown",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Skincare Ingredient Scanner (Open Source)",
+          "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "skincare-ingredient-scanner"
+      ]
+    },
+    {
+      "id": "betaine",
+      "inciName": "Betaine",
+      "commonNames": [],
+      "rating": 0,
+      "category": "Unknown",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Skincare Ingredient Scanner (Open Source)",
+          "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "skincare-ingredient-scanner"
+      ]
+    },
+    {
+      "id": "oat-kernel-extract",
+      "inciName": "Oat Kernel Extract",
+      "commonNames": [],
+      "rating": 0,
+      "category": "Unknown",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Skincare Ingredient Scanner (Open Source)",
+          "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "skincare-ingredient-scanner"
+      ]
+    },
+    {
+      "id": "lavender-oil",
+      "inciName": "Lavender Oil",
+      "commonNames": [],
+      "rating": 0,
+      "category": "Unknown",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Skincare Ingredient Scanner (Open Source)",
+          "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "skincare-ingredient-scanner"
+      ]
+    },
+    {
+      "id": "peppermint-oil",
+      "inciName": "Peppermint Oil",
+      "commonNames": [],
+      "rating": 0,
+      "category": "Unknown",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Skincare Ingredient Scanner (Open Source)",
+          "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "skincare-ingredient-scanner"
+      ]
+    },
+    {
+      "id": "eucalyptus-oil",
+      "inciName": "Eucalyptus Oil",
+      "commonNames": [],
+      "rating": 0,
+      "category": "Unknown",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Skincare Ingredient Scanner (Open Source)",
+          "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "skincare-ingredient-scanner"
+      ]
+    },
+    {
+      "id": "bergamot-oil",
+      "inciName": "Bergamot Oil",
+      "commonNames": [],
+      "rating": 0,
+      "category": "Unknown",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Skincare Ingredient Scanner (Open Source)",
+          "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "skincare-ingredient-scanner"
+      ]
+    },
+    {
+      "id": "lemon-oil",
+      "inciName": "Lemon Oil",
+      "commonNames": [],
+      "rating": 0,
+      "category": "Unknown",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Skincare Ingredient Scanner (Open Source)",
+          "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "skincare-ingredient-scanner"
+      ]
+    },
+    {
+      "id": "lime-oil",
+      "inciName": "Lime Oil",
+      "commonNames": [],
+      "rating": 0,
+      "category": "Unknown",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Skincare Ingredient Scanner (Open Source)",
+          "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "skincare-ingredient-scanner"
+      ]
+    },
+    {
+      "id": "orange-oil",
+      "inciName": "Orange Oil",
+      "commonNames": [],
+      "rating": 0,
+      "category": "Unknown",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Skincare Ingredient Scanner (Open Source)",
+          "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "skincare-ingredient-scanner"
+      ]
+    },
+    {
+      "id": "lemongrass-oil",
+      "inciName": "Lemongrass Oil",
+      "commonNames": [],
+      "rating": 0,
+      "category": "Unknown",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Skincare Ingredient Scanner (Open Source)",
+          "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "skincare-ingredient-scanner"
+      ]
+    },
+    {
+      "id": "ylang-ylang-oil",
+      "inciName": "Ylang-Ylang Oil",
+      "commonNames": [],
+      "rating": 0,
+      "category": "Unknown",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Skincare Ingredient Scanner (Open Source)",
+          "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "skincare-ingredient-scanner"
+      ]
+    },
+    {
+      "id": "clove-oil",
+      "inciName": "Clove Oil",
+      "commonNames": [],
+      "rating": 0,
+      "category": "Unknown",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Skincare Ingredient Scanner (Open Source)",
+          "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "skincare-ingredient-scanner"
+      ]
+    },
+    {
+      "id": "cinnamon-bark-oil",
+      "inciName": "Cinnamon Bark Oil",
+      "commonNames": [],
+      "rating": 0,
+      "category": "Unknown",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Skincare Ingredient Scanner (Open Source)",
+          "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "skincare-ingredient-scanner"
+      ]
+    },
+    {
+      "id": "rosemary-oil",
+      "inciName": "Rosemary Oil",
+      "commonNames": [],
+      "rating": 0,
+      "category": "Unknown",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Skincare Ingredient Scanner (Open Source)",
+          "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "skincare-ingredient-scanner"
+      ]
+    },
+    {
+      "id": "patchouli-oil",
+      "inciName": "Patchouli Oil",
+      "commonNames": [],
+      "rating": 0,
+      "category": "Unknown",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Skincare Ingredient Scanner (Open Source)",
+          "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "skincare-ingredient-scanner"
+      ]
+    },
+    {
+      "id": "limonene",
+      "inciName": "Limonene",
+      "commonNames": [],
+      "rating": 0,
+      "category": "Unknown",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Skincare Ingredient Scanner (Open Source)",
+          "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "skincare-ingredient-scanner"
+      ]
+    },
+    {
+      "id": "linalool",
+      "inciName": "Linalool",
+      "commonNames": [],
+      "rating": 0,
+      "category": "Unknown",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Skincare Ingredient Scanner (Open Source)",
+          "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "skincare-ingredient-scanner"
+      ]
+    },
+    {
+      "id": "geraniol",
+      "inciName": "Geraniol",
+      "commonNames": [],
+      "rating": 0,
+      "category": "Unknown",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Skincare Ingredient Scanner (Open Source)",
+          "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "skincare-ingredient-scanner"
+      ]
+    },
+    {
+      "id": "citronellol",
+      "inciName": "Citronellol",
+      "commonNames": [],
+      "rating": 0,
+      "category": "Unknown",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Skincare Ingredient Scanner (Open Source)",
+          "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "skincare-ingredient-scanner"
+      ]
+    },
+    {
+      "id": "citral",
+      "inciName": "Citral",
+      "commonNames": [],
+      "rating": 0,
+      "category": "Unknown",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Skincare Ingredient Scanner (Open Source)",
+          "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "skincare-ingredient-scanner"
+      ]
+    },
+    {
+      "id": "eugenol",
+      "inciName": "Eugenol",
+      "commonNames": [],
+      "rating": 0,
+      "category": "Unknown",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Skincare Ingredient Scanner (Open Source)",
+          "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "skincare-ingredient-scanner"
+      ]
+    },
+    {
+      "id": "coumarin",
+      "inciName": "Coumarin",
+      "commonNames": [],
+      "rating": 0,
+      "category": "Unknown",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Skincare Ingredient Scanner (Open Source)",
+          "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "skincare-ingredient-scanner"
+      ]
+    },
+    {
+      "id": "farnesol",
+      "inciName": "Farnesol",
+      "commonNames": [],
+      "rating": 0,
+      "category": "Unknown",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Skincare Ingredient Scanner (Open Source)",
+          "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "skincare-ingredient-scanner"
+      ]
+    },
+    {
+      "id": "hexyl-cinnamal",
+      "inciName": "Hexyl Cinnamal",
+      "commonNames": [],
+      "rating": 0,
+      "category": "Unknown",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Skincare Ingredient Scanner (Open Source)",
+          "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "skincare-ingredient-scanner"
+      ]
+    },
+    {
+      "id": "butylphenyl-methylpropional",
+      "inciName": "Butylphenyl Methylpropional",
+      "commonNames": [],
+      "rating": 0,
+      "category": "Unknown",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Skincare Ingredient Scanner (Open Source)",
+          "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "skincare-ingredient-scanner"
+      ]
+    },
+    {
+      "id": "hydroxycitronellal",
+      "inciName": "Hydroxycitronellal",
+      "commonNames": [],
+      "rating": 0,
+      "category": "Unknown",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Skincare Ingredient Scanner (Open Source)",
+          "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "skincare-ingredient-scanner"
+      ]
+    },
+    {
+      "id": "decamethylcyclopentasiloxane",
+      "inciName": "Decamethylcyclopentasiloxane",
+      "commonNames": [],
+      "rating": 0,
+      "category": "Unknown",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Skincare Ingredient Scanner (Open Source)",
+          "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "skincare-ingredient-scanner"
+      ]
+    },
+    {
+      "id": "epidermal-growth-factor",
+      "inciName": "Epidermal Growth Factor",
+      "commonNames": [],
+      "rating": 0,
+      "category": "Unknown",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Skincare Ingredient Scanner (Open Source)",
+          "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "skincare-ingredient-scanner"
+      ]
+    },
+    {
+      "id": "copper-tripeptide-1",
+      "inciName": "Copper Tripeptide-1",
+      "commonNames": [],
+      "rating": 0,
+      "category": "Unknown",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Skincare Ingredient Scanner (Open Source)",
+          "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "skincare-ingredient-scanner"
+      ]
+    },
+    {
+      "id": "palmitoyl-tripeptide-1",
+      "inciName": "Palmitoyl Tripeptide-1",
+      "commonNames": [],
+      "rating": 0,
+      "category": "Unknown",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Skincare Ingredient Scanner (Open Source)",
+          "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "skincare-ingredient-scanner"
+      ]
+    },
+    {
+      "id": "palmitoyl-tetrapeptide-7",
+      "inciName": "Palmitoyl Tetrapeptide-7",
+      "commonNames": [],
+      "rating": 0,
+      "category": "Unknown",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Skincare Ingredient Scanner (Open Source)",
+          "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "skincare-ingredient-scanner"
+      ]
+    },
+    {
+      "id": "amyl-cinnamal",
+      "inciName": "Amyl Cinnamal",
+      "commonNames": [],
+      "rating": 0,
+      "category": "Unknown",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Skincare Ingredient Scanner (Open Source)",
+          "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "skincare-ingredient-scanner"
+      ]
+    },
+    {
+      "id": "amylcinnamyl-alcohol",
+      "inciName": "Amylcinnamyl Alcohol",
+      "commonNames": [],
+      "rating": 0,
+      "category": "Unknown",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Skincare Ingredient Scanner (Open Source)",
+          "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "skincare-ingredient-scanner"
+      ]
+    },
+    {
+      "id": "anisyl-alcohol",
+      "inciName": "Anisyl Alcohol",
+      "commonNames": [],
+      "rating": 0,
+      "category": "Unknown",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Skincare Ingredient Scanner (Open Source)",
+          "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "skincare-ingredient-scanner"
+      ]
+    },
+    {
+      "id": "benzyl-cinnamate",
+      "inciName": "Benzyl Cinnamate",
+      "commonNames": [],
+      "rating": 0,
+      "category": "Unknown",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Skincare Ingredient Scanner (Open Source)",
+          "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "skincare-ingredient-scanner"
+      ]
+    },
+    {
+      "id": "cinnamyl-alcohol",
+      "inciName": "Cinnamyl Alcohol",
+      "commonNames": [],
+      "rating": 0,
+      "category": "Unknown",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Skincare Ingredient Scanner (Open Source)",
+          "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "skincare-ingredient-scanner"
+      ]
+    },
+    {
+      "id": "cinnamal",
+      "inciName": "Cinnamal",
+      "commonNames": [],
+      "rating": 0,
+      "category": "Unknown",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Skincare Ingredient Scanner (Open Source)",
+          "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "skincare-ingredient-scanner"
+      ]
+    },
+    {
+      "id": "alpha-isomethyl-ionone",
+      "inciName": "Alpha-Isomethyl Ionone",
+      "commonNames": [],
+      "rating": 0,
+      "category": "Unknown",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Skincare Ingredient Scanner (Open Source)",
+          "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "skincare-ingredient-scanner"
+      ]
+    },
+    {
+      "id": "methyl-2-octynoate",
+      "inciName": "Methyl 2-Octynoate",
+      "commonNames": [],
+      "rating": 0,
+      "category": "Unknown",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Skincare Ingredient Scanner (Open Source)",
+          "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "skincare-ingredient-scanner"
+      ]
+    },
+    {
+      "id": "evernia-prunastri-extract",
+      "inciName": "Evernia Prunastri Extract",
+      "commonNames": [],
+      "rating": 0,
+      "category": "Unknown",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Skincare Ingredient Scanner (Open Source)",
+          "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "skincare-ingredient-scanner"
+      ]
+    },
+    {
+      "id": "evernia-furfuracea-extract",
+      "inciName": "Evernia Furfuracea Extract",
+      "commonNames": [],
+      "rating": 0,
+      "category": "Unknown",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Skincare Ingredient Scanner (Open Source)",
+          "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "skincare-ingredient-scanner"
+      ]
+    },
+    {
+      "id": "iso-eugenol",
+      "inciName": "Iso Eugenol",
+      "commonNames": [],
+      "rating": 0,
+      "category": "Unknown",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Skincare Ingredient Scanner (Open Source)",
+          "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "skincare-ingredient-scanner"
+      ]
+    },
+    {
+      "id": "algin",
+      "inciName": "Algin",
+      "commonNames": [],
+      "rating": 4,
+      "category": "Unknown",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 4,
+      "sourceUrls": [
+        {
+          "name": "Comedogenic Ingredients (Open Source)",
+          "url": "https://github.com/e-zob/comedogenic-ingredients",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "comedogenic-ingredients-csv"
+      ]
+    },
+    {
+      "id": "caprylic-acid",
+      "inciName": "Caprylic Acid",
+      "commonNames": [],
+      "rating": 1,
+      "category": "Unknown",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 3,
+      "sourceUrls": [
+        {
+          "name": "Comedogenic Ingredients (Open Source)",
+          "url": "https://github.com/e-zob/comedogenic-ingredients",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "comedogenic-ingredients-csv"
+      ]
+    },
+    {
+      "id": "carnuba-wax",
+      "inciName": "Carnuba Wax",
+      "commonNames": [],
+      "rating": 1,
+      "category": "Unknown",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Comedogenic Ingredients (Open Source)",
+          "url": "https://github.com/e-zob/comedogenic-ingredients",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "comedogenic-ingredients-csv"
+      ]
+    },
+    {
+      "id": "dc-red--17",
+      "inciName": "D&C Red # 17",
+      "commonNames": [],
+      "rating": 3,
+      "category": "Unknown",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Comedogenic Ingredients (Open Source)",
+          "url": "https://github.com/e-zob/comedogenic-ingredients",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "comedogenic-ingredients-csv"
+      ]
+    },
+    {
+      "id": "dc-red--19",
+      "inciName": "D&C Red # 19",
+      "commonNames": [],
+      "rating": 2,
+      "category": "Unknown",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Comedogenic Ingredients (Open Source)",
+          "url": "https://github.com/e-zob/comedogenic-ingredients",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "comedogenic-ingredients-csv"
+      ]
+    },
+    {
+      "id": "dc-red--21",
+      "inciName": "D&C Red # 21",
+      "commonNames": [],
+      "rating": 3,
+      "category": "Unknown",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Comedogenic Ingredients (Open Source)",
+          "url": "https://github.com/e-zob/comedogenic-ingredients",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "comedogenic-ingredients-csv"
+      ]
+    },
+    {
+      "id": "dc-red--3",
+      "inciName": "D&C Red # 3",
+      "commonNames": [],
+      "rating": 3,
+      "category": "Unknown",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Comedogenic Ingredients (Open Source)",
+          "url": "https://github.com/e-zob/comedogenic-ingredients",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "comedogenic-ingredients-csv"
+      ]
+    },
+    {
+      "id": "dc-red--4",
+      "inciName": "D&C Red # 4",
+      "commonNames": [],
+      "rating": 1,
+      "category": "Unknown",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Comedogenic Ingredients (Open Source)",
+          "url": "https://github.com/e-zob/comedogenic-ingredients",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "comedogenic-ingredients-csv"
+      ]
+    },
+    {
+      "id": "dc-red--6",
+      "inciName": "D&C Red # 6",
+      "commonNames": [],
+      "rating": 1,
+      "category": "Unknown",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Comedogenic Ingredients (Open Source)",
+          "url": "https://github.com/e-zob/comedogenic-ingredients",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "comedogenic-ingredients-csv"
+      ]
+    },
+    {
+      "id": "dc-red--7",
+      "inciName": "D&C Red # 7",
+      "commonNames": [],
+      "rating": 1,
+      "category": "Unknown",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Comedogenic Ingredients (Open Source)",
+          "url": "https://github.com/e-zob/comedogenic-ingredients",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "comedogenic-ingredients-csv"
+      ]
+    },
+    {
+      "id": "dc-red--9",
+      "inciName": "D&C Red # 9",
+      "commonNames": [],
+      "rating": 1,
+      "category": "Unknown",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Comedogenic Ingredients (Open Source)",
+          "url": "https://github.com/e-zob/comedogenic-ingredients",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "comedogenic-ingredients-csv"
+      ]
+    },
+    {
+      "id": "laureth-23",
+      "inciName": "Laureth 23",
+      "commonNames": [],
+      "rating": 3,
+      "category": "Unknown",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Comedogenic Ingredients (Open Source)",
+          "url": "https://github.com/e-zob/comedogenic-ingredients",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "comedogenic-ingredients-csv"
+      ]
+    },
+    {
+      "id": "laureth-4",
+      "inciName": "Laureth 4",
+      "commonNames": [],
+      "rating": 5,
+      "category": "Unknown",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 4,
+      "sourceUrls": [
+        {
+          "name": "Comedogenic Ingredients (Open Source)",
+          "url": "https://github.com/e-zob/comedogenic-ingredients",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "comedogenic-ingredients-csv"
+      ]
+    },
+    {
+      "id": "lithiumm-stearate",
+      "inciName": "Lithiumm Stearate",
+      "commonNames": [],
+      "rating": 1,
+      "category": "Unknown",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Comedogenic Ingredients (Open Source)",
+          "url": "https://github.com/e-zob/comedogenic-ingredients",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "comedogenic-ingredients-csv"
+      ]
+    },
+    {
+      "id": "magneseium-aluminum-silicate",
+      "inciName": "Magneseium Aluminum Silicate",
+      "commonNames": [],
+      "rating": 0,
+      "category": "Unknown",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Comedogenic Ingredients (Open Source)",
+          "url": "https://github.com/e-zob/comedogenic-ingredients",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "comedogenic-ingredients-csv"
+      ]
+    },
+    {
+      "id": "peg-75-lanolin",
+      "inciName": "PEG 75 Lanolin",
+      "commonNames": [],
+      "rating": 3,
+      "category": "Unknown",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 2,
+      "sourceUrls": [
+        {
+          "name": "Comedogenic Ingredients (Open Source)",
+          "url": "https://github.com/e-zob/comedogenic-ingredients",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "comedogenic-ingredients-csv"
+      ]
+    },
+    {
+      "id": "peg-100-stearate",
+      "inciName": "PEG 100 Stearate",
+      "commonNames": [],
+      "rating": 1,
+      "category": "Unknown",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Comedogenic Ingredients (Open Source)",
+          "url": "https://github.com/e-zob/comedogenic-ingredients",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "comedogenic-ingredients-csv"
+      ]
+    },
+    {
+      "id": "peg-16-lanolin",
+      "inciName": "PEG 16 Lanolin",
+      "commonNames": [],
+      "rating": 4,
+      "category": "Unknown",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 3,
+      "sourceUrls": [
+        {
+          "name": "Comedogenic Ingredients (Open Source)",
+          "url": "https://github.com/e-zob/comedogenic-ingredients",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "comedogenic-ingredients-csv"
+      ]
+    },
+    {
+      "id": "peg-8-stearate",
+      "inciName": "PEG 8 Stearate",
+      "commonNames": [],
+      "rating": 3,
+      "category": "Unknown",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 1,
+      "sourceUrls": [
+        {
+          "name": "Comedogenic Ingredients (Open Source)",
+          "url": "https://github.com/e-zob/comedogenic-ingredients",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "comedogenic-ingredients-csv"
+      ]
+    },
+    {
+      "id": "polyethylene-glycol-peg-400",
+      "inciName": "Polyethylene Glycol (PEG 400)",
+      "commonNames": [],
+      "rating": 1,
+      "category": "Unknown",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Comedogenic Ingredients (Open Source)",
+          "url": "https://github.com/e-zob/comedogenic-ingredients",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "comedogenic-ingredients-csv"
+      ]
+    },
+    {
+      "id": "red-algea",
+      "inciName": "Red Algea",
+      "commonNames": [],
+      "rating": 5,
+      "category": "Unknown",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 2,
+      "sourceUrls": [
+        {
+          "name": "Comedogenic Ingredients (Open Source)",
+          "url": "https://github.com/e-zob/comedogenic-ingredients",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "comedogenic-ingredients-csv"
+      ]
+    },
+    {
+      "id": "syearyl-heptanoate",
+      "inciName": "Syearyl Heptanoate",
+      "commonNames": [],
+      "rating": 4,
+      "category": "Unknown",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Comedogenic Ingredients (Open Source)",
+          "url": "https://github.com/e-zob/comedogenic-ingredients",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "comedogenic-ingredients-csv"
+      ]
+    },
+    {
+      "id": "tocopherol-vitamin-e",
+      "inciName": "Tocopherol (Vitamin E)",
+      "commonNames": [],
+      "rating": 2,
+      "category": "Unknown",
+      "description": "",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 2,
+      "sourceUrls": [
+        {
+          "name": "Comedogenic Ingredients (Open Source)",
+          "url": "https://github.com/e-zob/comedogenic-ingredients",
+          "type": "github"
+        }
+      ],
+      "sources": [
+        "comedogenic-ingredients-csv"
+      ]
+    },
+    {
+      "id": "ensulizole",
+      "inciName": "Ensulizole",
+      "commonNames": [],
+      "rating": 0,
+      "category": "Sunscreen",
+      "description": "UVB sunscreen agent (phenylbenzimidazole sulfonic acid). Water-soluble, non-comedogenic.",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [],
+      "sources": [
+        "manual-research"
+      ]
+    },
+    {
+      "id": "meradimate",
+      "inciName": "Meradimate",
+      "commonNames": [],
+      "rating": 0,
+      "category": "Sunscreen",
+      "description": "UVA sunscreen agent (menthyl anthranilate). Non-comedogenic.",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [],
+      "sources": [
+        "manual-research"
+      ]
+    },
+    {
+      "id": "padimate-o",
+      "inciName": "Padimate O",
+      "commonNames": [],
+      "rating": 0,
+      "category": "Sunscreen",
+      "description": "UVB sunscreen agent (octyl dimethyl PABA). Non-comedogenic.",
+      "skinTypeNotes": {},
+      "evidenceLevel": "medium",
+      "irritancy": 0,
+      "sourceUrls": [],
+      "sources": [
+        "manual-research"
+      ]
+    },
+    {
+      "id": "butyloctyl-salicylate",
+      "inciName": "Butyloctyl Salicylate",
+      "commonNames": [],
+      "rating": 1,
+      "category": "Emollient",
+      "description": "Lightweight ester combining salicylic acid with a branched alcohol. Used to enhance slip and dissolve oil-compatible UV filters in sunscreens. Low comedogenic risk.",
+      "skinTypeNotes": {},
+      "evidenceLevel": "low",
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "Glooshi",
+          "url": "https://www.glooshi.com/butyloctyl-salicylate/",
+          "type": "database"
+        }
+      ],
+      "sources": [
+        "manual-research"
+      ]
+    },
+    {
+      "id": "steareth-20",
+      "inciName": "Steareth-20",
+      "commonNames": [
+        "Steareth 20",
+        "PEG-20 Stearyl Ether"
+      ],
+      "rating": 2,
+      "category": "Emulsifier",
+      "description": "Non-ionic emulsifier derived from stearyl alcohol. Mild comedogenic potential at high concentrations.",
+      "skinTypeNotes": {},
+      "evidenceLevel": "low",
+      "irritancy": 0,
+      "sourceUrls": [],
+      "sources": [
+        "manual-research"
+      ]
+    },
+    {
+      "id": "cellulose",
+      "inciName": "Cellulose",
+      "commonNames": [],
+      "rating": 1,
+      "category": "Thickener",
+      "description": "Plant-derived polysaccharide used as thickener. Very low comedogenic risk.",
+      "skinTypeNotes": {},
+      "evidenceLevel": "low",
+      "irritancy": 0,
+      "sourceUrls": [],
+      "sources": [
+        "manual-research"
+      ]
+    },
+    {
+      "id": "ethylhexyl-methoxycrylene",
+      "inciName": "Ethylhexyl Methoxycrylene",
+      "commonNames": [],
+      "rating": 1,
+      "category": "Sunscreen Stabilizer",
+      "description": "Photostabilizer for avobenzone. Very low comedogenic risk.",
+      "skinTypeNotes": {},
+      "evidenceLevel": "low",
+      "irritancy": 0,
+      "sourceUrls": [],
+      "sources": [
+        "manual-research"
+      ]
+    },
+    {
+      "id": "steareth-2",
+      "inciName": "Steareth-2",
+      "commonNames": [
+        "Steareth 2",
+        "PEG-2 Stearyl Ether"
+      ],
+      "rating": 2,
+      "category": "Emulsifier",
+      "description": "Non-ionic emulsifier with lower ethoxylation than Steareth-20. Mild comedogenic potential at high concentrations.",
+      "skinTypeNotes": {},
+      "evidenceLevel": "low",
+      "irritancy": 0,
+      "sourceUrls": [],
+      "sources": [
+        "manual-research"
+      ]
+    },
+    {
+      "id": "sorbitan-isostearate",
+      "inciName": "Sorbitan Isostearate",
+      "commonNames": [],
+      "rating": 1,
+      "category": "Emulsifier",
+      "description": "Emulsifier derived from sorbitol and isostearic acid. Very low comedogenic risk.",
+      "skinTypeNotes": {},
+      "evidenceLevel": "low",
+      "irritancy": 0,
+      "sourceUrls": [],
+      "sources": [
+        "manual-research"
+      ]
+    },
+    {
+      "id": "triethoxycaprylylsilane",
+      "inciName": "Triethoxycaprylylsilane",
+      "commonNames": [],
+      "rating": 1,
+      "category": "Silicone",
+      "description": "Silane coupling agent for mineral sunscreens. Very low comedogenic risk.",
+      "skinTypeNotes": {},
+      "evidenceLevel": "low",
+      "irritancy": 0,
+      "sourceUrls": [],
+      "sources": [
+        "manual-research"
+      ]
+    },
+    {
+      "id": "triethyl-citrate",
+      "inciName": "Triethyl Citrate",
+      "commonNames": [],
+      "rating": 0,
+      "category": "Fragrance Fixative",
+      "description": "Ester of citric acid used as a fragrance fixative, solvent, and deodorant agent. Biodegradable and non-comedogenic.",
+      "skinTypeNotes": {},
+      "evidenceLevel": "low",
+      "irritancy": 0,
+      "sourceUrls": [],
+      "sources": [
+        "manual-research"
+      ]
+    },
+    {
+      "id": "ammonium-polyacryloyldimethyl-taurate",
+      "inciName": "Ammonium Polyacryloyldimethyl Taurate",
+      "commonNames": [],
+      "rating": 0,
+      "category": "Thickener",
+      "description": "Synthetic polymer thickener and emulsion stabilizer. Creates lightweight gel textures. Not known to be comedogenic.",
+      "skinTypeNotes": {},
+      "evidenceLevel": "low",
+      "irritancy": 0,
+      "sourceUrls": [],
+      "sources": [
+        "manual-research"
+      ]
+    },
+    {
+      "id": "hydroxyacetophenone",
+      "inciName": "Hydroxyacetophenone",
+      "commonNames": [],
+      "rating": 0,
+      "category": "Antioxidant",
+      "description": "Antioxidant and preservative booster. Synergizes with other preservatives to reduce microbial growth. Not comedogenic.",
+      "skinTypeNotes": {},
+      "evidenceLevel": "low",
+      "irritancy": 0,
+      "sourceUrls": [],
+      "sources": [
+        "manual-research"
+      ]
+    },
+    {
+      "id": "hydroxyethyl-acrylate-sodium-acryloyldimethyl-taurate-copolymer",
+      "inciName": "Hydroxyethyl Acrylate/Sodium Acryloyldimethyl Taurate Copolymer",
+      "commonNames": [
+        "Hydroxyethyl Acrylate Sodium Acryloyldimethyl Taurate Copolymer"
+      ],
+      "rating": 0,
+      "category": "Thickener",
+      "description": "Synthetic polymer thickener and texture enhancer. Creates smooth, non-tacky gels. Not known to be comedogenic.",
+      "skinTypeNotes": {},
+      "evidenceLevel": "low",
+      "irritancy": 0,
+      "sourceUrls": [],
+      "sources": [
+        "manual-research"
+      ]
+    },
+    {
+      "id": "trisodium-ethylenediamine-disuccinate",
+      "inciName": "Trisodium Ethylenediamine Disuccinate",
+      "commonNames": [],
+      "rating": 0,
+      "category": "Chelating Agent",
+      "description": "Chelating agent that binds metal ions to improve formula stability. Biodegradable alternative to EDTA. Not comedogenic.",
+      "skinTypeNotes": {},
+      "evidenceLevel": "low",
+      "irritancy": 0,
+      "sourceUrls": [],
+      "sources": [
+        "manual-research"
+      ]
+    },
+    {
+      "id": "polyhydroxystearic-acid",
+      "inciName": "Polyhydroxystearic Acid",
+      "commonNames": [],
+      "rating": 1,
+      "category": "Dispersant",
+      "description": "Dispersing agent for mineral pigments. Very low comedogenic risk.",
+      "skinTypeNotes": {},
+      "evidenceLevel": "low",
+      "irritancy": 0,
+      "sourceUrls": [],
+      "sources": [
+        "manual-research"
+      ]
+    },
+    {
+      "id": "oryza-sativa-rice-bran-wax",
+      "inciName": "Oryza Sativa (Rice) Bran Wax",
+      "commonNames": [
+        "Rice Bran Wax",
+        "Oryza Sativa Bran Wax"
+      ],
+      "rating": 1,
+      "category": "Wax",
+      "description": "Natural wax from rice bran. Very low comedogenic risk, possible mild congestion for very oily skin.",
+      "skinTypeNotes": {},
+      "evidenceLevel": "low",
+      "irritancy": 0,
+      "sourceUrls": [],
+      "sources": [
+        "manual-research"
+      ]
+    },
+    {
+      "id": "c12-22-alkyl-acrylate-hydroxyethylacrylate-copolymer",
+      "inciName": "C12-22 Alkyl Acrylate/Hydroxyethylacrylate Copolymer",
+      "commonNames": [
+        "C12-22 Alkyl Acrylate Hydroxyethylacrylate Copolymer"
+      ],
+      "rating": 0,
+      "category": "Film Former",
+      "description": "Synthetic film-forming polymer used to create breathable, flexible films on skin. Common in sunscreens and long-wear makeup. Not comedogenic.",
+      "skinTypeNotes": {},
+      "evidenceLevel": "low",
+      "irritancy": 0,
+      "sourceUrls": [],
+      "sources": [
+        "manual-research"
       ]
     }
   ],
