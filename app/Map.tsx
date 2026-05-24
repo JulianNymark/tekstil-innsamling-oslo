@@ -29,7 +29,7 @@ export default function Map({ locations }: MapProps) {
   const osloCenter: [number, number] = [59.9139, 10.7522];
 
   return (
-    <div className="h-[600px] w-full rounded-xl overflow-hidden shadow-lg border border-zinc-200 dark:border-zinc-800">
+    <div className="h-[600px] w-full rounded-xl overflow-hidden shadow-lg border border-border-default">
       <MapContainer 
         center={osloCenter} 
         zoom={12} 
@@ -48,7 +48,7 @@ export default function Map({ locations }: MapProps) {
             <Popup>
               <div className="p-1">
                 <h3 className="font-bold text-lg">{loc.address}</h3>
-                <p className="text-sm text-zinc-600 dark:text-zinc-400">{loc.postnr} Oslo</p>
+                <p className="text-sm text-text-subtle">{loc.postnr} Oslo</p>
                 {loc.description && (
                   <p className="mt-2 text-xs italic">{loc.description}</p>
                 )}

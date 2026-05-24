@@ -13,6 +13,84 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
+  /*
+    Rating scale colors — symmetric diverging scale.
+    Both edges (0 and 5) are strongest; the middle (2, 3) is most subtle.
+    Mix % increases gradually toward each edge for a smooth visual ramp.
+  */
+
+  /* 5 — Very High (left edge, strongest danger) */
+  --color-rating-5-bg: color-mix(
+    in oklch,
+    var(--ds-color-danger-base-default) 35%,
+    white
+  );
+  --color-rating-5-text: color-mix(
+    in oklch,
+    var(--ds-color-danger-base-default) 90%,
+    black
+  );
+
+  /* 4 — High (medium danger) */
+  --color-rating-4-bg: color-mix(
+    in oklch,
+    var(--ds-color-danger-base-default) 22%,
+    white
+  );
+  --color-rating-4-text: color-mix(
+    in oklch,
+    var(--ds-color-danger-base-default) 75%,
+    black
+  );
+
+  /* 3 — Moderate (subtle warning) */
+  --color-rating-3-bg: color-mix(
+    in oklch,
+    var(--ds-color-warning-base-default) 17%,
+    white
+  );
+  --color-rating-3-text: color-mix(
+    in oklch,
+    var(--ds-color-warning-base-default) 45%,
+    black
+  );
+
+  /* 2 — Low (subtle warning) */
+  --color-rating-2-bg: color-mix(
+    in oklch,
+    var(--ds-color-warning-base-default) 0%,
+    white
+  );
+  --color-rating-2-text: color-mix(
+    in oklch,
+    var(--ds-color-warning-base-default) 55%,
+    black
+  );
+
+  /* 1 — Very Low (medium success) */
+  --color-rating-1-bg: color-mix(
+    in oklch,
+    var(--ds-color-success-base-default) 5%,
+    white
+  );
+  --color-rating-1-text: color-mix(
+    in oklch,
+    var(--ds-color-success-base-default) 75%,
+    black
+  );
+
+  /* 0 — Non-comedogenic (right edge, strongest success) */
+  --color-rating-0-bg: color-mix(
+    in oklch,
+    var(--ds-color-success-base-default) 35%,
+    white
+  );
+  --color-rating-0-text: color-mix(
+    in oklch,
+    var(--ds-color-success-base-default) 65%,
+    black
+  );
 }
 
 @media (prefers-color-scheme: dark) {

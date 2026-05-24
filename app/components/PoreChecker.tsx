@@ -51,17 +51,61 @@ type SkinType = "all" | "oily" | "dry" | "sensitive" | "acneProne" | "normal";
 type Mode = "check" | "browse";
 
 function getRatingColor(rating: number): string {
-  if (rating === 0)
-    return "bg-emerald-100 text-emerald-800 dark:bg-emerald-900/30 dark:text-emerald-400";
-  if (rating === 1)
-    return "bg-emerald-50 text-emerald-700 dark:bg-emerald-900/20 dark:text-emerald-300";
-  if (rating === 2)
-    return "bg-yellow-100 text-yellow-800 dark:bg-yellow-900/30 dark:text-yellow-400";
-  if (rating === 3)
-    return "bg-orange-100 text-orange-800 dark:bg-orange-900/30 dark:text-orange-400";
-  if (rating === 4)
-    return "bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-400";
-  return "bg-red-200 text-red-900 dark:bg-red-900/40 dark:text-red-300";
+  switch (rating) {
+    case 0:
+      return "bg-rating-0-bg text-rating-0-text";
+    case 1:
+      return "bg-rating-1-bg text-rating-1-text";
+    case 2:
+      return "bg-rating-2-bg text-rating-2-text";
+    case 3:
+      return "bg-rating-3-bg text-rating-3-text";
+    case 4:
+      return "bg-rating-4-bg text-rating-4-text";
+    case 5:
+      return "bg-rating-5-bg text-rating-5-text";
+    default:
+      return "bg-rating-0-bg text-rating-0-text";
+  }
+}
+
+function getVerdictStyles(semanticColor: string) {
+  const styles: Record<
+    string,
+    { border: string; bg: string; text: string; iconBg: string }
+  > = {
+    success: {
+      border: "border-[var(--ds-color-success-border-default)]",
+      bg: "bg-[var(--ds-color-success-surface-default)]",
+      text: "text-[var(--ds-color-success-text-default)]",
+      iconBg: "bg-[var(--ds-color-success-surface-tinted)]",
+    },
+    warning: {
+      border: "border-[var(--ds-color-warning-border-default)]",
+      bg: "bg-[var(--ds-color-warning-surface-default)]",
+      text: "text-[var(--ds-color-warning-text-default)]",
+      iconBg: "bg-[var(--ds-color-warning-surface-tinted)]",
+    },
+    danger: {
+      border: "border-[var(--ds-color-danger-border-default)]",
+      bg: "bg-[var(--ds-color-danger-surface-default)]",
+      text: "text-[var(--ds-color-danger-text-default)]",
+      iconBg: "bg-[var(--ds-color-danger-surface-tinted)]",
+    },
+    neutral: {
+      border: "border-[var(--ds-color-neutral-border-default)]",
+      bg: "bg-[var(--ds-color-neutral-surface-default)]",
+      text: "text-[var(--ds-color-neutral-text-default)]",
+      iconBg: "bg-[var(--ds-color-neutral-surface-tinted)]",
+    },
+    info: {
+      border: "border-[var(--ds-color-info-border-default)]",
+      bg: "bg-[var(--ds-color-info-surface-default)]",
+      text: "text-[var(--ds-color-info-text-default)]",
+      iconBg: "bg-[var(--ds-color-info-surface-tinted)]",
+    },
+  };
+  return styles[semanticColor] || styles.neutral;
 }
 
 function getRatingLabel(rating: number): string {
@@ -93,13 +137,16 @@ function getSkinTypeAdvice(ingredient: Ingredient, skinType: SkinType): string {
   const adviceMap: Record<string, { text: string; color: string }> = {
     safe: {
       text: "Safe for your skin type",
-      color: "text-emerald-600 dark:text-emerald-400",
+      color: "text-[var(--ds-color-success-text-default)]",
     },
     caution: {
       text: "Use with caution",
-      color: "text-yellow-600 dark:text-yellow-400",
+      color: "text-[var(--ds-color-warning-text-default)]",
     },
-    avoid: { text: "Best to avoid", color: "text-red-600 dark:text-red-400" },
+    avoid: {
+      text: "Best to avoid",
+      color: "text-[var(--ds-color-danger-text-default)]",
+    },
   };
 
   return adviceMap[advice]?.text || advice;
@@ -114,9 +161,9 @@ function getSkinTypeAdviceColor(
   if (!advice) return "";
 
   const colorMap: Record<string, string> = {
-    safe: "text-emerald-600 dark:text-emerald-400",
-    caution: "text-yellow-600 dark:text-yellow-400",
-    avoid: "text-red-600 dark:text-red-400",
+    safe: "text-[var(--ds-color-success-text-default)]",
+    caution: "text-[var(--ds-color-warning-text-default)]",
+    avoid: "text-[var(--ds-color-danger-text-default)]",
   };
 
   return colorMap[advice] || "";
@@ -301,7 +348,7 @@ function getProductVerdict(
   verdict: "safe" | "low-risk" | "caution" | "not-suitable";
   label: string;
   emoji: string;
-  color: string;
+  semanticColor: "success" | "warning" | "danger" | "neutral" | "info";
   summary: string;
   details: string[];
 } {
@@ -310,7 +357,7 @@ function getProductVerdict(
       verdict: "safe",
       label: "No data",
       emoji: "🤷",
-      color: "bg-zinc-100 text-zinc-700 dark:bg-zinc-900 dark:text-zinc-300",
+      semanticColor: "neutral",
       summary:
         "Ingen ingredienser funnet i databasen. Dette betyr ikke at produktet er utrygt — bare at vi ikke har nok info.",
       details: [],
@@ -351,7 +398,7 @@ function getProductVerdict(
       verdict: "not-suitable",
       label: "Use with caution",
       emoji: "⚠️",
-      color: "bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-400",
+      semanticColor: "danger",
       summary: hasMultiple
         ? `This product contains ${highRisk.length} ingredients with high comedogenic risk (rating 4–5). These are known pore-cloggers.`
         : `This product contains ${highRisk[0].ingredient.inciName} (rating ${highRisk[0].ingredient.rating}), which is known to clog pores in many people.`,
@@ -371,8 +418,7 @@ function getProductVerdict(
       verdict: "caution",
       label: "Moderate risk",
       emoji: "⚡",
-      color:
-        "bg-orange-100 text-orange-800 dark:bg-orange-900/30 dark:text-orange-400",
+      semanticColor: "warning",
       summary: `This product contains ${moderateRisk.length} ingredient(s) with moderate comedogenic risk (rating 3).`,
       details: [
         "Moderately comedogenic ingredients (rating 3) can clog pores in some people, especially with frequent use.",
@@ -394,8 +440,7 @@ function getProductVerdict(
       verdict: "safe",
       label: "Likely safe",
       emoji: "✅",
-      color:
-        "bg-emerald-100 text-emerald-800 dark:bg-emerald-900/30 dark:text-emerald-400",
+      semanticColor: "success",
       summary: `This product contains ${fattyAlcohols.length} fatty alcohol(s) with low comedogenic risk (rating 2). These are moisturizing and safe for most people.`,
       details: [
         "Fatty alcohols (like Cetearyl Alcohol, Stearyl Alcohol, Cetyl Alcohol) are NOT drying alcohols. They are moisturizing and help repair the skin barrier.",
@@ -410,8 +455,7 @@ function getProductVerdict(
       verdict: "low-risk",
       label: "Low risk",
       emoji: "🟡",
-      color:
-        "bg-yellow-100 text-yellow-800 dark:bg-yellow-900/30 dark:text-yellow-400",
+      semanticColor: "warning",
       summary: `This product contains ${lowRisk.length} ingredient(s) with low comedogenic risk (rating 2).`,
       details: [
         "Low comedogenic risk (rating 2) means the ingredient rarely clogs pores, but it can happen in some individuals.",
@@ -425,8 +469,7 @@ function getProductVerdict(
     verdict: "safe",
     label: "Likely safe",
     emoji: "✅",
-    color:
-      "bg-emerald-100 text-emerald-800 dark:bg-emerald-900/30 dark:text-emerald-400",
+    semanticColor: "success",
     summary: `No comedogenic ingredients found among the ${matched.length} we know of in the database.`,
     details: [
       "All known ingredients have rating 0–1 (non-comedogenic).",
@@ -531,7 +574,7 @@ export default function PoreChecker() {
   if (loading) {
     return (
       <div className="flex items-center justify-center h-64">
-        <div className="text-zinc-500 dark:text-zinc-400">
+        <div className="text-[var(--ds-color-text-subtle)]">
           Loading ingredients database...
         </div>
       </div>
@@ -540,25 +583,14 @@ export default function PoreChecker() {
 
   return (
     <div className="space-y-6">
-      {/* Header */}
-      <div className="text-center space-y-2">
-        <h2 className="text-2xl font-bold text-zinc-900 dark:text-zinc-50">
-          Pore-vakten
-        </h2>
-        <p className="text-zinc-600 dark:text-zinc-400 max-w-lg mx-auto">
-          Your personal pore guard. Check if your beauty products are smuggling
-          in unwanted guests (read: clogging pores).
-        </p>
-      </div>
-
       {/* Mode Toggle */}
-      <div className="flex gap-1 p-1 bg-zinc-100 dark:bg-zinc-900 rounded-xl border border-zinc-200 dark:border-zinc-800">
+      <div className="flex gap-1 p-1 bg-[var(--ds-color-surface-tinted)] rounded-xl border border-[var(--ds-color-border-default)]">
         <button
           onClick={() => setMode("check")}
           className={`flex-1 px-4 py-2.5 rounded-lg text-sm font-medium transition-all duration-200 ${
             mode === "check"
-              ? "bg-white dark:bg-zinc-800 text-zinc-900 dark:text-zinc-50 shadow-sm border border-zinc-200 dark:border-zinc-700"
-              : "text-zinc-500 dark:text-zinc-400 hover:text-zinc-700 dark:hover:text-zinc-300"
+              ? "bg-[var(--ds-color-surface-default)] text-[var(--ds-color-text-default)] shadow-sm border border-[var(--ds-color-border-subtle)]"
+              : "text-[var(--ds-color-text-subtle)] hover:text-[var(--ds-color-text-default)]"
           }`}
         >
           Check Product
@@ -567,8 +599,8 @@ export default function PoreChecker() {
           onClick={() => setMode("browse")}
           className={`flex-1 px-4 py-2.5 rounded-lg text-sm font-medium transition-all duration-200 ${
             mode === "browse"
-              ? "bg-white dark:bg-zinc-800 text-zinc-900 dark:text-zinc-50 shadow-sm border border-zinc-200 dark:border-zinc-700"
-              : "text-zinc-500 dark:text-zinc-400 hover:text-zinc-700 dark:hover:text-zinc-300"
+              ? "bg-[var(--ds-color-surface-default)] text-[var(--ds-color-text-default)] shadow-sm border border-[var(--ds-color-border-subtle)]"
+              : "text-[var(--ds-color-text-subtle)] hover:text-[var(--ds-color-text-default)]"
           }`}
         >
           Browse Database
@@ -580,7 +612,7 @@ export default function PoreChecker() {
           {/* Textarea Input */}
           <div className="space-y-4">
             <div>
-              <label className="block text-sm font-medium text-zinc-700 dark:text-zinc-300 mb-2">
+              <label className="block text-sm font-medium text-[var(--ds-color-text-subtle)] mb-2">
                 Paste ingredient list
               </label>
               <textarea
@@ -588,9 +620,9 @@ export default function PoreChecker() {
                 onChange={(e) => setIngredientText(e.target.value)}
                 placeholder="Paste ingredient list here, e.g., from the back of your cream..."
                 rows={6}
-                className="w-full px-4 py-3 bg-zinc-50 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl text-zinc-900 dark:text-zinc-50 placeholder-zinc-400 dark:placeholder-zinc-600 focus:outline-none focus:ring-2 focus:ring-zinc-500 focus:border-transparent transition-all resize-y min-h-80 text-sm"
+                className="w-full px-4 py-3 bg-[var(--ds-color-surface-tinted)] border border-[var(--ds-color-border-default)] rounded-xl text-[var(--ds-color-text-default)] placeholder-text-subtle focus:outline-none focus:ring-2 focus:ring-[var(--ds-color-neutral-base-default)] focus:border-transparent transition-all resize-y min-h-80 text-sm"
               />
-              <p className="text-xs text-zinc-500 dark:text-zinc-500 mt-1">
+              <p className="text-xs text-[var(--ds-color-text-subtle)] mt-1">
                 Copy and paste the ingredient list from your product. We
                 automatically check against our database — because your pores
                 deserve better than landfill.
@@ -599,7 +631,7 @@ export default function PoreChecker() {
 
             {/* Skin Type Filter */}
             <div className="flex items-center gap-2">
-              <span className="text-sm font-medium text-zinc-600 dark:text-zinc-400">
+              <span className="text-sm font-medium text-[var(--ds-color-text-subtle)]">
                 Skin Type:
               </span>
               <select
@@ -607,7 +639,7 @@ export default function PoreChecker() {
                 onChange={(e) =>
                   setSelectedSkinType(e.target.value as SkinType)
                 }
-                className="px-3 py-2 bg-zinc-50 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-lg text-sm text-zinc-900 dark:text-zinc-50 focus:outline-none focus:ring-2 focus:ring-zinc-500"
+                className="px-3 py-2 bg-[var(--ds-color-surface-tinted)] border border-[var(--ds-color-border-default)] rounded-lg text-sm text-[var(--ds-color-text-default)] focus:outline-none focus:ring-2 focus:ring-[var(--ds-color-neutral-base-default)]"
               >
                 {(
                   [
@@ -647,45 +679,67 @@ export default function PoreChecker() {
               </div>
 
               {/* Product Verdict */}
-              {ingredientText.trim() && matchedIngredients.length > 0 && (
-                <div
-                  className={`p-5 rounded-xl border-2 ${productVerdict.color.replace("text-", "border-").split(" ")[0]} ${productVerdict.color.split(" ")[0]} bg-opacity-10`}
-                >
-                  <div className="flex items-center gap-3 mb-3">
-                    <span className="text-3xl">{productVerdict.emoji}</span>
-                    <div>
-                      <h3
-                        className={`text-lg font-bold ${productVerdict.color.split(" ")[1]}`}
-                      >
-                        {productVerdict.label}
-                      </h3>
-                      <p
-                        className={`text-sm ${productVerdict.color.split(" ")[1]} opacity-90`}
-                      >
-                        {productVerdict.summary}
-                      </p>
-                    </div>
-                  </div>
-                  {productVerdict.details.length > 0 && (
-                    <ul className="space-y-1.5 mt-3">
-                      {productVerdict.details.map((detail, i) => (
-                        <li
-                          key={i}
-                          className={`text-sm ${productVerdict.color.split(" ")[1]} opacity-80 flex items-start gap-2`}
+              {ingredientText.trim() &&
+                matchedIngredients.length > 0 &&
+                (() => {
+                  const styles = getVerdictStyles(productVerdict.semanticColor);
+                  return (
+                    <div
+                      className={`rounded-2xl border-2 ${styles.border} ${styles.bg} overflow-hidden`}
+                    >
+                      {/* Header with icon and label */}
+                      <div className={`p-5 pb-4 flex items-start gap-4`}>
+                        <div
+                          className={`flex-shrink-0 w-12 h-12 rounded-xl ${styles.iconBg} flex items-center justify-center text-2xl`}
                         >
-                          <span className="mt-0.5">•</span>
-                          <span>{detail}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  )}
-                </div>
-              )}
+                          {productVerdict.emoji}
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <h3 className={`text-lg font-bold ${styles.text}`}>
+                            {productVerdict.label}
+                          </h3>
+                          <p
+                            className={`text-sm ${styles.text} opacity-80 leading-relaxed mt-1`}
+                          >
+                            {productVerdict.summary}
+                          </p>
+                        </div>
+                      </div>
+
+                      {/* Details list */}
+                      {productVerdict.details.length > 0 && (
+                        <div className="px-5 pb-5">
+                          <div
+                            className={`rounded-xl border ${styles.border} bg-[var(--ds-color-surface-default)]/50 overflow-hidden`}
+                          >
+                            <ul className="divide-y divide-current/10">
+                              {productVerdict.details.map((detail, i) => (
+                                <li
+                                  key={i}
+                                  className={`px-4 py-3 text-sm ${styles.text} opacity-70 flex items-start gap-3`}
+                                >
+                                  <span
+                                    className={`flex-shrink-0 w-5 h-5 rounded-full ${styles.iconBg} flex items-center justify-center text-xs font-bold ${styles.text} mt-0.5`}
+                                  >
+                                    {i + 1}
+                                  </span>
+                                  <span className="leading-relaxed">
+                                    {detail}
+                                  </span>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        </div>
+                      )}
+                    </div>
+                  );
+                })()}
 
               {/* Results */}
               {matchedIngredients.length > 0 ? (
                 <div className="space-y-3">
-                  <h3 className="text-lg font-semibold text-zinc-900 dark:text-zinc-50">
+                  <h3 className="text-lg font-semibold text-[var(--ds-color-text-default)]">
                     Matched Ingredients ({matchedIngredients.length})
                   </h3>
 
@@ -732,8 +786,8 @@ export default function PoreChecker() {
                             <div
                               className={`px-3 py-1.5 rounded-lg text-xs font-semibold inline-block ${
                                 section.name === "Active Ingredients"
-                                  ? "bg-purple-100 text-purple-800 dark:bg-purple-900/30 dark:text-purple-400"
-                                  : "bg-teal-100 text-teal-800 dark:bg-teal-900/30 dark:text-teal-400"
+                                  ? "bg-[var(--ds-color-accent-surface-default)] text-[var(--ds-color-accent-text-default)]"
+                                  : "bg-[var(--ds-color-brand1-surface-default)] text-[var(--ds-color-brand1-text-default)]"
                               }`}
                             >
                               {section.name}
@@ -780,41 +834,41 @@ export default function PoreChecker() {
                             }
                             className={`p-4 rounded-xl border cursor-pointer transition-all hover:shadow-sm ${
                               matched.section === "active"
-                                ? "bg-purple-50 dark:bg-purple-950/20 border-purple-200 dark:border-purple-900/50 hover:border-purple-300 dark:hover:border-purple-800"
+                                ? "bg-[var(--ds-color-accent-surface-tinted)] border-[var(--ds-color-accent-border-default)] hover:border-[var(--ds-color-accent-border-strong)]"
                                 : matched.section === "inactive"
-                                  ? "bg-teal-50 dark:bg-teal-950/20 border-teal-200 dark:border-teal-900/50 hover:border-teal-300 dark:hover:border-teal-800"
-                                  : "bg-zinc-50 dark:bg-zinc-900 border-zinc-200 dark:border-zinc-800 hover:border-zinc-300 dark:hover:border-zinc-700"
+                                  ? "bg-[var(--ds-color-brand1-surface-tinted)] border-[var(--ds-color-brand1-border-default)] hover:border-[var(--ds-color-brand1-border-strong)]"
+                                  : "bg-[var(--ds-color-surface-tinted)] border-[var(--ds-color-border-default)] hover:border-[var(--ds-color-border-strong)]"
                             }`}
                           >
                             <div className="flex items-start justify-between gap-4">
                               <div className="flex-1 min-w-0">
                                 <div className="flex items-center gap-2 flex-wrap">
-                                  <h3 className="font-semibold text-zinc-900 dark:text-zinc-50">
+                                  <h3 className="font-semibold text-[var(--ds-color-text-default)]">
                                     {matched.ingredient.inciName}
                                   </h3>
                                   {matched.matchedName !==
                                     matched.ingredient.inciName && (
-                                    <span className="text-sm text-zinc-500 dark:text-zinc-400">
+                                    <span className="text-sm text-[var(--ds-color-text-subtle)]">
                                       (matched as &quot;{matched.matchedName}
                                       &quot;)
                                     </span>
                                   )}
                                 </div>
-                                <p className="text-sm text-zinc-600 dark:text-zinc-400 mt-1">
+                                <p className="text-sm text-[var(--ds-color-text-subtle)] mt-1">
                                   {matched.ingredient.description}
                                 </p>
                                 <div className="flex items-center gap-2 mt-2 flex-wrap">
-                                  <span className="text-xs px-2 py-1 bg-zinc-200 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300 rounded-full">
+                                  <span className="text-xs px-2 py-1 bg-[var(--ds-color-surface-hover)] text-[var(--ds-color-text-subtle)] rounded-full">
                                     {matched.ingredient.category}
                                   </span>
                                   {matched.position < 5 && (
                                     <span
                                       className={`text-xs px-2 py-1 rounded-full ${
                                         matched.section === "active"
-                                          ? "bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-400"
+                                          ? "bg-[var(--ds-color-accent-surface-tinted)] text-[var(--ds-color-accent-text-default)]"
                                           : matched.section === "inactive"
-                                            ? "bg-teal-100 dark:bg-teal-900/30 text-teal-700 dark:text-teal-400"
-                                            : "bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400"
+                                            ? "bg-[var(--ds-color-brand1-surface-tinted)] text-[var(--ds-color-brand1-text-default)]"
+                                            : "bg-[var(--ds-color-info-surface-tinted)] text-[var(--ds-color-info-text-default)]"
                                       }`}
                                       title={
                                         matched.section === "active"
@@ -838,7 +892,7 @@ export default function PoreChecker() {
                                     </span>
                                   )}
                                   {matched.ingredient.irritancy > 0 && (
-                                    <span className="text-xs px-2 py-1 bg-orange-100 dark:bg-orange-900/30 text-orange-700 dark:text-orange-400 rounded-full">
+                                    <span className="text-xs px-2 py-1 bg-[var(--ds-color-warning-surface-tinted)] text-[var(--ds-color-warning-text-default)] rounded-full">
                                       Irritancy: {matched.ingredient.irritancy}
                                       /5
                                     </span>
@@ -874,7 +928,7 @@ export default function PoreChecker() {
                 </div>
               ) : unmatchedIngredients.length === 0 ? (
                 <div className="text-center py-8">
-                  <p className="text-zinc-500 dark:text-zinc-400">
+                  <p className="text-[var(--ds-color-text-subtle)]">
                     No ingredients parsed. Try pasting a comma-separated list.
                   </p>
                 </div>
@@ -882,11 +936,11 @@ export default function PoreChecker() {
 
               {/* Unmatched ingredients */}
               {unmatchedIngredients.length > 0 && (
-                <div className="p-4 bg-zinc-50 dark:bg-zinc-900 rounded-xl border border-zinc-200 dark:border-zinc-800">
-                  <h4 className="text-sm font-semibold text-zinc-700 dark:text-zinc-300 mb-2">
+                <div className="p-4 bg-[var(--ds-color-surface-tinted)] rounded-xl border border-[var(--ds-color-border-default)]">
+                  <h4 className="text-sm font-semibold text-[var(--ds-color-text-subtle)] mb-2">
                     Not in database ({unmatchedIngredients.length})
                   </h4>
-                  <p className="text-xs text-zinc-500 dark:text-zinc-500 mb-2">
+                  <p className="text-xs text-[var(--ds-color-text-subtle)] mb-2">
                     These ingredients were not found in our database. This could
                     mean they are not known to be comedogenic, or we need to add
                     them.
@@ -895,7 +949,7 @@ export default function PoreChecker() {
                     {unmatchedIngredients.map((name, i) => (
                       <span
                         key={i}
-                        className="text-xs px-2 py-1 bg-zinc-200 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 rounded-full"
+                        className="text-xs px-2 py-1 bg-[var(--ds-color-surface-hover)] text-[var(--ds-color-text-subtle)] rounded-full"
                       >
                         {name}
                       </span>
@@ -904,25 +958,25 @@ export default function PoreChecker() {
                 </div>
               )}
               {/* Draelos 2006 Disclaimer */}
-              <div className="p-4 bg-blue-50 dark:bg-blue-900/20 rounded-xl border border-blue-200 dark:border-blue-800">
-                <h4 className="text-sm font-semibold text-blue-800 dark:text-blue-300 mb-2 flex items-center gap-2">
+              <div className="p-4 bg-[var(--ds-color-info-surface-default)] rounded-xl border border-[var(--ds-color-info-border-default)]">
+                <h4 className="text-sm font-semibold text-[var(--ds-color-info-text-default)] mb-2 flex items-center gap-2">
                   <span>🧪</span>
                   <span>Important: Raw ingredient vs. finished product</span>
                 </h4>
-                <p className="text-sm text-blue-700 dark:text-blue-400 leading-relaxed">
+                <p className="text-sm text-[var(--ds-color-info-text-subtle)] leading-relaxed">
                   These ratings are based on tests of{" "}
                   <strong>pure ingredients</strong> in high concentrations
                   (often 100%). A finished product contains ingredients at much
                   lower concentrations, and the formulation as a whole can
                   change how an ingredient affects the skin.
                 </p>
-                <p className="text-sm text-blue-700 dark:text-blue-400 mt-2 leading-relaxed">
+                <p className="text-sm text-[var(--ds-color-info-text-subtle)] mt-2 leading-relaxed">
                   A study by{" "}
                   <a
                     href="https://pubmed.ncbi.nlm.nih.gov/16488305/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="underline hover:text-blue-900 dark:hover:text-blue-200"
+                    className="underline hover:text-[var(--ds-color-info-text-default)]"
                   >
                     Draelos & DiNardo (2006,{" "}
                     <em>Journal of the American Academy of Dermatology</em>)
@@ -932,8 +986,8 @@ export default function PoreChecker() {
                   concentrations and pH. So treat these results as a{" "}
                   <strong>guiding tool</strong>, not an absolute verdict.
                 </p>
-                <div className="mt-3 pt-3 border-t border-blue-200 dark:border-blue-800">
-                  <p className="text-xs text-blue-600 dark:text-blue-400 font-medium mb-1.5">
+                <div className="mt-3 pt-3 border-t border-[var(--ds-color-info-border-default)]">
+                  <p className="text-xs text-[var(--ds-color-info-text-subtle)] font-medium mb-1.5">
                     Key studies on comedogenicity:
                   </p>
                   <ul className="space-y-1">
@@ -942,7 +996,7 @@ export default function PoreChecker() {
                         href="https://pubmed.ncbi.nlm.nih.gov/6229554/"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-xs text-blue-600 dark:text-blue-400 underline hover:text-blue-900 dark:hover:text-blue-200"
+                        className="text-xs text-[var(--ds-color-info-text-subtle)] underline hover:text-[var(--ds-color-info-text-default)]"
                       >
                         Fulton et al. (1984) — First major JAAD study;
                         established the 0-5 scale
@@ -953,7 +1007,7 @@ export default function PoreChecker() {
                         href="https://pdfs.semanticscholar.org/578c/d23064f4be5f9f623e9cb9dbfe4a6c29eef2.pdf"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-xs text-blue-600 dark:text-blue-400 underline hover:text-blue-900 dark:hover:text-blue-200"
+                        className="text-xs text-[var(--ds-color-info-text-subtle)] underline hover:text-[var(--ds-color-info-text-default)]"
                       >
                         Fulton (1989) — 200+ ingredienser testet; detaljert 0-5
                         skala
@@ -964,7 +1018,7 @@ export default function PoreChecker() {
                         href="https://pubmed.ncbi.nlm.nih.gov/7138047/"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-xs text-blue-600 dark:text-blue-400 underline hover:text-blue-900 dark:hover:text-blue-200"
+                        className="text-xs text-[var(--ds-color-info-text-subtle)] underline hover:text-[var(--ds-color-info-text-default)]"
                       >
                         Mills & Kligman (1982) — Human modell; REA er mer
                         sensitiv enn menneskelig hud
@@ -975,10 +1029,10 @@ export default function PoreChecker() {
                         href="https://pubmed.ncbi.nlm.nih.gov/4264346/"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-xs text-blue-600 dark:text-blue-400 underline hover:text-blue-900 dark:hover:text-blue-200"
+                        className="text-xs text-[var(--ds-color-info-text-subtle)] underline hover:text-[var(--ds-color-info-text-default)]"
                       >
-                        Kligman & Mills (1972) — Coined the term "acne
-                        cosmetica"
+                        Kligman & Mills (1972) — Coined the term &quot;acne
+                        cosmetica&quot;
                       </a>
                     </li>
                     <li>
@@ -986,7 +1040,7 @@ export default function PoreChecker() {
                         href="https://pubmed.ncbi.nlm.nih.gov/2521642/"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-xs text-blue-600 dark:text-blue-400 underline hover:text-blue-900 dark:hover:text-blue-200"
+                        className="text-xs text-[var(--ds-color-info-text-subtle)] underline hover:text-[var(--ds-color-info-text-default)]"
                       >
                         AAD Symposium (1989) — Konsensus: REA-negativ = trygt
                         for mennesker
@@ -1015,16 +1069,16 @@ export default function PoreChecker() {
           onClick={() => setSelectedIngredient(null)}
         >
           <div
-            className="bg-white dark:bg-zinc-950 rounded-2xl p-6 max-w-lg w-full max-h-[80vh] overflow-y-auto border border-zinc-200 dark:border-zinc-800 shadow-2xl"
+            className="bg-[var(--ds-color-surface-default)] rounded-2xl p-6 max-w-lg w-full max-h-[80vh] overflow-y-auto border border-[var(--ds-color-border-default)] shadow-2xl"
             onClick={(e) => e.stopPropagation()}
           >
             <div className="flex items-start justify-between gap-4 mb-4">
               <div>
-                <h3 className="text-xl font-bold text-zinc-900 dark:text-zinc-50">
+                <h3 className="text-xl font-bold text-[var(--ds-color-text-default)]">
                   {selectedIngredient.inciName}
                 </h3>
                 {selectedIngredient.commonNames.length > 0 && (
-                  <p className="text-sm text-zinc-500 dark:text-zinc-400">
+                  <p className="text-sm text-[var(--ds-color-text-subtle)]">
                     Also known as: {selectedIngredient.commonNames.join(", ")}
                   </p>
                 )}
@@ -1043,10 +1097,10 @@ export default function PoreChecker() {
 
             <div className="space-y-4">
               <div>
-                <h4 className="font-semibold text-zinc-900 dark:text-zinc-50 mb-1">
+                <h4 className="font-semibold text-[var(--ds-color-text-default)] mb-1">
                   Description
                 </h4>
-                <p className="text-zinc-600 dark:text-zinc-400 text-sm">
+                <p className="text-[var(--ds-color-text-subtle)] text-sm">
                   {selectedIngredient.description}
                 </p>
               </div>
@@ -1054,14 +1108,14 @@ export default function PoreChecker() {
               {selectedIngredient.function &&
                 selectedIngredient.function.length > 0 && (
                   <div>
-                    <h4 className="font-semibold text-zinc-900 dark:text-zinc-50 mb-1">
+                    <h4 className="font-semibold text-[var(--ds-color-text-default)] mb-1">
                       Functions
                     </h4>
                     <div className="flex flex-wrap gap-2">
                       {selectedIngredient.function.map((fn) => (
                         <span
                           key={fn}
-                          className="text-xs px-2 py-1 bg-zinc-100 dark:bg-zinc-900 text-zinc-700 dark:text-zinc-300 rounded-full border border-zinc-200 dark:border-zinc-800"
+                          className="text-xs px-2 py-1 bg-[var(--ds-color-surface-tinted)] text-[var(--ds-color-text-subtle)] rounded-full border border-[var(--ds-color-border-default)]"
                         >
                           {fn.replace(/_/g, " ")}
                         </span>
@@ -1073,7 +1127,7 @@ export default function PoreChecker() {
               {selectedIngredient.skinTypeNotes &&
                 Object.keys(selectedIngredient.skinTypeNotes).length > 0 && (
                   <div>
-                    <h4 className="font-semibold text-zinc-900 dark:text-zinc-50 mb-2">
+                    <h4 className="font-semibold text-[var(--ds-color-text-default)] mb-2">
                       Skin Type Recommendations
                     </h4>
                     <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
@@ -1083,10 +1137,10 @@ export default function PoreChecker() {
                             key={type}
                             className={`p-2 rounded-lg text-xs font-medium ${
                               advice === "safe"
-                                ? "bg-emerald-100 text-emerald-800 dark:bg-emerald-900/30 dark:text-emerald-400"
+                                ? "bg-[var(--ds-color-success-surface-default)] text-[var(--ds-color-success-text-default)]"
                                 : advice === "caution"
-                                  ? "bg-yellow-100 text-yellow-800 dark:bg-yellow-900/30 dark:text-yellow-400"
-                                  : "bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-400"
+                                  ? "bg-[var(--ds-color-warning-surface-default)] text-[var(--ds-color-warning-text-default)]"
+                                  : "bg-[var(--ds-color-danger-surface-default)] text-[var(--ds-color-danger-text-default)]"
                             }`}
                           >
                             <div className="font-semibold capitalize">
@@ -1102,19 +1156,19 @@ export default function PoreChecker() {
 
               {selectedIngredient.irritancy > 0 && (
                 <div>
-                  <h4 className="font-semibold text-zinc-900 dark:text-zinc-50 mb-1">
+                  <h4 className="font-semibold text-[var(--ds-color-text-default)] mb-1">
                     Irritancy
                   </h4>
                   <div className="flex items-center gap-2">
-                    <div className="flex-1 h-2 bg-zinc-200 dark:bg-zinc-800 rounded-full overflow-hidden">
+                    <div className="flex-1 h-2 bg-[var(--ds-color-surface-hover)] rounded-full overflow-hidden">
                       <div
-                        className="h-full bg-orange-500 rounded-full"
+                        className="h-full bg-[var(--ds-color-warning-base-default)] rounded-full"
                         style={{
                           width: `${(selectedIngredient.irritancy / 5) * 100}%`,
                         }}
                       />
                     </div>
-                    <span className="text-sm text-zinc-600 dark:text-zinc-400">
+                    <span className="text-sm text-[var(--ds-color-text-subtle)]">
                       {selectedIngredient.irritancy}/5
                     </span>
                   </div>
@@ -1124,14 +1178,14 @@ export default function PoreChecker() {
               {selectedIngredient.flags &&
                 selectedIngredient.flags.length > 0 && (
                   <div>
-                    <h4 className="font-semibold text-zinc-900 dark:text-zinc-50 mb-1">
+                    <h4 className="font-semibold text-[var(--ds-color-text-default)] mb-1">
                       Flags
                     </h4>
                     <div className="flex flex-wrap gap-2">
                       {selectedIngredient.flags.map((flag) => (
                         <span
                           key={flag}
-                          className="text-xs px-2 py-1 bg-zinc-100 dark:bg-zinc-900 text-zinc-700 dark:text-zinc-300 rounded-full border border-zinc-200 dark:border-zinc-800"
+                          className="text-xs px-2 py-1 bg-[var(--ds-color-surface-tinted)] text-[var(--ds-color-text-subtle)] rounded-full border border-[var(--ds-color-border-default)]"
                         >
                           {flag.replace(/_/g, " ")}
                         </span>
@@ -1141,7 +1195,7 @@ export default function PoreChecker() {
                 )}
 
               <div className="text-xs space-y-2">
-                <div className="text-zinc-500 dark:text-zinc-500">
+                <div className="text-[var(--ds-color-text-subtle)]">
                   Evidence level:{" "}
                   {selectedIngredient.evidenceLevel || "unknown"}
                 </div>
@@ -1149,22 +1203,22 @@ export default function PoreChecker() {
                 {selectedIngredient.sourceUrls &&
                   selectedIngredient.sourceUrls.length > 0 && (
                     <div>
-                      <h4 className="font-semibold text-zinc-700 dark:text-zinc-300 mb-1.5">
+                      <h4 className="font-semibold text-[var(--ds-color-text-subtle)] mb-1.5">
                         Sources
                       </h4>
                       <div className="flex flex-wrap gap-2">
                         {selectedIngredient.sourceUrls.map((source) => {
                           const typeColors: Record<string, string> = {
                             government:
-                              "bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-400",
+                              "bg-[var(--ds-color-info-surface-default)] text-[var(--ds-color-info-text-default)]",
                             study:
-                              "bg-emerald-100 text-emerald-800 dark:bg-emerald-900/30 dark:text-emerald-400",
+                              "bg-[var(--ds-color-success-surface-default)] text-[var(--ds-color-success-text-default)]",
                             regulatory:
-                              "bg-purple-100 text-purple-800 dark:bg-purple-900/30 dark:text-purple-400",
+                              "bg-[var(--ds-color-accent-surface-default)] text-[var(--ds-color-accent-text-default)]",
                             database:
-                              "bg-zinc-100 text-zinc-700 dark:bg-zinc-800 dark:text-zinc-300",
+                              "bg-[var(--ds-color-neutral-surface-default)] text-[var(--ds-color-neutral-text-default)]",
                             reference:
-                              "bg-zinc-100 text-zinc-700 dark:bg-zinc-800 dark:text-zinc-300",
+                              "bg-[var(--ds-color-neutral-surface-default)] text-[var(--ds-color-neutral-text-default)]",
                           };
                           return (
                             <a
@@ -1186,7 +1240,7 @@ export default function PoreChecker() {
 
             <button
               onClick={() => setSelectedIngredient(null)}
-              className="mt-6 w-full py-2.5 bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900 rounded-xl font-medium hover:bg-zinc-800 dark:hover:bg-zinc-200 transition-colors"
+              className="mt-6 w-full py-2.5 bg-[var(--ds-color-base-default)] text-[var(--ds-color-base-contrast-default)] rounded-xl font-medium hover:bg-[var(--ds-color-base-hover)] transition-colors"
             >
               Close
             </button>
@@ -1256,11 +1310,11 @@ function BrowseMode({
   return (
     <div className="space-y-6">
       {/* Scale Info */}
-      <div className="p-4 bg-zinc-50 dark:bg-zinc-900 rounded-xl border border-zinc-200 dark:border-zinc-800">
-        <h3 className="text-sm font-semibold text-zinc-900 dark:text-zinc-50 mb-2">
+      <div className="p-4 bg-[var(--ds-color-surface-tinted)] rounded-xl border border-[var(--ds-color-border-default)]">
+        <h3 className="text-sm font-semibold text-[var(--ds-color-text-default)] mb-2">
           About the Comedogenic Scale
         </h3>
-        <p className="text-xs text-zinc-600 dark:text-zinc-400 mb-2">
+        <p className="text-xs text-[var(--ds-color-text-subtle)] mb-2">
           Based on the Fulton 1989 rabbit ear assay (REA). Ratings 0-1 are
           generally safe, 2-3 use caution, 4-5 avoid for acne-prone skin. Note:
           REA is more sensitive than human skin; concentration and formulation
@@ -1304,10 +1358,10 @@ function BrowseMode({
             placeholder="Search ingredients..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full px-4 py-3 pl-11 bg-zinc-50 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl text-zinc-900 dark:text-zinc-50 placeholder-zinc-400 dark:placeholder-zinc-600 focus:outline-none focus:ring-2 focus:ring-zinc-500 focus:border-transparent transition-all"
+            className="w-full px-4 py-3 pl-11 bg-[var(--ds-color-surface-tinted)] border border-[var(--ds-color-border-default)] rounded-xl text-[var(--ds-color-text-default)] placeholder-text-subtle focus:outline-none focus:ring-2 focus:ring-[var(--ds-color-neutral-base-default)] focus:border-transparent transition-all"
           />
           <svg
-            className="absolute left-3.5 top-1/2 -translate-y-1/2 w-5 h-5 text-zinc-400"
+            className="absolute left-3.5 top-1/2 -translate-y-1/2 w-5 h-5 text-[var(--ds-color-text-subtle)]"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -1324,13 +1378,13 @@ function BrowseMode({
         {/* Filters */}
         <div className="flex flex-wrap gap-3">
           <div className="flex items-center gap-2">
-            <span className="text-sm font-medium text-zinc-600 dark:text-zinc-400">
+            <span className="text-sm font-medium text-[var(--ds-color-text-subtle)]">
               Skin Type:
             </span>
             <select
               value={selectedSkinType}
               onChange={(e) => onSkinTypeChange(e.target.value as SkinType)}
-              className="px-3 py-2 bg-zinc-50 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-lg text-sm text-zinc-900 dark:text-zinc-50 focus:outline-none focus:ring-2 focus:ring-zinc-500"
+              className="px-3 py-2 bg-[var(--ds-color-surface-tinted)] border border-[var(--ds-color-border-default)] rounded-lg text-sm text-[var(--ds-color-text-default)] focus:outline-none focus:ring-2 focus:ring-[var(--ds-color-neutral-base-default)]"
             >
               {(
                 [
@@ -1350,7 +1404,7 @@ function BrowseMode({
           </div>
 
           <div className="flex items-center gap-2">
-            <span className="text-sm font-medium text-zinc-600 dark:text-zinc-400">
+            <span className="text-sm font-medium text-[var(--ds-color-text-subtle)]">
               Sort by:
             </span>
             <select
@@ -1358,7 +1412,7 @@ function BrowseMode({
               onChange={(e) =>
                 setSortBy(e.target.value as "rating" | "name" | "category")
               }
-              className="px-3 py-2 bg-zinc-50 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-lg text-sm text-zinc-900 dark:text-zinc-50 focus:outline-none focus:ring-2 focus:ring-zinc-500"
+              className="px-3 py-2 bg-[var(--ds-color-surface-tinted)] border border-[var(--ds-color-border-default)] rounded-lg text-sm text-[var(--ds-color-text-default)] focus:outline-none focus:ring-2 focus:ring-[var(--ds-color-neutral-base-default)]"
             >
               <option value="rating">Rating (High to Low)</option>
               <option value="name">Name (A-Z)</option>
@@ -1369,7 +1423,7 @@ function BrowseMode({
       </div>
 
       {/* Results count */}
-      <div className="text-sm text-zinc-500 dark:text-zinc-500">
+      <div className="text-sm text-[var(--ds-color-text-subtle)]">
         Showing {filteredIngredients.length} of {ingredients.length} ingredients
       </div>
 
@@ -1379,29 +1433,29 @@ function BrowseMode({
           <div
             key={ingredient.id}
             onClick={() => onSelectIngredient(ingredient)}
-            className="p-4 bg-zinc-50 dark:bg-zinc-900 rounded-xl border border-zinc-200 dark:border-zinc-800 hover:border-zinc-300 dark:hover:border-zinc-700 cursor-pointer transition-all hover:shadow-sm"
+            className="p-4 bg-[var(--ds-color-surface-tinted)] rounded-xl border border-[var(--ds-color-border-default)] hover:border-[var(--ds-color-border-strong)] cursor-pointer transition-all hover:shadow-sm"
           >
             <div className="flex items-start justify-between gap-4">
               <div className="flex-1 min-w-0">
                 <div className="flex items-center gap-2 flex-wrap">
-                  <h3 className="font-semibold text-zinc-900 dark:text-zinc-50">
+                  <h3 className="font-semibold text-[var(--ds-color-text-default)]">
                     {ingredient.inciName}
                   </h3>
                   {ingredient.commonNames.length > 0 && (
-                    <span className="text-sm text-zinc-500 dark:text-zinc-400 truncate">
+                    <span className="text-sm text-[var(--ds-color-text-subtle)] truncate">
                       ({ingredient.commonNames[0]})
                     </span>
                   )}
                 </div>
-                <p className="text-sm text-zinc-600 dark:text-zinc-400 mt-1 line-clamp-2">
+                <p className="text-sm text-[var(--ds-color-text-subtle)] mt-1 line-clamp-2">
                   {ingredient.description}
                 </p>
                 <div className="flex items-center gap-2 mt-2 flex-wrap">
-                  <span className="text-xs px-2 py-1 bg-zinc-200 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300 rounded-full">
+                  <span className="text-xs px-2 py-1 bg-[var(--ds-color-surface-hover)] text-[var(--ds-color-text-subtle)] rounded-full">
                     {ingredient.category}
                   </span>
                   {ingredient.irritancy > 0 && (
-                    <span className="text-xs px-2 py-1 bg-orange-100 dark:bg-orange-900/30 text-orange-700 dark:text-orange-400 rounded-full">
+                    <span className="text-xs px-2 py-1 bg-[var(--ds-color-warning-surface-tinted)] text-[var(--ds-color-warning-text-default)] rounded-full">
                       Irritancy: {ingredient.irritancy}/5
                     </span>
                   )}
@@ -1431,10 +1485,10 @@ function BrowseMode({
       {filteredIngredients.length === 0 && (
         <div className="text-center py-12">
           <div className="text-4xl mb-3">🔍</div>
-          <h3 className="text-lg font-semibold text-zinc-900 dark:text-zinc-50 mb-1">
+          <h3 className="text-lg font-semibold text-[var(--ds-color-text-default)] mb-1">
             No ingredients found
           </h3>
-          <p className="text-zinc-500 dark:text-zinc-400">
+          <p className="text-[var(--ds-color-text-subtle)]">
             Try adjusting your search or filters
           </p>
         </div>
