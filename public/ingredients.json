@@ -56,7 +56,29 @@
         "penetration_enhancer"
       ],
       "evidenceLevel": "high",
-      "irritancy": 3
+      "irritancy": 3,
+      "sourceUrls": [
+        {
+          "name": "INCIDecoder",
+          "url": "https://incidecoder.com/ingredients/isopropyl-myristate",
+          "type": "database"
+        },
+        {
+          "name": "CosDNA",
+          "url": "https://www.cosdna.com/eng/35cc31879.html",
+          "type": "database"
+        },
+        {
+          "name": "PubMed (penetration enhancer)",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/15801677/",
+          "type": "study"
+        },
+        {
+          "name": "PubChem",
+          "url": "https://pubchem.ncbi.nlm.nih.gov/compound/Isopropyl-myristate",
+          "type": "reference"
+        }
+      ]
     },
     {
       "id": "isopropyl-isostearate",
@@ -82,7 +104,14 @@
         "highly_comedogenic"
       ],
       "evidenceLevel": "high",
-      "irritancy": 0
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "INCIDecoder",
+          "url": "https://incidecoder.com/ingredients/isopropyl-isostearate",
+          "type": "database"
+        }
+      ]
     },
     {
       "id": "isopropyl-linoleate",
@@ -108,7 +137,14 @@
         "highly_comedogenic"
       ],
       "evidenceLevel": "high",
-      "irritancy": 2
+      "irritancy": 2,
+      "sourceUrls": [
+        {
+          "name": "INCIDecoder",
+          "url": "https://incidecoder.com/ingredients/isopropyl-linoleate",
+          "type": "database"
+        }
+      ]
     },
     {
       "id": "myristyl-myristate",
@@ -135,7 +171,14 @@
         "highly_comedogenic"
       ],
       "evidenceLevel": "high",
-      "irritancy": 2
+      "irritancy": 2,
+      "sourceUrls": [
+        {
+          "name": "INCIDecoder",
+          "url": "https://incidecoder.com/ingredients/myristyl-myristate",
+          "type": "database"
+        }
+      ]
     },
     {
       "id": "laureth-4",
@@ -164,7 +207,14 @@
         "highly_comedogenic"
       ],
       "evidenceLevel": "high",
-      "irritancy": 2
+      "irritancy": 2,
+      "sourceUrls": [
+        {
+          "name": "INCIDecoder",
+          "url": "https://incidecoder.com/ingredients/laureth-4",
+          "type": "database"
+        }
+      ]
     },
     {
       "id": "oleth-3",
@@ -192,7 +242,14 @@
         "highly_comedogenic"
       ],
       "evidenceLevel": "high",
-      "irritancy": 2
+      "irritancy": 2,
+      "sourceUrls": [
+        {
+          "name": "INCIDecoder",
+          "url": "https://incidecoder.com/ingredients/oleth-3",
+          "type": "database"
+        }
+      ]
     },
     {
       "id": "acetylated-lanolin-alcohol",
@@ -222,7 +279,24 @@
         "lanolin_derivative"
       ],
       "evidenceLevel": "high",
-      "irritancy": 2
+      "irritancy": 2,
+      "sourceUrls": [
+        {
+          "name": "INCIDecoder",
+          "url": "https://incidecoder.com/ingredients/acetylated-lanolin-alcohol",
+          "type": "database"
+        },
+        {
+          "name": "CosDNA",
+          "url": "https://www.cosdna.com/eng/4973c11263.html",
+          "type": "database"
+        },
+        {
+          "name": "CIR (Lanolin)",
+          "url": "https://www.cir-safety.org/sites/default/files/Lanolin.pdf",
+          "type": "regulatory"
+        }
+      ]
     },
     {
       "id": "isocetyl-stearate",
@@ -248,7 +322,14 @@
         "highly_comedogenic"
       ],
       "evidenceLevel": "high",
-      "irritancy": 0
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "INCIDecoder",
+          "url": "https://incidecoder.com/ingredients/isocetyl-stearate",
+          "type": "database"
+        }
+      ]
     },
     {
       "id": "coconut-oil",
@@ -279,7 +360,24 @@
         "natural"
       ],
       "evidenceLevel": "high",
-      "irritancy": 1
+      "irritancy": 1,
+      "sourceUrls": [
+        {
+          "name": "INCIDecoder",
+          "url": "https://incidecoder.com/ingredients/cocos-nucifera-oil",
+          "type": "database"
+        },
+        {
+          "name": "CosDNA",
+          "url": "https://www.cosdna.com/eng/4c2b6d124.html",
+          "type": "database"
+        },
+        {
+          "name": "PubMed (pediatric AD)",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/24320105/",
+          "type": "study"
+        }
+      ]
     },
     {
       "id": "cocoa-butter",
@@ -310,7 +408,19 @@
         "natural"
       ],
       "evidenceLevel": "high",
-      "irritancy": 0
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "INCIDecoder",
+          "url": "https://incidecoder.com/ingredients/theobroma-cacao-seed-butter",
+          "type": "database"
+        },
+        {
+          "name": "PubMed (microcomedones)",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/34632684/",
+          "type": "study"
+        }
+      ]
     },
     {
       "id": "isopropyl-palmitate",
@@ -339,7 +449,14 @@
         "highly_comedogenic"
       ],
       "evidenceLevel": "high",
-      "irritancy": 1
+      "irritancy": 1,
+      "sourceUrls": [
+        {
+          "name": "INCIDecoder",
+          "url": "https://incidecoder.com/ingredients/isopropyl-palmitate",
+          "type": "database"
+        }
+      ]
     },
     {
       "id": "ethylhexyl-palmitate",
@@ -368,7 +485,14 @@
         "highly_comedogenic"
       ],
       "evidenceLevel": "high",
-      "irritancy": 0
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "INCIDecoder",
+          "url": "https://incidecoder.com/ingredients/ethylhexyl-palmitate",
+          "type": "database"
+        }
+      ]
     },
     {
       "id": "acetylated-lanolin",
@@ -397,7 +521,14 @@
         "lanolin_derivative"
       ],
       "evidenceLevel": "high",
-      "irritancy": 0
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "INCIDecoder",
+          "url": "https://incidecoder.com/ingredients/acetylated-lanolin",
+          "type": "database"
+        }
+      ]
     },
     {
       "id": "lauric-acid",
@@ -428,7 +559,14 @@
         "antimicrobial"
       ],
       "evidenceLevel": "high",
-      "irritancy": 1
+      "irritancy": 1,
+      "sourceUrls": [
+        {
+          "name": "INCIDecoder",
+          "url": "https://incidecoder.com/ingredients/lauric-acid",
+          "type": "database"
+        }
+      ]
     },
     {
       "id": "oleyl-alcohol",
@@ -457,7 +595,14 @@
         "highly_comedogenic"
       ],
       "evidenceLevel": "high",
-      "irritancy": 2
+      "irritancy": 2,
+      "sourceUrls": [
+        {
+          "name": "INCIDecoder",
+          "url": "https://incidecoder.com/ingredients/oleyl-alcohol",
+          "type": "database"
+        }
+      ]
     },
     {
       "id": "oleth-5",
@@ -484,7 +629,14 @@
         "highly_comedogenic"
       ],
       "evidenceLevel": "high",
-      "irritancy": 2
+      "irritancy": 2,
+      "sourceUrls": [
+        {
+          "name": "INCIDecoder",
+          "url": "https://incidecoder.com/ingredients/oleth-5",
+          "type": "database"
+        }
+      ]
     },
     {
       "id": "steareth-10",
@@ -511,7 +663,14 @@
         "highly_comedogenic"
       ],
       "evidenceLevel": "high",
-      "irritancy": 2
+      "irritancy": 2,
+      "sourceUrls": [
+        {
+          "name": "INCIDecoder",
+          "url": "https://incidecoder.com/ingredients/steareth-10",
+          "type": "database"
+        }
+      ]
     },
     {
       "id": "wheat-germ-oil",
@@ -541,7 +700,14 @@
         "vitamin_e"
       ],
       "evidenceLevel": "high",
-      "irritancy": 0
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "INCIDecoder",
+          "url": "https://incidecoder.com/ingredients/triticum-vulgare-germ-oil",
+          "type": "database"
+        }
+      ]
     },
     {
       "id": "linseed-oil",
@@ -571,7 +737,14 @@
         "omega_3"
       ],
       "evidenceLevel": "high",
-      "irritancy": 0
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "INCIDecoder",
+          "url": "https://incidecoder.com/ingredients/linum-usitatissimum-seed-oil",
+          "type": "database"
+        }
+      ]
     },
     {
       "id": "squalene",
@@ -601,7 +774,14 @@
         "sebum_component"
       ],
       "evidenceLevel": "high",
-      "irritancy": 0
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "INCIDecoder",
+          "url": "https://incidecoder.com/ingredients/squalene",
+          "type": "database"
+        }
+      ]
     },
     {
       "id": "butyl-stearate",
@@ -628,7 +808,14 @@
         "comedogenic"
       ],
       "evidenceLevel": "high",
-      "irritancy": 0
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "INCIDecoder",
+          "url": "https://incidecoder.com/ingredients/butyl-stearate",
+          "type": "database"
+        }
+      ]
     },
     {
       "id": "decyl-oleate",
@@ -654,7 +841,14 @@
         "comedogenic"
       ],
       "evidenceLevel": "high",
-      "irritancy": 0
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "INCIDecoder",
+          "url": "https://incidecoder.com/ingredients/decyl-oleate",
+          "type": "database"
+        }
+      ]
     },
     {
       "id": "glycine-soja-oil",
@@ -711,7 +905,14 @@
         "natural"
       ],
       "evidenceLevel": "medium",
-      "irritancy": 0
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "INCIDecoder",
+          "url": "https://incidecoder.com/ingredients/gossypium-herbaceum-seed-oil",
+          "type": "database"
+        }
+      ]
     },
     {
       "id": "hydrogenated-vegetable-oil",
@@ -739,7 +940,14 @@
         "occlusive"
       ],
       "evidenceLevel": "medium",
-      "irritancy": 0
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "INCIDecoder",
+          "url": "https://incidecoder.com/ingredients/hydrogenated-vegetable-oil",
+          "type": "database"
+        }
+      ]
     },
     {
       "id": "myristic-acid",
@@ -769,7 +977,14 @@
         "surfactant"
       ],
       "evidenceLevel": "high",
-      "irritancy": 0
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "INCIDecoder",
+          "url": "https://incidecoder.com/ingredients/myristic-acid",
+          "type": "database"
+        }
+      ]
     },
     {
       "id": "oleic-acid",
@@ -800,7 +1015,14 @@
         "penetration_enhancer"
       ],
       "evidenceLevel": "high",
-      "irritancy": 0
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "INCIDecoder",
+          "url": "https://incidecoder.com/ingredients/oleic-acid",
+          "type": "database"
+        }
+      ]
     },
     {
       "id": "evening-primrose-oil",
@@ -829,7 +1051,14 @@
         "omega_6"
       ],
       "evidenceLevel": "medium",
-      "irritancy": 0
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "INCIDecoder",
+          "url": "https://incidecoder.com/ingredients/oenothera-biennis-oil",
+          "type": "database"
+        }
+      ]
     },
     {
       "id": "sorbitan-oleate",
@@ -858,7 +1087,14 @@
         "emulsifier"
       ],
       "evidenceLevel": "medium",
-      "irritancy": 0
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "INCIDecoder",
+          "url": "https://incidecoder.com/ingredients/sorbitan-oleate",
+          "type": "database"
+        }
+      ]
     },
     {
       "id": "stearic-acid",
@@ -888,7 +1124,14 @@
         "emulsifier"
       ],
       "evidenceLevel": "high",
-      "irritancy": 0
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "INCIDecoder",
+          "url": "https://incidecoder.com/ingredients/stearic-acid",
+          "type": "database"
+        }
+      ]
     },
     {
       "id": "palmitic-acid",
@@ -919,7 +1162,14 @@
         "emulsifier"
       ],
       "evidenceLevel": "high",
-      "irritancy": 0
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "INCIDecoder",
+          "url": "https://incidecoder.com/ingredients/palmitic-acid",
+          "type": "database"
+        }
+      ]
     },
     {
       "id": "cetearyl-alcohol",
@@ -949,7 +1199,14 @@
         "emulsifier"
       ],
       "evidenceLevel": "high",
-      "irritancy": 2
+      "irritancy": 2,
+      "sourceUrls": [
+        {
+          "name": "INCIDecoder",
+          "url": "https://incidecoder.com/ingredients/cetearyl-alcohol",
+          "type": "database"
+        }
+      ]
     },
     {
       "id": "cetyl-alcohol",
@@ -978,7 +1235,14 @@
         "low_comedogenic"
       ],
       "evidenceLevel": "high",
-      "irritancy": 2
+      "irritancy": 2,
+      "sourceUrls": [
+        {
+          "name": "INCIDecoder",
+          "url": "https://incidecoder.com/ingredients/cetyl-alcohol",
+          "type": "database"
+        }
+      ]
     },
     {
       "id": "stearyl-alcohol",
@@ -1006,7 +1270,14 @@
         "low_comedogenic"
       ],
       "evidenceLevel": "high",
-      "irritancy": 2
+      "irritancy": 2,
+      "sourceUrls": [
+        {
+          "name": "INCIDecoder",
+          "url": "https://incidecoder.com/ingredients/stearyl-alcohol",
+          "type": "database"
+        }
+      ]
     },
     {
       "id": "ascorbyl-palmitate",
@@ -1035,7 +1306,14 @@
         "antioxidant"
       ],
       "evidenceLevel": "medium",
-      "irritancy": 0
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "INCIDecoder",
+          "url": "https://incidecoder.com/ingredients/ascorbyl-palmitate",
+          "type": "database"
+        }
+      ]
     },
     {
       "id": "triethanolamine",
@@ -1065,7 +1343,14 @@
         "irritant"
       ],
       "evidenceLevel": "medium",
-      "irritancy": 0
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "INCIDecoder",
+          "url": "https://incidecoder.com/ingredients/triethanolamine",
+          "type": "database"
+        }
+      ]
     },
     {
       "id": "sodium-lauryl-sulfate",
@@ -1097,7 +1382,19 @@
         "barrier_disruptor"
       ],
       "evidenceLevel": "high",
-      "irritancy": 2
+      "irritancy": 2,
+      "sourceUrls": [
+        {
+          "name": "CIR Summary",
+          "url": "https://www.cir-safety.org/sites/default/files/imports/alerts.pdf",
+          "type": "regulatory"
+        },
+        {
+          "name": "EU SCCS Notes",
+          "url": "https://health.ec.europa.eu/publications/sccs-notes-guidance-testing-cosmetic-ingredients-and-their-safety-evaluation-12th-revision_en",
+          "type": "government"
+        }
+      ]
     },
     {
       "id": "jojoba-oil",
@@ -1128,7 +1425,24 @@
         "sebum_like"
       ],
       "evidenceLevel": "high",
-      "irritancy": 0
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "INCIDecoder",
+          "url": "https://incidecoder.com/ingredients/simmondsia-chinensis-seed-oil",
+          "type": "database"
+        },
+        {
+          "name": "PubMed (comprehensive review)",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/34073772/",
+          "type": "study"
+        },
+        {
+          "name": "PMC (full review)",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8197201/",
+          "type": "study"
+        }
+      ]
     },
     {
       "id": "squalane",
@@ -1159,7 +1473,24 @@
         "sebum_component"
       ],
       "evidenceLevel": "high",
-      "irritancy": 0
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "INCIDecoder",
+          "url": "https://incidecoder.com/ingredients/squalane",
+          "type": "database"
+        },
+        {
+          "name": "CIR (Safety Assessment)",
+          "url": "https://www.cir-safety.org/sites/default/files/Squalene%20and%20Squalane.pdf",
+          "type": "regulatory"
+        },
+        {
+          "name": "Sage (Updated 2023)",
+          "url": "https://journals.sagepub.com/doi/10.1177/10915818231204276",
+          "type": "study"
+        }
+      ]
     },
     {
       "id": "argan-oil",
@@ -1189,7 +1520,14 @@
         "vitamin_e"
       ],
       "evidenceLevel": "high",
-      "irritancy": 0
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "INCIDecoder",
+          "url": "https://incidecoder.com/ingredients/argania-spinosa-kernel-oil",
+          "type": "database"
+        }
+      ]
     },
     {
       "id": "hemp-seed-oil",
@@ -1222,7 +1560,14 @@
         "omega_6"
       ],
       "evidenceLevel": "medium",
-      "irritancy": 0
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "INCIDecoder",
+          "url": "https://incidecoder.com/ingredients/cannabis-sativa-seed-oil",
+          "type": "database"
+        }
+      ]
     },
     {
       "id": "grapeseed-oil",
@@ -1253,7 +1598,14 @@
         "omega_6"
       ],
       "evidenceLevel": "medium",
-      "irritancy": 0
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "INCIDecoder",
+          "url": "https://incidecoder.com/ingredients/vitis-vinifera-seed-oil",
+          "type": "database"
+        }
+      ]
     },
     {
       "id": "sunflower-oil",
@@ -1282,7 +1634,14 @@
         "omega_6"
       ],
       "evidenceLevel": "medium",
-      "irritancy": 0
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "INCIDecoder",
+          "url": "https://incidecoder.com/ingredients/helianthus-annuus-seed-oil",
+          "type": "database"
+        }
+      ]
     },
     {
       "id": "safflower-oil",
@@ -1311,7 +1670,14 @@
         "omega_6"
       ],
       "evidenceLevel": "medium",
-      "irritancy": 0
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "INCIDecoder",
+          "url": "https://incidecoder.com/ingredients/carthamus-tinctorius-seed-oil",
+          "type": "database"
+        }
+      ]
     },
     {
       "id": "rosehip-oil",
@@ -1344,7 +1710,14 @@
         "omega_6"
       ],
       "evidenceLevel": "medium",
-      "irritancy": 0
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "INCIDecoder",
+          "url": "https://incidecoder.com/ingredients/rosa-canina-seed-oil",
+          "type": "database"
+        }
+      ]
     },
     {
       "id": "glycerin",
@@ -1374,7 +1747,29 @@
         "humectant"
       ],
       "evidenceLevel": "high",
-      "irritancy": 0
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "INCIDecoder",
+          "url": "https://incidecoder.com/ingredients/glycerin",
+          "type": "database"
+        },
+        {
+          "name": "CosDNA",
+          "url": "https://www.cosdna.com/eng/205eb9166.html",
+          "type": "database"
+        },
+        {
+          "name": "CIR Safety Assessment",
+          "url": "https://www.cir-safety.org/sites/default/files/glycerin.pdf",
+          "type": "regulatory"
+        },
+        {
+          "name": "PubMed (skin barrier)",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/29192997/",
+          "type": "study"
+        }
+      ]
     },
     {
       "id": "niacinamide",
@@ -1406,7 +1801,19 @@
         "pore_minimizing"
       ],
       "evidenceLevel": "high",
-      "irritancy": 0
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "INCIDecoder",
+          "url": "https://incidecoder.com/ingredients/niacinamide",
+          "type": "database"
+        },
+        {
+          "name": "PubMed (sebum regulation)",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/22091554/",
+          "type": "study"
+        }
+      ]
     },
     {
       "id": "hyaluronic-acid",
@@ -1437,7 +1844,14 @@
         "hydrating"
       ],
       "evidenceLevel": "high",
-      "irritancy": 0
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "INCIDecoder",
+          "url": "https://incidecoder.com/ingredients/sodium-hyaluronate",
+          "type": "database"
+        }
+      ]
     },
     {
       "id": "dimethicone",
@@ -1469,7 +1883,24 @@
         "slip_agent"
       ],
       "evidenceLevel": "high",
-      "irritancy": 0
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "INCIDecoder",
+          "url": "https://incidecoder.com/ingredients/dimethicone",
+          "type": "database"
+        },
+        {
+          "name": "CIR (Amended Report)",
+          "url": "https://www.cir-safety.org/sites/default/files/FAR_Methicones_032022.pdf",
+          "type": "regulatory"
+        },
+        {
+          "name": "PMC (Pilot Study)",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3654275/",
+          "type": "study"
+        }
+      ]
     },
     {
       "id": "shea-butter",
@@ -1501,7 +1932,14 @@
         "vitamin_e"
       ],
       "evidenceLevel": "high",
-      "irritancy": 0
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "INCIDecoder",
+          "url": "https://incidecoder.com/ingredients/butyrospermum-parkii-butter",
+          "type": "database"
+        }
+      ]
     },
     {
       "id": "aloe-vera",
@@ -1534,7 +1972,14 @@
         "soothing"
       ],
       "evidenceLevel": "high",
-      "irritancy": 0
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "INCIDecoder",
+          "url": "https://incidecoder.com/ingredients/aloe-barbadensis-leaf-juice",
+          "type": "database"
+        }
+      ]
     },
     {
       "id": "green-tea-extract",
@@ -1568,7 +2013,14 @@
         "sebum_regulating"
       ],
       "evidenceLevel": "high",
-      "irritancy": 0
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "INCIDecoder",
+          "url": "https://incidecoder.com/ingredients/camellia-sinensis-leaf-extract",
+          "type": "database"
+        }
+      ]
     },
     {
       "id": "salicylic-acid",
@@ -1601,7 +2053,19 @@
         "anti_acne"
       ],
       "evidenceLevel": "high",
-      "irritancy": 0
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "INCIDecoder",
+          "url": "https://incidecoder.com/ingredients/salicylic-acid",
+          "type": "database"
+        },
+        {
+          "name": "PubMed (acne treatment)",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/22988671/",
+          "type": "study"
+        }
+      ]
     },
     {
       "id": "tea-tree-oil",
@@ -1634,7 +2098,19 @@
         "anti_acne"
       ],
       "evidenceLevel": "high",
-      "irritancy": 0
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "INCIDecoder",
+          "url": "https://incidecoder.com/ingredients/melaleuca-alternifolia-leaf-oil",
+          "type": "database"
+        },
+        {
+          "name": "PubMed (antimicrobial)",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/17305436/",
+          "type": "study"
+        }
+      ]
     },
     {
       "id": "zinc-oxide",
@@ -1666,7 +2142,19 @@
         "soothing"
       ],
       "evidenceLevel": "high",
-      "irritancy": 0
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "INCIDecoder",
+          "url": "https://incidecoder.com/ingredients/zinc-oxide",
+          "type": "database"
+        },
+        {
+          "name": "FDA (Sunscreen)",
+          "url": "https://www.fda.gov/drugs/understanding-over-counter-medicines/sunscreen-how-help-protect-your-skin-sun",
+          "type": "government"
+        }
+      ]
     },
     {
       "id": "titanium-dioxide",
@@ -1697,7 +2185,19 @@
         "pigment"
       ],
       "evidenceLevel": "high",
-      "irritancy": 0
+      "irritancy": 0,
+      "sourceUrls": [
+        {
+          "name": "INCIDecoder",
+          "url": "https://incidecoder.com/ingredients/titanium-dioxide",
+          "type": "database"
+        },
+        {
+          "name": "FDA (Sunscreen)",
+          "url": "https://www.fda.gov/drugs/understanding-over-counter-medicines/sunscreen-how-help-protect-your-skin-sun",
+          "type": "government"
+        }
+      ]
     },
     {
       "id": "peg-16-lanolin",
@@ -1730,6 +2230,13 @@
       "evidenceLevel": "high",
       "sources": [
         "Fulton 1989"
+      ],
+      "sourceUrls": [
+        {
+          "name": "INCIDecoder",
+          "url": "https://incidecoder.com/ingredients/peg-16-lanolin",
+          "type": "database"
+        }
       ]
     },
     {
@@ -1763,6 +2270,13 @@
       "evidenceLevel": "high",
       "sources": [
         "Fulton 1989"
+      ],
+      "sourceUrls": [
+        {
+          "name": "INCIDecoder",
+          "url": "https://incidecoder.com/ingredients/laneth-10",
+          "type": "database"
+        }
       ]
     },
     {
@@ -1794,6 +2308,13 @@
       "evidenceLevel": "high",
       "sources": [
         "Fulton 1989"
+      ],
+      "sourceUrls": [
+        {
+          "name": "INCIDecoder",
+          "url": "https://incidecoder.com/ingredients/cetyl-acetate",
+          "type": "database"
+        }
       ]
     },
     {
@@ -1823,6 +2344,13 @@
       "evidenceLevel": "high",
       "sources": [
         "Fulton 1989"
+      ],
+      "sourceUrls": [
+        {
+          "name": "INCIDecoder",
+          "url": "https://incidecoder.com/ingredients/isostearyl-isostearate",
+          "type": "database"
+        }
       ]
     },
     {
@@ -1853,6 +2381,13 @@
       "evidenceLevel": "high",
       "sources": [
         "Fulton 1989"
+      ],
+      "sourceUrls": [
+        {
+          "name": "INCIDecoder",
+          "url": "https://incidecoder.com/ingredients/myristyl-lactate",
+          "type": "database"
+        }
       ]
     },
     {
@@ -1882,6 +2417,13 @@
       "evidenceLevel": "high",
       "sources": [
         "Fulton 1989"
+      ],
+      "sourceUrls": [
+        {
+          "name": "INCIDecoder",
+          "url": "https://incidecoder.com/ingredients/stearyl-heptanoate",
+          "type": "database"
+        }
       ]
     },
     {
@@ -1913,6 +2455,13 @@
       "evidenceLevel": "medium",
       "sources": [
         "Fulton 1989"
+      ],
+      "sourceUrls": [
+        {
+          "name": "INCIDecoder",
+          "url": "https://incidecoder.com/ingredients/isopropyl-lanolate",
+          "type": "database"
+        }
       ]
     },
     {
@@ -1948,6 +2497,13 @@
       "evidenceLevel": "high",
       "sources": [
         "Fulton 1989"
+      ],
+      "sourceUrls": [
+        {
+          "name": "INCIDecoder",
+          "url": "https://incidecoder.com/ingredients/propylene-glycol",
+          "type": "database"
+        }
       ]
     },
     {
@@ -1982,6 +2538,13 @@
       "evidenceLevel": "high",
       "sources": [
         "Fulton 1989"
+      ],
+      "sourceUrls": [
+        {
+          "name": "INCIDecoder",
+          "url": "https://incidecoder.com/ingredients/butylene-glycol",
+          "type": "database"
+        }
       ]
     },
     {
@@ -2015,6 +2578,13 @@
       "evidenceLevel": "high",
       "sources": [
         "INCIDecoder"
+      ],
+      "sourceUrls": [
+        {
+          "name": "INCIDecoder",
+          "url": "https://incidecoder.com/ingredients/sodium-hyaluronate",
+          "type": "database"
+        }
       ]
     },
     {
@@ -2048,6 +2618,13 @@
       "evidenceLevel": "medium",
       "sources": [
         "Fulton 1989"
+      ],
+      "sourceUrls": [
+        {
+          "name": "INCIDecoder",
+          "url": "https://incidecoder.com/ingredients/olea-europaea-fruit-oil",
+          "type": "database"
+        }
       ]
     },
     {
@@ -2081,6 +2658,13 @@
       "evidenceLevel": "medium",
       "sources": [
         "INCIDecoder"
+      ],
+      "sourceUrls": [
+        {
+          "name": "INCIDecoder",
+          "url": "https://incidecoder.com/ingredients/prunus-amygdalus-dulcis-oil",
+          "type": "database"
+        }
       ]
     },
     {
@@ -2113,6 +2697,13 @@
       "evidenceLevel": "medium",
       "sources": [
         "Platinum Skincare"
+      ],
+      "sourceUrls": [
+        {
+          "name": "INCIDecoder",
+          "url": "https://incidecoder.com/ingredients/prunus-armeniaca-kernel-oil",
+          "type": "database"
+        }
       ]
     },
     {
@@ -2146,6 +2737,13 @@
       "evidenceLevel": "medium",
       "sources": [
         "Fulton 1989"
+      ],
+      "sourceUrls": [
+        {
+          "name": "INCIDecoder",
+          "url": "https://incidecoder.com/ingredients/sesamum-indicum-seed-oil",
+          "type": "database"
+        }
       ]
     },
     {
@@ -2178,6 +2776,13 @@
       "evidenceLevel": "medium",
       "sources": [
         "Fulton 1989"
+      ],
+      "sourceUrls": [
+        {
+          "name": "INCIDecoder",
+          "url": "https://incidecoder.com/ingredients/persea-gratissima-oil",
+          "type": "database"
+        }
       ]
     },
     {
@@ -2210,6 +2815,13 @@
       "evidenceLevel": "medium",
       "sources": [
         "Fulton 1989"
+      ],
+      "sourceUrls": [
+        {
+          "name": "INCIDecoder",
+          "url": "https://incidecoder.com/ingredients/arachis-hypogaea-oil",
+          "type": "database"
+        }
       ]
     },
     {
@@ -2242,6 +2854,13 @@
       "evidenceLevel": "medium",
       "sources": [
         "Fulton 1989"
+      ],
+      "sourceUrls": [
+        {
+          "name": "INCIDecoder",
+          "url": "https://incidecoder.com/ingredients/zea-mays-oil",
+          "type": "database"
+        }
       ]
     },
     {
@@ -2277,6 +2896,13 @@
       "evidenceLevel": "medium",
       "sources": [
         "Platinum Skincare"
+      ],
+      "sourceUrls": [
+        {
+          "name": "INCIDecoder",
+          "url": "https://incidecoder.com/ingredients/cera-alba",
+          "type": "database"
+        }
       ]
     },
     {
@@ -2312,6 +2938,23 @@
       "sources": [
         "Fulton 1989",
         "INCIDecoder"
+      ],
+      "sourceUrls": [
+        {
+          "name": "INCIDecoder",
+          "url": "https://incidecoder.com/ingredients/paraffinum-liquidum",
+          "type": "database"
+        },
+        {
+          "name": "CIR (Petrolatum)",
+          "url": "https://www.cir-safety.org/ingredients/petrolatum",
+          "type": "regulatory"
+        },
+        {
+          "name": "CosmeticsInfo",
+          "url": "https://www.cosmeticsinfo.org/ingredient/petrolatum/",
+          "type": "reference"
+        }
       ]
     },
     {
@@ -2347,6 +2990,23 @@
       "sources": [
         "Fulton 1989",
         "INCIDecoder"
+      ],
+      "sourceUrls": [
+        {
+          "name": "INCIDecoder",
+          "url": "https://incidecoder.com/ingredients/mineral-oil",
+          "type": "database"
+        },
+        {
+          "name": "CIR (Petrolatum)",
+          "url": "https://www.cir-safety.org/ingredients/petrolatum",
+          "type": "regulatory"
+        },
+        {
+          "name": "CosmeticsInfo",
+          "url": "https://www.cosmeticsinfo.org/ingredient/petrolatum/",
+          "type": "reference"
+        }
       ]
     },
     {
@@ -2381,6 +3041,13 @@
       "evidenceLevel": "high",
       "sources": [
         "Platinum Skincare"
+      ],
+      "sourceUrls": [
+        {
+          "name": "INCIDecoder",
+          "url": "https://incidecoder.com/ingredients/carrageenan",
+          "type": "database"
+        }
       ]
     },
     {
@@ -2418,6 +3085,13 @@
       "evidenceLevel": "high",
       "sources": [
         "Platinum Skincare"
+      ],
+      "sourceUrls": [
+        {
+          "name": "INCIDecoder",
+          "url": "https://incidecoder.com/ingredients/algae-extract",
+          "type": "database"
+        }
       ]
     },
     {
@@ -2454,6 +3128,13 @@
       "evidenceLevel": "high",
       "sources": [
         "Fulton 1989"
+      ],
+      "sourceUrls": [
+        {
+          "name": "INCIDecoder",
+          "url": "https://incidecoder.com/ingredients/sulfur",
+          "type": "database"
+        }
       ]
     },
     {
@@ -2489,6 +3170,13 @@
       "evidenceLevel": "high",
       "sources": [
         "Platinum Skincare"
+      ],
+      "sourceUrls": [
+        {
+          "name": "INCIDecoder",
+          "url": "https://incidecoder.com/ingredients/allantoin",
+          "type": "database"
+        }
       ]
     },
     {
@@ -2525,6 +3213,13 @@
       "evidenceLevel": "high",
       "sources": [
         "INCIDecoder"
+      ],
+      "sourceUrls": [
+        {
+          "name": "INCIDecoder",
+          "url": "https://incidecoder.com/ingredients/panthenol",
+          "type": "database"
+        }
       ]
     },
     {
@@ -2562,6 +3257,18 @@
       "evidenceLevel": "high",
       "sources": [
         "INCIDecoder"
+      ],
+      "sourceUrls": [
+        {
+          "name": "INCIDecoder",
+          "url": "https://incidecoder.com/ingredients/centella-asiatica-extract",
+          "type": "database"
+        },
+        {
+          "name": "PubMed (wound healing)",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/22788506/",
+          "type": "study"
+        }
       ]
     },
     {
@@ -2597,6 +3304,18 @@
       "evidenceLevel": "high",
       "sources": [
         "INCIDecoder"
+      ],
+      "sourceUrls": [
+        {
+          "name": "INCIDecoder",
+          "url": "https://incidecoder.com/ingredients/ceramide-np",
+          "type": "database"
+        },
+        {
+          "name": "PubMed (barrier repair)",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/25607545/",
+          "type": "study"
+        }
       ]
     },
     {
@@ -2631,6 +3350,13 @@
       "evidenceLevel": "high",
       "sources": [
         "INCIDecoder"
+      ],
+      "sourceUrls": [
+        {
+          "name": "INCIDecoder",
+          "url": "https://incidecoder.com/ingredients/palmitoyl-pentapeptide-4",
+          "type": "database"
+        }
       ]
     },
     {
@@ -2667,6 +3393,18 @@
       "evidenceLevel": "high",
       "sources": [
         "INCIDecoder"
+      ],
+      "sourceUrls": [
+        {
+          "name": "INCIDecoder",
+          "url": "https://incidecoder.com/ingredients/retinol",
+          "type": "database"
+        },
+        {
+          "name": "PubMed (retinoids in acne)",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/25269415/",
+          "type": "study"
+        }
       ]
     },
     {
@@ -2702,6 +3440,18 @@
       "evidenceLevel": "high",
       "sources": [
         "INCIDecoder"
+      ],
+      "sourceUrls": [
+        {
+          "name": "INCIDecoder",
+          "url": "https://incidecoder.com/ingredients/azelaic-acid",
+          "type": "database"
+        },
+        {
+          "name": "PubMed (acne/rosacea)",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/29769100/",
+          "type": "study"
+        }
       ]
     },
     {
@@ -2738,6 +3488,13 @@
       "evidenceLevel": "high",
       "sources": [
         "INCIDecoder"
+      ],
+      "sourceUrls": [
+        {
+          "name": "INCIDecoder",
+          "url": "https://incidecoder.com/ingredients/mandelic-acid",
+          "type": "database"
+        }
       ]
     },
     {
@@ -2774,6 +3531,13 @@
       "evidenceLevel": "high",
       "sources": [
         "INCIDecoder"
+      ],
+      "sourceUrls": [
+        {
+          "name": "INCIDecoder",
+          "url": "https://incidecoder.com/ingredients/glycolic-acid",
+          "type": "database"
+        }
       ]
     },
     {
@@ -2810,6 +3574,13 @@
       "evidenceLevel": "high",
       "sources": [
         "INCIDecoder"
+      ],
+      "sourceUrls": [
+        {
+          "name": "INCIDecoder",
+          "url": "https://incidecoder.com/ingredients/lactic-acid",
+          "type": "database"
+        }
       ]
     },
     {
@@ -2846,6 +3617,18 @@
       "evidenceLevel": "high",
       "sources": [
         "INCIDecoder"
+      ],
+      "sourceUrls": [
+        {
+          "name": "INCIDecoder",
+          "url": "https://incidecoder.com/ingredients/ascorbic-acid",
+          "type": "database"
+        },
+        {
+          "name": "PubMed (topical vitamin C)",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/9002054/",
+          "type": "study"
+        }
       ]
     },
     {
@@ -2916,6 +3699,13 @@
       "evidenceLevel": "high",
       "sources": [
         "INCIDecoder"
+      ],
+      "sourceUrls": [
+        {
+          "name": "INCIDecoder",
+          "url": "https://incidecoder.com/ingredients/bisabolol",
+          "type": "database"
+        }
       ]
     },
     {
@@ -2951,6 +3741,13 @@
       "evidenceLevel": "high",
       "sources": [
         "INCIDecoder"
+      ],
+      "sourceUrls": [
+        {
+          "name": "INCIDecoder",
+          "url": "https://incidecoder.com/ingredients/beta-glucan",
+          "type": "database"
+        }
       ]
     },
     {
@@ -2986,6 +3783,13 @@
       "evidenceLevel": "high",
       "sources": [
         "INCIDecoder"
+      ],
+      "sourceUrls": [
+        {
+          "name": "INCIDecoder",
+          "url": "https://incidecoder.com/ingredients/urea",
+          "type": "database"
+        }
       ]
     },
     {
@@ -3020,6 +3824,13 @@
       "evidenceLevel": "high",
       "sources": [
         "INCIDecoder"
+      ],
+      "sourceUrls": [
+        {
+          "name": "INCIDecoder",
+          "url": "https://incidecoder.com/ingredients/ceramide-ap",
+          "type": "database"
+        }
       ]
     },
     {
@@ -3054,6 +3865,13 @@
       "evidenceLevel": "high",
       "sources": [
         "INCIDecoder"
+      ],
+      "sourceUrls": [
+        {
+          "name": "INCIDecoder",
+          "url": "https://incidecoder.com/ingredients/cholesterol",
+          "type": "database"
+        }
       ]
     },
     {
@@ -3087,6 +3905,13 @@
       "evidenceLevel": "high",
       "sources": [
         "INCIDecoder"
+      ],
+      "sourceUrls": [
+        {
+          "name": "INCIDecoder",
+          "url": "https://incidecoder.com/ingredients/sodium-pca",
+          "type": "database"
+        }
       ]
     },
     {
@@ -3121,6 +3946,13 @@
       "evidenceLevel": "high",
       "sources": [
         "INCIDecoder"
+      ],
+      "sourceUrls": [
+        {
+          "name": "INCIDecoder",
+          "url": "https://incidecoder.com/ingredients/phytosphingosine",
+          "type": "database"
+        }
       ]
     },
     {
@@ -3155,6 +3987,13 @@
       "evidenceLevel": "high",
       "sources": [
         "INCIDecoder"
+      ],
+      "sourceUrls": [
+        {
+          "name": "INCIDecoder",
+          "url": "https://incidecoder.com/ingredients/water",
+          "type": "database"
+        }
       ]
     },
     {
@@ -3187,6 +4026,13 @@
       "evidenceLevel": "high",
       "sources": [
         "Fulton 1989"
+      ],
+      "sourceUrls": [
+        {
+          "name": "INCIDecoder",
+          "url": "https://incidecoder.com/ingredients/carbomer",
+          "type": "database"
+        }
       ]
     },
     {
@@ -3221,6 +4067,13 @@
       "evidenceLevel": "high",
       "sources": [
         "INCIDecoder"
+      ],
+      "sourceUrls": [
+        {
+          "name": "INCIDecoder",
+          "url": "https://incidecoder.com/ingredients/xanthan-gum",
+          "type": "database"
+        }
       ]
     },
     {
@@ -3253,6 +4106,13 @@
       "evidenceLevel": "high",
       "sources": [
         "INCIDecoder"
+      ],
+      "sourceUrls": [
+        {
+          "name": "INCIDecoder",
+          "url": "https://incidecoder.com/ingredients/phenoxyethanol",
+          "type": "database"
+        }
       ]
     },
     {
@@ -3287,6 +4147,13 @@
       "evidenceLevel": "medium",
       "sources": [
         "INCIDecoder"
+      ],
+      "sourceUrls": [
+        {
+          "name": "INCIDecoder",
+          "url": "https://incidecoder.com/ingredients/ethylhexylglycerin",
+          "type": "database"
+        }
       ]
     },
     {
@@ -3320,6 +4187,13 @@
       "evidenceLevel": "high",
       "sources": [
         "INCIDecoder"
+      ],
+      "sourceUrls": [
+        {
+          "name": "INCIDecoder",
+          "url": "https://incidecoder.com/ingredients/disodium-edta",
+          "type": "database"
+        }
       ]
     },
     {
@@ -3354,6 +4228,13 @@
       "evidenceLevel": "medium",
       "sources": [
         "INCIDecoder"
+      ],
+      "sourceUrls": [
+        {
+          "name": "INCIDecoder",
+          "url": "https://incidecoder.com/ingredients/polysorbate-20",
+          "type": "database"
+        }
       ]
     },
     {
@@ -3388,6 +4269,13 @@
       "evidenceLevel": "medium",
       "sources": [
         "INCIDecoder"
+      ],
+      "sourceUrls": [
+        {
+          "name": "INCIDecoder",
+          "url": "https://incidecoder.com/ingredients/behentrimonium-methosulfate",
+          "type": "database"
+        }
       ]
     },
     {
@@ -3421,6 +4309,13 @@
       "evidenceLevel": "medium",
       "sources": [
         "INCIDecoder"
+      ],
+      "sourceUrls": [
+        {
+          "name": "INCIDecoder",
+          "url": "https://incidecoder.com/ingredients/sodium-lauroyl-lactylate",
+          "type": "database"
+        }
       ]
     },
     {
@@ -3454,6 +4349,13 @@
       "evidenceLevel": "high",
       "sources": [
         "INCIDecoder"
+      ],
+      "sourceUrls": [
+        {
+          "name": "INCIDecoder",
+          "url": "https://incidecoder.com/ingredients/potassium-phosphate",
+          "type": "database"
+        }
       ]
     },
     {
@@ -3486,6 +4388,13 @@
       "evidenceLevel": "high",
       "sources": [
         "INCIDecoder"
+      ],
+      "sourceUrls": [
+        {
+          "name": "INCIDecoder",
+          "url": "https://incidecoder.com/ingredients/dipotassium-phosphate",
+          "type": "database"
+        }
       ]
     },
     {
@@ -3519,6 +4428,13 @@
       "evidenceLevel": "medium",
       "sources": [
         "INCIDecoder"
+      ],
+      "sourceUrls": [
+        {
+          "name": "INCIDecoder",
+          "url": "https://incidecoder.com/ingredients/peg-40-stearate",
+          "type": "database"
+        }
       ]
     },
     {
@@ -3555,6 +4471,13 @@
       "sources": [
         "Fulton 1989",
         "INCIDecoder"
+      ],
+      "sourceUrls": [
+        {
+          "name": "INCIDecoder",
+          "url": "https://incidecoder.com/ingredients/glyceryl-stearate",
+          "type": "database"
+        }
       ]
     },
     {
@@ -3588,6 +4511,13 @@
       "evidenceLevel": "high",
       "sources": [
         "INCIDecoder"
+      ],
+      "sourceUrls": [
+        {
+          "name": "INCIDecoder",
+          "url": "https://incidecoder.com/ingredients/tocopheryl-acetate",
+          "type": "database"
+        }
       ]
     },
     {
@@ -3623,7 +4553,56 @@
       "evidenceLevel": "high",
       "sources": [
         "INCIDecoder"
+      ],
+      "sourceUrls": [
+        {
+          "name": "INCIDecoder",
+          "url": "https://incidecoder.com/ingredients/ceramide-eop",
+          "type": "database"
+        }
       ]
+    }
+  ],
+  "globalSources": [
+    {
+      "name": "Fulton 1989 (Original Scale)",
+      "url": "https://insolitbeauty.com/documentacion/Comedogenicidad%20e%20irritacion%20de%20los%20ingredientes%20de%20uso%20comun%20en%20productos%20para%20el%20cuidado%20de%20la%20piel.pdf",
+      "type": "study"
+    },
+    {
+      "name": "Kligman & Mills 1972",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/4264346/",
+      "type": "study"
+    },
+    {
+      "name": "Draelos & DiNardo 2006",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/16488305/",
+      "type": "study"
+    },
+    {
+      "name": "Nguyen & Maibach 2007",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/18058303/",
+      "type": "study"
+    },
+    {
+      "name": "EU CosIng Database",
+      "url": "https://ec.europa.eu/growth/tools-databases/cosing/",
+      "type": "government"
+    },
+    {
+      "name": "US FDA Cosmetics",
+      "url": "https://www.fda.gov/cosmetics/cosmetic-products-ingredients/cosmetic-ingredients",
+      "type": "government"
+    },
+    {
+      "name": "Health Canada Hotlist",
+      "url": "https://www.canada.ca/en/health-canada/services/consumer-product-safety/cosmetics/cosmetic-ingredient-hotlist-prohibited-restricted-ingredients/hotlist.html",
+      "type": "government"
+    },
+    {
+      "name": "CIR Safety Assessments",
+      "url": "https://www.cir-safety.org/",
+      "type": "regulatory"
     }
   ]
 }

@@ -11,8 +11,8 @@ interface TabBarProps {
 
 export default function TabBar({ activeTab, onTabChange }: TabBarProps) {
   const tabs: { id: Tab; label: string }[] = [
-    { id: "map", label: "Kart" },
-    { id: "porechecker", label: "Pore Clogging Checker" },
+    { id: "map", label: "Sorter Klær" },
+    { id: "porechecker", label: "Pore-vakten" },
   ];
 
   return (

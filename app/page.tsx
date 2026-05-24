@@ -52,10 +52,13 @@ export default function Home() {
       <main className="flex min-h-screen w-full max-w-5xl flex-col items-center gap-12 py-16 px-4 bg-white dark:bg-zinc-950 rounded-3xl shadow-xl overflow-hidden border border-zinc-200 dark:border-zinc-800">
         <div className="flex flex-col items-center gap-4 text-center">
           <h1 className="text-4xl font-extrabold tracking-tight text-zinc-900 dark:text-zinc-50 sm:text-5xl">
-            Tekstilinnsamling i Oslo
+            Tekstilinnsamling + Pore-vakten i Oslo
           </h1>
           <p className="max-w-xl text-lg text-zinc-600 dark:text-zinc-400">
-            Finn ditt nærmeste innsamlingspunkt for klær og tekstiler.
+            Fordi både klær og hud trenger å sorteres: finn innsamlingspunkt for tekstiler, eller sjekk om skjønnhetsproduktene dine tetter porene like effektivt som ullgenseren din.
+          </p>
+          <p className="max-w-lg text-sm text-zinc-500 dark:text-zinc-500 italic">
+            (&quot;Pores&quot; er egentlig det eneste disse to tingene har til felles. Men hey, begge handler om å rydde opp i rotet ditt!)
           </p>
         </div>
 

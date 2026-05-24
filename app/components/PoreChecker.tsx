@@ -16,12 +16,14 @@ interface Ingredient {
   flags: string[];
   evidenceLevel: string;
   sources?: string[];
+  sourceUrls?: { name: string; url: string; type: string }[];
 }
 
 interface IngredientsData {
   version: string;
   lastUpdated: string;
   sources: string[];
+  globalSources?: { name: string; url: string; type: string }[];
   scale: {
     name: string;
     range: string;
@@ -98,136 +100,61 @@ function getSkinTypeAdviceColor(ingredient: Ingredient, skinType: SkinType): str
   return colorMap[advice] || "";
 }
 
-function parseIngredients(text: string): string[] {
+function findMatchesInText(
+  text: string,
+  ingredients: Ingredient[]
+): MatchedIngredient[] {
   if (!text.trim()) return [];
 
-  // Split by common delimiters: commas, newlines, semicolons
-  const parts = text.split(/[,;\n]+/);
-
-  const allNames: string[] = [];
-
-  for (const part of parts) {
-    // Clean up each part
-    let cleaned = part.trim();
-    // Remove leading bullets, dashes, numbers
-    cleaned = cleaned.replace(/^[\s•\-\*\d.]+/, "");
-    // Remove trailing asterisks or other markers
-    cleaned = cleaned.replace(/[*†‡]+$/, "");
-    cleaned = cleaned.trim();
-
-    if (cleaned.length < 2) continue;
-
-    // If it contains "/" aliases like "Aqua / Water / Eau", split and add each
-    if (cleaned.includes(" / ")) {
-      const aliases = cleaned.split(" / ").map((a) => a.trim()).filter((a) => a.length > 1);
-      for (const alias of aliases) {
-        if (!allNames.includes(alias)) {
-          allNames.push(alias);
-        }
-      }
-    } else {
-      // Regular ingredient name
-      allNames.push(cleaned);
+  // Some websites copy-paste URL-encoded text. Decode it first.
+  let decodedText = text;
+  try {
+    if (/%20|%2C|%2F|%3B|%7C/.test(text)) {
+      decodedText = decodeURIComponent(text);
+    } else if (/\$20/.test(text)) {
+      // Some sites use $20 instead of %20 for spaces
+      decodedText = text.replace(/\$20/g, " ");
     }
+  } catch {
+    decodedText = text;
   }
 
-  return allNames;
-}
+  const normalizedText = decodedText.toLowerCase();
+  const matches: MatchedIngredient[] = [];
+  const matchedIds = new Set<string>();
 
-function findIngredientMatch(
-  query: string,
-  ingredients: Ingredient[]
-): MatchedIngredient | null {
-  // Strict exact matching only for pasted ingredient lists
-  // Ingredients copied from websites are typically accurate
-  const normalizedQuery = query.toLowerCase().trim();
-  if (!normalizedQuery || normalizedQuery.length < 2) return null;
-
-  // Also try with parenthetical content stripped (e.g., "Tocopherol (Vitamin E)" -> "Tocopherol")
-  const strippedQuery = normalizedQuery.replace(/\s*\([^)]*\)/g, "").trim();
-
-  // Exact match on INCI name
   for (const ing of ingredients) {
-    if (ing.inciName.toLowerCase() === normalizedQuery) {
-      return { ingredient: ing, matchedName: ing.inciName, originalText: query };
-    }
-    if (strippedQuery !== normalizedQuery && ing.inciName.toLowerCase() === strippedQuery) {
-      return { ingredient: ing, matchedName: ing.inciName, originalText: query };
-    }
-  }
+    if (matchedIds.has(ing.id)) continue;
 
-  // Exact match on common names
-  for (const ing of ingredients) {
+    // Check INCI name as whole word
+    const inciPattern = new RegExp(
+      "\\b" + escapeRegex(ing.inciName.toLowerCase()) + "\\b"
+    );
+    if (inciPattern.test(normalizedText)) {
+      matches.push({ ingredient: ing, matchedName: ing.inciName, originalText: ing.inciName });
+      matchedIds.add(ing.id);
+      continue;
+    }
+
+    // Check common names as whole words
     for (const commonName of ing.commonNames) {
-      if (commonName.toLowerCase() === normalizedQuery) {
-        return { ingredient: ing, matchedName: commonName, originalText: query };
-      }
-      if (strippedQuery !== normalizedQuery && commonName.toLowerCase() === strippedQuery) {
-        return { ingredient: ing, matchedName: commonName, originalText: query };
+      const commonPattern = new RegExp(
+        "\\b" + escapeRegex(commonName.toLowerCase()) + "\\b"
+      );
+      if (commonPattern.test(normalizedText)) {
+        matches.push({ ingredient: ing, matchedName: commonName, originalText: commonName });
+        matchedIds.add(ing.id);
+        break;
       }
     }
   }
 
-  // No fuzzy fallback - too risky with chemistry names
-  // "Sodium Lauroyl Lactylate" !== "Sodium Lauryl Sulfate"
-  return null;
+  // Sort by rating descending (worst first)
+  return matches.sort((a, b) => b.ingredient.rating - a.ingredient.rating);
 }
 
-function levenshteinDistance(a: string, b: string): number {
-  const matrix: number[][] = [];
-  for (let i = 0; i <= b.length; i++) {
-    matrix[i] = [i];
-  }
-  for (let j = 0; j <= a.length; j++) {
-    matrix[0][j] = j;
-  }
-  for (let i = 1; i <= b.length; i++) {
-    for (let j = 1; j <= a.length; j++) {
-      if (b.charAt(i - 1) === a.charAt(j - 1)) {
-        matrix[i][j] = matrix[i - 1][j - 1];
-      } else {
-        matrix[i][j] = Math.min(
-          matrix[i - 1][j - 1] + 1,
-          matrix[i][j - 1] + 1,
-          matrix[i - 1][j] + 1
-        );
-      }
-    }
-  }
-  return matrix[b.length][a.length];
-}
-
-function fuzzyMatchIngredient(
-  query: string,
-  ingredients: Ingredient[]
-): MatchedIngredient | null {
-  const normalizedQuery = query.toLowerCase().trim();
-  if (!normalizedQuery || normalizedQuery.length < 3) return null;
-
-  let bestMatch: MatchedIngredient | null = null;
-  let bestScore = Infinity;
-
-  for (const ing of ingredients) {
-    // Check INCI name
-    const inciDistance = levenshteinDistance(normalizedQuery, ing.inciName.toLowerCase());
-    const inciScore = inciDistance / Math.max(normalizedQuery.length, ing.inciName.length);
-    if (inciScore < bestScore && inciScore < 0.4) {
-      bestScore = inciScore;
-      bestMatch = { ingredient: ing, matchedName: ing.inciName, originalText: query };
-    }
-
-    // Check common names
-    for (const commonName of ing.commonNames) {
-      const commonDistance = levenshteinDistance(normalizedQuery, commonName.toLowerCase());
-      const commonScore = commonDistance / Math.max(normalizedQuery.length, commonName.length);
-      if (commonScore < bestScore && commonScore < 0.4) {
-        bestScore = commonScore;
-        bestMatch = { ingredient: ing, matchedName: commonName, originalText: query };
-      }
-    }
-  }
-
-  return bestMatch;
+function escapeRegex(str: string): string {
+  return str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 }
 
 export default function PoreChecker() {
@@ -251,33 +178,42 @@ export default function PoreChecker() {
   }, []);
 
   const matchedIngredients = useMemo(() => {
-    const parsed = parseIngredients(ingredientText);
-    const matches: MatchedIngredient[] = [];
-    const matchedIds = new Set<string>();
-
-    for (const parsedIng of parsed) {
-      const match = findIngredientMatch(parsedIng, ingredients);
-
-      if (match && !matchedIds.has(match.ingredient.id)) {
-        matches.push(match);
-        matchedIds.add(match.ingredient.id);
-      }
-    }
-
-    // Sort by rating descending (worst first)
-    return matches.sort((a, b) => b.ingredient.rating - a.ingredient.rating);
+    return findMatchesInText(ingredientText, ingredients);
   }, [ingredientText, ingredients]);
 
   const unmatchedIngredients = useMemo(() => {
-    const parsed = parseIngredients(ingredientText);
-    const matchedOriginalTexts = new Set(
-      matchedIngredients.map((m) => m.originalText.toLowerCase().trim())
-    );
-    return parsed.filter((p) => {
-      const normalized = p.toLowerCase().trim();
-      return !matchedOriginalTexts.has(normalized);
-    });
-  }, [ingredientText, matchedIngredients]);
+    if (!ingredientText.trim()) return [];
+    const matches = findMatchesInText(ingredientText, ingredients);
+    const matchedPatterns = new Set<string>();
+    for (const m of matches) {
+      matchedPatterns.add(m.matchedName.toLowerCase());
+      matchedPatterns.add(m.ingredient.inciName.toLowerCase());
+      for (const cn of m.ingredient.commonNames) {
+        matchedPatterns.add(cn.toLowerCase());
+      }
+    }
+
+    // Split by common delimiters and check each chunk
+    const chunks = ingredientText.split(/[,;\n|]+/);
+    const unmatched: string[] = [];
+    for (const chunk of chunks) {
+      const normalizedChunk = chunk.toLowerCase().trim();
+      if (normalizedChunk.length < 2) continue;
+      // Check if this chunk contains any matched ingredient
+      let found = false;
+      for (const pattern of matchedPatterns) {
+        const regex = new RegExp("\\b" + escapeRegex(pattern) + "\\b");
+        if (regex.test(normalizedChunk)) {
+          found = true;
+          break;
+        }
+      }
+      if (!found) {
+        unmatched.push(chunk.trim());
+      }
+    }
+    return unmatched;
+  }, [ingredientText, ingredients]);
 
   const ratingCounts = useMemo(() => {
     const counts: Record<number, number> = { 0: 0, 1: 0, 2: 0, 3: 0, 4: 0, 5: 0 };
@@ -308,10 +244,10 @@ export default function PoreChecker() {
       {/* Header */}
       <div className="text-center space-y-2">
         <h2 className="text-2xl font-bold text-zinc-900 dark:text-zinc-50">
-          Pore Clogging Ingredient Checker
+          Pore-vakten
         </h2>
         <p className="text-zinc-600 dark:text-zinc-400 max-w-lg mx-auto">
-          Paste an ingredient list from any product to check for pore-clogging ingredients.
+          Din personlige vakt for porene. Sjekk om skjønnhetsproduktene dine smugler inn uønskte gjester (les: tetter porene).
         </p>
       </div>
 
@@ -350,12 +286,12 @@ export default function PoreChecker() {
               <textarea
                 value={ingredientText}
                 onChange={(e) => setIngredientText(e.target.value)}
-                placeholder="Water, Glycerin, Cocos Nucifera Oil, Isopropyl Myristate, Niacinamide, Sodium Hyaluronate..."
+                placeholder="Lim inn ingrediensliste her, f.eks. fra baksiden av kremen din..."
                 rows={6}
                 className="w-full px-4 py-3 bg-zinc-50 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl text-zinc-900 dark:text-zinc-50 placeholder-zinc-400 dark:placeholder-zinc-600 focus:outline-none focus:ring-2 focus:ring-zinc-500 focus:border-transparent transition-all resize-y text-sm"
               />
               <p className="text-xs text-zinc-500 dark:text-zinc-500 mt-1">
-                Copy and paste the ingredient list from any product page. We will automatically parse and match against our database.
+                Kopier og lim inn ingredienslisten fra produktet ditt. Vi sjekker automatisk mot databasen vår — for porene dine fortjener bedre enn restavfall.
               </p>
             </div>
 
@@ -589,10 +525,37 @@ export default function PoreChecker() {
                 </div>
               )}
 
-              <div className="text-xs text-zinc-500 dark:text-zinc-500 space-y-1">
-                <div>Evidence level: {selectedIngredient.evidenceLevel}</div>
-                {selectedIngredient.sources && selectedIngredient.sources.length > 0 && (
-                  <div>Sources: {selectedIngredient.sources.join(", ")}</div>
+              <div className="text-xs space-y-2">
+                <div className="text-zinc-500 dark:text-zinc-500">
+                  Evidence level: {selectedIngredient.evidenceLevel}
+                </div>
+                
+                {selectedIngredient.sourceUrls && selectedIngredient.sourceUrls.length > 0 && (
+                  <div>
+                    <h4 className="font-semibold text-zinc-700 dark:text-zinc-300 mb-1.5">Sources</h4>
+                    <div className="flex flex-wrap gap-2">
+                      {selectedIngredient.sourceUrls.map((source) => {
+                        const typeColors: Record<string, string> = {
+                          government: "bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-400",
+                          study: "bg-emerald-100 text-emerald-800 dark:bg-emerald-900/30 dark:text-emerald-400",
+                          regulatory: "bg-purple-100 text-purple-800 dark:bg-purple-900/30 dark:text-purple-400",
+                          database: "bg-zinc-100 text-zinc-700 dark:bg-zinc-800 dark:text-zinc-300",
+                          reference: "bg-zinc-100 text-zinc-700 dark:bg-zinc-800 dark:text-zinc-300",
+                        };
+                        return (
+                          <a
+                            key={source.url}
+                            href={source.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className={`text-xs px-2 py-1 rounded-full hover:opacity-80 transition-opacity ${typeColors[source.type] || typeColors.database}`}
+                          >
+                            {source.name}
+                          </a>
+                        );
+                      })}
+                    </div>
+                  </div>
                 )}
               </div>
             </div>
