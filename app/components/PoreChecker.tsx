@@ -1,6 +1,12 @@
 "use client";
 
 import { useState, useEffect, useMemo } from "react";
+import {
+  Popover,
+  PopoverTrigger,
+  PopoverTriggerContext,
+} from "@digdir/designsystemet-react";
+import { InformationSquareFillIcon } from "@navikt/aksel-icons";
 
 interface Ingredient {
   id: string;
@@ -116,21 +122,26 @@ function getSkinTypeAdviceColor(
   return colorMap[advice] || "";
 }
 
-function parseIngredientSections(text: string): { name: "active" | "inactive" | "unknown"; content: string }[] {
-  const sections: { name: "active" | "inactive" | "unknown"; content: string }[] = [];
-  
+function parseIngredientSections(
+  text: string,
+): { name: "active" | "inactive" | "unknown"; content: string }[] {
+  const sections: {
+    name: "active" | "inactive" | "unknown";
+    content: string;
+  }[] = [];
+
   // Find headers with their positions
   const activeMatch = text.match(/active\s+ingredients\s*[:\-]?/i);
   const inactiveMatch = text.match(/inactive\s+ingredients\s*[:\-]?/i);
-  
+
   if (!activeMatch || !inactiveMatch) {
     // No split detected, treat as single list
     return [{ name: "unknown", content: text }];
   }
-  
+
   const activeIndex = activeMatch.index ?? 0;
   const inactiveIndex = inactiveMatch.index ?? 0;
-  
+
   // Text before first header
   const firstHeaderIndex = Math.min(activeIndex, inactiveIndex);
   if (firstHeaderIndex > 0) {
@@ -139,7 +150,7 @@ function parseIngredientSections(text: string): { name: "active" | "inactive" | 
       sections.push({ name: "unknown", content: preamble });
     }
   }
-  
+
   // Determine which header comes first
   if (activeIndex < inactiveIndex) {
     // Active first, then inactive
@@ -148,7 +159,7 @@ function parseIngredientSections(text: string): { name: "active" | "inactive" | 
     if (activeContent.length > 0) {
       sections.push({ name: "active", content: activeContent });
     }
-    
+
     const inactiveEnd = inactiveIndex + inactiveMatch[0].length;
     const inactiveContent = text.slice(inactiveEnd).trim();
     if (inactiveContent.length > 0) {
@@ -161,14 +172,14 @@ function parseIngredientSections(text: string): { name: "active" | "inactive" | 
     if (inactiveContent.length > 0) {
       sections.push({ name: "inactive", content: inactiveContent });
     }
-    
+
     const activeEnd = activeIndex + activeMatch[0].length;
     const activeContent = text.slice(activeEnd).trim();
     if (activeContent.length > 0) {
       sections.push({ name: "active", content: activeContent });
     }
   }
-  
+
   return sections;
 }
 
@@ -200,11 +211,14 @@ function findMatchesInText(
   for (const section of sections) {
     const chunks = section.content.split(/[,;\n|]+/);
     let sectionPos = 0;
-    
+
     for (const chunk of chunks) {
       const normalizedChunk = chunk.toLowerCase().trim();
       // Strip parenthetical content for matching (e.g., "Glycine Soja (Soybean) Oil" -> "Glycine Soja Oil")
-      const strippedChunk = normalizedChunk.replace(/\s*\([^)]*\)\s*/g, ' ').replace(/\s+/g, ' ').trim();
+      const strippedChunk = normalizedChunk
+        .replace(/\s*\([^)]*\)\s*/g, " ")
+        .replace(/\s+/g, " ")
+        .trim();
       if (normalizedChunk.length < 2) {
         sectionPos++;
         continue;
@@ -217,7 +231,10 @@ function findMatchesInText(
         const inciPattern = new RegExp(
           "\\b" + escapeRegex(ing.inciName.toLowerCase()) + "\\b",
         );
-        if (inciPattern.test(normalizedChunk) || inciPattern.test(strippedChunk)) {
+        if (
+          inciPattern.test(normalizedChunk) ||
+          inciPattern.test(strippedChunk)
+        ) {
           matches.push({
             ingredient: ing,
             matchedName: ing.inciName,
@@ -235,7 +252,10 @@ function findMatchesInText(
           const commonPattern = new RegExp(
             "\\b" + escapeRegex(commonName.toLowerCase()) + "\\b",
           );
-          if (commonPattern.test(normalizedChunk) || commonPattern.test(strippedChunk)) {
+          if (
+            commonPattern.test(normalizedChunk) ||
+            commonPattern.test(strippedChunk)
+          ) {
             matches.push({
               ingredient: ing,
               matchedName: commonName,
@@ -605,26 +625,6 @@ export default function PoreChecker() {
                 ))}
               </select>
             </div>
-
-            {/* Split List Warning */}
-            {ingredientText.trim() &&
-              /active\s+ingredient/i.test(ingredientText) &&
-              /inactive\s+ingredient/i.test(ingredientText) && (
-                <div className="p-3 bg-amber-50 dark:bg-amber-900/20 rounded-lg border border-amber-200 dark:border-amber-800">
-                  <p className="text-sm text-amber-800 dark:text-amber-300 flex items-start gap-2">
-                    <span className="mt-0.5">📋</span>
-                    <span>
-                      <strong>Split list detected:</strong> This product
-                      separates "Active" and "Inactive" ingredients. Active
-                      ingredients are listed <strong>alphabetically</strong>{" "}
-                      with percentages (not by concentration). Inactive
-                      ingredients are ordered by concentration{" "}
-                      <strong>only within the inactive section</strong>. We
-                      cannot compare concentration across the two sections.
-                    </span>
-                  </p>
-                </div>
-              )}
           </div>
 
           {ingredientText.trim() && (
@@ -688,18 +688,29 @@ export default function PoreChecker() {
                   <h3 className="text-lg font-semibold text-zinc-900 dark:text-zinc-50">
                     Matched Ingredients ({matchedIngredients.length})
                   </h3>
-                  
+
                   {/* Group by section for split lists */}
                   {(() => {
-                    const sections: { name: string; items: typeof matchedIngredients }[] = [];
+                    const sections: {
+                      name: string;
+                      items: typeof matchedIngredients;
+                    }[] = [];
                     let currentSection = "";
                     let currentItems: typeof matchedIngredients = [];
-                    
+
                     for (const matched of matchedIngredients) {
-                      const sectionName = matched.section === "active" ? "Active Ingredients" : matched.section === "inactive" ? "Inactive Ingredients" : "";
+                      const sectionName =
+                        matched.section === "active"
+                          ? "Active Ingredients"
+                          : matched.section === "inactive"
+                            ? "Inactive Ingredients"
+                            : "";
                       if (sectionName !== currentSection) {
                         if (currentItems.length > 0) {
-                          sections.push({ name: currentSection, items: currentItems });
+                          sections.push({
+                            name: currentSection,
+                            items: currentItems,
+                          });
                         }
                         currentSection = sectionName;
                         currentItems = [matched];
@@ -708,24 +719,65 @@ export default function PoreChecker() {
                       }
                     }
                     if (currentItems.length > 0) {
-                      sections.push({ name: currentSection, items: currentItems });
+                      sections.push({
+                        name: currentSection,
+                        items: currentItems,
+                      });
                     }
-                    
+
                     return sections.map((section) => (
                       <div key={section.name || "all"} className="space-y-3">
                         {section.name && (
-                          <div className={`px-3 py-1.5 rounded-lg text-xs font-semibold inline-block ${
-                            section.name === "Active Ingredients"
-                              ? "bg-purple-100 text-purple-800 dark:bg-purple-900/30 dark:text-purple-400"
-                              : "bg-teal-100 text-teal-800 dark:bg-teal-900/30 dark:text-teal-400"
-                          }`}>
-                            {section.name}
+                          <div className="flex items-center gap-2">
+                            <div
+                              className={`px-3 py-1.5 rounded-lg text-xs font-semibold inline-block ${
+                                section.name === "Active Ingredients"
+                                  ? "bg-purple-100 text-purple-800 dark:bg-purple-900/30 dark:text-purple-400"
+                                  : "bg-teal-100 text-teal-800 dark:bg-teal-900/30 dark:text-teal-400"
+                              }`}
+                            >
+                              {section.name}
+                            </div>
+                            {section.name === "Active Ingredients" && (
+                              <PopoverTriggerContext>
+                                <PopoverTrigger
+                                  variant="tertiary"
+                                  icon
+                                  data-color="warning"
+                                  data-size="sm"
+                                >
+                                  <InformationSquareFillIcon aria-label="Info om aktiv/inaktiv liste" />
+                                </PopoverTrigger>
+                                <Popover
+                                  placement="right"
+                                  variant="tinted"
+                                  data-color="warning"
+                                >
+                                  <div>
+                                    <strong>Split list detected:</strong> This
+                                    product separates &quot;Active&quot; and
+                                    &quot;Inactive&quot; ingredients. Active
+                                    ingredients are listed{" "}
+                                    <strong>alphabetically</strong> with
+                                    percentages (not by concentration). Inactive
+                                    ingredients are ordered by concentration{" "}
+                                    <strong>
+                                      only within the inactive section
+                                    </strong>
+                                    . We cannot compare concentration across the
+                                    two sections.
+                                  </div>
+                                </Popover>
+                              </PopoverTriggerContext>
+                            )}
                           </div>
                         )}
                         {section.items.map((matched) => (
                           <div
                             key={matched.ingredient.id}
-                            onClick={() => setSelectedIngredient(matched.ingredient)}
+                            onClick={() =>
+                              setSelectedIngredient(matched.ingredient)
+                            }
                             className={`p-4 rounded-xl border cursor-pointer transition-all hover:shadow-sm ${
                               matched.section === "active"
                                 ? "bg-purple-50 dark:bg-purple-950/20 border-purple-200 dark:border-purple-900/50 hover:border-purple-300 dark:hover:border-purple-800"
@@ -743,7 +795,8 @@ export default function PoreChecker() {
                                   {matched.matchedName !==
                                     matched.ingredient.inciName && (
                                     <span className="text-sm text-zinc-500 dark:text-zinc-400">
-                                      (matched as &quot;{matched.matchedName}&quot;)
+                                      (matched as &quot;{matched.matchedName}
+                                      &quot;)
                                     </span>
                                   )}
                                 </div>
@@ -786,7 +839,8 @@ export default function PoreChecker() {
                                   )}
                                   {matched.ingredient.irritancy > 0 && (
                                     <span className="text-xs px-2 py-1 bg-orange-100 dark:bg-orange-900/30 text-orange-700 dark:text-orange-400 rounded-full">
-                                      Irritancy: {matched.ingredient.irritancy}/5
+                                      Irritancy: {matched.ingredient.irritancy}
+                                      /5
                                     </span>
                                   )}
                                   {selectedSkinType !== "all" && (
@@ -859,8 +913,8 @@ export default function PoreChecker() {
                   These ratings are based on tests of{" "}
                   <strong>pure ingredients</strong> in high concentrations
                   (often 100%). A finished product contains ingredients at much
-                  lower concentrations, and the formulation as a whole can change
-                  how an ingredient affects the skin.
+                  lower concentrations, and the formulation as a whole can
+                  change how an ingredient affects the skin.
                 </p>
                 <p className="text-sm text-blue-700 dark:text-blue-400 mt-2 leading-relaxed">
                   A study by{" "}
@@ -997,52 +1051,54 @@ export default function PoreChecker() {
                 </p>
               </div>
 
-              {selectedIngredient.function && selectedIngredient.function.length > 0 && (
-                <div>
-                  <h4 className="font-semibold text-zinc-900 dark:text-zinc-50 mb-1">
-                    Functions
-                  </h4>
-                  <div className="flex flex-wrap gap-2">
-                    {selectedIngredient.function.map((fn) => (
-                      <span
-                        key={fn}
-                        className="text-xs px-2 py-1 bg-zinc-100 dark:bg-zinc-900 text-zinc-700 dark:text-zinc-300 rounded-full border border-zinc-200 dark:border-zinc-800"
-                      >
-                        {fn.replace(/_/g, " ")}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              )}
-
-              {selectedIngredient.skinTypeNotes && Object.keys(selectedIngredient.skinTypeNotes).length > 0 && (
-                <div>
-                  <h4 className="font-semibold text-zinc-900 dark:text-zinc-50 mb-2">
-                    Skin Type Recommendations
-                  </h4>
-                  <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
-                    {Object.entries(selectedIngredient.skinTypeNotes).map(
-                      ([type, advice]) => (
-                        <div
-                          key={type}
-                          className={`p-2 rounded-lg text-xs font-medium ${
-                            advice === "safe"
-                              ? "bg-emerald-100 text-emerald-800 dark:bg-emerald-900/30 dark:text-emerald-400"
-                              : advice === "caution"
-                                ? "bg-yellow-100 text-yellow-800 dark:bg-yellow-900/30 dark:text-yellow-400"
-                                : "bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-400"
-                          }`}
+              {selectedIngredient.function &&
+                selectedIngredient.function.length > 0 && (
+                  <div>
+                    <h4 className="font-semibold text-zinc-900 dark:text-zinc-50 mb-1">
+                      Functions
+                    </h4>
+                    <div className="flex flex-wrap gap-2">
+                      {selectedIngredient.function.map((fn) => (
+                        <span
+                          key={fn}
+                          className="text-xs px-2 py-1 bg-zinc-100 dark:bg-zinc-900 text-zinc-700 dark:text-zinc-300 rounded-full border border-zinc-200 dark:border-zinc-800"
                         >
-                          <div className="font-semibold capitalize">
-                            {type.replace(/([A-Z])/g, " $1").trim()}
-                          </div>
-                          <div className="opacity-80">{advice}</div>
-                        </div>
-                      ),
-                    )}
+                          {fn.replace(/_/g, " ")}
+                        </span>
+                      ))}
+                    </div>
                   </div>
-                </div>
-              )}
+                )}
+
+              {selectedIngredient.skinTypeNotes &&
+                Object.keys(selectedIngredient.skinTypeNotes).length > 0 && (
+                  <div>
+                    <h4 className="font-semibold text-zinc-900 dark:text-zinc-50 mb-2">
+                      Skin Type Recommendations
+                    </h4>
+                    <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
+                      {Object.entries(selectedIngredient.skinTypeNotes).map(
+                        ([type, advice]) => (
+                          <div
+                            key={type}
+                            className={`p-2 rounded-lg text-xs font-medium ${
+                              advice === "safe"
+                                ? "bg-emerald-100 text-emerald-800 dark:bg-emerald-900/30 dark:text-emerald-400"
+                                : advice === "caution"
+                                  ? "bg-yellow-100 text-yellow-800 dark:bg-yellow-900/30 dark:text-yellow-400"
+                                  : "bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-400"
+                            }`}
+                          >
+                            <div className="font-semibold capitalize">
+                              {type.replace(/([A-Z])/g, " $1").trim()}
+                            </div>
+                            <div className="opacity-80">{advice}</div>
+                          </div>
+                        ),
+                      )}
+                    </div>
+                  </div>
+                )}
 
               {selectedIngredient.irritancy > 0 && (
                 <div>
@@ -1065,27 +1121,29 @@ export default function PoreChecker() {
                 </div>
               )}
 
-              {selectedIngredient.flags && selectedIngredient.flags.length > 0 && (
-                <div>
-                  <h4 className="font-semibold text-zinc-900 dark:text-zinc-50 mb-1">
-                    Flags
-                  </h4>
-                  <div className="flex flex-wrap gap-2">
-                    {selectedIngredient.flags.map((flag) => (
-                      <span
-                        key={flag}
-                        className="text-xs px-2 py-1 bg-zinc-100 dark:bg-zinc-900 text-zinc-700 dark:text-zinc-300 rounded-full border border-zinc-200 dark:border-zinc-800"
-                      >
-                        {flag.replace(/_/g, " ")}
-                      </span>
-                    ))}
+              {selectedIngredient.flags &&
+                selectedIngredient.flags.length > 0 && (
+                  <div>
+                    <h4 className="font-semibold text-zinc-900 dark:text-zinc-50 mb-1">
+                      Flags
+                    </h4>
+                    <div className="flex flex-wrap gap-2">
+                      {selectedIngredient.flags.map((flag) => (
+                        <span
+                          key={flag}
+                          className="text-xs px-2 py-1 bg-zinc-100 dark:bg-zinc-900 text-zinc-700 dark:text-zinc-300 rounded-full border border-zinc-200 dark:border-zinc-800"
+                        >
+                          {flag.replace(/_/g, " ")}
+                        </span>
+                      ))}
+                    </div>
                   </div>
-                </div>
-              )}
+                )}
 
               <div className="text-xs space-y-2">
                 <div className="text-zinc-500 dark:text-zinc-500">
-                  Evidence level: {selectedIngredient.evidenceLevel || "unknown"}
+                  Evidence level:{" "}
+                  {selectedIngredient.evidenceLevel || "unknown"}
                 </div>
 
                 {selectedIngredient.sourceUrls &&

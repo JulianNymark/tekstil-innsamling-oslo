@@ -1,3 +1,11 @@
+<!-- BEGIN:nextjs-agent-rules -->
+# This is NOT the Next.js you know
+
+This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` before writing any code. Heed deprecation notices.
+<!-- END:nextjs-agent-rules -->
+
+---
+
 # AGENTS.md — Tekstilinnsamling + Pore-vakten
 
 ## Ingredient Database (`public/ingredients.json`)
@@ -59,7 +67,7 @@ interface Ingredient {
 }
 ```
 
-3. Run `pnpm build` to verify JSON is valid
+3. Run `pnpm build:iso` to verify JSON is valid
 4. Test in the app by pasting an ingredient list containing the new name
 
 ### Rating Guidelines
@@ -120,8 +128,8 @@ pnpm install
 # Dev server
 pnpm dev
 
-# Production build (static export)
-pnpm build
+# Isolated production build (agents must use this)
+pnpm build:iso
 
 # The `out/` directory contains static files for deployment
 ```
@@ -158,7 +166,7 @@ pnpm build
 ## Testing Checklist
 
 Before committing changes:
-- [ ] `pnpm build` passes without errors
+- [ ] `pnpm build:iso` passes without errors
 
 ## Version History
 
