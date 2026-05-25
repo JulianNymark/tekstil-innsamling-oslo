@@ -12,6 +12,7 @@ import {
 } from "../utils/ratingColors";
 import { parseIngredientSections } from "../utils/parseIngredientSections";
 import SkinTypeSelect from "./SkinTypeSelect";
+import BrowseMode from "./BrowseMode";
 
 interface Ingredient {
   id: string;
@@ -371,77 +372,154 @@ function getProductVerdict(matched: MatchedIngredient[]): {
 }
 
 export default function PoreChecker({ mode }: { mode: Mode }) {
-  const [ingredients, setIngredients] = useState<Ingredient[]>([]);
   const [ingredientText, setIngredientText] = useState("");
   const [selectedSkinType, setSelectedSkinType] = useState<SkinType>("all");
   const [selectedIngredient, setSelectedIngredient] =
     useState<Ingredient | null>(null);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
+  const [apiMatches, setApiMatches] = useState<MatchedIngredient[]>([]);
 
+  // Debounced API call for ingredient matching
   useEffect(() => {
-    fetch("/ingredients.json")
-      .then((res) => res.json())
-      .then((data: IngredientsData) => {
-        setIngredients(data.ingredients);
+    if (!ingredientText.trim()) {
+      setApiMatches([]);
+      return;
+    }
+
+    const timeoutId = setTimeout(() => {
+      setLoading(true);
+      
+      // Parse sections (active/inactive split)
+      const sections = parseIngredientSections(ingredientText);
+      
+      // Collect all ingredient names with their section info
+      const ingredientsWithSections: { name: string; section: string }[] = [];
+      
+      for (const section of sections) {
+        const chunks = section.content.split(/[,;\n|]+/);
+        for (const chunk of chunks) {
+          const trimmed = chunk.trim();
+          if (trimmed.length >= 2) {
+            ingredientsWithSections.push({
+              name: trimmed,
+              section: section.name
+            });
+          }
+        }
+      }
+
+      if (ingredientsWithSections.length === 0) {
         setLoading(false);
+        return;
+      }
+
+      fetch('/api/ingredients/match', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ 
+          ingredients: ingredientsWithSections.map(i => i.name)
+        })
       })
-      .catch(() => {
-        setLoading(false);
-      });
-  }, []);
+        .then(res => res.json())
+        .then(data => {
+          if (data.matches) {
+            const matches: MatchedIngredient[] = data.matches.map((m: any, index: number) => ({
+              ingredient: {
+                id: m.id,
+                inciName: m.inci_name,
+                commonNames: [],
+                rating: m.rating,
+                irritancy: m.irritancy,
+                category: m.category,
+                categoryGroup: m.category_group,
+                function: [],
+                description: m.description,
+                skinTypeNotes: m.skinTypeNotes || {},
+                flags: m.flags ? JSON.parse(m.flags) : [],
+                evidenceLevel: m.evidence_level,
+                sources: m.sources ? JSON.parse(m.sources) : [],
+                sourceUrls: m.sourceUrls || []
+              },
+              matchedName: m.inci_name,
+              originalText: m.inci_name,
+              position: index,
+              section: ingredientsWithSections[index]?.section || 'unknown' as const
+            }));
+            setApiMatches(matches);
+          }
+          setLoading(false);
+        })
+        .catch(() => setLoading(false));
+    }, 500);
+
+    return () => clearTimeout(timeoutId);
+  }, [ingredientText]);
 
   const matchedIngredients = useMemo(() => {
-    return findMatchesInText(ingredientText, ingredients);
-  }, [ingredientText, ingredients]);
+    return apiMatches;
+  }, [apiMatches]);
 
   const unmatchedIngredients = useMemo(() => {
     if (!ingredientText.trim()) return [];
-    const matches = findMatchesInText(ingredientText, ingredients);
-    const matchedPatterns = new Set<string>();
-    for (const m of matches) {
-      matchedPatterns.add(m.matchedName.toLowerCase());
-      matchedPatterns.add(m.ingredient.inciName.toLowerCase());
-      for (const cn of m.ingredient.commonNames) {
-        matchedPatterns.add(cn.toLowerCase());
+    
+    // Parse sections to get proper chunks
+    const sections = parseIngredientSections(ingredientText);
+    const allChunks: string[] = [];
+    for (const section of sections) {
+      const chunks = section.content.split(/[,;\n|]+/);
+      for (const chunk of chunks) {
+        const trimmed = chunk.trim();
+        if (trimmed.length >= 2) {
+          allChunks.push(trimmed);
+        }
       }
     }
-
-    // Split by common delimiters and check each chunk
-    const chunks = ingredientText.split(/[,;\n|]+/);
+    
+    // Build set of matched normalized names
+    const matchedNormalized = new Set(
+      apiMatches.map(m => m.matchedName.toLowerCase().trim())
+    );
+    
     const unmatched: string[] = [];
-    for (const chunk of chunks) {
-      const normalizedChunk = chunk.toLowerCase().trim();
+    
+    for (const chunk of allChunks) {
+      // Normalize chunk the same way the API does
+      const normalizedChunk = chunk
+        .toLowerCase()
+        .trim()
+        .replace(/^(?:active|inactive)\s*(?:ingredients)?\s*:?\s*/i, '')
+        .replace(/\s*[\(\[\{]\s*\d+(?:\.\d+)?\s*%?\s*[\)\]\}]\s*/g, ' ')
+        .replace(/\s*\d+(?:\.\d+)?\s*%\s*/g, ' ')
+        .replace(/\s*\([^)]*\)\s*/g, ' ')
+        .replace(/\s+/g, ' ')
+        .trim();
+      
+      // Skip section headers
+      if (/^(?:active|inactive)\s*ingredients?$/i.test(normalizedChunk)) continue;
       if (normalizedChunk.length < 2) continue;
-      // Check if this chunk contains any matched ingredient
+      
+      // Check if this chunk matches any matched ingredient
       let found = false;
-      for (const pattern of matchedPatterns) {
-        const regex = new RegExp("\\b" + escapeRegex(pattern) + "\\b");
-        if (regex.test(normalizedChunk)) {
+      for (const matchedName of matchedNormalized) {
+        if (normalizedChunk === matchedName || 
+            matchedName.includes(normalizedChunk) || 
+            normalizedChunk.includes(matchedName)) {
           found = true;
           break;
         }
       }
+      
       if (!found) {
-        unmatched.push(chunk.trim());
+        unmatched.push(chunk);
       }
     }
     return unmatched;
-  }, [ingredientText, ingredients]);
+  }, [ingredientText, apiMatches]);
 
   const ratingCounts = useMemo(() => {
-    const counts: Record<number, number> = {
-      0: 0,
-      1: 0,
-      2: 0,
-      3: 0,
-      4: 0,
-      5: 0,
-    };
-    ingredients.forEach((ing) => {
-      counts[ing.rating] = (counts[ing.rating] || 0) + 1;
-    });
-    return counts;
-  }, [ingredients]);
+    // This is now computed server-side, we'll fetch it
+    return { 0: 0, 1: 0, 2: 0, 3: 0, 4: 0, 5: 0 };
+  }, []);
 
   const productVerdict = useMemo(() => {
     return getProductVerdict(matchedIngredients);
@@ -886,10 +964,8 @@ export default function PoreChecker({ mode }: { mode: Mode }) {
         </>
       ) : (
         <BrowseMode
-          ingredients={ingredients}
           selectedSkinType={selectedSkinType}
           onSkinTypeChange={setSelectedSkinType}
-          ratingCounts={ratingCounts}
           onSelectIngredient={setSelectedIngredient}
         />
       )}
@@ -1077,231 +1153,6 @@ export default function PoreChecker({ mode }: { mode: Mode }) {
               Close
             </button>
           </div>
-        </div>
-      )}
-    </div>
-  );
-}
-
-// Browse Mode Component
-function BrowseMode({
-  ingredients,
-  selectedSkinType,
-  onSkinTypeChange,
-  ratingCounts,
-  onSelectIngredient,
-}: {
-  ingredients: Ingredient[];
-  selectedSkinType: SkinType;
-  onSkinTypeChange: (type: SkinType) => void;
-  ratingCounts: Record<number, number>;
-  onSelectIngredient: (ing: Ingredient | null) => void;
-}) {
-  const [searchQuery, setSearchQuery] = useState("");
-  const [sortBy, setSortBy] = useState<"rating" | "name" | "category">(
-    "rating",
-  );
-
-  const filteredIngredients = useMemo(() => {
-    let filtered = ingredients;
-
-    if (searchQuery.trim()) {
-      const query = searchQuery.toLowerCase().trim();
-      filtered = filtered.filter((ing) => {
-        const nameMatch = ing.inciName.toLowerCase().includes(query);
-        const commonMatch = ing.commonNames.some((name) =>
-          name.toLowerCase().includes(query),
-        );
-        const categoryMatch = ing.category.toLowerCase().includes(query);
-        const functionMatch = ing.function.some((fn) =>
-          fn.toLowerCase().includes(query),
-        );
-        return nameMatch || commonMatch || categoryMatch || functionMatch;
-      });
-    }
-
-    if (selectedSkinType !== "all") {
-      filtered = filtered.filter((ing) => {
-        const advice = ing.skinTypeNotes[selectedSkinType];
-        return advice && advice !== "avoid";
-      });
-    }
-
-    const sorted = [...filtered];
-    if (sortBy === "rating") {
-      sorted.sort((a, b) => b.rating - a.rating);
-    } else if (sortBy === "name") {
-      sorted.sort((a, b) => a.inciName.localeCompare(b.inciName));
-    } else if (sortBy === "category") {
-      sorted.sort((a, b) => a.category.localeCompare(b.category));
-    }
-
-    return sorted;
-  }, [ingredients, searchQuery, selectedSkinType, sortBy]);
-
-  return (
-    <div className="space-y-6">
-      {/* Scale Info */}
-      <div className="p-4 bg-[var(--ds-color-surface-tinted)] rounded-xl border border-[var(--ds-color-border-default)]">
-        <h3 className="text-sm font-semibold text-[var(--ds-color-text-default)] mb-2">
-          About the Comedogenic Scale
-        </h3>
-        <p className="text-xs text-[var(--ds-color-text-subtle)] mb-2">
-          Based on the Fulton 1989 rabbit ear assay (REA). Ratings 0-1 are
-          generally safe, 2-3 use caution, 4-5 avoid for acne-prone skin. Note:
-          REA is more sensitive than human skin; concentration and formulation
-          matter.
-        </p>
-        <div className="flex flex-wrap gap-1.5">
-          {[5, 4, 3, 2, 1, 0].map((r) => (
-            <span
-              key={r}
-              className={`text-xs px-2 py-1 rounded-full ${getRatingColor(r)}`}
-            >
-              {r}: {getRatingLabel(r)}
-            </span>
-          ))}
-        </div>
-      </div>
-
-      {/* Stats */}
-      <div className="grid grid-cols-3 sm:grid-cols-6 gap-2">
-        {[5, 4, 3, 2, 1, 0].map((rating) => (
-          <div
-            key={rating}
-            className={`p-3 rounded-xl text-center ${getRatingColor(rating)}`}
-          >
-            <div className="text-2xl font-bold">
-              {ratingCounts[rating] || 0}
-            </div>
-            <div className="text-xs font-medium opacity-80">
-              {getRatingLabel(rating)}
-            </div>
-          </div>
-        ))}
-      </div>
-
-      {/* Controls */}
-      <div className="space-y-4">
-        {/* Search */}
-        <div className="relative">
-          <input
-            type="text"
-            placeholder="Search ingredients..."
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full px-4 py-3 pl-11 bg-[var(--ds-color-surface-tinted)] border border-[var(--ds-color-border-default)] rounded-xl text-[var(--ds-color-text-default)] placeholder-text-subtle focus:outline-none focus:ring-2 focus:ring-[var(--ds-color-neutral-base-default)] focus:border-transparent transition-all"
-          />
-          <svg
-            className="absolute left-3.5 top-1/2 -translate-y-1/2 w-5 h-5 text-[var(--ds-color-text-subtle)]"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-            />
-          </svg>
-        </div>
-
-        {/* Filters */}
-        <div className="flex flex-wrap gap-3">
-          <SkinTypeSelect
-            value={selectedSkinType}
-            onChange={onSkinTypeChange}
-          />
-
-          <div className="ds-field">
-            <label className="ds-label" data-weight="medium">
-              Sort by
-            </label>
-            <select
-              value={sortBy}
-              onChange={(e) =>
-                setSortBy(e.target.value as "rating" | "name" | "category")
-              }
-              className="ds-input"
-            >
-              <option value="rating">Rating (High to Low)</option>
-              <option value="name">Name (A-Z)</option>
-              <option value="category">Category</option>
-            </select>
-          </div>
-        </div>
-      </div>
-
-      {/* Results count */}
-      <div className="text-sm text-[var(--ds-color-text-subtle)]">
-        Showing {filteredIngredients.length} of {ingredients.length} ingredients
-      </div>
-
-      {/* Ingredient List */}
-      <div className="space-y-3">
-        {filteredIngredients.map((ingredient) => (
-          <div
-            key={ingredient.id}
-            onClick={() => onSelectIngredient(ingredient)}
-            className="p-4 bg-[var(--ds-color-surface-tinted)] rounded-xl border border-[var(--ds-color-border-default)] hover:border-[var(--ds-color-border-strong)] cursor-pointer transition-all hover:shadow-sm"
-          >
-            <div className="flex items-start justify-between gap-4">
-              <div className="flex-1 min-w-0">
-                <div className="flex items-center gap-2 flex-wrap">
-                  <h3 className="font-semibold text-[var(--ds-color-text-default)]">
-                    {ingredient.inciName}
-                  </h3>
-                  {ingredient.commonNames.length > 0 && (
-                    <span className="text-sm text-[var(--ds-color-text-subtle)] truncate">
-                      ({ingredient.commonNames[0]})
-                    </span>
-                  )}
-                </div>
-                <p className="text-sm text-[var(--ds-color-text-subtle)] mt-1 line-clamp-2">
-                  {ingredient.description}
-                </p>
-                <div className="flex items-center gap-2 mt-2 flex-wrap">
-                  <span className="text-xs px-2 py-1 bg-[var(--ds-color-surface-hover)] text-[var(--ds-color-text-subtle)] rounded-full">
-                    {ingredient.category}
-                  </span>
-                  {ingredient.irritancy > 0 && (
-                    <span className="text-xs px-2 py-1 bg-[var(--ds-color-warning-surface-tinted)] text-[var(--ds-color-warning-text-default)] rounded-full">
-                      Irritancy: {ingredient.irritancy}/5
-                    </span>
-                  )}
-                  {selectedSkinType !== "all" && (
-                    <span
-                      className={`text-xs font-medium ${getSkinTypeAdviceColor(ingredient, selectedSkinType)}`}
-                    >
-                      {getSkinTypeAdvice(ingredient, selectedSkinType)}
-                    </span>
-                  )}
-                </div>
-              </div>
-              <div
-                className={`flex-shrink-0 px-3 py-2 rounded-lg text-center min-w-[80px] ${getRatingColor(ingredient.rating)}`}
-              >
-                <div className="text-2xl font-bold">{ingredient.rating}</div>
-                <div className="text-xs font-medium opacity-80">
-                  {getRatingLabel(ingredient.rating)}
-                </div>
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
-
-      {/* Empty state */}
-      {filteredIngredients.length === 0 && (
-        <div className="text-center py-12">
-          <div className="text-4xl mb-3">🔍</div>
-          <h3 className="text-lg font-semibold text-[var(--ds-color-text-default)] mb-1">
-            No ingredients found
-          </h3>
-          <p className="text-[var(--ds-color-text-subtle)]">
-            Try adjusting your search or filters
-          </p>
         </div>
       )}
     </div>

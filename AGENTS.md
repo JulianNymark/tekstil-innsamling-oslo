@@ -100,21 +100,44 @@ The matcher (`findMatchesInText()` in `PoreChecker.tsx`) handles:
 2. Rating: descending (worst first)
 3. Position: ascending (appearance order)
 
-## Data Sources & Legal
+## Architecture (v2.0 — Server-Based)
 
-### ✅ Safe to use (already merged)
+### Backend
+- **Database**: SQLite (`data/ingredients.db`) with full-text search (FTS5)
+- **API Routes**: Next.js App Router API routes
+  - `GET /api/ingredients` — Paginated browse with search/filter
+  - `POST /api/ingredients/match` — Batch ingredient matching from pasted lists
+  - `GET /api/ingredients/search?q={query}` — Quick search
+  - `GET /api/regulatory?ingredient={name}` — EU regulatory status lookup
+  - `GET /api/sources` — Database source metadata
+- **Build**: `pnpm build` (no longer static export)
+
+### Database Schema
+```
+ingredients (id, inci_name, rating, irritancy, category, ...)
+ingredient_synonyms (ingredient_id, synonym)
+ingredient_sources (ingredient_id, name, url, type)
+skin_type_notes (ingredient_id, skin_type, advice)
+regulatory_status (inci_name, status, annex, restriction_details)
+ingredients_fts (FTS5 virtual table for full-text search)
+```
+
+### Data Sources & Legal
+
+#### ✅ Safe to use (already merged)
 - **Emmanuel.Skin** (GitHub): https://github.com/VincentEmmanuel/emmanuel.skin — 150 ingredients, MIT license
 - **Skincare Ingredient Scanner** (GitHub): https://github.com/ruupedev/skincare-ingredient-scanner — 166 ingredients, open source
 - **Comedogenic Ingredients** (GitHub): https://github.com/e-zob/comedogenic-ingredients — 98 ingredients, open source
 - **BEAUTEE dataset** (GitHub): https://github.com/beauteeru/cosmetic-ingredients-dataset — 28K identifiers, MIT license
 
-### ⚠️ Do NOT scrape (ToS violations)
+#### ⚠️ Do NOT scrape (ToS violations)
 - **SkinSort**: Explicitly prohibits scraping in ToS
 - **CosDNA**: Blocks AI crawlers, no bulk access, legally grey
 - **INCIDecoder**: No explicit ban but no permission either — grey area
 - **EWG Skin Deep**: Proprietary, legally risky
+- **beautee.ru**: Commercial product with proprietary analysis data
 
-### ✅ Regulatory sources (free, authoritative)
+#### ✅ Regulatory sources (free, authoritative)
 - **EU CosIng**: https://ec.europa.eu/growth/tools-databases/cosing/ — 30K ingredients, open data
 - **CIR (Cosmetic Ingredient Review)**: https://cir-reports.cir-safety.org/ — Safety assessments, public access
 - **PubMed**: https://pubmed.ncbi.nlm.nih.gov/ — Peer-reviewed studies
@@ -128,20 +151,21 @@ pnpm install
 # Dev server
 pnpm dev
 
-# Isolated production build (agents must use this)
-pnpm build:iso
+# Production build
+pnpm build
 
 # Find unused dependencies, exports, and files (run before committing)
 pnpm knip
 
-# The `out/` directory contains static files for deployment
+# Deploy to Fly.io (scale-to-zero)
+fly deploy
 ```
 
 ## Known Quirks
 
 1. **Merged ingredients lack some fields**: Ingredients from external datasets may not have `function`, `flags`, `categoryGroup`, or `skinTypeNotes`. The UI guards against missing fields.
 
-2. **Static export limitations**: No API routes, no server-side rendering, no dynamic routes.
+2. **Server-based app**: Uses SQLite database with API routes. Not a static export anymore. Database is built from `ingredients.json` at build time.
 
 3. **Ingredient ordering ambiguity**: For OTC drug-cosmetics (sunscreens), active ingredients are listed alphabetically with %, inactive by concentration within inactive section only. Cross-section comparison is not possible.
 
@@ -152,14 +176,16 @@ pnpm knip
 ### New ingredient data field
 1. Update `Ingredient` interface in `PoreChecker.tsx`
 2. Update JSON schema in `public/ingredients.json`
-3. Add UI rendering in the detail modal or ingredient card
-4. Guard against undefined for merged ingredients
+3. Update SQLite schema in `scripts/build-db.ts`
+4. Add UI rendering in the detail modal or ingredient card
+5. Guard against undefined for merged ingredients
 
 ### New data source
 1. Verify license/ToS allows reuse
 2. Prefer open-source GitHub repos with clear licenses
 3. Avoid scraping commercial databases without permission, we might manually add some, but have CLEAR attribution, so it could be removed in the future if it becomes an issue, this is primarily something just intended for personal use... so in theory this shouldn't be a big deal at all.
 4. Document source in `ingredients.json` `sources` array
+5. Run `pnpm build:db` to regenerate SQLite database
 
 ### New UI feature
 1. Check if it works with both light and dark mode (Tailwind `dark:` prefixes)
@@ -175,6 +201,8 @@ Before committing changes:
 
 ## Version History
 
+- **v2.0.0** (2026-05-25): Server-based architecture with SQLite database and API routes. Added EU regulatory status (banned/restricted ingredients). Database explainer component with source metadata.
+- **v1.4.0** (2026-05-25): Expanded to 28,489 ingredients by merging BEAUTEE Cosmetic Ingredients Dataset (28K+ INCI identifiers with CAS/EINECS/PubChem links). Most new entries have no comedogenicity rating yet — they serve as recognized ingredient names for better matching coverage.
 - **v1.3.0** (2026-05-24): Expanded to 377 ingredients from 3 open-source datasets + manual additions
 - **v1.2.0**: Added source URLs, skin type notes, evidence levels
 - **v1.1.0**: Initial 113-ingredient database

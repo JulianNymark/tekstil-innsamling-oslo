@@ -4,6 +4,7 @@ import dynamic from "next/dynamic";
 import { useEffect, useState } from "react";
 import { ToggleGroup } from "@digdir/designsystemet-react";
 import PoreChecker from "./components/PoreChecker";
+import DatabaseSources from "./components/DatabaseSources";
 
 interface Location {
   address: string;
@@ -124,8 +125,9 @@ export default function Home() {
         )}
 
         {(activeTab === "check" || activeTab === "browse") && (
-          <div className="w-full max-w-4xl px-4">
+          <div className="w-full max-w-4xl px-4 space-y-8">
             <PoreChecker mode={activeTab as Tab} />
+            <DatabaseSources />
           </div>
         )}
 
