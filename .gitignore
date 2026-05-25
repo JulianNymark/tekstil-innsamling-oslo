@@ -43,3 +43,7 @@ next-env.d.ts
 # Data pipeline cache (raw fetched data, not committed)
 data/cache/
 data/sources/
+
+# SQLite transient files
+data/*.db-shm
+data/*.db-wal
