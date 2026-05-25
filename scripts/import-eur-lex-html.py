@@ -2,26 +2,43 @@
 """
 Import EU Cosmetics Regulation annexes from EUR-Lex HTML.
 Extracts both chemical names and glossary names for better ingredient matching.
+
+Caches the HTML locally in the project directory. Re-running will use the cached
+file unless you delete it. Merges regulatory entries into the existing database
+without wiping other data.
+
+Usage:
+    python scripts/import-eur-lex-html.py
+    python scripts/import-eur-lex-html.py --refresh   # force re-download
+
+Requires: requests, beautifulsoup4
+    uv pip install requests beautifulsoup4
 """
+import argparse
 import os
-import sys
 import re
 import sqlite3
+import sys
+
 import requests
 from bs4 import BeautifulSoup
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 PROJECT_DIR = os.path.dirname(SCRIPT_DIR)
 DB_PATH = os.path.join(PROJECT_DIR, "data", "ingredients.db")
+CACHE_DIR = os.path.join(PROJECT_DIR, "data", "cache")
+HTML_PATH = os.path.join(CACHE_DIR, "eur-lex-regulation.html")
 HTML_URL = "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32009R1223"
-HTML_PATH = "/tmp/regulation.html"
 
 
-def download_html():
-    """Download the EUR-Lex HTML if not cached."""
-    if os.path.exists(HTML_PATH):
+def download_html(force: bool = False):
+    """Download the EUR-Lex HTML if not cached locally."""
+    os.makedirs(CACHE_DIR, exist_ok=True)
+
+    if os.path.exists(HTML_PATH) and not force:
         print(f"Using cached HTML: {HTML_PATH}")
         return
+
     print(f"Downloading {HTML_URL}...")
     response = requests.get(HTML_URL, timeout=120)
     response.raise_for_status()
@@ -108,15 +125,15 @@ def find_data_tables(soup):
     """Find all data tables by looking for tables with substance entries."""
     tables = soup.find_all("table")
     data_tables = []
-    
+
     for table in tables:
         text = table.get_text()
-        
+
         # Check if this looks like an annex table
         text_upper = text.upper()
         has_ref = "REFERENCE NUMBER" in text_upper
         has_chemical = "CHEMICAL NAME" in text_upper or "CHEMICAL NAME/INN" in text_upper
-        
+
         # Count rows with actual data
         rows = table.find_all("tr")
         data_rows = 0
@@ -126,7 +143,7 @@ def find_data_tables(soup):
                 ref_text = clean_text(cells[0].get_text())
                 if re.match(r"^\d+[a-z]?$", ref_text):
                     data_rows += 1
-        
+
         if has_ref and has_chemical and data_rows > 5:
             # Determine which annex this is
             text_lower = text.lower()
@@ -142,10 +159,10 @@ def find_data_tables(soup):
                 annex = ("VI", "restricted")
             else:
                 annex = ("?", "restricted")
-            
+
             data_tables.append((annex[0], annex[1], table))
             print(f"  Found Annex {annex[0]} table with {data_rows} data rows")
-    
+
     return data_tables
 
 
@@ -153,23 +170,23 @@ def parse_annex2_table(table):
     """Parse Annex II (banned substances) simple table."""
     entries = []
     rows = table.find_all("tr")
-    
+
     for row in rows:
         cells = row.find_all(["th", "td"])
         if len(cells) < 3:
             continue
-        
+
         ref = clean_text(cells[0].get_text())
         chemical = clean_text(cells[1].get_text())
         cas = clean_text(cells[2].get_text()) if len(cells) > 2 else ""
         ec = clean_text(cells[3].get_text()) if len(cells) > 3 else ""
-        
+
         # Skip header rows
         if not re.match(r"^\d+[a-z]?$", ref):
             continue
         if not chemical or is_garbage_name(chemical):
             continue
-        
+
         entries.append({
             "ref": ref,
             "chemical_name": chemical,
@@ -178,7 +195,7 @@ def parse_annex2_table(table):
             "ec": ec if ec and ec not in ("N/A", "n/a", "-", "") else None,
             "conditions": "",
         })
-    
+
     return entries
 
 
@@ -188,38 +205,38 @@ def parse_complex_table(table):
     rows = table.find_all("tr")
     current_entry = None
     current_condition_group = None
-    
+
     for row in rows:
         cells = row.find_all(["th", "td"])
         if not cells:
             continue
-        
+
         # Skip header rows
         first_text = clean_text(cells[0].get_text())
-        if first_text in ["Reference number", "a", "—", "", "Chemical name/INN", "Name of Common Ingredients Glossary", 
+        if first_text in ["Reference number", "a", "—", "", "Chemical name/INN", "Name of Common Ingredients Glossary",
                           "Chemical name", "Name of Common Ingredients Glossary", "CAS number", "EC number"]:
             continue
-        
+
         # Check if this is a new entry (has ref number in first cell)
         if re.match(r"^\d+[a-z]?$", first_text):
             # New entry
             ref = first_text
-            
+
             # Get all cell texts
             cell_texts = [clean_text(c.get_text()) for c in cells]
-            
+
             # Extract fields by position
             chemical = cell_texts[1] if len(cell_texts) > 1 else ""
             glossary = cell_texts[2] if len(cell_texts) > 2 else ""
             cas = cell_texts[3] if len(cell_texts) > 3 else ""
             ec = cell_texts[4] if len(cell_texts) > 4 else ""
-            
+
             if not chemical or is_garbage_name(chemical):
                 continue
-            
+
             # Parse glossary names
             glossary_names = split_glossary_names(glossary)
-            
+
             # Extract conditions from first row (for annexes like VI where conditions are in first row)
             # Skip empty cells and cells with just letters like "a", "b", "c"
             conditions_parts = []
@@ -231,7 +248,7 @@ def parse_complex_table(table):
                     if text and text.lower() not in seen:
                         conditions_parts.append(text)
                         seen.add(text.lower())
-            
+
             current_entry = {
                 "ref": ref,
                 "chemical_name": chemical,
@@ -243,15 +260,15 @@ def parse_complex_table(table):
             }
             current_condition_group = None
             entries.append(current_entry)
-            
+
         elif current_entry is not None and len(cells) >= 2:
             # Continuation row - add conditions, avoiding duplicates
             cell_texts = [clean_text(c.get_text()) for c in cells]
-            
+
             # Check if first cell is a condition group marker like (a), (b), etc.
             first = cell_texts[0]
             second = cell_texts[1] if len(cell_texts) > 1 else ""
-            
+
             def add_condition(text, sep="; "):
                 """Add condition if not already seen (case-insensitive)."""
                 norm = text.lower().strip()
@@ -261,7 +278,7 @@ def parse_complex_table(table):
                     else:
                         current_entry["conditions"] = text
                     current_entry["_seen_conditions"].add(norm)
-            
+
             if re.match(r"^\([a-z]\)$", first):
                 # New condition group
                 current_condition_group = first
@@ -271,31 +288,46 @@ def parse_complex_table(table):
             elif first and first not in ("—", ""):
                 # Additional condition data
                 add_condition(first)
-            
+
             # Check remaining cells
             for text in cell_texts[2:]:
                 if text and text not in ("—", ""):
                     add_condition(text)
-    
+
     return entries
 
 
 def import_to_database(all_entries):
-    """Import extracted entries into the SQLite database."""
+    """Merge extracted entries into the SQLite database (upsert, no wipe)."""
     db_path = os.path.abspath(DB_PATH)
     if not os.path.exists(db_path):
         print(f"Database not found at {db_path}")
-        print("Run 'pnpm build:db' first to create the database.")
+        print("The database should already exist and be committed to git.")
         sys.exit(1)
 
     conn = sqlite3.connect(db_path)
     cursor = conn.cursor()
 
-    # Clear existing regulatory data
-    print("\nClearing existing regulatory_status entries...")
-    cursor.execute("DELETE FROM regulatory_status")
+    # Ensure table exists (in case schema changes)
+    cursor.execute("""
+        CREATE TABLE IF NOT EXISTS regulatory_status (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            ingredient_id TEXT,
+            inci_name TEXT NOT NULL,
+            chemical_name TEXT,
+            glossary_name TEXT,
+            status TEXT NOT NULL CHECK(status IN ('banned', 'restricted', 'allowed')),
+            annex TEXT,
+            restriction_details TEXT,
+            conditions TEXT,
+            regulation_source TEXT,
+            effective_date TEXT,
+            UNIQUE(inci_name)
+        )
+    """)
 
     inserted = 0
+    updated = 0
     skipped = 0
 
     for entry in all_entries:
@@ -310,7 +342,7 @@ def import_to_database(all_entries):
 
         # Use first glossary name as primary inci_name, fallback to chemical name
         primary_name = glossary_list[0] if glossary_list else chemical
-        
+
         # Build restriction details (summary only, not conditions)
         parts = [f"Annex {annex} — {status} substance"]
         if ref:
@@ -321,19 +353,26 @@ def import_to_database(all_entries):
             parts.append(f"EC: {ec}")
 
         restriction = "; ".join(parts)
-        
+
         # Store all glossary names as comma-separated
         glossary_str = ", ".join(glossary_list) if glossary_list else None
 
         try:
+            # Try UPDATE first, then INSERT
             cursor.execute(
                 """
-                INSERT OR IGNORE INTO regulatory_status 
-                (inci_name, chemical_name, glossary_name, status, annex, restriction_details, conditions, regulation_source, effective_date)
-                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+                UPDATE regulatory_status
+                SET chemical_name = ?,
+                    glossary_name = ?,
+                    status = ?,
+                    annex = ?,
+                    restriction_details = ?,
+                    conditions = ?,
+                    regulation_source = ?,
+                    effective_date = ?
+                WHERE LOWER(inci_name) = LOWER(?)
                 """,
                 (
-                    primary_name,
                     chemical,
                     glossary_str,
                     status,
@@ -342,12 +381,34 @@ def import_to_database(all_entries):
                     conditions,
                     "EU Cosmetics Regulation (EC) No 1223/2009",
                     "2013-07-11",
+                    primary_name,
                 ),
             )
             if cursor.rowcount > 0:
-                inserted += 1
+                updated += 1
             else:
-                skipped += 1
+                cursor.execute(
+                    """
+                    INSERT OR IGNORE INTO regulatory_status
+                    (inci_name, chemical_name, glossary_name, status, annex, restriction_details, conditions, regulation_source, effective_date)
+                    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+                    """,
+                    (
+                        primary_name,
+                        chemical,
+                        glossary_str,
+                        status,
+                        annex,
+                        restriction,
+                        conditions,
+                        "EU Cosmetics Regulation (EC) No 1223/2009",
+                        "2013-07-11",
+                    ),
+                )
+                if cursor.rowcount > 0:
+                    inserted += 1
+                else:
+                    skipped += 1
         except Exception as e:
             print(f"Error inserting {primary_name}: {e}")
             skipped += 1
@@ -356,16 +417,21 @@ def import_to_database(all_entries):
     conn.close()
 
     print(f"\nInserted {inserted} new entries")
+    print(f"Updated {updated} existing entries")
     if skipped:
-        print(f"Skipped {skipped} duplicates")
+        print(f"Skipped {skipped} duplicates/errors")
 
 
 def main():
+    parser = argparse.ArgumentParser(description="Import EU Cosmetics Regulation annexes from EUR-Lex HTML")
+    parser.add_argument("--refresh", action="store_true", help="Force re-download of HTML")
+    args = parser.parse_args()
+
     print("=" * 60)
     print("EUR-Lex HTML Annex Importer")
     print("=" * 60)
 
-    download_html()
+    download_html(force=args.refresh)
 
     with open(HTML_PATH, "r", encoding="utf-8") as f:
         soup = BeautifulSoup(f.read(), "html.parser")
@@ -383,27 +449,27 @@ def main():
         print(f"\n{'=' * 60}")
         print(f"Processing Annex {annex_name} ({status})")
         print(f"{'=' * 60}")
-        
+
         if annex_name == "II":
             entries = parse_annex2_table(table)
         else:
             entries = parse_complex_table(table)
-        
+
         print(f"Extracted {len(entries)} entries")
-        
+
         # Show sample
         for entry in entries[:3]:
             print(f"  Ref {entry.get('ref', 'N/A')}: {entry['chemical_name'][:60]}")
-            if entry.get('glossary_names'):
+            if entry.get("glossary_names"):
                 print(f"    Glossary: {', '.join(entry['glossary_names'])[:80]}")
-            if entry.get('conditions'):
+            if entry.get("conditions"):
                 print(f"    Conditions: {entry['conditions'][:80]}")
-        
+
         # Add status and annex to each entry
         for entry in entries:
             entry["status"] = status
             entry["annex"] = annex_name
-        
+
         all_entries.extend(entries)
 
     print(f"\n{'=' * 60}")
@@ -416,13 +482,13 @@ def main():
 
     # Save to JSON for inspection
     import json
-    with open("/tmp/eur-lex-html-entries.json", "w", encoding="utf-8") as f:
+    with open(os.path.join(CACHE_DIR, "eur-lex-html-entries.json"), "w", encoding="utf-8") as f:
         json.dump(all_entries, f, indent=2, ensure_ascii=False)
-    print("Saved to /tmp/eur-lex-html-entries.json")
+    print(f"Saved to {CACHE_DIR}/eur-lex-html-entries.json")
 
     import_to_database(all_entries)
 
-    print("\nDone! Run 'pnpm build' to verify the app works with the new data.")
+    print("\nDone!")
 
 
 if __name__ == "__main__":

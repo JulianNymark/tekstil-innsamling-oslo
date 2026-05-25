@@ -10,7 +10,13 @@
     "start": "next start",
     "lint": "eslint",
     "test": "vitest run",
-    "geocode": "node scripts/geocode.mjs"
+    "geocode": "node scripts/geocode.mjs",
+    "db:list": ".venv/bin/python3 scripts/import-data.py --list",
+    "db:export": ".venv/bin/python3 scripts/import-data.py --export",
+    "db:import": ".venv/bin/python3 scripts/import-data.py --import",
+    "db:process": ".venv/bin/python3 scripts/process-sources.py",
+    "db:regulatory": ".venv/bin/python3 scripts/import-eur-lex-html.py",
+    "db:regulatory:refresh": ".venv/bin/python3 scripts/import-eur-lex-html.py --refresh"
   },
   "dependencies": {
     "@digdir/designsystemet-css": "^1.14.0",

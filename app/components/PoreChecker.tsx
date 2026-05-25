@@ -11,6 +11,7 @@ import {
   getRatingLabel,
 } from "../utils/ratingColors";
 import { parseIngredientSections } from "../utils/parseIngredientSections";
+import { splitIngredients } from "../utils/splitIngredients";
 
 function explainConditions(text: string): string {
   // Explain standalone percentages as max concentration limits
@@ -221,11 +222,12 @@ function findMatchesInText(
 
   // Process each section
   for (const section of sections) {
-    const chunks = section.content.split(/[,;\n|]+/);
+    const chunks = splitIngredients(section.content);
     let sectionPos = 0;
 
     for (const chunk of chunks) {
-      const normalizedChunk = chunk.toLowerCase().trim();
+      // Strip surrounding quotes for matching
+      const normalizedChunk = chunk.toLowerCase().trim().replace(/^["']|["']$/g, '');
       // Strip parenthetical content for matching (e.g., "Glycine Soja (Soybean) Oil" -> "Glycine Soja Oil")
       const strippedChunk = normalizedChunk
         .replace(/\s*\([^)]*\)\s*/g, " ")
@@ -493,7 +495,7 @@ export default function PoreChecker({ mode }: { mode: Mode }) {
       const ingredientsWithSections: { name: string; section: string }[] = [];
       
       for (const section of sections) {
-        const chunks = section.content.split(/[,;\n|]+/);
+        const chunks = splitIngredients(section.content);
         for (const chunk of chunks) {
           const trimmed = chunk.trim();
           if (trimmed.length >= 2) {
@@ -601,7 +603,7 @@ export default function PoreChecker({ mode }: { mode: Mode }) {
     const sections = parseIngredientSections(ingredientText);
     const allChunks: string[] = [];
     for (const section of sections) {
-      const chunks = section.content.split(/[,;\n|]+/);
+      const chunks = splitIngredients(section.content);
       for (const chunk of chunks) {
         const trimmed = chunk.trim();
         if (trimmed.length >= 2) {
@@ -609,14 +611,16 @@ export default function PoreChecker({ mode }: { mode: Mode }) {
         }
       }
     }
-    
+
     const unmatched: string[] = [];
-    
+
     for (const chunk of allChunks) {
-      // Normalize chunk the same way the API does
+      // Normalize chunk the same way the API does (including quote + period stripping)
       const normalizedChunk = chunk
         .toLowerCase()
         .trim()
+        .replace(/^["']|["']$/g, '')
+        .replace(/\.$/, '')
         .replace(/^(?:active|inactive|ingredients)\s*:?\s*/i, '')
         .replace(/\s*[\(\[\{]\s*\d+(?:\.\d+)?\s*%?\s*[\)\]\}]\s*/g, ' ')
         .replace(/\s*\d+(?:\.\d+)?\s*%\s*/g, ' ')

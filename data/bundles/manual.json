@@ -1,0 +1,40 @@
+{
+  "meta": {
+    "source": "manual",
+    "exported_at": "2026-05-25T23:12:12.699487",
+    "db_path": "/Users/username/Repos/DABBLE/tekstil-innsamling-oslo/data/ingredients.db"
+  },
+  "ingredients": [
+    {
+      "id": "butyloctyl-salicylate",
+      "inci_name": "Butyloctyl Salicylate",
+      "irritancy": 0,
+      "category": "Emollient",
+      "category_group": null,
+      "description": "Lightweight ester combining salicylic acid with a branched alcohol. Used to enhance slip and dissolve oil-compatible UV filters in sunscreens. Low comedogenic risk.",
+      "flags": null
+    }
+  ],
+  "ratings": [
+    {
+      "ingredient_id": "butyloctyl-salicylate",
+      "source_name": "Glooshi",
+      "rating": 1,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "low",
+      "sample_size": null,
+      "notes": null
+    }
+  ],
+  "synonyms": [],
+  "sources": [
+    {
+      "ingredient_id": "butyloctyl-salicylate",
+      "name": "Glooshi",
+      "url": "https://www.glooshi.com/butyloctyl-salicylate/",
+      "type": "database"
+    }
+  ],
+  "skin_type_notes": []
+}

@@ -39,3 +39,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Data pipeline cache (raw fetched data, not committed)
+data/cache/
+data/sources/

@@ -1,0 +1,440 @@
+{
+  "meta": {
+    "source": "comedogenic-ingredients",
+    "exported_at": "2026-05-25T23:12:12.461201",
+    "db_path": "/Users/username/Repos/DABBLE/tekstil-innsamling-oslo/data/ingredients.db"
+  },
+  "ingredients": [
+    {
+      "id": "algin",
+      "inci_name": "Algin",
+      "irritancy": 4,
+      "category": "Unknown",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "caprylic-acid",
+      "inci_name": "Caprylic Acid",
+      "irritancy": 3,
+      "category": "Unknown",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "carnuba-wax",
+      "inci_name": "Carnuba Wax",
+      "irritancy": 0,
+      "category": "Unknown",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "dc-red--17",
+      "inci_name": "D&C Red # 17",
+      "irritancy": 0,
+      "category": "Unknown",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "dc-red--19",
+      "inci_name": "D&C Red # 19",
+      "irritancy": 0,
+      "category": "Unknown",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "dc-red--21",
+      "inci_name": "D&C Red # 21",
+      "irritancy": 0,
+      "category": "Unknown",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "dc-red--3",
+      "inci_name": "D&C Red # 3",
+      "irritancy": 0,
+      "category": "Unknown",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "dc-red--4",
+      "inci_name": "D&C Red # 4",
+      "irritancy": 0,
+      "category": "Unknown",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "dc-red--6",
+      "inci_name": "D&C Red # 6",
+      "irritancy": 0,
+      "category": "Unknown",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "dc-red--7",
+      "inci_name": "D&C Red # 7",
+      "irritancy": 0,
+      "category": "Unknown",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "dc-red--9",
+      "inci_name": "D&C Red # 9",
+      "irritancy": 0,
+      "category": "Unknown",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "lithiumm-stearate",
+      "inci_name": "Lithiumm Stearate",
+      "irritancy": 0,
+      "category": "Unknown",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "magneseium-aluminum-silicate",
+      "inci_name": "Magneseium Aluminum Silicate",
+      "irritancy": 0,
+      "category": "Unknown",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "polyethylene-glycol-peg-400",
+      "inci_name": "Polyethylene Glycol (PEG 400)",
+      "irritancy": 0,
+      "category": "Unknown",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "red-algea",
+      "inci_name": "Red Algea",
+      "irritancy": 2,
+      "category": "Unknown",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "syearyl-heptanoate",
+      "inci_name": "Syearyl Heptanoate",
+      "irritancy": 0,
+      "category": "Unknown",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "tocopherol-vitamin-e",
+      "inci_name": "Tocopherol (Vitamin E)",
+      "irritancy": 2,
+      "category": "Unknown",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    }
+  ],
+  "ratings": [
+    {
+      "ingredient_id": "algin",
+      "source_name": "Comedogenic Ingredients (Open Source)",
+      "rating": 4,
+      "irritancy": 4,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "caprylic-acid",
+      "source_name": "Comedogenic Ingredients (Open Source)",
+      "rating": 1,
+      "irritancy": 3,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "carnuba-wax",
+      "source_name": "Comedogenic Ingredients (Open Source)",
+      "rating": 1,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "dc-red--17",
+      "source_name": "Comedogenic Ingredients (Open Source)",
+      "rating": 3,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "dc-red--19",
+      "source_name": "Comedogenic Ingredients (Open Source)",
+      "rating": 2,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "dc-red--21",
+      "source_name": "Comedogenic Ingredients (Open Source)",
+      "rating": 3,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "dc-red--3",
+      "source_name": "Comedogenic Ingredients (Open Source)",
+      "rating": 3,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "dc-red--4",
+      "source_name": "Comedogenic Ingredients (Open Source)",
+      "rating": 1,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "dc-red--6",
+      "source_name": "Comedogenic Ingredients (Open Source)",
+      "rating": 1,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "dc-red--7",
+      "source_name": "Comedogenic Ingredients (Open Source)",
+      "rating": 1,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "dc-red--9",
+      "source_name": "Comedogenic Ingredients (Open Source)",
+      "rating": 1,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "lithiumm-stearate",
+      "source_name": "Comedogenic Ingredients (Open Source)",
+      "rating": 1,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "magneseium-aluminum-silicate",
+      "source_name": "Comedogenic Ingredients (Open Source)",
+      "rating": 0,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "polyethylene-glycol-peg-400",
+      "source_name": "Comedogenic Ingredients (Open Source)",
+      "rating": 1,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "red-algea",
+      "source_name": "Comedogenic Ingredients (Open Source)",
+      "rating": 5,
+      "irritancy": 2,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "syearyl-heptanoate",
+      "source_name": "Comedogenic Ingredients (Open Source)",
+      "rating": 4,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "tocopherol-vitamin-e",
+      "source_name": "Comedogenic Ingredients (Open Source)",
+      "rating": 2,
+      "irritancy": 2,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    }
+  ],
+  "synonyms": [],
+  "sources": [
+    {
+      "ingredient_id": "algin",
+      "name": "Comedogenic Ingredients (Open Source)",
+      "url": "https://github.com/e-zob/comedogenic-ingredients",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "caprylic-acid",
+      "name": "Comedogenic Ingredients (Open Source)",
+      "url": "https://github.com/e-zob/comedogenic-ingredients",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "carnuba-wax",
+      "name": "Comedogenic Ingredients (Open Source)",
+      "url": "https://github.com/e-zob/comedogenic-ingredients",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "dc-red--17",
+      "name": "Comedogenic Ingredients (Open Source)",
+      "url": "https://github.com/e-zob/comedogenic-ingredients",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "dc-red--19",
+      "name": "Comedogenic Ingredients (Open Source)",
+      "url": "https://github.com/e-zob/comedogenic-ingredients",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "dc-red--21",
+      "name": "Comedogenic Ingredients (Open Source)",
+      "url": "https://github.com/e-zob/comedogenic-ingredients",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "dc-red--3",
+      "name": "Comedogenic Ingredients (Open Source)",
+      "url": "https://github.com/e-zob/comedogenic-ingredients",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "dc-red--4",
+      "name": "Comedogenic Ingredients (Open Source)",
+      "url": "https://github.com/e-zob/comedogenic-ingredients",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "dc-red--6",
+      "name": "Comedogenic Ingredients (Open Source)",
+      "url": "https://github.com/e-zob/comedogenic-ingredients",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "dc-red--7",
+      "name": "Comedogenic Ingredients (Open Source)",
+      "url": "https://github.com/e-zob/comedogenic-ingredients",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "dc-red--9",
+      "name": "Comedogenic Ingredients (Open Source)",
+      "url": "https://github.com/e-zob/comedogenic-ingredients",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "lithiumm-stearate",
+      "name": "Comedogenic Ingredients (Open Source)",
+      "url": "https://github.com/e-zob/comedogenic-ingredients",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "magneseium-aluminum-silicate",
+      "name": "Comedogenic Ingredients (Open Source)",
+      "url": "https://github.com/e-zob/comedogenic-ingredients",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "polyethylene-glycol-peg-400",
+      "name": "Comedogenic Ingredients (Open Source)",
+      "url": "https://github.com/e-zob/comedogenic-ingredients",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "red-algea",
+      "name": "Comedogenic Ingredients (Open Source)",
+      "url": "https://github.com/e-zob/comedogenic-ingredients",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "syearyl-heptanoate",
+      "name": "Comedogenic Ingredients (Open Source)",
+      "url": "https://github.com/e-zob/comedogenic-ingredients",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "tocopherol-vitamin-e",
+      "name": "Comedogenic Ingredients (Open Source)",
+      "url": "https://github.com/e-zob/comedogenic-ingredients",
+      "type": "github"
+    }
+  ],
+  "skin_type_notes": []
+}

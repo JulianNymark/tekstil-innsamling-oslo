@@ -1,0 +1,2454 @@
+{
+  "meta": {
+    "source": "emmanuel",
+    "exported_at": "2026-05-25T23:12:12.325863",
+    "db_path": "/Users/username/Repos/DABBLE/tekstil-innsamling-oslo/data/ingredients.db"
+  },
+  "ingredients": [
+    {
+      "id": "abyssinian-seed-oil",
+      "inci_name": "Abyssinian Seed Oil",
+      "irritancy": 0,
+      "category": "Oil",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "acai-berry-oil",
+      "inci_name": "Acai Berry Oil",
+      "irritancy": 0,
+      "category": "Oil",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "acetone",
+      "inci_name": "Acetone",
+      "irritancy": 0,
+      "category": "Solvent",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "almond-oil",
+      "inci_name": "Almond Oil",
+      "irritancy": 0,
+      "category": "Oil",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "babassu-oil",
+      "inci_name": "Babassu Oil",
+      "irritancy": 0,
+      "category": "Oil",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "baobab-seed-oil",
+      "inci_name": "Baobab Seed Oil",
+      "irritancy": 0,
+      "category": "Oil",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "benzoic-acid",
+      "inci_name": "Benzoic Acid",
+      "irritancy": 0,
+      "category": "Preservative",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "beta-carotene",
+      "inci_name": "Beta Carotene",
+      "irritancy": 0,
+      "category": "Antioxidant",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "black-cumin-seed-oil",
+      "inci_name": "Black Cumin Seed Oil",
+      "irritancy": 0,
+      "category": "Oil",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "black-currant-seed-oil",
+      "inci_name": "Black Currant Seed Oil",
+      "irritancy": 0,
+      "category": "Oil",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "blueberry-seed-oil",
+      "inci_name": "Blueberry Seed Oil",
+      "irritancy": 0,
+      "category": "Oil",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "borage-oil",
+      "inci_name": "Borage Oil",
+      "irritancy": 0,
+      "category": "Oil",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "brazil-nut-oil",
+      "inci_name": "Brazil Nut Oil",
+      "irritancy": 0,
+      "category": "Oil",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "broccoli-seed-oil",
+      "inci_name": "Broccoli Seed Oil",
+      "irritancy": 0,
+      "category": "Oil",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "buriti-oil",
+      "inci_name": "Buriti Oil",
+      "irritancy": 0,
+      "category": "Oil",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "calendula",
+      "inci_name": "Calendula",
+      "irritancy": 0,
+      "category": "Extract",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "camellia-seed-oil",
+      "inci_name": "Camellia Seed Oil",
+      "irritancy": 0,
+      "category": "Oil",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "camphor",
+      "inci_name": "Camphor",
+      "irritancy": 0,
+      "category": "Active",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "candelilla-wax",
+      "inci_name": "Candelilla Wax",
+      "irritancy": 0,
+      "category": "Wax",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "capric-acid",
+      "inci_name": "Capric Acid",
+      "irritancy": 0,
+      "category": "Fatty Acid",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "carnauba-wax",
+      "inci_name": "Carnauba Wax",
+      "irritancy": 0,
+      "category": "Wax",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "carrot-seed-oil",
+      "inci_name": "Carrot Seed Oil",
+      "irritancy": 0,
+      "category": "Oil",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "castor-oil",
+      "inci_name": "Castor Oil",
+      "irritancy": 0,
+      "category": "Oil",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "ceteareth-20",
+      "inci_name": "Ceteareth-20",
+      "irritancy": 0,
+      "category": "Emulsifier",
+      "category_group": null,
+      "description": "Can be comedogenic, especially combined with cetearyl alcohol",
+      "flags": null
+    },
+    {
+      "id": "cherry-kernel-oil",
+      "inci_name": "Cherry Kernel Oil",
+      "irritancy": 0,
+      "category": "Oil",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "chia-seed-oil",
+      "inci_name": "Chia Seed Oil",
+      "irritancy": 0,
+      "category": "Oil",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "coconut-butter",
+      "inci_name": "Coconut Butter",
+      "irritancy": 0,
+      "category": "Butter",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "coconut-oil-fractionated",
+      "inci_name": "Coconut Oil (Fractionated)",
+      "irritancy": 0,
+      "category": "Emollient",
+      "category_group": null,
+      "description": "Lower comedogenic rating than regular coconut oil",
+      "flags": null
+    },
+    {
+      "id": "colloidal-sulfur",
+      "inci_name": "Colloidal Sulfur",
+      "irritancy": 0,
+      "category": "Active",
+      "category_group": null,
+      "description": "Acne treatment ingredient",
+      "flags": null
+    },
+    {
+      "id": "cranberry-seed-oil",
+      "inci_name": "Cranberry Seed Oil",
+      "irritancy": 0,
+      "category": "Oil",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "cyclomethicone",
+      "inci_name": "Cyclomethicone",
+      "irritancy": 0,
+      "category": "Silicone",
+      "category_group": null,
+      "description": "Volatile silicone blend",
+      "flags": null
+    },
+    {
+      "id": "cyclopentasiloxane",
+      "inci_name": "Cyclopentasiloxane",
+      "irritancy": 0,
+      "category": "Silicone",
+      "category_group": null,
+      "description": "Volatile silicone, evaporates quickly",
+      "flags": null
+    },
+    {
+      "id": "d--c-red-dyes",
+      "inci_name": "D & C Red Dyes",
+      "irritancy": 0,
+      "category": "Colorant",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "dioctyl-succinate",
+      "inci_name": "Dioctyl Succinate",
+      "irritancy": 0,
+      "category": "Emollient",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "emu-oil",
+      "inci_name": "Emu Oil",
+      "irritancy": 0,
+      "category": "Oil",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "ethylparaben",
+      "inci_name": "Ethylparaben",
+      "irritancy": 0,
+      "category": "Preservative",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "glyceryl-stearate-nse",
+      "inci_name": "Glyceryl Stearate NSE",
+      "irritancy": 0,
+      "category": "Emulsifier",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "glyceryl-stearate-se",
+      "inci_name": "Glyceryl Stearate SE",
+      "irritancy": 0,
+      "category": "Emulsifier",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "hazelnut-oil",
+      "inci_name": "Hazelnut Oil",
+      "irritancy": 0,
+      "category": "Oil",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "isostearyl-neopentanoate",
+      "inci_name": "Isostearyl Neopentanoate",
+      "irritancy": 0,
+      "category": "Emollient",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "kukui-nut-oil",
+      "inci_name": "Kukui Nut Oil",
+      "irritancy": 0,
+      "category": "Oil",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "lanolin",
+      "inci_name": "Lanolin",
+      "irritancy": 0,
+      "category": "Wax",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "lanolin-alcohol",
+      "inci_name": "Lanolin Alcohol",
+      "irritancy": 0,
+      "category": "Fatty Alcohol",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "lanolin-oil",
+      "inci_name": "Lanolin Oil",
+      "irritancy": 0,
+      "category": "Emollient",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "lanolin-wax",
+      "inci_name": "Lanolin Wax",
+      "irritancy": 0,
+      "category": "Wax",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "laureth-23",
+      "inci_name": "Laureth-23",
+      "irritancy": 0,
+      "category": "Emulsifier",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "lithium-stearate",
+      "inci_name": "Lithium Stearate",
+      "irritancy": 0,
+      "category": "Emulsifier",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "macadamia-nut-oil",
+      "inci_name": "Macadamia Nut Oil",
+      "irritancy": 0,
+      "category": "Oil",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "magnesium-aluminum-silicate",
+      "inci_name": "Magnesium Aluminum Silicate",
+      "irritancy": 0,
+      "category": "Thickener",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "magnesium-stearate",
+      "inci_name": "Magnesium Stearate",
+      "irritancy": 0,
+      "category": "Emulsifier",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "mango-butter",
+      "inci_name": "Mango Butter",
+      "irritancy": 0,
+      "category": "Butter",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "marula-oil",
+      "inci_name": "Marula Oil",
+      "irritancy": 0,
+      "category": "Oil",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "mink-oil",
+      "inci_name": "Mink Oil",
+      "irritancy": 0,
+      "category": "Oil",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "moringa-oil",
+      "inci_name": "Moringa Oil",
+      "irritancy": 0,
+      "category": "Oil",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "neem-oil",
+      "inci_name": "Neem Oil",
+      "irritancy": 0,
+      "category": "Oil",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "octyl-palmitate",
+      "inci_name": "Octyl Palmitate",
+      "irritancy": 0,
+      "category": "Emollient",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "octyl-stearate",
+      "inci_name": "Octyl Stearate",
+      "irritancy": 0,
+      "category": "Emollient",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "oleth-10",
+      "inci_name": "Oleth-10",
+      "irritancy": 0,
+      "category": "Emulsifier",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "palm-oil",
+      "inci_name": "Palm Oil",
+      "irritancy": 0,
+      "category": "Oil",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "papain",
+      "inci_name": "Papain",
+      "irritancy": 0,
+      "category": "Enzyme",
+      "category_group": null,
+      "description": "Papaya enzyme, exfoliant",
+      "flags": null
+    },
+    {
+      "id": "peach-kernel-oil",
+      "inci_name": "Peach Kernel Oil",
+      "irritancy": 0,
+      "category": "Oil",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "peg-100-stearate",
+      "inci_name": "PEG-100 Stearate",
+      "irritancy": 0,
+      "category": "Emulsifier",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "peg-75-lanolin",
+      "inci_name": "PEG-75 Lanolin",
+      "irritancy": 0,
+      "category": "Emulsifier",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "peg-8-stearate",
+      "inci_name": "PEG-8 Stearate",
+      "irritancy": 0,
+      "category": "Emulsifier",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "petroleum-jelly",
+      "inci_name": "Petroleum Jelly",
+      "irritancy": 0,
+      "category": "Occlusive",
+      "category_group": null,
+      "description": "Generally safe for most skin types",
+      "flags": null
+    },
+    {
+      "id": "polyethylene-glycol",
+      "inci_name": "Polyethylene Glycol",
+      "irritancy": 0,
+      "category": "Humectant",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "polysorbate-60",
+      "inci_name": "Polysorbate 60",
+      "irritancy": 0,
+      "category": "Emulsifier",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "polysorbate-80",
+      "inci_name": "Polysorbate 80",
+      "irritancy": 0,
+      "category": "Emulsifier",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "propylene-glycol-monostearate",
+      "inci_name": "Propylene Glycol Monostearate",
+      "irritancy": 0,
+      "category": "Emulsifier",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "propylparaben",
+      "inci_name": "Propylparaben",
+      "irritancy": 0,
+      "category": "Preservative",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "pumpkin-seed-oil",
+      "inci_name": "Pumpkin Seed Oil",
+      "irritancy": 0,
+      "category": "Oil",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "red-algae",
+      "inci_name": "Red Algae",
+      "irritancy": 0,
+      "category": "Extract",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "red-raspberry-seed-oil",
+      "inci_name": "Red Raspberry Seed Oil",
+      "irritancy": 0,
+      "category": "Oil",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "rice-bran-oil",
+      "inci_name": "Rice Bran Oil",
+      "irritancy": 0,
+      "category": "Oil",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "rosehip-seed-oil",
+      "inci_name": "Rosehip Seed Oil",
+      "irritancy": 0,
+      "category": "Oil",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "simethicone",
+      "inci_name": "Simethicone",
+      "irritancy": 0,
+      "category": "Silicone",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "sodium-chloride",
+      "inci_name": "Sodium Chloride",
+      "irritancy": 0,
+      "category": "Other",
+      "category_group": null,
+      "description": "Can clog pores in high concentrations",
+      "flags": null
+    },
+    {
+      "id": "sodium-laureth-sulfate",
+      "inci_name": "Sodium Laureth Sulfate",
+      "irritancy": 0,
+      "category": "Surfactant",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "soybean-oil",
+      "inci_name": "Soybean Oil",
+      "irritancy": 0,
+      "category": "Oil",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "sulfated-castor-oil",
+      "inci_name": "Sulfated Castor Oil",
+      "irritancy": 0,
+      "category": "Emulsifier",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "sulfated-jojoba-oil",
+      "inci_name": "Sulfated Jojoba Oil",
+      "irritancy": 0,
+      "category": "Emulsifier",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "sunflower-seed-oil",
+      "inci_name": "Sunflower Seed Oil",
+      "irritancy": 0,
+      "category": "Oil",
+      "category_group": null,
+      "description": "Non-comedogenic, high in linoleic acid",
+      "flags": null
+    },
+    {
+      "id": "talc",
+      "inci_name": "Talc",
+      "irritancy": 0,
+      "category": "Powder",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "tamanu-oil",
+      "inci_name": "Tamanu Oil",
+      "irritancy": 0,
+      "category": "Oil",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "vitamin-a-palmitate",
+      "inci_name": "Vitamin A Palmitate",
+      "irritancy": 0,
+      "category": "Active",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "watermelon-seed-oil",
+      "inci_name": "Watermelon Seed Oil",
+      "irritancy": 0,
+      "category": "Oil",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    }
+  ],
+  "ratings": [
+    {
+      "ingredient_id": "coconut-butter",
+      "source_name": "Emmanuel.Skin (Open Source)",
+      "rating": 4,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "lanolin",
+      "source_name": "Emmanuel.Skin (Open Source)",
+      "rating": 4,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "octyl-palmitate",
+      "source_name": "Emmanuel.Skin (Open Source)",
+      "rating": 4,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "octyl-stearate",
+      "source_name": "Emmanuel.Skin (Open Source)",
+      "rating": 5,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "sodium-laureth-sulfate",
+      "source_name": "Emmanuel.Skin (Open Source)",
+      "rating": 3,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "soybean-oil",
+      "source_name": "Emmanuel.Skin (Open Source)",
+      "rating": 3,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "almond-oil",
+      "source_name": "Emmanuel.Skin (Open Source)",
+      "rating": 2,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "d--c-red-dyes",
+      "source_name": "Emmanuel.Skin (Open Source)",
+      "rating": 3,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "petroleum-jelly",
+      "source_name": "Emmanuel.Skin (Open Source)",
+      "rating": 0,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "isostearyl-neopentanoate",
+      "source_name": "Emmanuel.Skin (Open Source)",
+      "rating": 3,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "propylene-glycol-monostearate",
+      "source_name": "Emmanuel.Skin (Open Source)",
+      "rating": 4,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "peg-8-stearate",
+      "source_name": "Emmanuel.Skin (Open Source)",
+      "rating": 3,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "peg-100-stearate",
+      "source_name": "Emmanuel.Skin (Open Source)",
+      "rating": 1,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "rosehip-seed-oil",
+      "source_name": "Emmanuel.Skin (Open Source)",
+      "rating": 1,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "castor-oil",
+      "source_name": "Emmanuel.Skin (Open Source)",
+      "rating": 1,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "sunflower-seed-oil",
+      "source_name": "Emmanuel.Skin (Open Source)",
+      "rating": 0,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "neem-oil",
+      "source_name": "Emmanuel.Skin (Open Source)",
+      "rating": 1,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "rice-bran-oil",
+      "source_name": "Emmanuel.Skin (Open Source)",
+      "rating": 2,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "palm-oil",
+      "source_name": "Emmanuel.Skin (Open Source)",
+      "rating": 4,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "marula-oil",
+      "source_name": "Emmanuel.Skin (Open Source)",
+      "rating": 3,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "black-cumin-seed-oil",
+      "source_name": "Emmanuel.Skin (Open Source)",
+      "rating": 2,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "borage-oil",
+      "source_name": "Emmanuel.Skin (Open Source)",
+      "rating": 2,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "cranberry-seed-oil",
+      "source_name": "Emmanuel.Skin (Open Source)",
+      "rating": 2,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "peach-kernel-oil",
+      "source_name": "Emmanuel.Skin (Open Source)",
+      "rating": 2,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "pumpkin-seed-oil",
+      "source_name": "Emmanuel.Skin (Open Source)",
+      "rating": 2,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "tamanu-oil",
+      "source_name": "Emmanuel.Skin (Open Source)",
+      "rating": 2,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "hazelnut-oil",
+      "source_name": "Emmanuel.Skin (Open Source)",
+      "rating": 1,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "macadamia-nut-oil",
+      "source_name": "Emmanuel.Skin (Open Source)",
+      "rating": 2,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "carrot-seed-oil",
+      "source_name": "Emmanuel.Skin (Open Source)",
+      "rating": 3,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "chia-seed-oil",
+      "source_name": "Emmanuel.Skin (Open Source)",
+      "rating": 3,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "kukui-nut-oil",
+      "source_name": "Emmanuel.Skin (Open Source)",
+      "rating": 2,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "moringa-oil",
+      "source_name": "Emmanuel.Skin (Open Source)",
+      "rating": 3,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "mink-oil",
+      "source_name": "Emmanuel.Skin (Open Source)",
+      "rating": 3,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "abyssinian-seed-oil",
+      "source_name": "Emmanuel.Skin (Open Source)",
+      "rating": 0,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "black-currant-seed-oil",
+      "source_name": "Emmanuel.Skin (Open Source)",
+      "rating": 0,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "blueberry-seed-oil",
+      "source_name": "Emmanuel.Skin (Open Source)",
+      "rating": 0,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "red-raspberry-seed-oil",
+      "source_name": "Emmanuel.Skin (Open Source)",
+      "rating": 0,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "watermelon-seed-oil",
+      "source_name": "Emmanuel.Skin (Open Source)",
+      "rating": 0,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "babassu-oil",
+      "source_name": "Emmanuel.Skin (Open Source)",
+      "rating": 1,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "broccoli-seed-oil",
+      "source_name": "Emmanuel.Skin (Open Source)",
+      "rating": 1,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "camellia-seed-oil",
+      "source_name": "Emmanuel.Skin (Open Source)",
+      "rating": 1,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "emu-oil",
+      "source_name": "Emmanuel.Skin (Open Source)",
+      "rating": 1,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "acai-berry-oil",
+      "source_name": "Emmanuel.Skin (Open Source)",
+      "rating": 2,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "baobab-seed-oil",
+      "source_name": "Emmanuel.Skin (Open Source)",
+      "rating": 2,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "brazil-nut-oil",
+      "source_name": "Emmanuel.Skin (Open Source)",
+      "rating": 2,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "buriti-oil",
+      "source_name": "Emmanuel.Skin (Open Source)",
+      "rating": 2,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "cherry-kernel-oil",
+      "source_name": "Emmanuel.Skin (Open Source)",
+      "rating": 2,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "mango-butter",
+      "source_name": "Emmanuel.Skin (Open Source)",
+      "rating": 2,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "candelilla-wax",
+      "source_name": "Emmanuel.Skin (Open Source)",
+      "rating": 1,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "carnauba-wax",
+      "source_name": "Emmanuel.Skin (Open Source)",
+      "rating": 1,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "cyclopentasiloxane",
+      "source_name": "Emmanuel.Skin (Open Source)",
+      "rating": 0,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "cyclomethicone",
+      "source_name": "Emmanuel.Skin (Open Source)",
+      "rating": 0,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "simethicone",
+      "source_name": "Emmanuel.Skin (Open Source)",
+      "rating": 1,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "ceteareth-20",
+      "source_name": "Emmanuel.Skin (Open Source)",
+      "rating": 4,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "polysorbate-60",
+      "source_name": "Emmanuel.Skin (Open Source)",
+      "rating": 2,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "polysorbate-80",
+      "source_name": "Emmanuel.Skin (Open Source)",
+      "rating": 3,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "glyceryl-stearate-se",
+      "source_name": "Emmanuel.Skin (Open Source)",
+      "rating": 3,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "glyceryl-stearate-nse",
+      "source_name": "Emmanuel.Skin (Open Source)",
+      "rating": 1,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "oleth-10",
+      "source_name": "Emmanuel.Skin (Open Source)",
+      "rating": 1,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "peg-75-lanolin",
+      "source_name": "Emmanuel.Skin (Open Source)",
+      "rating": 3,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "laureth-23",
+      "source_name": "Emmanuel.Skin (Open Source)",
+      "rating": 3,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "lanolin-alcohol",
+      "source_name": "Emmanuel.Skin (Open Source)",
+      "rating": 2,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "vitamin-a-palmitate",
+      "source_name": "Emmanuel.Skin (Open Source)",
+      "rating": 2,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "sodium-chloride",
+      "source_name": "Emmanuel.Skin (Open Source)",
+      "rating": 5,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "capric-acid",
+      "source_name": "Emmanuel.Skin (Open Source)",
+      "rating": 2,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "benzoic-acid",
+      "source_name": "Emmanuel.Skin (Open Source)",
+      "rating": 2,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "camphor",
+      "source_name": "Emmanuel.Skin (Open Source)",
+      "rating": 2,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "talc",
+      "source_name": "Emmanuel.Skin (Open Source)",
+      "rating": 1,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "beta-carotene",
+      "source_name": "Emmanuel.Skin (Open Source)",
+      "rating": 1,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "colloidal-sulfur",
+      "source_name": "Emmanuel.Skin (Open Source)",
+      "rating": 3,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "dioctyl-succinate",
+      "source_name": "Emmanuel.Skin (Open Source)",
+      "rating": 3,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "sulfated-castor-oil",
+      "source_name": "Emmanuel.Skin (Open Source)",
+      "rating": 3,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "sulfated-jojoba-oil",
+      "source_name": "Emmanuel.Skin (Open Source)",
+      "rating": 3,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "red-algae",
+      "source_name": "Emmanuel.Skin (Open Source)",
+      "rating": 5,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "lithium-stearate",
+      "source_name": "Emmanuel.Skin (Open Source)",
+      "rating": 1,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "magnesium-stearate",
+      "source_name": "Emmanuel.Skin (Open Source)",
+      "rating": 1,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "ethylparaben",
+      "source_name": "Emmanuel.Skin (Open Source)",
+      "rating": 0,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "propylparaben",
+      "source_name": "Emmanuel.Skin (Open Source)",
+      "rating": 0,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "papain",
+      "source_name": "Emmanuel.Skin (Open Source)",
+      "rating": 0,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "calendula",
+      "source_name": "Emmanuel.Skin (Open Source)",
+      "rating": 1,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "lanolin-oil",
+      "source_name": "Emmanuel.Skin (Open Source)",
+      "rating": 1,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "lanolin-wax",
+      "source_name": "Emmanuel.Skin (Open Source)",
+      "rating": 1,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "polyethylene-glycol",
+      "source_name": "Emmanuel.Skin (Open Source)",
+      "rating": 1,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "acetone",
+      "source_name": "Emmanuel.Skin (Open Source)",
+      "rating": 0,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "magnesium-aluminum-silicate",
+      "source_name": "Emmanuel.Skin (Open Source)",
+      "rating": 0,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "coconut-oil-fractionated",
+      "source_name": "Emmanuel.Skin (Open Source)",
+      "rating": 2,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    }
+  ],
+  "synonyms": [
+    {
+      "ingredient_id": "lanolin",
+      "synonym": "acetylated lanolin"
+    },
+    {
+      "ingredient_id": "lanolin",
+      "synonym": "lanolin alcohol"
+    },
+    {
+      "ingredient_id": "lanolin",
+      "synonym": "adeps lanae"
+    },
+    {
+      "ingredient_id": "octyl-palmitate",
+      "synonym": "ethylhexyl palmitate"
+    },
+    {
+      "ingredient_id": "octyl-stearate",
+      "synonym": "ethylhexyl stearate"
+    },
+    {
+      "ingredient_id": "sodium-laureth-sulfate",
+      "synonym": "sles"
+    },
+    {
+      "ingredient_id": "soybean-oil",
+      "synonym": "glycine soja oil"
+    },
+    {
+      "ingredient_id": "almond-oil",
+      "synonym": "prunus amygdalus dulcis oil"
+    },
+    {
+      "ingredient_id": "almond-oil",
+      "synonym": "sweet almond oil"
+    },
+    {
+      "ingredient_id": "d--c-red-dyes",
+      "synonym": "red 3"
+    },
+    {
+      "ingredient_id": "d--c-red-dyes",
+      "synonym": "red 17"
+    },
+    {
+      "ingredient_id": "d--c-red-dyes",
+      "synonym": "red 21"
+    },
+    {
+      "ingredient_id": "d--c-red-dyes",
+      "synonym": "red 27"
+    },
+    {
+      "ingredient_id": "d--c-red-dyes",
+      "synonym": "red 30"
+    },
+    {
+      "ingredient_id": "d--c-red-dyes",
+      "synonym": "red 36"
+    },
+    {
+      "ingredient_id": "petroleum-jelly",
+      "synonym": "petrolatum"
+    },
+    {
+      "ingredient_id": "petroleum-jelly",
+      "synonym": "vaseline"
+    },
+    {
+      "ingredient_id": "propylene-glycol-monostearate",
+      "synonym": "pg monostearate"
+    },
+    {
+      "ingredient_id": "rosehip-seed-oil",
+      "synonym": "rosa canina fruit oil"
+    },
+    {
+      "ingredient_id": "rosehip-seed-oil",
+      "synonym": "rosa mosqueta seed oil"
+    },
+    {
+      "ingredient_id": "castor-oil",
+      "synonym": "ricinus communis seed oil"
+    },
+    {
+      "ingredient_id": "sunflower-seed-oil",
+      "synonym": "helianthus annuus seed oil"
+    },
+    {
+      "ingredient_id": "neem-oil",
+      "synonym": "melia azadirachta seed oil"
+    },
+    {
+      "ingredient_id": "neem-oil",
+      "synonym": "azadirachta indica seed oil"
+    },
+    {
+      "ingredient_id": "rice-bran-oil",
+      "synonym": "oryza sativa bran oil"
+    },
+    {
+      "ingredient_id": "palm-oil",
+      "synonym": "elaeis guineensis oil"
+    },
+    {
+      "ingredient_id": "marula-oil",
+      "synonym": "sclerocarya birrea seed oil"
+    },
+    {
+      "ingredient_id": "black-cumin-seed-oil",
+      "synonym": "nigella sativa seed oil"
+    },
+    {
+      "ingredient_id": "black-cumin-seed-oil",
+      "synonym": "black seed oil"
+    },
+    {
+      "ingredient_id": "borage-oil",
+      "synonym": "borago officinalis seed oil"
+    },
+    {
+      "ingredient_id": "cranberry-seed-oil",
+      "synonym": "vaccinium macrocarpon seed oil"
+    },
+    {
+      "ingredient_id": "peach-kernel-oil",
+      "synonym": "prunus persica kernel oil"
+    },
+    {
+      "ingredient_id": "pumpkin-seed-oil",
+      "synonym": "cucurbita pepo seed oil"
+    },
+    {
+      "ingredient_id": "tamanu-oil",
+      "synonym": "calophyllum inophyllum seed oil"
+    },
+    {
+      "ingredient_id": "hazelnut-oil",
+      "synonym": "corylus avellana seed oil"
+    },
+    {
+      "ingredient_id": "macadamia-nut-oil",
+      "synonym": "macadamia ternifolia seed oil"
+    },
+    {
+      "ingredient_id": "carrot-seed-oil",
+      "synonym": "daucus carota sativa seed oil"
+    },
+    {
+      "ingredient_id": "chia-seed-oil",
+      "synonym": "salvia hispanica seed oil"
+    },
+    {
+      "ingredient_id": "kukui-nut-oil",
+      "synonym": "aleurites moluccana seed oil"
+    },
+    {
+      "ingredient_id": "moringa-oil",
+      "synonym": "moringa oleifera seed oil"
+    },
+    {
+      "ingredient_id": "abyssinian-seed-oil",
+      "synonym": "crambe abyssinica seed oil"
+    },
+    {
+      "ingredient_id": "black-currant-seed-oil",
+      "synonym": "ribes nigrum seed oil"
+    },
+    {
+      "ingredient_id": "blueberry-seed-oil",
+      "synonym": "vaccinium corymbosum seed oil"
+    },
+    {
+      "ingredient_id": "red-raspberry-seed-oil",
+      "synonym": "rubus idaeus seed oil"
+    },
+    {
+      "ingredient_id": "watermelon-seed-oil",
+      "synonym": "citrullus lanatus seed oil"
+    },
+    {
+      "ingredient_id": "babassu-oil",
+      "synonym": "orbignya oleifera seed oil"
+    },
+    {
+      "ingredient_id": "broccoli-seed-oil",
+      "synonym": "brassica oleracea italica seed oil"
+    },
+    {
+      "ingredient_id": "camellia-seed-oil",
+      "synonym": "camellia oleifera seed oil"
+    },
+    {
+      "ingredient_id": "camellia-seed-oil",
+      "synonym": "tea seed oil"
+    },
+    {
+      "ingredient_id": "acai-berry-oil",
+      "synonym": "euterpe oleracea fruit oil"
+    },
+    {
+      "ingredient_id": "baobab-seed-oil",
+      "synonym": "adansonia digitata seed oil"
+    },
+    {
+      "ingredient_id": "brazil-nut-oil",
+      "synonym": "bertholletia excelsa seed oil"
+    },
+    {
+      "ingredient_id": "buriti-oil",
+      "synonym": "mauritia flexuosa fruit oil"
+    },
+    {
+      "ingredient_id": "cherry-kernel-oil",
+      "synonym": "prunus avium seed oil"
+    },
+    {
+      "ingredient_id": "mango-butter",
+      "synonym": "mangifera indica seed butter"
+    },
+    {
+      "ingredient_id": "candelilla-wax",
+      "synonym": "euphorbia cerifera cera"
+    },
+    {
+      "ingredient_id": "carnauba-wax",
+      "synonym": "copernicia cerifera cera"
+    },
+    {
+      "ingredient_id": "cyclopentasiloxane",
+      "synonym": "d5"
+    },
+    {
+      "ingredient_id": "polysorbate-60",
+      "synonym": "tween 60"
+    },
+    {
+      "ingredient_id": "polysorbate-80",
+      "synonym": "tween 80"
+    },
+    {
+      "ingredient_id": "vitamin-a-palmitate",
+      "synonym": "retinyl palmitate"
+    },
+    {
+      "ingredient_id": "sodium-chloride",
+      "synonym": "salt"
+    },
+    {
+      "ingredient_id": "capric-acid",
+      "synonym": "decanoic acid"
+    },
+    {
+      "ingredient_id": "talc",
+      "synonym": "magnesium silicate"
+    },
+    {
+      "ingredient_id": "beta-carotene",
+      "synonym": "provitamin a"
+    },
+    {
+      "ingredient_id": "colloidal-sulfur",
+      "synonym": "sulfur"
+    },
+    {
+      "ingredient_id": "sulfated-castor-oil",
+      "synonym": "turkey red oil"
+    },
+    {
+      "ingredient_id": "red-algae",
+      "synonym": "rhodophyta"
+    },
+    {
+      "ingredient_id": "calendula",
+      "synonym": "calendula officinalis extract"
+    },
+    {
+      "ingredient_id": "polyethylene-glycol",
+      "synonym": "peg-400"
+    },
+    {
+      "ingredient_id": "polyethylene-glycol",
+      "synonym": "peg 400"
+    },
+    {
+      "ingredient_id": "coconut-oil-fractionated",
+      "synonym": "caprylic/capric triglyceride"
+    }
+  ],
+  "sources": [
+    {
+      "ingredient_id": "coconut-butter",
+      "name": "Emmanuel.Skin (Open Source)",
+      "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "lanolin",
+      "name": "Emmanuel.Skin (Open Source)",
+      "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "octyl-palmitate",
+      "name": "Emmanuel.Skin (Open Source)",
+      "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "octyl-stearate",
+      "name": "Emmanuel.Skin (Open Source)",
+      "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "sodium-laureth-sulfate",
+      "name": "Emmanuel.Skin (Open Source)",
+      "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "soybean-oil",
+      "name": "Emmanuel.Skin (Open Source)",
+      "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "almond-oil",
+      "name": "Emmanuel.Skin (Open Source)",
+      "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "d--c-red-dyes",
+      "name": "Emmanuel.Skin (Open Source)",
+      "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "petroleum-jelly",
+      "name": "Emmanuel.Skin (Open Source)",
+      "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "isostearyl-neopentanoate",
+      "name": "Emmanuel.Skin (Open Source)",
+      "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "propylene-glycol-monostearate",
+      "name": "Emmanuel.Skin (Open Source)",
+      "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "peg-8-stearate",
+      "name": "Emmanuel.Skin (Open Source)",
+      "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "peg-100-stearate",
+      "name": "Emmanuel.Skin (Open Source)",
+      "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "rosehip-seed-oil",
+      "name": "Emmanuel.Skin (Open Source)",
+      "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "castor-oil",
+      "name": "Emmanuel.Skin (Open Source)",
+      "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "sunflower-seed-oil",
+      "name": "Emmanuel.Skin (Open Source)",
+      "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "neem-oil",
+      "name": "Emmanuel.Skin (Open Source)",
+      "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "rice-bran-oil",
+      "name": "Emmanuel.Skin (Open Source)",
+      "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "palm-oil",
+      "name": "Emmanuel.Skin (Open Source)",
+      "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "marula-oil",
+      "name": "Emmanuel.Skin (Open Source)",
+      "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "black-cumin-seed-oil",
+      "name": "Emmanuel.Skin (Open Source)",
+      "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "borage-oil",
+      "name": "Emmanuel.Skin (Open Source)",
+      "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "cranberry-seed-oil",
+      "name": "Emmanuel.Skin (Open Source)",
+      "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "peach-kernel-oil",
+      "name": "Emmanuel.Skin (Open Source)",
+      "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "pumpkin-seed-oil",
+      "name": "Emmanuel.Skin (Open Source)",
+      "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "tamanu-oil",
+      "name": "Emmanuel.Skin (Open Source)",
+      "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "hazelnut-oil",
+      "name": "Emmanuel.Skin (Open Source)",
+      "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "macadamia-nut-oil",
+      "name": "Emmanuel.Skin (Open Source)",
+      "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "carrot-seed-oil",
+      "name": "Emmanuel.Skin (Open Source)",
+      "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "chia-seed-oil",
+      "name": "Emmanuel.Skin (Open Source)",
+      "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "kukui-nut-oil",
+      "name": "Emmanuel.Skin (Open Source)",
+      "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "moringa-oil",
+      "name": "Emmanuel.Skin (Open Source)",
+      "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "mink-oil",
+      "name": "Emmanuel.Skin (Open Source)",
+      "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "abyssinian-seed-oil",
+      "name": "Emmanuel.Skin (Open Source)",
+      "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "black-currant-seed-oil",
+      "name": "Emmanuel.Skin (Open Source)",
+      "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "blueberry-seed-oil",
+      "name": "Emmanuel.Skin (Open Source)",
+      "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "red-raspberry-seed-oil",
+      "name": "Emmanuel.Skin (Open Source)",
+      "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "watermelon-seed-oil",
+      "name": "Emmanuel.Skin (Open Source)",
+      "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "babassu-oil",
+      "name": "Emmanuel.Skin (Open Source)",
+      "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "broccoli-seed-oil",
+      "name": "Emmanuel.Skin (Open Source)",
+      "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "camellia-seed-oil",
+      "name": "Emmanuel.Skin (Open Source)",
+      "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "emu-oil",
+      "name": "Emmanuel.Skin (Open Source)",
+      "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "acai-berry-oil",
+      "name": "Emmanuel.Skin (Open Source)",
+      "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "baobab-seed-oil",
+      "name": "Emmanuel.Skin (Open Source)",
+      "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "brazil-nut-oil",
+      "name": "Emmanuel.Skin (Open Source)",
+      "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "buriti-oil",
+      "name": "Emmanuel.Skin (Open Source)",
+      "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "cherry-kernel-oil",
+      "name": "Emmanuel.Skin (Open Source)",
+      "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "mango-butter",
+      "name": "Emmanuel.Skin (Open Source)",
+      "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "candelilla-wax",
+      "name": "Emmanuel.Skin (Open Source)",
+      "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "carnauba-wax",
+      "name": "Emmanuel.Skin (Open Source)",
+      "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "cyclopentasiloxane",
+      "name": "Emmanuel.Skin (Open Source)",
+      "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "cyclomethicone",
+      "name": "Emmanuel.Skin (Open Source)",
+      "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "simethicone",
+      "name": "Emmanuel.Skin (Open Source)",
+      "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "ceteareth-20",
+      "name": "Emmanuel.Skin (Open Source)",
+      "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "polysorbate-60",
+      "name": "Emmanuel.Skin (Open Source)",
+      "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "polysorbate-80",
+      "name": "Emmanuel.Skin (Open Source)",
+      "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "glyceryl-stearate-se",
+      "name": "Emmanuel.Skin (Open Source)",
+      "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "glyceryl-stearate-nse",
+      "name": "Emmanuel.Skin (Open Source)",
+      "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "oleth-10",
+      "name": "Emmanuel.Skin (Open Source)",
+      "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "peg-75-lanolin",
+      "name": "Emmanuel.Skin (Open Source)",
+      "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "laureth-23",
+      "name": "Emmanuel.Skin (Open Source)",
+      "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "lanolin-alcohol",
+      "name": "Emmanuel.Skin (Open Source)",
+      "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "vitamin-a-palmitate",
+      "name": "Emmanuel.Skin (Open Source)",
+      "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "sodium-chloride",
+      "name": "Emmanuel.Skin (Open Source)",
+      "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "capric-acid",
+      "name": "Emmanuel.Skin (Open Source)",
+      "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "benzoic-acid",
+      "name": "Emmanuel.Skin (Open Source)",
+      "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "camphor",
+      "name": "Emmanuel.Skin (Open Source)",
+      "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "talc",
+      "name": "Emmanuel.Skin (Open Source)",
+      "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "beta-carotene",
+      "name": "Emmanuel.Skin (Open Source)",
+      "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "colloidal-sulfur",
+      "name": "Emmanuel.Skin (Open Source)",
+      "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "dioctyl-succinate",
+      "name": "Emmanuel.Skin (Open Source)",
+      "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "sulfated-castor-oil",
+      "name": "Emmanuel.Skin (Open Source)",
+      "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "sulfated-jojoba-oil",
+      "name": "Emmanuel.Skin (Open Source)",
+      "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "red-algae",
+      "name": "Emmanuel.Skin (Open Source)",
+      "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "lithium-stearate",
+      "name": "Emmanuel.Skin (Open Source)",
+      "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "magnesium-stearate",
+      "name": "Emmanuel.Skin (Open Source)",
+      "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "ethylparaben",
+      "name": "Emmanuel.Skin (Open Source)",
+      "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "propylparaben",
+      "name": "Emmanuel.Skin (Open Source)",
+      "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "papain",
+      "name": "Emmanuel.Skin (Open Source)",
+      "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "calendula",
+      "name": "Emmanuel.Skin (Open Source)",
+      "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "lanolin-oil",
+      "name": "Emmanuel.Skin (Open Source)",
+      "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "lanolin-wax",
+      "name": "Emmanuel.Skin (Open Source)",
+      "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "polyethylene-glycol",
+      "name": "Emmanuel.Skin (Open Source)",
+      "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "acetone",
+      "name": "Emmanuel.Skin (Open Source)",
+      "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "magnesium-aluminum-silicate",
+      "name": "Emmanuel.Skin (Open Source)",
+      "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "coconut-oil-fractionated",
+      "name": "Emmanuel.Skin (Open Source)",
+      "url": "https://github.com/VincentEmmanuel/emmanuel.skin",
+      "type": "github"
+    }
+  ],
+  "skin_type_notes": []
+}

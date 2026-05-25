@@ -1,0 +1,124 @@
+{
+  "meta": {
+    "source": "cir",
+    "exported_at": "2026-05-25T23:12:12.629853",
+    "db_path": "/Users/username/Repos/DABBLE/tekstil-innsamling-oslo/data/ingredients.db"
+  },
+  "ingredients": [
+    {
+      "id": "chlorphenesin",
+      "inci_name": "Chlorphenesin",
+      "irritancy": 0,
+      "category": "Unknown",
+      "category_group": null,
+      "description": "Preservative and biocide used in cosmetics at concentrations up to 0.3% (leave-on) and 0.32% (rinse-off). The CIR Expert Panel concluded it is safe in present practices of use and concentration.",
+      "flags": null
+    },
+    {
+      "id": "sodium-lauryl-sulfate",
+      "inci_name": "Sodium Lauryl Sulfate",
+      "irritancy": 2,
+      "category": "Surfactant",
+      "category_group": "sulfate",
+      "description": "Strong anionic surfactant. More irritating than comedogenic, but can disrupt skin barrier and contribute to acne. Rated 5 for irritation potential.",
+      "flags": [
+        "highly_irritating",
+        "surfactant",
+        "barrier_disruptor"
+      ]
+    }
+  ],
+  "ratings": [
+    {
+      "ingredient_id": "chlorphenesin",
+      "source_name": "CIR Safety Assessment (PDF)",
+      "rating": 0,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "high",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "sodium-lauryl-sulfate",
+      "source_name": "CIR Summary",
+      "rating": 5,
+      "irritancy": 2,
+      "scale": "fulton-0-5",
+      "evidence_level": "high",
+      "sample_size": null,
+      "notes": null
+    }
+  ],
+  "synonyms": [
+    {
+      "ingredient_id": "sodium-lauryl-sulfate",
+      "synonym": "dodecyl sodium sulfate"
+    },
+    {
+      "ingredient_id": "sodium-lauryl-sulfate",
+      "synonym": "sds"
+    },
+    {
+      "ingredient_id": "sodium-lauryl-sulfate",
+      "synonym": "sls"
+    },
+    {
+      "ingredient_id": "sodium-lauryl-sulfate",
+      "synonym": "sodium dodecyl sulfate"
+    }
+  ],
+  "sources": [
+    {
+      "ingredient_id": "sodium-lauryl-sulfate",
+      "name": "CIR Summary",
+      "url": "https://www.cir-safety.org/sites/default/files/imports/alerts.pdf",
+      "type": "regulatory"
+    },
+    {
+      "ingredient_id": "sodium-lauryl-sulfate",
+      "name": "EU SCCS Notes",
+      "url": "https://health.ec.europa.eu/publications/sccs-notes-guidance-testing-cosmetic-ingredients-and-their-safety-evaluation-12th-revision_en",
+      "type": "government"
+    },
+    {
+      "ingredient_id": "chlorphenesin",
+      "name": "CIR Safety Assessment (PDF)",
+      "url": "https://www.cir-safety.org/sites/default/files/Chlorp092012rep.pdf",
+      "type": "regulatory"
+    },
+    {
+      "ingredient_id": "chlorphenesin",
+      "name": "Sage Journals - Safety Assessment Publication",
+      "url": "https://journals.sagepub.com/doi/10.1177/1091581814526893",
+      "type": "study"
+    }
+  ],
+  "skin_type_notes": [
+    {
+      "ingredient_id": "sodium-lauryl-sulfate",
+      "skin_type": "acneProne",
+      "advice": "avoid"
+    },
+    {
+      "ingredient_id": "sodium-lauryl-sulfate",
+      "skin_type": "dry",
+      "advice": "avoid"
+    },
+    {
+      "ingredient_id": "sodium-lauryl-sulfate",
+      "skin_type": "normal",
+      "advice": "caution"
+    },
+    {
+      "ingredient_id": "sodium-lauryl-sulfate",
+      "skin_type": "oily",
+      "advice": "avoid"
+    },
+    {
+      "ingredient_id": "sodium-lauryl-sulfate",
+      "skin_type": "sensitive",
+      "advice": "avoid"
+    }
+  ]
+}

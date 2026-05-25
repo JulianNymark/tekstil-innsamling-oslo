@@ -3,6 +3,7 @@ import { getDb } from '@/lib/db';
 
 /**
  * Normalizes an ingredient name for matching:
+ * - Strips surrounding quotes: "1,2-hexanediol" -> 1,2-hexanediol
  * - Strips concentrations: (8%), [10%], {5%}, 8%, etc.
  * - Strips parenthetical content: (SOYBEAN), (RICE), etc.
  * - Strips leading section header remnants like "ACTIVE INGREDIENTS:"
@@ -12,6 +13,10 @@ function normalizeIngredientName(name: string): string {
   return name
     .toLowerCase()
     .trim()
+    // Strip surrounding quotes
+    .replace(/^["']|["']$/g, '')
+    // Strip trailing period (e.g., "potassium sorbate.")
+    .replace(/\.$/, '')
     // Strip leading section headers (e.g., "active ingredients:", "inactive ingredients:")
     .replace(/^(?:active|inactive|ingredients)\s*:?\s*/i, '')
     // Strip concentrations in various formats
@@ -81,15 +86,19 @@ export async function POST(request: NextRequest) {
         `).get(`%${normalizedName}%`);
       }
 
-      // Try reverse: INCI name is substring of normalized (for truncated inputs)
-      if (!result) {
+      // Try word-boundary match: INCI is a complete word in the normalized input
+      // This avoids false positives like "hexane" matching inside "2-hexanediol"
+      if (!result && normalizedName.length >= 3) {
         result = db.prepare(`
           SELECT i.id, i.inci_name, i.irritancy, i.category, i.category_group,
                  i.description, i.flags
           FROM ingredients i
-          WHERE ? LIKE '%' || LOWER(i.inci_name) || '%'
+          WHERE ? LIKE '% ' || LOWER(i.inci_name) || ' %'
+             OR ? LIKE LOWER(i.inci_name) || ' %'
+             OR ? LIKE '% ' || LOWER(i.inci_name)
+             OR ? = LOWER(i.inci_name)
           LIMIT 1
-        `).get(normalizedName);
+        `).get(normalizedName, normalizedName, normalizedName, normalizedName);
       }
 
       if (result) {
@@ -155,15 +164,23 @@ export async function POST(request: NextRequest) {
         `).get(normalizedName, normalizedName, normalizedName);
 
         if (!regulatory) {
-          // Try partial match on regulatory names
+          // Try word-boundary match on regulatory names to avoid false positives
           const regulatoryPartial = db.prepare(`
             SELECT inci_name, status, annex, restriction_details, conditions, regulation_source
             FROM regulatory_status
-            WHERE LOWER(inci_name) LIKE ?
-               OR LOWER(chemical_name) LIKE ?
-               OR LOWER(glossary_name) LIKE ?
+            WHERE ? LIKE '% ' || LOWER(inci_name) || ' %'
+               OR ? LIKE LOWER(inci_name) || ' %'
+               OR ? LIKE '% ' || LOWER(inci_name)
+               OR LOWER(inci_name) = ?
+               OR ? LIKE '% ' || LOWER(chemical_name) || ' %'
+               OR ? LIKE LOWER(chemical_name) || ' %'
+               OR ? LIKE '% ' || LOWER(chemical_name)
+               OR LOWER(chemical_name) = ?
             LIMIT 1
-          `).get(`%${normalizedName}%`, `%${normalizedName}%`, `%${normalizedName}%`);
+          `).get(
+            normalizedName, normalizedName, normalizedName, normalizedName,
+            normalizedName, normalizedName, normalizedName, normalizedName
+          );
 
           if (regulatoryPartial) {
             matchedRawNames.add(normalizedName);

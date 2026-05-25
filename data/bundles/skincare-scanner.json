@@ -1,0 +1,2815 @@
+{
+  "meta": {
+    "source": "skincare-scanner",
+    "exported_at": "2026-05-25T23:12:12.391622",
+    "db_path": "/Users/username/Repos/DABBLE/tekstil-innsamling-oslo/data/ingredients.db"
+  },
+  "ingredients": [
+    {
+      "id": "4-methylbenzylidene-camphor",
+      "inci_name": "4-Methylbenzylidene Camphor",
+      "irritancy": 0,
+      "category": "Unknown",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "adapalene",
+      "inci_name": "Adapalene",
+      "irritancy": 0,
+      "category": "Unknown",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "alcohol-denat",
+      "inci_name": "Alcohol Denat.",
+      "irritancy": 0,
+      "category": "Unknown",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "alpha-isomethyl-ionone",
+      "inci_name": "Alpha-Isomethyl Ionone",
+      "irritancy": 0,
+      "category": "Unknown",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "ammonium-laureth-sulfate",
+      "inci_name": "Ammonium Laureth Sulfate",
+      "irritancy": 0,
+      "category": "Unknown",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "ammonium-lauryl-sulfate",
+      "inci_name": "Ammonium Lauryl Sulfate",
+      "irritancy": 0,
+      "category": "Unknown",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "amodimethicone",
+      "inci_name": "Amodimethicone",
+      "irritancy": 0,
+      "category": "Unknown",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "amyl-cinnamal",
+      "inci_name": "Amyl Cinnamal",
+      "irritancy": 0,
+      "category": "Unknown",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "amylcinnamyl-alcohol",
+      "inci_name": "Amylcinnamyl Alcohol",
+      "irritancy": 0,
+      "category": "Unknown",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "anisyl-alcohol",
+      "inci_name": "Anisyl Alcohol",
+      "irritancy": 0,
+      "category": "Unknown",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "avobenzone",
+      "inci_name": "Avobenzone",
+      "irritancy": 0,
+      "category": "Unknown",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "benzyl-alcohol",
+      "inci_name": "Benzyl Alcohol",
+      "irritancy": 0,
+      "category": "Unknown",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "benzyl-cinnamate",
+      "inci_name": "Benzyl Cinnamate",
+      "irritancy": 0,
+      "category": "Unknown",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "benzylparaben",
+      "inci_name": "Benzylparaben",
+      "irritancy": 0,
+      "category": "Unknown",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "bergamot-oil",
+      "inci_name": "Bergamot Oil",
+      "irritancy": 0,
+      "category": "Unknown",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "betaine",
+      "inci_name": "Betaine",
+      "irritancy": 0,
+      "category": "Unknown",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "bha",
+      "inci_name": "BHA",
+      "irritancy": 0,
+      "category": "Unknown",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "bht",
+      "inci_name": "BHT",
+      "irritancy": 0,
+      "category": "Unknown",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "bronopol",
+      "inci_name": "Bronopol",
+      "irritancy": 0,
+      "category": "Unknown",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "butylparaben",
+      "inci_name": "Butylparaben",
+      "irritancy": 0,
+      "category": "Unknown",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "butylphenyl-methylpropional",
+      "inci_name": "Butylphenyl Methylpropional",
+      "irritancy": 0,
+      "category": "Unknown",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "capryliccapric-triglyceride",
+      "inci_name": "Caprylic/Capric Triglyceride",
+      "irritancy": 0,
+      "category": "Unknown",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "caprylyl-glycol",
+      "inci_name": "Caprylyl Glycol",
+      "irritancy": 0,
+      "category": "Unknown",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "chamomile-extract",
+      "inci_name": "Chamomile Extract",
+      "irritancy": 0,
+      "category": "Unknown",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "cinnamal",
+      "inci_name": "Cinnamal",
+      "irritancy": 0,
+      "category": "Unknown",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "cinnamon-bark-oil",
+      "inci_name": "Cinnamon Bark Oil",
+      "irritancy": 0,
+      "category": "Unknown",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "cinnamyl-alcohol",
+      "inci_name": "Cinnamyl Alcohol",
+      "irritancy": 0,
+      "category": "Unknown",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "citral",
+      "inci_name": "Citral",
+      "irritancy": 0,
+      "category": "Unknown",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "citric-acid",
+      "inci_name": "Citric Acid",
+      "irritancy": 0,
+      "category": "Unknown",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "citronellol",
+      "inci_name": "Citronellol",
+      "irritancy": 0,
+      "category": "Unknown",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "clove-oil",
+      "inci_name": "Clove Oil",
+      "irritancy": 0,
+      "category": "Unknown",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "cocamidopropyl-betaine",
+      "inci_name": "Cocamidopropyl Betaine",
+      "irritancy": 0,
+      "category": "Unknown",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "cocamidopropyl-hydroxysultaine",
+      "inci_name": "Cocamidopropyl Hydroxysultaine",
+      "irritancy": 0,
+      "category": "Unknown",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "coco-glucoside",
+      "inci_name": "Coco-Glucoside",
+      "irritancy": 0,
+      "category": "Unknown",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "copper-tripeptide-1",
+      "inci_name": "Copper Tripeptide-1",
+      "irritancy": 0,
+      "category": "Unknown",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "coumarin",
+      "inci_name": "Coumarin",
+      "irritancy": 0,
+      "category": "Unknown",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "cyclohexasiloxane",
+      "inci_name": "Cyclohexasiloxane",
+      "irritancy": 0,
+      "category": "Unknown",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "decamethylcyclopentasiloxane",
+      "inci_name": "Decamethylcyclopentasiloxane",
+      "irritancy": 0,
+      "category": "Unknown",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "decyl-glucoside",
+      "inci_name": "Decyl Glucoside",
+      "irritancy": 0,
+      "category": "Unknown",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "dehydroacetic-acid",
+      "inci_name": "Dehydroacetic Acid",
+      "irritancy": 0,
+      "category": "Unknown",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "diazolidinyl-urea",
+      "inci_name": "Diazolidinyl Urea",
+      "irritancy": 0,
+      "category": "Unknown",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "dibutyl-phthalate-dbp",
+      "inci_name": "Dibutyl Phthalate (DBP)",
+      "irritancy": 0,
+      "category": "Unknown",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "diethyl-phthalate-dep",
+      "inci_name": "Diethyl Phthalate (DEP)",
+      "irritancy": 0,
+      "category": "Unknown",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "diethylhexyl-phthalate-dehp",
+      "inci_name": "Diethylhexyl Phthalate (DEHP)",
+      "irritancy": 0,
+      "category": "Unknown",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "dipotassium-glycyrrhizate",
+      "inci_name": "Dipotassium Glycyrrhizate",
+      "irritancy": 0,
+      "category": "Unknown",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "disodium-laureth-sulfosuccinate",
+      "inci_name": "Disodium Laureth Sulfosuccinate",
+      "irritancy": 0,
+      "category": "Unknown",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "dmdm-hydantoin",
+      "inci_name": "DMDM Hydantoin",
+      "irritancy": 0,
+      "category": "Unknown",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "epidermal-growth-factor",
+      "inci_name": "Epidermal Growth Factor",
+      "irritancy": 0,
+      "category": "Unknown",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "eucalyptus-oil",
+      "inci_name": "Eucalyptus Oil",
+      "irritancy": 0,
+      "category": "Unknown",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "eugenol",
+      "inci_name": "Eugenol",
+      "irritancy": 0,
+      "category": "Unknown",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "evernia-furfuracea-extract",
+      "inci_name": "Evernia Furfuracea Extract",
+      "irritancy": 0,
+      "category": "Unknown",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "evernia-prunastri-extract",
+      "inci_name": "Evernia Prunastri Extract",
+      "irritancy": 0,
+      "category": "Unknown",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "farnesol",
+      "inci_name": "Farnesol",
+      "irritancy": 0,
+      "category": "Unknown",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "formaldehyde",
+      "inci_name": "Formaldehyde",
+      "irritancy": 0,
+      "category": "Unknown",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "geraniol",
+      "inci_name": "Geraniol",
+      "irritancy": 0,
+      "category": "Unknown",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "gluconolactone",
+      "inci_name": "Gluconolactone",
+      "irritancy": 0,
+      "category": "Unknown",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "hexyl-cinnamal",
+      "inci_name": "Hexyl Cinnamal",
+      "irritancy": 0,
+      "category": "Unknown",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "homosalate",
+      "inci_name": "Homosalate",
+      "irritancy": 0,
+      "category": "Unknown",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "hyaluronic-acid",
+      "inci_name": "Hyaluronic Acid",
+      "irritancy": 0,
+      "category": "Unknown",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "hydroquinone",
+      "inci_name": "Hydroquinone",
+      "irritancy": 0,
+      "category": "Unknown",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "hydroxycitronellal",
+      "inci_name": "Hydroxycitronellal",
+      "irritancy": 0,
+      "category": "Unknown",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "imidazolidinyl-urea",
+      "inci_name": "Imidazolidinyl Urea",
+      "irritancy": 0,
+      "category": "Unknown",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "iso-eugenol",
+      "inci_name": "Iso Eugenol",
+      "irritancy": 0,
+      "category": "Unknown",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "isobutylparaben",
+      "inci_name": "Isobutylparaben",
+      "irritancy": 0,
+      "category": "Unknown",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "isopropyl-alcohol",
+      "inci_name": "Isopropyl Alcohol",
+      "irritancy": 0,
+      "category": "Unknown",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "lauryl-glucoside",
+      "inci_name": "Lauryl Glucoside",
+      "irritancy": 0,
+      "category": "Unknown",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "lavender-oil",
+      "inci_name": "Lavender Oil",
+      "irritancy": 0,
+      "category": "Unknown",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "lemon-oil",
+      "inci_name": "Lemon Oil",
+      "irritancy": 0,
+      "category": "Unknown",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "lemongrass-oil",
+      "inci_name": "Lemongrass Oil",
+      "irritancy": 0,
+      "category": "Unknown",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "lime-oil",
+      "inci_name": "Lime Oil",
+      "irritancy": 0,
+      "category": "Unknown",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "limonene",
+      "inci_name": "Limonene",
+      "irritancy": 0,
+      "category": "Unknown",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "linalool",
+      "inci_name": "Linalool",
+      "irritancy": 0,
+      "category": "Unknown",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "methyl-2-octynoate",
+      "inci_name": "Methyl 2-Octynoate",
+      "irritancy": 0,
+      "category": "Unknown",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "methylchloroisothiazolinone",
+      "inci_name": "Methylchloroisothiazolinone",
+      "irritancy": 0,
+      "category": "Unknown",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "methylisothiazolinone",
+      "inci_name": "Methylisothiazolinone",
+      "irritancy": 0,
+      "category": "Unknown",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "methylparaben",
+      "inci_name": "Methylparaben",
+      "irritancy": 0,
+      "category": "Unknown",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "nonylphenol-ethoxylates",
+      "inci_name": "Nonylphenol Ethoxylates",
+      "irritancy": 0,
+      "category": "Unknown",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "oat-kernel-extract",
+      "inci_name": "Oat Kernel Extract",
+      "irritancy": 0,
+      "category": "Unknown",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "octinoxate",
+      "inci_name": "Octinoxate",
+      "irritancy": 0,
+      "category": "Unknown",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "octisalate",
+      "inci_name": "Octisalate",
+      "irritancy": 0,
+      "category": "Unknown",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "octocrylene",
+      "inci_name": "Octocrylene",
+      "irritancy": 0,
+      "category": "Unknown",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "orange-oil",
+      "inci_name": "Orange Oil",
+      "irritancy": 0,
+      "category": "Unknown",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "oxybenzone",
+      "inci_name": "Oxybenzone",
+      "irritancy": 0,
+      "category": "Unknown",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "palmitoyl-tetrapeptide-7",
+      "inci_name": "Palmitoyl Tetrapeptide-7",
+      "irritancy": 0,
+      "category": "Unknown",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "palmitoyl-tripeptide-1",
+      "inci_name": "Palmitoyl Tripeptide-1",
+      "irritancy": 0,
+      "category": "Unknown",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "patchouli-oil",
+      "inci_name": "Patchouli Oil",
+      "irritancy": 0,
+      "category": "Unknown",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "pentylene-glycol",
+      "inci_name": "Pentylene Glycol",
+      "irritancy": 0,
+      "category": "Unknown",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "peppermint-oil",
+      "inci_name": "Peppermint Oil",
+      "irritancy": 0,
+      "category": "Unknown",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "phenyl-trimethicone",
+      "inci_name": "Phenyl Trimethicone",
+      "irritancy": 0,
+      "category": "Unknown",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "polysilicone-11",
+      "inci_name": "Polysilicone-11",
+      "irritancy": 0,
+      "category": "Unknown",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "potassium-sorbate",
+      "inci_name": "Potassium Sorbate",
+      "irritancy": 0,
+      "category": "Unknown",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "propanediol",
+      "inci_name": "Propanediol",
+      "irritancy": 0,
+      "category": "Unknown",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "quaternium-15",
+      "inci_name": "Quaternium-15",
+      "irritancy": 0,
+      "category": "Unknown",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "retinaldehyde",
+      "inci_name": "Retinaldehyde",
+      "irritancy": 0,
+      "category": "Unknown",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "retinyl-palmitate",
+      "inci_name": "Retinyl Palmitate",
+      "irritancy": 0,
+      "category": "Unknown",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "rosemary-oil",
+      "inci_name": "Rosemary Oil",
+      "irritancy": 0,
+      "category": "Unknown",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "sodium-benzoate",
+      "inci_name": "Sodium Benzoate",
+      "irritancy": 0,
+      "category": "Unknown",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "sodium-c14-16-olefin-sulfonate",
+      "inci_name": "Sodium C14-16 Olefin Sulfonate",
+      "irritancy": 0,
+      "category": "Unknown",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "sodium-coco-sulfate",
+      "inci_name": "Sodium Coco-Sulfate",
+      "irritancy": 0,
+      "category": "Unknown",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "sodium-cocoyl-isethionate",
+      "inci_name": "Sodium Cocoyl Isethionate",
+      "irritancy": 0,
+      "category": "Unknown",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "sodium-lauroamphoacetate",
+      "inci_name": "Sodium Lauroamphoacetate",
+      "irritancy": 0,
+      "category": "Unknown",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "sodium-lauroyl-glutamate",
+      "inci_name": "Sodium Lauroyl Glutamate",
+      "irritancy": 0,
+      "category": "Unknown",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "sodium-lauroyl-methyl-isethionate",
+      "inci_name": "Sodium Lauroyl Methyl Isethionate",
+      "irritancy": 0,
+      "category": "Unknown",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "sodium-lauroyl-sarcosinate",
+      "inci_name": "Sodium Lauroyl Sarcosinate",
+      "irritancy": 0,
+      "category": "Unknown",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "sodium-methyl-cocoyl-taurate",
+      "inci_name": "Sodium Methyl Cocoyl Taurate",
+      "irritancy": 0,
+      "category": "Unknown",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "tetrasodium-edta",
+      "inci_name": "Tetrasodium EDTA",
+      "irritancy": 0,
+      "category": "Unknown",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "tranexamic-acid",
+      "inci_name": "Tranexamic Acid",
+      "irritancy": 0,
+      "category": "Unknown",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "tretinoin",
+      "inci_name": "Tretinoin",
+      "irritancy": 0,
+      "category": "Unknown",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "triclocarban",
+      "inci_name": "Triclocarban",
+      "irritancy": 0,
+      "category": "Unknown",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "triclosan",
+      "inci_name": "Triclosan",
+      "irritancy": 0,
+      "category": "Unknown",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "witch-hazel",
+      "inci_name": "Witch Hazel",
+      "irritancy": 0,
+      "category": "Unknown",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    },
+    {
+      "id": "ylang-ylang-oil",
+      "inci_name": "Ylang-Ylang Oil",
+      "irritancy": 0,
+      "category": "Unknown",
+      "category_group": null,
+      "description": "",
+      "flags": null
+    }
+  ],
+  "ratings": [
+    {
+      "ingredient_id": "ammonium-lauryl-sulfate",
+      "source_name": "Skincare Ingredient Scanner (Open Source)",
+      "rating": 0,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "ammonium-laureth-sulfate",
+      "source_name": "Skincare Ingredient Scanner (Open Source)",
+      "rating": 0,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "sodium-c14-16-olefin-sulfonate",
+      "source_name": "Skincare Ingredient Scanner (Open Source)",
+      "rating": 0,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "cocamidopropyl-betaine",
+      "source_name": "Skincare Ingredient Scanner (Open Source)",
+      "rating": 2,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "sodium-coco-sulfate",
+      "source_name": "Skincare Ingredient Scanner (Open Source)",
+      "rating": 0,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "disodium-laureth-sulfosuccinate",
+      "source_name": "Skincare Ingredient Scanner (Open Source)",
+      "rating": 0,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "sodium-methyl-cocoyl-taurate",
+      "source_name": "Skincare Ingredient Scanner (Open Source)",
+      "rating": 0,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "sodium-lauroyl-sarcosinate",
+      "source_name": "Skincare Ingredient Scanner (Open Source)",
+      "rating": 0,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "cocamidopropyl-hydroxysultaine",
+      "source_name": "Skincare Ingredient Scanner (Open Source)",
+      "rating": 0,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "sodium-lauroamphoacetate",
+      "source_name": "Skincare Ingredient Scanner (Open Source)",
+      "rating": 0,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "sodium-lauroyl-glutamate",
+      "source_name": "Skincare Ingredient Scanner (Open Source)",
+      "rating": 0,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "sodium-cocoyl-isethionate",
+      "source_name": "Skincare Ingredient Scanner (Open Source)",
+      "rating": 0,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "sodium-lauroyl-methyl-isethionate",
+      "source_name": "Skincare Ingredient Scanner (Open Source)",
+      "rating": 0,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "lauryl-glucoside",
+      "source_name": "Skincare Ingredient Scanner (Open Source)",
+      "rating": 0,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "decyl-glucoside",
+      "source_name": "Skincare Ingredient Scanner (Open Source)",
+      "rating": 0,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "coco-glucoside",
+      "source_name": "Skincare Ingredient Scanner (Open Source)",
+      "rating": 0,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "pentylene-glycol",
+      "source_name": "Skincare Ingredient Scanner (Open Source)",
+      "rating": 0,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "hyaluronic-acid",
+      "source_name": "Skincare Ingredient Scanner (Open Source)",
+      "rating": 0,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "citric-acid",
+      "source_name": "Skincare Ingredient Scanner (Open Source)",
+      "rating": 0,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "gluconolactone",
+      "source_name": "Skincare Ingredient Scanner (Open Source)",
+      "rating": 0,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "retinaldehyde",
+      "source_name": "Skincare Ingredient Scanner (Open Source)",
+      "rating": 0,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "retinyl-palmitate",
+      "source_name": "Skincare Ingredient Scanner (Open Source)",
+      "rating": 0,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "tretinoin",
+      "source_name": "Skincare Ingredient Scanner (Open Source)",
+      "rating": 0,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "adapalene",
+      "source_name": "Skincare Ingredient Scanner (Open Source)",
+      "rating": 0,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "tranexamic-acid",
+      "source_name": "Skincare Ingredient Scanner (Open Source)",
+      "rating": 0,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "hydroquinone",
+      "source_name": "Skincare Ingredient Scanner (Open Source)",
+      "rating": 0,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "dipotassium-glycyrrhizate",
+      "source_name": "Skincare Ingredient Scanner (Open Source)",
+      "rating": 0,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "chamomile-extract",
+      "source_name": "Skincare Ingredient Scanner (Open Source)",
+      "rating": 0,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "witch-hazel",
+      "source_name": "Skincare Ingredient Scanner (Open Source)",
+      "rating": 0,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "alcohol-denat",
+      "source_name": "Skincare Ingredient Scanner (Open Source)",
+      "rating": 0,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "isopropyl-alcohol",
+      "source_name": "Skincare Ingredient Scanner (Open Source)",
+      "rating": 0,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "benzyl-alcohol",
+      "source_name": "Skincare Ingredient Scanner (Open Source)",
+      "rating": 0,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "methylisothiazolinone",
+      "source_name": "Skincare Ingredient Scanner (Open Source)",
+      "rating": 0,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "methylchloroisothiazolinone",
+      "source_name": "Skincare Ingredient Scanner (Open Source)",
+      "rating": 0,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "diazolidinyl-urea",
+      "source_name": "Skincare Ingredient Scanner (Open Source)",
+      "rating": 0,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "imidazolidinyl-urea",
+      "source_name": "Skincare Ingredient Scanner (Open Source)",
+      "rating": 0,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "dmdm-hydantoin",
+      "source_name": "Skincare Ingredient Scanner (Open Source)",
+      "rating": 0,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "quaternium-15",
+      "source_name": "Skincare Ingredient Scanner (Open Source)",
+      "rating": 0,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "bronopol",
+      "source_name": "Skincare Ingredient Scanner (Open Source)",
+      "rating": 0,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "formaldehyde",
+      "source_name": "Skincare Ingredient Scanner (Open Source)",
+      "rating": 0,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "methylparaben",
+      "source_name": "Skincare Ingredient Scanner (Open Source)",
+      "rating": 0,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "butylparaben",
+      "source_name": "Skincare Ingredient Scanner (Open Source)",
+      "rating": 0,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "benzylparaben",
+      "source_name": "Skincare Ingredient Scanner (Open Source)",
+      "rating": 0,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "isobutylparaben",
+      "source_name": "Skincare Ingredient Scanner (Open Source)",
+      "rating": 0,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "sodium-benzoate",
+      "source_name": "Skincare Ingredient Scanner (Open Source)",
+      "rating": 0,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "potassium-sorbate",
+      "source_name": "Skincare Ingredient Scanner (Open Source)",
+      "rating": 0,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "dehydroacetic-acid",
+      "source_name": "Skincare Ingredient Scanner (Open Source)",
+      "rating": 0,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "caprylyl-glycol",
+      "source_name": "Skincare Ingredient Scanner (Open Source)",
+      "rating": 0,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "tetrasodium-edta",
+      "source_name": "Skincare Ingredient Scanner (Open Source)",
+      "rating": 0,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "bht",
+      "source_name": "Skincare Ingredient Scanner (Open Source)",
+      "rating": 0,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "bha",
+      "source_name": "Skincare Ingredient Scanner (Open Source)",
+      "rating": 0,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "oxybenzone",
+      "source_name": "Skincare Ingredient Scanner (Open Source)",
+      "rating": 0,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "octinoxate",
+      "source_name": "Skincare Ingredient Scanner (Open Source)",
+      "rating": 0,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "octisalate",
+      "source_name": "Skincare Ingredient Scanner (Open Source)",
+      "rating": 0,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "homosalate",
+      "source_name": "Skincare Ingredient Scanner (Open Source)",
+      "rating": 0,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "octocrylene",
+      "source_name": "Skincare Ingredient Scanner (Open Source)",
+      "rating": 0,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "avobenzone",
+      "source_name": "Skincare Ingredient Scanner (Open Source)",
+      "rating": 0,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "4-methylbenzylidene-camphor",
+      "source_name": "Skincare Ingredient Scanner (Open Source)",
+      "rating": 0,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "triclosan",
+      "source_name": "Skincare Ingredient Scanner (Open Source)",
+      "rating": 0,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "triclocarban",
+      "source_name": "Skincare Ingredient Scanner (Open Source)",
+      "rating": 0,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "diethyl-phthalate-dep",
+      "source_name": "Skincare Ingredient Scanner (Open Source)",
+      "rating": 0,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "dibutyl-phthalate-dbp",
+      "source_name": "Skincare Ingredient Scanner (Open Source)",
+      "rating": 0,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "diethylhexyl-phthalate-dehp",
+      "source_name": "Skincare Ingredient Scanner (Open Source)",
+      "rating": 0,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "nonylphenol-ethoxylates",
+      "source_name": "Skincare Ingredient Scanner (Open Source)",
+      "rating": 0,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "cyclohexasiloxane",
+      "source_name": "Skincare Ingredient Scanner (Open Source)",
+      "rating": 1,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "phenyl-trimethicone",
+      "source_name": "Skincare Ingredient Scanner (Open Source)",
+      "rating": 1,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "amodimethicone",
+      "source_name": "Skincare Ingredient Scanner (Open Source)",
+      "rating": 1,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "polysilicone-11",
+      "source_name": "Skincare Ingredient Scanner (Open Source)",
+      "rating": 1,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "capryliccapric-triglyceride",
+      "source_name": "Skincare Ingredient Scanner (Open Source)",
+      "rating": 2,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "propanediol",
+      "source_name": "Skincare Ingredient Scanner (Open Source)",
+      "rating": 0,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "betaine",
+      "source_name": "Skincare Ingredient Scanner (Open Source)",
+      "rating": 0,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "oat-kernel-extract",
+      "source_name": "Skincare Ingredient Scanner (Open Source)",
+      "rating": 0,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "lavender-oil",
+      "source_name": "Skincare Ingredient Scanner (Open Source)",
+      "rating": 0,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "peppermint-oil",
+      "source_name": "Skincare Ingredient Scanner (Open Source)",
+      "rating": 0,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "eucalyptus-oil",
+      "source_name": "Skincare Ingredient Scanner (Open Source)",
+      "rating": 0,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "bergamot-oil",
+      "source_name": "Skincare Ingredient Scanner (Open Source)",
+      "rating": 0,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "lemon-oil",
+      "source_name": "Skincare Ingredient Scanner (Open Source)",
+      "rating": 0,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "lime-oil",
+      "source_name": "Skincare Ingredient Scanner (Open Source)",
+      "rating": 0,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "orange-oil",
+      "source_name": "Skincare Ingredient Scanner (Open Source)",
+      "rating": 0,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "lemongrass-oil",
+      "source_name": "Skincare Ingredient Scanner (Open Source)",
+      "rating": 0,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "ylang-ylang-oil",
+      "source_name": "Skincare Ingredient Scanner (Open Source)",
+      "rating": 0,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "clove-oil",
+      "source_name": "Skincare Ingredient Scanner (Open Source)",
+      "rating": 0,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "cinnamon-bark-oil",
+      "source_name": "Skincare Ingredient Scanner (Open Source)",
+      "rating": 0,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "rosemary-oil",
+      "source_name": "Skincare Ingredient Scanner (Open Source)",
+      "rating": 0,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "patchouli-oil",
+      "source_name": "Skincare Ingredient Scanner (Open Source)",
+      "rating": 0,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "limonene",
+      "source_name": "Skincare Ingredient Scanner (Open Source)",
+      "rating": 0,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "linalool",
+      "source_name": "Skincare Ingredient Scanner (Open Source)",
+      "rating": 0,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "geraniol",
+      "source_name": "Skincare Ingredient Scanner (Open Source)",
+      "rating": 0,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "citronellol",
+      "source_name": "Skincare Ingredient Scanner (Open Source)",
+      "rating": 0,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "citral",
+      "source_name": "Skincare Ingredient Scanner (Open Source)",
+      "rating": 0,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "eugenol",
+      "source_name": "Skincare Ingredient Scanner (Open Source)",
+      "rating": 0,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "coumarin",
+      "source_name": "Skincare Ingredient Scanner (Open Source)",
+      "rating": 0,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "farnesol",
+      "source_name": "Skincare Ingredient Scanner (Open Source)",
+      "rating": 0,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "hexyl-cinnamal",
+      "source_name": "Skincare Ingredient Scanner (Open Source)",
+      "rating": 0,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "butylphenyl-methylpropional",
+      "source_name": "Skincare Ingredient Scanner (Open Source)",
+      "rating": 0,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "hydroxycitronellal",
+      "source_name": "Skincare Ingredient Scanner (Open Source)",
+      "rating": 0,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "decamethylcyclopentasiloxane",
+      "source_name": "Skincare Ingredient Scanner (Open Source)",
+      "rating": 0,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "epidermal-growth-factor",
+      "source_name": "Skincare Ingredient Scanner (Open Source)",
+      "rating": 0,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "copper-tripeptide-1",
+      "source_name": "Skincare Ingredient Scanner (Open Source)",
+      "rating": 0,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "palmitoyl-tripeptide-1",
+      "source_name": "Skincare Ingredient Scanner (Open Source)",
+      "rating": 0,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "palmitoyl-tetrapeptide-7",
+      "source_name": "Skincare Ingredient Scanner (Open Source)",
+      "rating": 0,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "amyl-cinnamal",
+      "source_name": "Skincare Ingredient Scanner (Open Source)",
+      "rating": 0,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "amylcinnamyl-alcohol",
+      "source_name": "Skincare Ingredient Scanner (Open Source)",
+      "rating": 0,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "anisyl-alcohol",
+      "source_name": "Skincare Ingredient Scanner (Open Source)",
+      "rating": 0,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "benzyl-cinnamate",
+      "source_name": "Skincare Ingredient Scanner (Open Source)",
+      "rating": 0,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "cinnamyl-alcohol",
+      "source_name": "Skincare Ingredient Scanner (Open Source)",
+      "rating": 0,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "cinnamal",
+      "source_name": "Skincare Ingredient Scanner (Open Source)",
+      "rating": 0,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "alpha-isomethyl-ionone",
+      "source_name": "Skincare Ingredient Scanner (Open Source)",
+      "rating": 0,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "methyl-2-octynoate",
+      "source_name": "Skincare Ingredient Scanner (Open Source)",
+      "rating": 0,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "evernia-prunastri-extract",
+      "source_name": "Skincare Ingredient Scanner (Open Source)",
+      "rating": 0,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "evernia-furfuracea-extract",
+      "source_name": "Skincare Ingredient Scanner (Open Source)",
+      "rating": 0,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    },
+    {
+      "ingredient_id": "iso-eugenol",
+      "source_name": "Skincare Ingredient Scanner (Open Source)",
+      "rating": 0,
+      "irritancy": 0,
+      "scale": "fulton-0-5",
+      "evidence_level": "medium",
+      "sample_size": null,
+      "notes": null
+    }
+  ],
+  "synonyms": [],
+  "sources": [
+    {
+      "ingredient_id": "ammonium-lauryl-sulfate",
+      "name": "Skincare Ingredient Scanner (Open Source)",
+      "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "ammonium-laureth-sulfate",
+      "name": "Skincare Ingredient Scanner (Open Source)",
+      "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "sodium-c14-16-olefin-sulfonate",
+      "name": "Skincare Ingredient Scanner (Open Source)",
+      "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "cocamidopropyl-betaine",
+      "name": "Skincare Ingredient Scanner (Open Source)",
+      "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "sodium-coco-sulfate",
+      "name": "Skincare Ingredient Scanner (Open Source)",
+      "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "disodium-laureth-sulfosuccinate",
+      "name": "Skincare Ingredient Scanner (Open Source)",
+      "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "sodium-methyl-cocoyl-taurate",
+      "name": "Skincare Ingredient Scanner (Open Source)",
+      "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "sodium-lauroyl-sarcosinate",
+      "name": "Skincare Ingredient Scanner (Open Source)",
+      "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "cocamidopropyl-hydroxysultaine",
+      "name": "Skincare Ingredient Scanner (Open Source)",
+      "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "sodium-lauroamphoacetate",
+      "name": "Skincare Ingredient Scanner (Open Source)",
+      "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "sodium-lauroyl-glutamate",
+      "name": "Skincare Ingredient Scanner (Open Source)",
+      "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "sodium-cocoyl-isethionate",
+      "name": "Skincare Ingredient Scanner (Open Source)",
+      "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "sodium-lauroyl-methyl-isethionate",
+      "name": "Skincare Ingredient Scanner (Open Source)",
+      "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "lauryl-glucoside",
+      "name": "Skincare Ingredient Scanner (Open Source)",
+      "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "decyl-glucoside",
+      "name": "Skincare Ingredient Scanner (Open Source)",
+      "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "coco-glucoside",
+      "name": "Skincare Ingredient Scanner (Open Source)",
+      "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "pentylene-glycol",
+      "name": "Skincare Ingredient Scanner (Open Source)",
+      "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "hyaluronic-acid",
+      "name": "Skincare Ingredient Scanner (Open Source)",
+      "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "citric-acid",
+      "name": "Skincare Ingredient Scanner (Open Source)",
+      "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "gluconolactone",
+      "name": "Skincare Ingredient Scanner (Open Source)",
+      "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "retinaldehyde",
+      "name": "Skincare Ingredient Scanner (Open Source)",
+      "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "retinyl-palmitate",
+      "name": "Skincare Ingredient Scanner (Open Source)",
+      "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "tretinoin",
+      "name": "Skincare Ingredient Scanner (Open Source)",
+      "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "adapalene",
+      "name": "Skincare Ingredient Scanner (Open Source)",
+      "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "tranexamic-acid",
+      "name": "Skincare Ingredient Scanner (Open Source)",
+      "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "hydroquinone",
+      "name": "Skincare Ingredient Scanner (Open Source)",
+      "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "dipotassium-glycyrrhizate",
+      "name": "Skincare Ingredient Scanner (Open Source)",
+      "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "chamomile-extract",
+      "name": "Skincare Ingredient Scanner (Open Source)",
+      "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "witch-hazel",
+      "name": "Skincare Ingredient Scanner (Open Source)",
+      "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "alcohol-denat",
+      "name": "Skincare Ingredient Scanner (Open Source)",
+      "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "isopropyl-alcohol",
+      "name": "Skincare Ingredient Scanner (Open Source)",
+      "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "benzyl-alcohol",
+      "name": "Skincare Ingredient Scanner (Open Source)",
+      "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "methylisothiazolinone",
+      "name": "Skincare Ingredient Scanner (Open Source)",
+      "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "methylchloroisothiazolinone",
+      "name": "Skincare Ingredient Scanner (Open Source)",
+      "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "diazolidinyl-urea",
+      "name": "Skincare Ingredient Scanner (Open Source)",
+      "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "imidazolidinyl-urea",
+      "name": "Skincare Ingredient Scanner (Open Source)",
+      "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "dmdm-hydantoin",
+      "name": "Skincare Ingredient Scanner (Open Source)",
+      "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "quaternium-15",
+      "name": "Skincare Ingredient Scanner (Open Source)",
+      "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "bronopol",
+      "name": "Skincare Ingredient Scanner (Open Source)",
+      "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "formaldehyde",
+      "name": "Skincare Ingredient Scanner (Open Source)",
+      "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "methylparaben",
+      "name": "Skincare Ingredient Scanner (Open Source)",
+      "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "butylparaben",
+      "name": "Skincare Ingredient Scanner (Open Source)",
+      "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "benzylparaben",
+      "name": "Skincare Ingredient Scanner (Open Source)",
+      "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "isobutylparaben",
+      "name": "Skincare Ingredient Scanner (Open Source)",
+      "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "sodium-benzoate",
+      "name": "Skincare Ingredient Scanner (Open Source)",
+      "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "potassium-sorbate",
+      "name": "Skincare Ingredient Scanner (Open Source)",
+      "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "dehydroacetic-acid",
+      "name": "Skincare Ingredient Scanner (Open Source)",
+      "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "caprylyl-glycol",
+      "name": "Skincare Ingredient Scanner (Open Source)",
+      "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "tetrasodium-edta",
+      "name": "Skincare Ingredient Scanner (Open Source)",
+      "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "bht",
+      "name": "Skincare Ingredient Scanner (Open Source)",
+      "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "bha",
+      "name": "Skincare Ingredient Scanner (Open Source)",
+      "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "oxybenzone",
+      "name": "Skincare Ingredient Scanner (Open Source)",
+      "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "octinoxate",
+      "name": "Skincare Ingredient Scanner (Open Source)",
+      "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "octisalate",
+      "name": "Skincare Ingredient Scanner (Open Source)",
+      "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "homosalate",
+      "name": "Skincare Ingredient Scanner (Open Source)",
+      "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "octocrylene",
+      "name": "Skincare Ingredient Scanner (Open Source)",
+      "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "avobenzone",
+      "name": "Skincare Ingredient Scanner (Open Source)",
+      "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "4-methylbenzylidene-camphor",
+      "name": "Skincare Ingredient Scanner (Open Source)",
+      "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "triclosan",
+      "name": "Skincare Ingredient Scanner (Open Source)",
+      "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "triclocarban",
+      "name": "Skincare Ingredient Scanner (Open Source)",
+      "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "diethyl-phthalate-dep",
+      "name": "Skincare Ingredient Scanner (Open Source)",
+      "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "dibutyl-phthalate-dbp",
+      "name": "Skincare Ingredient Scanner (Open Source)",
+      "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "diethylhexyl-phthalate-dehp",
+      "name": "Skincare Ingredient Scanner (Open Source)",
+      "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "nonylphenol-ethoxylates",
+      "name": "Skincare Ingredient Scanner (Open Source)",
+      "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "cyclohexasiloxane",
+      "name": "Skincare Ingredient Scanner (Open Source)",
+      "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "phenyl-trimethicone",
+      "name": "Skincare Ingredient Scanner (Open Source)",
+      "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "amodimethicone",
+      "name": "Skincare Ingredient Scanner (Open Source)",
+      "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "polysilicone-11",
+      "name": "Skincare Ingredient Scanner (Open Source)",
+      "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "capryliccapric-triglyceride",
+      "name": "Skincare Ingredient Scanner (Open Source)",
+      "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "propanediol",
+      "name": "Skincare Ingredient Scanner (Open Source)",
+      "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "betaine",
+      "name": "Skincare Ingredient Scanner (Open Source)",
+      "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "oat-kernel-extract",
+      "name": "Skincare Ingredient Scanner (Open Source)",
+      "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "lavender-oil",
+      "name": "Skincare Ingredient Scanner (Open Source)",
+      "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "peppermint-oil",
+      "name": "Skincare Ingredient Scanner (Open Source)",
+      "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "eucalyptus-oil",
+      "name": "Skincare Ingredient Scanner (Open Source)",
+      "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "bergamot-oil",
+      "name": "Skincare Ingredient Scanner (Open Source)",
+      "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "lemon-oil",
+      "name": "Skincare Ingredient Scanner (Open Source)",
+      "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "lime-oil",
+      "name": "Skincare Ingredient Scanner (Open Source)",
+      "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "orange-oil",
+      "name": "Skincare Ingredient Scanner (Open Source)",
+      "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "lemongrass-oil",
+      "name": "Skincare Ingredient Scanner (Open Source)",
+      "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "ylang-ylang-oil",
+      "name": "Skincare Ingredient Scanner (Open Source)",
+      "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "clove-oil",
+      "name": "Skincare Ingredient Scanner (Open Source)",
+      "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "cinnamon-bark-oil",
+      "name": "Skincare Ingredient Scanner (Open Source)",
+      "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "rosemary-oil",
+      "name": "Skincare Ingredient Scanner (Open Source)",
+      "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "patchouli-oil",
+      "name": "Skincare Ingredient Scanner (Open Source)",
+      "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "limonene",
+      "name": "Skincare Ingredient Scanner (Open Source)",
+      "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "linalool",
+      "name": "Skincare Ingredient Scanner (Open Source)",
+      "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "geraniol",
+      "name": "Skincare Ingredient Scanner (Open Source)",
+      "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "citronellol",
+      "name": "Skincare Ingredient Scanner (Open Source)",
+      "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "citral",
+      "name": "Skincare Ingredient Scanner (Open Source)",
+      "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "eugenol",
+      "name": "Skincare Ingredient Scanner (Open Source)",
+      "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "coumarin",
+      "name": "Skincare Ingredient Scanner (Open Source)",
+      "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "farnesol",
+      "name": "Skincare Ingredient Scanner (Open Source)",
+      "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "hexyl-cinnamal",
+      "name": "Skincare Ingredient Scanner (Open Source)",
+      "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "butylphenyl-methylpropional",
+      "name": "Skincare Ingredient Scanner (Open Source)",
+      "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "hydroxycitronellal",
+      "name": "Skincare Ingredient Scanner (Open Source)",
+      "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "decamethylcyclopentasiloxane",
+      "name": "Skincare Ingredient Scanner (Open Source)",
+      "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "epidermal-growth-factor",
+      "name": "Skincare Ingredient Scanner (Open Source)",
+      "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "copper-tripeptide-1",
+      "name": "Skincare Ingredient Scanner (Open Source)",
+      "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "palmitoyl-tripeptide-1",
+      "name": "Skincare Ingredient Scanner (Open Source)",
+      "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "palmitoyl-tetrapeptide-7",
+      "name": "Skincare Ingredient Scanner (Open Source)",
+      "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "amyl-cinnamal",
+      "name": "Skincare Ingredient Scanner (Open Source)",
+      "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "amylcinnamyl-alcohol",
+      "name": "Skincare Ingredient Scanner (Open Source)",
+      "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "anisyl-alcohol",
+      "name": "Skincare Ingredient Scanner (Open Source)",
+      "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "benzyl-cinnamate",
+      "name": "Skincare Ingredient Scanner (Open Source)",
+      "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "cinnamyl-alcohol",
+      "name": "Skincare Ingredient Scanner (Open Source)",
+      "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "cinnamal",
+      "name": "Skincare Ingredient Scanner (Open Source)",
+      "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "alpha-isomethyl-ionone",
+      "name": "Skincare Ingredient Scanner (Open Source)",
+      "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "methyl-2-octynoate",
+      "name": "Skincare Ingredient Scanner (Open Source)",
+      "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "evernia-prunastri-extract",
+      "name": "Skincare Ingredient Scanner (Open Source)",
+      "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "evernia-furfuracea-extract",
+      "name": "Skincare Ingredient Scanner (Open Source)",
+      "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+      "type": "github"
+    },
+    {
+      "ingredient_id": "iso-eugenol",
+      "name": "Skincare Ingredient Scanner (Open Source)",
+      "url": "https://github.com/ruupedev/skincare-ingredient-scanner",
+      "type": "github"
+    }
+  ],
+  "skin_type_notes": []
+}
