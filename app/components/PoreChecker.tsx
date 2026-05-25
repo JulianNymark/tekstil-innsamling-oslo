@@ -10,6 +10,7 @@ import {
   getRatingColorBorder,
   getRatingLabel,
 } from "../utils/ratingColors";
+import { parseIngredientSections } from "../utils/parseIngredientSections";
 import SkinTypeSelect from "./SkinTypeSelect";
 
 interface Ingredient {
@@ -131,67 +132,6 @@ function getSkinTypeAdviceColor(
   };
 
   return colorMap[advice] || "";
-}
-
-function parseIngredientSections(
-  text: string,
-): { name: "active" | "inactive" | "unknown"; content: string }[] {
-  const sections: {
-    name: "active" | "inactive" | "unknown";
-    content: string;
-  }[] = [];
-
-  // Find headers with their positions
-  const activeMatch = text.match(/active\s+ingredients\s*[:\-]?/i);
-  const inactiveMatch = text.match(/inactive\s+ingredients\s*[:\-]?/i);
-
-  if (!activeMatch || !inactiveMatch) {
-    // No split detected, treat as single list
-    return [{ name: "unknown", content: text }];
-  }
-
-  const activeIndex = activeMatch.index ?? 0;
-  const inactiveIndex = inactiveMatch.index ?? 0;
-
-  // Text before first header
-  const firstHeaderIndex = Math.min(activeIndex, inactiveIndex);
-  if (firstHeaderIndex > 0) {
-    const preamble = text.slice(0, firstHeaderIndex).trim();
-    if (preamble.length > 0) {
-      sections.push({ name: "unknown", content: preamble });
-    }
-  }
-
-  // Determine which header comes first
-  if (activeIndex < inactiveIndex) {
-    // Active first, then inactive
-    const activeEnd = activeIndex + activeMatch[0].length;
-    const activeContent = text.slice(activeEnd, inactiveIndex).trim();
-    if (activeContent.length > 0) {
-      sections.push({ name: "active", content: activeContent });
-    }
-
-    const inactiveEnd = inactiveIndex + inactiveMatch[0].length;
-    const inactiveContent = text.slice(inactiveEnd).trim();
-    if (inactiveContent.length > 0) {
-      sections.push({ name: "inactive", content: inactiveContent });
-    }
-  } else {
-    // Inactive first, then active (unusual but possible)
-    const inactiveEnd = inactiveIndex + inactiveMatch[0].length;
-    const inactiveContent = text.slice(inactiveEnd, activeIndex).trim();
-    if (inactiveContent.length > 0) {
-      sections.push({ name: "inactive", content: inactiveContent });
-    }
-
-    const activeEnd = activeIndex + activeMatch[0].length;
-    const activeContent = text.slice(activeEnd).trim();
-    if (activeContent.length > 0) {
-      sections.push({ name: "active", content: activeContent });
-    }
-  }
-
-  return sections;
 }
 
 function findMatchesInText(
