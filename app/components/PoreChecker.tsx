@@ -768,9 +768,9 @@ export default function PoreChecker({ mode }: { mode: Mode }) {
                             }
                             className={`p-4 rounded-xl border cursor-pointer transition-all hover:shadow-sm ${
                               matched.section === "active"
-                                ? "bg-[var(--ds-color-accent-surface-tinted)] border-[var(--ds-color-accent-border-default)] hover:border-[var(--ds-color-accent-border-strong)]"
+                                ? "border-[var(--ds-color-accent-border-default)] hover:border-[var(--ds-color-accent-border-strong)]"
                                 : matched.section === "inactive"
-                                  ? "bg-[var(--ds-color-brand1-surface-tinted)] border-[var(--ds-color-brand1-border-default)] hover:border-[var(--ds-color-brand1-border-strong)]"
+                                  ? "border-[var(--ds-color-accent-border-default)] hover:border-[var(--ds-color-brand1-border-strong)]"
                                   : "bg-[var(--ds-color-surface-tinted)] border-[var(--ds-color-border-default)] hover:border-[var(--ds-color-border-strong)]"
                             }`}
                           >
@@ -1003,7 +1003,7 @@ export default function PoreChecker({ mode }: { mode: Mode }) {
           onClick={() => setSelectedIngredient(null)}
         >
           <div
-            className="bg-[var(--ds-color-surface-default)] rounded-2xl p-6 max-w-lg w-full max-h-[80vh] overflow-y-auto border border-[var(--ds-color-border-default)] shadow-2xl"
+            className="rounded-2xl p-6 max-w-lg w-full max-h-[80vh] overflow-y-auto border border-[var(--ds-color-border-default)] shadow-2xl"
             onClick={(e) => e.stopPropagation()}
           >
             <div className="flex items-start justify-between gap-4 mb-4">
