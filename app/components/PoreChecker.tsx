@@ -5,7 +5,12 @@ import {
   PopoverTriggerContext,
 } from "@digdir/designsystemet-react";
 import { InformationSquareFillIcon } from "@navikt/aksel-icons";
-import { getRatingColor, getRatingLabel } from "../utils/ratingColors";
+import {
+  getRatingColor,
+  getRatingColorBorder,
+  getRatingLabel,
+} from "../utils/ratingColors";
+import SkinTypeSelect from "./SkinTypeSelect";
 
 interface Ingredient {
   id: string;
@@ -86,18 +91,6 @@ function getVerdictStyles(semanticColor: string) {
     },
   };
   return styles[semanticColor] || styles.neutral;
-}
-
-function getSkinTypeLabel(type: SkinType): string {
-  const labels: Record<SkinType, string> = {
-    all: "All Skin Types",
-    oily: "Oily",
-    dry: "Dry",
-    sensitive: "Sensitive",
-    acneProne: "Acne-Prone",
-    normal: "Normal",
-  };
-  return labels[type];
 }
 
 function getSkinTypeAdvice(ingredient: Ingredient, skinType: SkinType): string {
@@ -564,33 +557,10 @@ export default function PoreChecker({ mode }: { mode: Mode }) {
             </div>
 
             {/* Skin Type Filter */}
-            <div className="flex items-center gap-2">
-              <span className="text-sm font-medium text-[var(--ds-color-text-subtle)]">
-                Skin Type:
-              </span>
-              <select
-                value={selectedSkinType}
-                onChange={(e) =>
-                  setSelectedSkinType(e.target.value as SkinType)
-                }
-                className="px-3 py-2 bg-[var(--ds-color-surface-tinted)] border border-[var(--ds-color-border-default)] rounded-lg text-sm text-[var(--ds-color-text-default)] focus:outline-none focus:ring-2 focus:ring-[var(--ds-color-neutral-base-default)]"
-              >
-                {(
-                  [
-                    "all",
-                    "oily",
-                    "dry",
-                    "sensitive",
-                    "acneProne",
-                    "normal",
-                  ] as SkinType[]
-                ).map((type) => (
-                  <option key={type} value={type}>
-                    {getSkinTypeLabel(type)}
-                  </option>
-                ))}
-              </select>
-            </div>
+            <SkinTypeSelect
+              value={selectedSkinType}
+              onChange={setSelectedSkinType}
+            />
           </div>
 
           {ingredientText.trim() && (
@@ -600,7 +570,7 @@ export default function PoreChecker({ mode }: { mode: Mode }) {
                 {[5, 4, 3, 2, 1, 0].map((rating) => (
                   <div
                     key={rating}
-                    className={`p-3 rounded-xl text-center ${getRatingColor(rating)}`}
+                    className={`p-3 rounded-xl text-center ${getRatingColorBorder(rating)} ${getRatingColor(rating)}`}
                   >
                     <div className="text-2xl font-bold">
                       {matchedRatingCounts[rating] || 0}
@@ -718,11 +688,7 @@ export default function PoreChecker({ mode }: { mode: Mode }) {
                         {section.name && (
                           <div className="flex items-center gap-2">
                             <div
-                              className={`px-3 py-1.5 rounded-lg text-xs font-semibold inline-block ${
-                                section.name === "Active Ingredients"
-                                  ? "bg-[var(--ds-color-accent-surface-default)] text-[var(--ds-color-accent-text-default)]"
-                                  : "bg-[var(--ds-color-brand1-surface-default)] text-[var(--ds-color-brand1-text-default)]"
-                              }`}
+                              className={`px-3 py-1.5 rounded-lg text-xs font-semibold inline-block bg-[var(--ds-color-brand1-surface-default)] text-[var(--ds-color-brand1-text-default)]`}
                             >
                               {section.name}
                             </div>
@@ -740,6 +706,7 @@ export default function PoreChecker({ mode }: { mode: Mode }) {
                                   placement="right"
                                   variant="tinted"
                                   data-color="warning"
+                                  style={{ maxWidth: "400px" }}
                                 >
                                   <div>
                                     <strong>Split list detected:</strong> This
@@ -766,13 +733,7 @@ export default function PoreChecker({ mode }: { mode: Mode }) {
                             onClick={() =>
                               setSelectedIngredient(matched.ingredient)
                             }
-                            className={`p-4 rounded-xl border cursor-pointer transition-all hover:shadow-sm ${
-                              matched.section === "active"
-                                ? "border-[var(--ds-color-accent-border-default)] hover:border-[var(--ds-color-accent-border-strong)]"
-                                : matched.section === "inactive"
-                                  ? "border-[var(--ds-color-accent-border-default)] hover:border-[var(--ds-color-brand1-border-strong)]"
-                                  : "bg-[var(--ds-color-surface-tinted)] border-[var(--ds-color-border-default)] hover:border-[var(--ds-color-border-strong)]"
-                            }`}
+                            className={`p-4 rounded-xl border cursor-pointer transition-all hover:shadow-sm border-(--ds-color-accent-border-default) hover:border-(--ds-color-accent-border-strong)`}
                           >
                             <div className="flex items-start justify-between gap-4">
                               <div className="flex-1 min-w-0">
@@ -844,11 +805,8 @@ export default function PoreChecker({ mode }: { mode: Mode }) {
                                 </div>
                               </div>
                               <div
-                                className={`flex-shrink-0 px-3 py-2 rounded-lg text-center min-w-[80px] ${getRatingColor(matched.ingredient.rating)}`}
+                                className={`border border-[var(--ds-color-border-subtle)] flex-shrink-0 px-3 py-2 rounded-lg text-center min-w-[80px] ${getRatingColor(matched.ingredient.rating)}`}
                               >
-                                <div className="text-2xl font-bold">
-                                  {matched.ingredient.rating}
-                                </div>
                                 <div className="text-xs font-medium opacity-80">
                                   {getRatingLabel(matched.ingredient.rating)}
                                 </div>
@@ -1003,7 +961,7 @@ export default function PoreChecker({ mode }: { mode: Mode }) {
           onClick={() => setSelectedIngredient(null)}
         >
           <div
-            className="rounded-2xl p-6 max-w-lg w-full max-h-[80vh] overflow-y-auto border border-[var(--ds-color-border-default)] shadow-2xl"
+            className="bg-[var(--ds-color-neutral-base-contrast-default)] rounded-2xl p-6 max-w-lg w-full max-h-[80vh] overflow-y-auto border border-[var(--ds-color-border-default)] shadow-2xl"
             onClick={(e) => e.stopPropagation()}
           >
             <div className="flex items-start justify-between gap-4 mb-4">
@@ -1311,42 +1269,21 @@ function BrowseMode({
 
         {/* Filters */}
         <div className="flex flex-wrap gap-3">
-          <div className="flex items-center gap-2">
-            <span className="text-sm font-medium text-[var(--ds-color-text-subtle)]">
-              Skin Type:
-            </span>
-            <select
-              value={selectedSkinType}
-              onChange={(e) => onSkinTypeChange(e.target.value as SkinType)}
-              className="px-3 py-2 bg-[var(--ds-color-surface-tinted)] border border-[var(--ds-color-border-default)] rounded-lg text-sm text-[var(--ds-color-text-default)] focus:outline-none focus:ring-2 focus:ring-[var(--ds-color-neutral-base-default)]"
-            >
-              {(
-                [
-                  "all",
-                  "oily",
-                  "dry",
-                  "sensitive",
-                  "acneProne",
-                  "normal",
-                ] as SkinType[]
-              ).map((type) => (
-                <option key={type} value={type}>
-                  {getSkinTypeLabel(type)}
-                </option>
-              ))}
-            </select>
-          </div>
+          <SkinTypeSelect
+            value={selectedSkinType}
+            onChange={onSkinTypeChange}
+          />
 
-          <div className="flex items-center gap-2">
-            <span className="text-sm font-medium text-[var(--ds-color-text-subtle)]">
-              Sort by:
-            </span>
+          <div className="ds-field">
+            <label className="ds-label" data-weight="medium">
+              Sort by
+            </label>
             <select
               value={sortBy}
               onChange={(e) =>
                 setSortBy(e.target.value as "rating" | "name" | "category")
               }
-              className="px-3 py-2 bg-[var(--ds-color-surface-tinted)] border border-[var(--ds-color-border-default)] rounded-lg text-sm text-[var(--ds-color-text-default)] focus:outline-none focus:ring-2 focus:ring-[var(--ds-color-neutral-base-default)]"
+              className="ds-input"
             >
               <option value="rating">Rating (High to Low)</option>
               <option value="name">Name (A-Z)</option>

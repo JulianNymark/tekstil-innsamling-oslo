@@ -97,6 +97,12 @@
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 
+  --color-danger-border-dark: color-mix(
+    in oklch,
+    var(--ds-color-danger-base-default) 75%,
+    black
+  );
+
   /*
     Rating scale colors — 3-tier system:
     Danger (4-5): strong red, Warning (2-3): plain white/black, Success (0-1): green
