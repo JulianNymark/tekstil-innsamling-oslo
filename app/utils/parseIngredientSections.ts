@@ -17,11 +17,18 @@ export function parseIngredientSections(
 ): IngredientSection[] {
   const sections: IngredientSection[] = [];
 
+  // Strip any leading label like "INCI Formula:", "Ingredients:", etc.
+  // But NOT "active ingredients:" or "inactive ingredients:" — those are handled below.
+  let strippedText = text;
+  if (!/^\s*(?:active|inactive)/i.test(text)) {
+    strippedText = text.replace(/^\s*[\w\s]+:\s*/i, '').trim();
+  }
+
   // Find "active" as the start marker
-  const activeMatch = text.match(/\bactive\b/i);
+  const activeMatch = strippedText.match(/\bactive\b/i);
   if (!activeMatch) {
     // No active section — strip bare "ingredients:" prefix if present
-    const content = text
+    const content = strippedText
       .replace(/^\s*ingredients\s*:\s*/i, '')
       .trim();
     return [{ name: "unknown", content }];
@@ -31,7 +38,7 @@ export function parseIngredientSections(
 
   // Text before the active header (if any)
   if (activeIndex > 0) {
-    const preamble = text.slice(0, activeIndex).trim();
+    const preamble = strippedText.slice(0, activeIndex).trim();
     if (preamble.length > 0) {
       sections.push({ name: "unknown", content: preamble });
     }
@@ -39,13 +46,13 @@ export function parseIngredientSections(
 
   // Skip past the active header (including "ingredients" and colon if present)
   const afterActiveWord = activeIndex + activeMatch[0].length;
-  const afterActiveText = text.slice(afterActiveWord);
+  const afterActiveText = strippedText.slice(afterActiveWord);
   const activeHeaderEndMatch = afterActiveText.match(/^[^:\n]*:?\s*/);
   const activeContentStart =
     afterActiveWord + (activeHeaderEndMatch?.[0].length ?? 0);
 
   // Look for the next "(inactive )?ingredients" header after the active one
-  const remaining = text.slice(activeContentStart);
+  const remaining = strippedText.slice(activeContentStart);
   const splitMatch = remaining.match(
     /\b(?:inactive\s+)?ingredients\b[^:\n]*:?\s*/i,
   );

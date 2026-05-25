@@ -77,4 +77,22 @@ describe("parseIngredientSections", () => {
     expect(result[0].name).toBe("unknown");
     expect(result[0].content).toBe("Water, Glycerin");
   });
+
+  it("strips 'INCI Formula:' prefix", () => {
+    const text = "INCI Formula: Aqua/water, alcohol denat., triethyl citrate";
+    const result = parseIngredientSections(text);
+
+    expect(result).toHaveLength(1);
+    expect(result[0].name).toBe("unknown");
+    expect(result[0].content).toBe("Aqua/water, alcohol denat., triethyl citrate");
+  });
+
+  it("strips generic label prefixes like 'Ingredients:'", () => {
+    const text = "Ingredients: Water, Glycerin, Niacinamide";
+    const result = parseIngredientSections(text);
+
+    expect(result).toHaveLength(1);
+    expect(result[0].name).toBe("unknown");
+    expect(result[0].content).toBe("Water, Glycerin, Niacinamide");
+  });
 });

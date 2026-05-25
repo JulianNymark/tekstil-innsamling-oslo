@@ -17,8 +17,8 @@ function normalizeIngredientName(name: string): string {
     .replace(/^["']|["']$/g, '')
     // Strip trailing period (e.g., "potassium sorbate.")
     .replace(/\.$/, '')
-    // Strip leading section headers (e.g., "active ingredients:", "inactive ingredients:")
-    .replace(/^(?:active|inactive|ingredients)\s*:?\s*/i, '')
+    // Strip leading section headers (e.g., "active ingredients:", "inactive ingredients:", "inci formula:")
+    .replace(/^(?:active|inactive|ingredients|inci\s+formula)\s*:?\s*/i, '')
     // Strip concentrations in various formats
     .replace(/\s*[\(\[\{]\s*\d+(?:\.\d+)?\s*%?\s*[\)\]\}]\s*/g, ' ')
     // Strip standalone percentages like "8 %" or "(8%)" that weren't caught above
