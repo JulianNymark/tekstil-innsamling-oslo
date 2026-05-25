@@ -12,21 +12,31 @@ RUN npm install -g pnpm@10.26.2
 COPY package.json pnpm-lock.yaml ./
 RUN pnpm install --frozen-lockfile
 
-# Copy application code
+# Copy application code (includes data/ingredients.db)
 COPY . .
 
-# Build application (generates 'out' directory)
+# Build application
 RUN pnpm run build
 
 # Stage 2: Serve
-FROM nginx:stable-alpine
+FROM node:22-alpine
 
-# Copy custom nginx config
-COPY nginx.conf /etc/nginx/conf.d/default.conf
+WORKDIR /app
 
-# Copy built static files
-COPY --from=build /app/out /usr/share/nginx/html
+# Install pnpm
+RUN npm install -g pnpm@10.26.2
 
-EXPOSE 80
+# Copy built application
+COPY --from=build /app/.next ./.next
+COPY --from=build /app/package.json ./package.json
+COPY --from=build /app/pnpm-lock.yaml ./pnpm-lock.yaml
+COPY --from=build /app/data ./data
 
-CMD ["nginx", "-g", "daemon off;"]
+# Install production dependencies only
+RUN pnpm install --prod --frozen-lockfile
+
+# Expose port
+EXPOSE 3000
+
+# Start Next.js server
+CMD ["pnpm", "start"]

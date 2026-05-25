@@ -10,6 +10,12 @@
 !.yarn/releases
 !.yarn/versions
 
+# python
+.venv
+
+# git
+.git
+
 # testing
 /coverage
 
@@ -39,3 +45,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# data cache (not needed in production)
+data/cache
