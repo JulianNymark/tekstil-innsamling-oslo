@@ -4,10 +4,11 @@ import { getDb } from '@/lib/db';
 export async function GET(request: NextRequest) {
   const searchParams = request.nextUrl.searchParams;
   const page = parseInt(searchParams.get('page') || '1');
-  const limit = Math.min(parseInt(searchParams.get('limit') || '500'), 1000);
+  const limit = Math.min(parseInt(searchParams.get('limit') || '50'), 100);
   const search = searchParams.get('search') || '';
   const category = searchParams.get('category') || '';
   const rating = searchParams.get('rating') || '';
+  const skinType = searchParams.get('skinType') || '';
   const sortBy = searchParams.get('sortBy') || 'inci_name';
   const sortOrder = searchParams.get('sortOrder') || 'asc';
 
@@ -33,24 +34,38 @@ export async function GET(request: NextRequest) {
     params.push(parseInt(rating));
   }
 
+  // Skin type filter: only ingredients with a safe or caution advice for the selected skin type
+  // We handle this post-query since ratings are computed from ingredient_ratings
+  // Actually, skin_type_notes advice is per-ingredient, so we can filter via JOIN
+  let skinTypeJoin = '';
+  let skinTypeWhere = '';
+  let skinTypeParams: any[] = [];
+  if (skinType && skinType !== 'all') {
+    // Need to filter to ingredients that have advice for this skin type
+    // We'll do a subquery approach: only include ingredients that appear in skin_type_notes for this skin type
+    skinTypeWhere = ' AND i.id IN (SELECT ingredient_id FROM skin_type_notes WHERE skin_type = ? AND advice IS NOT NULL)';
+    skinTypeParams.push(skinType);
+  }
+
   const validSortColumns = ['inci_name', 'rating', 'category', 'irritancy'];
   const orderColumn = validSortColumns.includes(sortBy) ? sortBy : 'inci_name';
   const orderDirection = sortOrder === 'desc' ? 'DESC' : 'ASC';
 
   // Get total count
   const countResult = db.prepare(`
-    SELECT COUNT(*) as total FROM ingredients i ${whereClause}
-  `).get(...params) as { total: number };
+    SELECT COUNT(*) as total FROM ingredients i ${whereClause} ${skinTypeWhere}
+  `).get(...params, ...skinTypeParams) as { total: number };
 
-  // Get ingredients
+  // Get ingredients — compute rating via subquery so ORDER BY rating works
   const ingredients = db.prepare(`
     SELECT i.id, i.inci_name, i.irritancy, i.category, i.category_group,
-           i.description, i.flags
+           i.description, i.flags,
+           (SELECT MAX(rating) FROM ingredient_ratings WHERE ingredient_id = i.id) as rating
     FROM ingredients i
-    ${whereClause}
+    ${whereClause} ${skinTypeWhere}
     ORDER BY ${orderColumn} ${orderDirection}
     LIMIT ? OFFSET ?
-  `).all(...params, limit, offset);
+  `).all(...params, ...skinTypeParams, limit, offset);
 
   // If searching, also include regulatory-only matches
   let regulatoryIngredients: any[] = [];

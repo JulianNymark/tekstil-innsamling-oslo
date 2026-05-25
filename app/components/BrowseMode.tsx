@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, useMemo } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { ExclamationmarkTriangleFillIcon } from "@navikt/aksel-icons";
 import {
   getRatingColor,
@@ -21,13 +21,30 @@ interface Ingredient {
   skinTypeNotes: Record<string, string>;
   flags: string[];
   sourceUrls?: { name: string; url: string; type: string }[];
+  regulatory?: {
+    status: string;
+    annex: string;
+    restriction_details: string;
+    conditions: string;
+    regulation_source: string;
+  };
 }
 
 type SkinType = "all" | "oily" | "dry" | "sensitive" | "acneProne" | "normal";
 
+interface ApiResponse {
+  ingredients: Ingredient[];
+  pagination: {
+    page: number;
+    limit: number;
+    total: number;
+    totalPages: number;
+  };
+  categories: string[];
+}
+
 function getSkinTypeAdvice(ingredient: Ingredient, skinType: SkinType): string {
   if (skinType === "all") return "";
-  // Don't show skin type advice for ingredients with no rating data
   if (ingredient.rating === null || ingredient.rating === undefined) return "";
   const advice = ingredient.skinTypeNotes[skinType];
   if (!advice) return "";
@@ -51,6 +68,15 @@ function getSkinTypeAdviceColor(ingredient: Ingredient, skinType: SkinType): str
   return colorMap[advice] || "";
 }
 
+function useDebounce<T>(value: T, delay: number): T {
+  const [debouncedValue, setDebouncedValue] = useState<T>(value);
+  useEffect(() => {
+    const handler = setTimeout(() => setDebouncedValue(value), delay);
+    return () => clearTimeout(handler);
+  }, [value, delay]);
+  return debouncedValue;
+}
+
 export default function BrowseMode({
   selectedSkinType,
   onSkinTypeChange,
@@ -63,69 +89,62 @@ export default function BrowseMode({
   const [searchQuery, setSearchQuery] = useState("");
   const [sortBy, setSortBy] = useState<"rating" | "name" | "category">("rating");
   const [ingredients, setIngredients] = useState<Ingredient[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [ratingCounts, setRatingCounts] = useState<Record<number, number>>({ 0: 0, 1: 0, 2: 0, 3: 0, 4: 0, 5: 0 });
+  const [loading, setLoading] = useState(false);
+  const [page, setPage] = useState(1);
+  const [pagination, setPagination] = useState({ page: 1, limit: 50, total: 0, totalPages: 1 });
+  const [categories, setCategories] = useState<string[]>([]);
+  const [selectedCategory, setSelectedCategory] = useState("");
 
+  const debouncedSearch = useDebounce(searchQuery, 300);
+
+  const fetchIngredients = useCallback(async (pageNum: number) => {
+    setLoading(true);
+    try {
+      const params = new URLSearchParams();
+      params.set('page', String(pageNum));
+      params.set('limit', '50');
+      if (debouncedSearch.trim()) params.set('search', debouncedSearch.trim());
+      if (selectedCategory) params.set('category', selectedCategory);
+      if (selectedSkinType !== 'all') params.set('skinType', selectedSkinType);
+
+      const apiSortBy = sortBy === 'rating' ? 'rating' : sortBy === 'name' ? 'inci_name' : 'category';
+      const apiSortOrder = sortBy === 'rating' ? 'desc' : 'asc';
+      params.set('sortBy', apiSortBy);
+      params.set('sortOrder', apiSortOrder);
+
+      const res = await fetch(`/api/ingredients?${params.toString()}`);
+      const data: ApiResponse = await res.json();
+      setIngredients(data.ingredients);
+      setPagination(data.pagination);
+      if (data.categories.length > 0) setCategories(data.categories);
+    } catch (err) {
+      console.error('Failed to fetch ingredients:', err);
+    } finally {
+      setLoading(false);
+    }
+  }, [debouncedSearch, selectedCategory, selectedSkinType, sortBy]);
+
+  // Fetch when page changes
   useEffect(() => {
-    fetch('/api/ingredients?limit=500&sortBy=rating&sortOrder=desc')
-      .then(res => res.json())
-      .then(data => {
-        setIngredients(data.ingredients);
-        // Calculate rating counts
-        const counts: Record<number, number> = { 0: 0, 1: 0, 2: 0, 3: 0, 4: 0, 5: 0 };
-        data.ingredients.forEach((ing: Ingredient) => {
-          const r = ing.rating;
-          if (r !== null && r !== undefined) {
-            counts[r] = (counts[r] || 0) + 1;
-          }
-        });
-        setRatingCounts(counts);
-        setLoading(false);
-      })
-      .catch(() => setLoading(false));
-  }, []);
+    fetchIngredients(page);
+  }, [page, fetchIngredients]);
 
-  const filteredIngredients = useMemo(() => {
-    let filtered = ingredients;
+  // Reset to page 1 when filters change
+  useEffect(() => {
+    setPage(1);
+  }, [debouncedSearch, selectedCategory, selectedSkinType, sortBy]);
 
-    if (searchQuery.trim()) {
-      const query = searchQuery.toLowerCase().trim();
-      filtered = filtered.filter((ing) => {
-        const nameMatch = ing.inciName.toLowerCase().includes(query);
-        const commonMatch = ing.commonNames.some((name) =>
-          name.toLowerCase().includes(query),
-        );
-        const categoryMatch = ing.category.toLowerCase().includes(query);
-        return nameMatch || commonMatch || categoryMatch;
-      });
-    }
+  const handleSearchChange = (value: string) => {
+    setSearchQuery(value);
+  };
 
-    if (selectedSkinType !== "all") {
-      filtered = filtered.filter((ing) => {
-        const advice = ing.skinTypeNotes[selectedSkinType];
-        return advice && advice !== "avoid";
-      });
-    }
+  const handleCategoryChange = (value: string) => {
+    setSelectedCategory(value);
+  };
 
-    const sorted = [...filtered];
-    if (sortBy === "rating") {
-      sorted.sort((a, b) => (b.rating ?? -1) - (a.rating ?? -1));
-    } else if (sortBy === "name") {
-      sorted.sort((a, b) => a.inciName.localeCompare(b.inciName));
-    } else if (sortBy === "category") {
-      sorted.sort((a, b) => a.category.localeCompare(b.category));
-    }
-
-    return sorted;
-  }, [ingredients, searchQuery, selectedSkinType, sortBy]);
-
-  if (loading) {
-    return (
-      <div className="flex items-center justify-center py-12">
-        <div className="text-[var(--ds-color-text-subtle)]">Loading ingredients...</div>
-      </div>
-    );
-  }
+  const handleSortChange = (value: "rating" | "name" | "category") => {
+    setSortBy(value);
+  };
 
   return (
     <div className="space-y-6">
@@ -152,23 +171,6 @@ export default function BrowseMode({
         </div>
       </div>
 
-      {/* Stats */}
-      <div className="grid grid-cols-3 sm:grid-cols-6 gap-2">
-        {[5, 4, 3, 2, 1, 0].map((rating) => (
-          <div
-            key={rating}
-            className={`p-3 rounded-xl text-center ${getRatingColor(rating)}`}
-          >
-            <div className="text-2xl font-bold">
-              {ratingCounts[rating] || 0}
-            </div>
-            <div className="text-xs font-medium opacity-80">
-              {getRatingLabel(rating)}
-            </div>
-          </div>
-        ))}
-      </div>
-
       {/* Controls */}
       <div className="space-y-4">
         {/* Search */}
@@ -177,7 +179,7 @@ export default function BrowseMode({
             type="text"
             placeholder="Search ingredients..."
             value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
+            onChange={(e) => handleSearchChange(e.target.value)}
             className="w-full px-4 py-3 pl-11 bg-[var(--ds-color-surface-tinted)] border border-[var(--ds-color-border-default)] rounded-xl text-[var(--ds-color-text-default)] placeholder-text-subtle focus:outline-none focus:ring-2 focus:ring-[var(--ds-color-neutral-base-default)] focus:border-transparent transition-all"
           />
           <svg
@@ -196,7 +198,7 @@ export default function BrowseMode({
         </div>
 
         {/* Filters */}
-        <div className="flex flex-wrap gap-3">
+        <div className="flex flex-wrap gap-3 items-end">
           <SkinTypeSelect
             value={selectedSkinType}
             onChange={onSkinTypeChange}
@@ -204,13 +206,27 @@ export default function BrowseMode({
 
           <div className="ds-field">
             <label className="ds-label" data-weight="medium">
+              Category
+            </label>
+            <select
+              value={selectedCategory}
+              onChange={(e) => handleCategoryChange(e.target.value)}
+              className="ds-input"
+            >
+              <option value="">All categories</option>
+              {categories.map((cat) => (
+                <option key={cat} value={cat}>{cat}</option>
+              ))}
+            </select>
+          </div>
+
+          <div className="ds-field">
+            <label className="ds-label" data-weight="medium">
               Sort by
             </label>
             <select
               value={sortBy}
-              onChange={(e) =>
-                setSortBy(e.target.value as "rating" | "name" | "category")
-              }
+              onChange={(e) => handleSortChange(e.target.value as "rating" | "name" | "category")}
               className="ds-input"
             >
               <option value="rating">Rating (High to Low)</option>
@@ -223,13 +239,13 @@ export default function BrowseMode({
 
       {/* Results count */}
       <div className="text-sm text-[var(--ds-color-text-subtle)]">
-        Showing {filteredIngredients.length} of {ingredients.length} ingredients
+        {loading ? 'Searching...' : `Showing ${ingredients.length} of ${pagination.total} ingredients`}
       </div>
 
       {/* Ingredient List */}
       <div className="space-y-3">
-        {filteredIngredients.map((ingredient) => {
-          const isBanned = (ingredient as any).regulatory?.status === 'banned';
+        {ingredients.map((ingredient) => {
+          const isBanned = ingredient.regulatory?.status === 'banned';
           return (
           <div
             key={ingredient.id}
@@ -267,16 +283,16 @@ export default function BrowseMode({
                   <span className="text-xs px-2 py-1 bg-[var(--ds-color-surface-hover)] text-[var(--ds-color-text-subtle)] rounded-full">
                     {ingredient.category}
                   </span>
-                  {(ingredient as any).regulatory && (
+                  {ingredient.regulatory && (
                     <span className={`inline-flex items-center gap-1 text-xs px-2 py-1 rounded-full font-semibold ${
-                      (ingredient as any).regulatory.status === 'banned'
+                      ingredient.regulatory.status === 'banned'
                         ? 'bg-[var(--ds-color-danger-surface-default)] text-[var(--ds-color-danger-text-default)]'
                         : 'bg-[var(--ds-color-warning-surface-default)] text-[var(--ds-color-warning-text-default)]'
                     }`}>
-                      {(ingredient as any).regulatory.status === 'banned' && (
+                      {ingredient.regulatory.status === 'banned' && (
                         <ExclamationmarkTriangleFillIcon className="w-3 h-3" aria-label="Banned" />
                       )}
-                      {(ingredient as any).regulatory.status === 'banned' ? 'BANNED' : 'RESTRICTED'}
+                      {ingredient.regulatory.status === 'banned' ? 'BANNED' : 'RESTRICTED'}
                     </span>
                   )}
                   {ingredient.irritancy > 0 && (
@@ -307,8 +323,31 @@ export default function BrowseMode({
         )}
       </div>
 
+      {/* Pagination */}
+      {pagination.totalPages > 1 && (
+        <div className="flex items-center justify-between pt-4 border-t border-[var(--ds-color-border-default)]">
+          <button
+            onClick={() => setPage(p => Math.max(1, p - 1))}
+            disabled={page <= 1 || loading}
+            className="px-4 py-2 rounded-lg border border-[var(--ds-color-border-default)] text-sm font-medium disabled:opacity-50 disabled:cursor-not-allowed hover:bg-[var(--ds-color-surface-hover)] transition-colors"
+          >
+            Previous
+          </button>
+          <span className="text-sm text-[var(--ds-color-text-subtle)]">
+            Page {page} of {pagination.totalPages}
+          </span>
+          <button
+            onClick={() => setPage(p => Math.min(pagination.totalPages, p + 1))}
+            disabled={page >= pagination.totalPages || loading}
+            className="px-4 py-2 rounded-lg border border-[var(--ds-color-border-default)] text-sm font-medium disabled:opacity-50 disabled:cursor-not-allowed hover:bg-[var(--ds-color-surface-hover)] transition-colors"
+          >
+            Next
+          </button>
+        </div>
+      )}
+
       {/* Empty state */}
-      {filteredIngredients.length === 0 && (
+      {!loading && ingredients.length === 0 && (
         <div className="text-center py-12">
           <div className="text-4xl mb-3">🔍</div>
           <h3 className="text-lg font-semibold text-[var(--ds-color-text-default)] mb-1">

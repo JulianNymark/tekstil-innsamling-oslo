@@ -1097,6 +1097,16 @@ export default function PoreChecker({ mode }: { mode: Mode }) {
                     </li>
                     <li>
                       <a
+                        href="https://library.scconline.org/is-cacheable/1708705747445/Comedogenicity-Irritancy-Commonly-Used-Skincare-Products.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-xs text-[var(--ds-color-info-text-subtle)] underline hover:text-[var(--ds-color-info-text-default)]"
+                      >
+                        Fulton (1989) — 200+ ingredienser; J. Soc. Cosmet. Chem. 40:321-333
+                      </a>
+                    </li>
+                    <li>
+                      <a
                         href="https://pubmed.ncbi.nlm.nih.gov/2521642/"
                         target="_blank"
                         rel="noopener noreferrer"

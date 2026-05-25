@@ -75,7 +75,86 @@ export async function POST(request: NextRequest) {
         `).get(normalizedName);
       }
 
-      // Try partial match (normalized name is substring of INCI)
+      // Try regulatory-only exact match (banned/restricted ingredients not in main DB)
+      if (!result) {
+        const regulatoryExact = db.prepare(`
+          SELECT inci_name, status, annex, restriction_details, conditions, regulation_source
+          FROM regulatory_status
+          WHERE LOWER(inci_name) = ?
+             OR LOWER(chemical_name) = ?
+             OR LOWER(glossary_name) = ?
+          LIMIT 1
+        `).get(normalizedName, normalizedName, normalizedName);
+
+        if (regulatoryExact) {
+          matchedRawNames.add(normalizedName);
+          matches.push({
+            id: `regulatory-${regulatoryExact.inci_name.toLowerCase().replace(/\s+/g, '-')}`,
+            inci_name: regulatoryExact.inci_name,
+            rating: null,
+            irritancy: 0,
+            category: 'Regulatory',
+            category_group: null,
+            description: regulatoryExact.restriction_details || `This ingredient is ${regulatoryExact.status} in the EU Cosmetics Regulation.`,
+            evidence_level: 'high',
+            flags: JSON.stringify([regulatoryExact.status]),
+            sources: null,
+            index: i,
+            regulatory: {
+              status: regulatoryExact.status,
+              annex: regulatoryExact.annex,
+              restriction_details: regulatoryExact.restriction_details,
+              conditions: regulatoryExact.conditions,
+              regulation_source: regulatoryExact.regulation_source
+            },
+            skinTypeNotes: {},
+            sourceUrls: []
+          });
+          continue; // Skip to next ingredient
+        }
+      }
+
+      // Try partial match on regulatory names before partial ingredient match
+      // This ensures banned/restricted ingredients are prioritized
+      if (!result) {
+        const regulatoryPartial = db.prepare(`
+          SELECT inci_name, status, annex, restriction_details, conditions, regulation_source
+          FROM regulatory_status
+          WHERE LOWER(inci_name) LIKE '%' || LOWER(?) || '%'
+             OR LOWER(chemical_name) LIKE '%' || LOWER(?) || '%'
+             OR LOWER(glossary_name) LIKE '%' || LOWER(?) || '%'
+          LIMIT 1
+        `).get(normalizedName, normalizedName, normalizedName);
+
+        if (regulatoryPartial) {
+          matchedRawNames.add(normalizedName);
+          matches.push({
+            id: `regulatory-${regulatoryPartial.inci_name.toLowerCase().replace(/\s+/g, '-')}`,
+            inci_name: regulatoryPartial.inci_name,
+            rating: null,
+            irritancy: 0,
+            category: 'Regulatory',
+            category_group: null,
+            description: regulatoryPartial.restriction_details || `This ingredient is ${regulatoryPartial.status} in the EU Cosmetics Regulation.`,
+            evidence_level: 'high',
+            flags: JSON.stringify([regulatoryPartial.status]),
+            sources: null,
+            index: i,
+            regulatory: {
+              status: regulatoryPartial.status,
+              annex: regulatoryPartial.annex,
+              restriction_details: regulatoryPartial.restriction_details,
+              conditions: regulatoryPartial.conditions,
+              regulation_source: regulatoryPartial.regulation_source
+            },
+            skinTypeNotes: {},
+            sourceUrls: []
+          });
+          continue; // Skip to next ingredient
+        }
+      }
+
+      // Try partial match on ingredients (only after regulatory checks)
       if (!result) {
         result = db.prepare(`
           SELECT i.id, i.inci_name, i.irritancy, i.category, i.category_group,
@@ -87,7 +166,6 @@ export async function POST(request: NextRequest) {
       }
 
       // Try word-boundary match: INCI is a complete word in the normalized input
-      // This avoids false positives like "hexane" matching inside "2-hexanediol"
       if (!result && normalizedName.length >= 3) {
         result = db.prepare(`
           SELECT i.id, i.inci_name, i.irritancy, i.category, i.category_group,
@@ -151,79 +229,6 @@ export async function POST(request: NextRequest) {
           }, {}),
           sourceUrls: sources
         });
-        } else {
-          // Try regulatory-only match (banned/restricted ingredients not in main DB)
-          // Search inci_name, glossary_name, and chemical_name
-          const regulatory = db.prepare(`
-            SELECT inci_name, status, annex, restriction_details, conditions, regulation_source
-            FROM regulatory_status
-            WHERE LOWER(inci_name) = ?
-               OR LOWER(chemical_name) = ?
-               OR LOWER(glossary_name) LIKE '%' || LOWER(?) || '%'
-            LIMIT 1
-          `).get(normalizedName, normalizedName, normalizedName);
-
-          if (!regulatory) {
-            // Try partial match on regulatory names (e.g., "mercury" matches "Mercury and its compounds...")
-            const regulatoryPartial = db.prepare(`
-              SELECT inci_name, status, annex, restriction_details, conditions, regulation_source
-              FROM regulatory_status
-              WHERE LOWER(inci_name) LIKE '%' || LOWER(?) || '%'
-                 OR LOWER(chemical_name) LIKE '%' || LOWER(?) || '%'
-                 OR LOWER(glossary_name) LIKE '%' || LOWER(?) || '%'
-              LIMIT 1
-            `).get(normalizedName, normalizedName, normalizedName);
-
-            if (regulatoryPartial) {
-              matchedRawNames.add(normalizedName);
-              matches.push({
-                id: `regulatory-${regulatoryPartial.inci_name.toLowerCase().replace(/\s+/g, '-')}`,
-                inci_name: regulatoryPartial.inci_name,
-                rating: null,
-                irritancy: 0,
-                category: 'Regulatory',
-                category_group: null,
-                description: regulatoryPartial.restriction_details || `This ingredient is ${regulatoryPartial.status} in the EU Cosmetics Regulation.`,
-                evidence_level: 'high',
-                flags: JSON.stringify([regulatoryPartial.status]),
-                sources: null,
-                index: i,
-                regulatory: {
-                  status: regulatoryPartial.status,
-                  annex: regulatoryPartial.annex,
-                  restriction_details: regulatoryPartial.restriction_details,
-                  conditions: regulatoryPartial.conditions,
-                  regulation_source: regulatoryPartial.regulation_source
-                },
-                skinTypeNotes: {},
-                sourceUrls: []
-              });
-            }
-          } else {
-            matchedRawNames.add(normalizedName);
-            matches.push({
-              id: `regulatory-${regulatory.inci_name.toLowerCase().replace(/\s+/g, '-')}`,
-              inci_name: regulatory.inci_name,
-              rating: null,
-              irritancy: 0,
-              category: 'Regulatory',
-              category_group: null,
-              description: regulatory.restriction_details || `This ingredient is ${regulatory.status} in the EU Cosmetics Regulation.`,
-              evidence_level: 'high',
-              flags: JSON.stringify([regulatory.status]),
-              sources: null,
-              index: i,
-              regulatory: {
-                status: regulatory.status,
-                annex: regulatory.annex,
-                restriction_details: regulatory.restriction_details,
-                conditions: regulatory.conditions,
-                regulation_source: regulatory.regulation_source
-              },
-              skinTypeNotes: {},
-              sourceUrls: []
-            });
-          }
       }
     }
 

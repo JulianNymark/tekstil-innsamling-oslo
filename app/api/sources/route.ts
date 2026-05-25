@@ -39,9 +39,9 @@ export async function GET() {
     },
     {
       name: 'Fulton 1989',
-      description: 'Original rabbit ear assay comedogenicity scale',
+      description: 'Original rabbit ear assay comedogenicity scale (J. Soc. Cosmet. Chem. 40:321-333)',
       managedBy: 'Scientific literature',
-      url: 'https://pubmed.ncbi.nlm.nih.gov/',
+      url: 'https://library.scconline.org/is-cacheable/1708705747445/Comedogenicity-Irritancy-Commonly-Used-Skincare-Products.pdf',
       type: 'study'
     }
   ];
