@@ -20,7 +20,11 @@ export function parseIngredientSections(
   // Find "active" as the start marker
   const activeMatch = text.match(/\bactive\b/i);
   if (!activeMatch) {
-    return [{ name: "unknown", content: text.trim() }];
+    // No active section — strip bare "ingredients:" prefix if present
+    const content = text
+      .replace(/^\s*ingredients\s*:\s*/i, '')
+      .trim();
+    return [{ name: "unknown", content }];
   }
 
   const activeIndex = activeMatch.index ?? 0;

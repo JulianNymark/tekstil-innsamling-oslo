@@ -3,7 +3,9 @@
  * Uses a symmetric diverging scale: both edges (0 and 5) are strongest;
  * the middle (2, 3) is most subtle.
  */
-export function getRatingColor(rating: number): string {
+export function getRatingColor(rating: number | null | undefined): string {
+  // Treat null/undefined as "no data" — neutral gray
+  if (rating === null || rating === undefined) return "bg-[var(--ds-color-surface-hover)] text-[var(--ds-color-text-subtle)]";
   switch (rating) {
     case 0:
       return "bg-rating-0-bg text-rating-0-text";
@@ -18,11 +20,12 @@ export function getRatingColor(rating: number): string {
     case 5:
       return "bg-rating-5-bg text-rating-5-text";
     default:
-      return "bg-rating-0-bg text-rating-0-text";
+      return "bg-[var(--ds-color-surface-hover)] text-[var(--ds-color-text-subtle)]";
   }
 }
 
-export function getRatingColorBorder(rating: number): string {
+export function getRatingColorBorder(rating: number | null | undefined): string {
+  if (rating === null || rating === undefined) return "border border-[var(--ds-color-border-subtle)]";
   switch (rating) {
     case 0:
       return "border border-[var(--ds-color-success-border-strong)]";
@@ -36,11 +39,12 @@ export function getRatingColorBorder(rating: number): string {
     case 5:
       return "border border-[var(--color-danger-border-dark)]";
     default:
-      return "";
+      return "border border-[var(--ds-color-border-subtle)]";
   }
 }
 
-export function getRatingLabel(rating: number): string {
+export function getRatingLabel(rating: number | null | undefined): string {
+  if (rating === null || rating === undefined) return "No data";
   if (rating === 0) return "Non-comedogenic";
   if (rating === 1) return "Very Low";
   if (rating === 2) return "Low";

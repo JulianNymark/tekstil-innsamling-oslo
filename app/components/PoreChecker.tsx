@@ -4,21 +4,82 @@ import {
   PopoverTrigger,
   PopoverTriggerContext,
 } from "@digdir/designsystemet-react";
-import { InformationSquareFillIcon } from "@navikt/aksel-icons";
+import { InformationSquareFillIcon, ExclamationmarkTriangleFillIcon } from "@navikt/aksel-icons";
 import {
   getRatingColor,
   getRatingColorBorder,
   getRatingLabel,
 } from "../utils/ratingColors";
 import { parseIngredientSections } from "../utils/parseIngredientSections";
+
+function explainConditions(text: string): string {
+  // Explain standalone percentages as max concentration limits
+  // European format: "5 %", "2,5 %", "0,1 %" — these are max allowed in final product
+  text = text.replace(
+    /(^|;\s*|\|\s*)(\d+(?:,\d+)?)\s*%(\s*\([^)]*\))?/g,
+    "$1$2%$3 (max concentration in final product)"
+  );
+  
+  const glossary: Record<string, string> = {
+    "mucous membranes": "mucous membranes (moist linings of mouth, nose, eyes, genitals)",
+    "rinse-off products": "rinse-off products (shampoo, face wash — washed off quickly)",
+    "leave-on products": "leave-on products (moisturizer, serum — stays on skin)",
+    "professional use": "professional use only (salon/treatment, not home use)",
+    "not to be used": "not to be used (avoid this usage completely)",
+    "not to be applied": "not to be applied (do not put on this area)",
+    "maximum concentration": "max concentration (highest safe amount allowed)",
+    "acid": "acid (as free acid, not salt form)",
+    "ready for use": "ready for use (final diluted product, not concentrate)",
+    "pH": "pH (acidity level; lower = more acidic)",
+    "wear suitable gloves": "wear suitable gloves (protective gloves required)",
+    "keep out of reach of children": "keep out of reach of children (child safety warning)",
+    "in the finished product": "in the finished product (in final cosmetic, not raw ingredient)",
+    "when mixed with": "when mixed with (combined with other substances)",
+    "as maximum": "as maximum (upper limit)",
+    "must not exceed": "must not exceed (hard limit, cannot go over)",
+    "other than": "other than (except for)",
+    "except": "except (excluded from restriction)",
+    "oral products": "oral products (toothpaste, mouthwash — goes in mouth)",
+    "hair products": "hair products (shampoo, conditioner, dye, styling)",
+    "eye products": "eye products (mascara, eyeshadow, eye cream — near eyes)",
+    "nail products": "nail products (polish, remover, treatments)",
+    "skin products": "skin products (lotion, cream, body butter)",
+    "depilatories": "depilatories (hair removal creams)",
+    "bleach": "bleach (lightening/highlighting products)",
+    "sunscreen": "sunscreen (UV protection products)",
+    "tanning": "tanning (self-tanner, bronzer)",
+    "tattoo": "tattoo (permanent makeup, body art)",
+    "aerosol": "aerosol (spray products)",
+    "powder": "powder (loose or pressed powder products)",
+    "lip products": "lip products (lipstick, gloss, balm — near mouth)",
+  };
+
+  let explained = text;
+  for (const [term, explanation] of Object.entries(glossary)) {
+    const regex = new RegExp(`\\b${term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\b`, 'gi');
+    explained = explained.replace(regex, explanation);
+  }
+  return explained;
+}
 import SkinTypeSelect from "./SkinTypeSelect";
 import BrowseMode from "./BrowseMode";
+
+interface IngredientRating {
+  source_name: string;
+  rating: number;
+  irritancy: number | null;
+  scale: string;
+  evidence_level: string;
+  sample_size: number | null;
+  notes: string | null;
+}
 
 interface Ingredient {
   id: string;
   inciName: string;
   commonNames: string[];
-  rating: number;
+  rating: number | null;
+  ratings?: IngredientRating[];
   irritancy: number;
   category: string;
   categoryGroup: string;
@@ -26,9 +87,8 @@ interface Ingredient {
   description: string;
   skinTypeNotes: Record<string, string>;
   flags: string[];
-  evidenceLevel: string;
-  sources?: string[];
   sourceUrls?: { name: string; url: string; type: string }[];
+  regulatory?: { status: string; annex: string; restriction_details: string; conditions?: string; regulation_source?: string; chemical_name?: string; glossary_name?: string } | null;
 }
 
 interface IngredientsData {
@@ -234,9 +294,11 @@ function findMatchesInText(
       const sectionOrder = { active: 0, unknown: 1, inactive: 2 };
       return sectionOrder[a.section] - sectionOrder[b.section];
     }
-    // Within same section, sort by rating descending
-    if (b.ingredient.rating !== a.ingredient.rating) {
-      return b.ingredient.rating - a.ingredient.rating;
+    // Within same section, sort by rating descending (null ratings last)
+    const ratingA = a.ingredient.rating ?? -1;
+    const ratingB = b.ingredient.rating ?? -1;
+    if (ratingB !== ratingA) {
+      return ratingB - ratingA;
     }
     return a.position - b.position;
   });
@@ -266,9 +328,26 @@ function getProductVerdict(matched: MatchedIngredient[]): {
     };
   }
 
-  const highRisk = matched.filter((m) => m.ingredient.rating >= 4);
-  const moderateRisk = matched.filter((m) => m.ingredient.rating === 3);
-  const lowRisk = matched.filter((m) => m.ingredient.rating === 2);
+  // Check for banned ingredients first — this overrides everything
+  const banned = matched.filter((m) => m.ingredient.regulatory?.status === 'banned');
+  if (banned.length > 0) {
+    return {
+      verdict: "not-suitable",
+      label: "Contains Banned Ingredient",
+      emoji: "🚫",
+      semanticColor: "danger",
+      summary: `This product contains ${banned.length === 1 ? banned[0].ingredient.inciName : banned.length + ' banned ingredients'} prohibited under EU Cosmetics Regulation (EC) No 1223/2009.`,
+      details: [
+        "Banned ingredients are prohibited in cosmetic products sold in the EU due to safety concerns.",
+        ...banned.map((b) => `${b.ingredient.inciName}: ${b.ingredient.regulatory?.restriction_details || 'Prohibited in all cosmetic products'}`),
+        "If you see this on a product label, it should not be sold in the EU market.",
+      ],
+    };
+  }
+
+  const highRisk = matched.filter((m) => (m.ingredient.rating ?? -1) >= 4);
+  const moderateRisk = matched.filter((m) => (m.ingredient.rating ?? -1) === 3);
+  const lowRisk = matched.filter((m) => (m.ingredient.rating ?? -1) === 2);
 
   // Fatty alcohols that are commonly rating 2 but actually safe
   const fattyAlcohols = lowRisk.filter((m) =>
@@ -294,7 +373,7 @@ function getProductVerdict(matched: MatchedIngredient[]): {
       semanticColor: "danger",
       summary: hasMultiple
         ? `This product contains ${highRisk.length} ingredients with high comedogenic risk (rating 4–5). These are known pore-cloggers.`
-        : `This product contains ${highRisk[0].ingredient.inciName} (rating ${highRisk[0].ingredient.rating}), which is known to clog pores in many people.`,
+        : `This product contains ${highRisk[0].ingredient.inciName} (rating ${highRisk[0].ingredient.rating ?? '?'}), which is known to clog pores in many people.`,
       details: [
         "Highly comedogenic ingredients (rating 4–5) have been shown to clog pores in both rabbit ear assays and clinical studies.",
         earlyPosition
@@ -357,6 +436,24 @@ function getProductVerdict(matched: MatchedIngredient[]): {
     };
   }
 
+  // Check if we have matched ingredients but none have rating data
+  const hasRatedIngredients = matched.some((m) => m.ingredient.rating !== null && m.ingredient.rating !== undefined);
+  const hasOnlyRegulatory = matched.length > 0 && !hasRatedIngredients;
+
+  if (hasOnlyRegulatory) {
+    return {
+      verdict: "safe",
+      label: "No comedogenic data",
+      emoji: "🤷",
+      semanticColor: "neutral",
+      summary: `We found ${matched.length} ingredient(s) in the database, but none have comedogenicity ratings.`,
+      details: [
+        "These ingredients are tracked for EU regulatory status (banned/restricted) but we don't have comedogenicity data for them.",
+        "This doesn't mean the product is safe or unsafe for acne-prone skin — we simply don't have enough information.",
+      ],
+    };
+  }
+
   // All safe (0-1)
   return {
     verdict: "safe",
@@ -378,18 +475,18 @@ export default function PoreChecker({ mode }: { mode: Mode }) {
     useState<Ingredient | null>(null);
   const [loading, setLoading] = useState(false);
   const [apiMatches, setApiMatches] = useState<MatchedIngredient[]>([]);
+  const [matchedRawNames, setMatchedRawNames] = useState<Set<string>>(new Set());
 
   // Debounced API call for ingredient matching
   useEffect(() => {
     if (!ingredientText.trim()) {
       setApiMatches([]);
+      setMatchedRawNames(new Set());
       return;
     }
 
     const timeoutId = setTimeout(() => {
       setLoading(true);
-      
-      // Parse sections (active/inactive split)
       const sections = parseIngredientSections(ingredientText);
       
       // Collect all ingredient names with their section info
@@ -423,34 +520,72 @@ export default function PoreChecker({ mode }: { mode: Mode }) {
         .then(res => res.json())
         .then(data => {
           if (data.matches) {
-            const matches: MatchedIngredient[] = data.matches.map((m: any, index: number) => ({
-              ingredient: {
-                id: m.id,
-                inciName: m.inci_name,
-                commonNames: [],
-                rating: m.rating,
-                irritancy: m.irritancy,
-                category: m.category,
-                categoryGroup: m.category_group,
-                function: [],
-                description: m.description,
-                skinTypeNotes: m.skinTypeNotes || {},
-                flags: m.flags ? JSON.parse(m.flags) : [],
-                evidenceLevel: m.evidence_level,
-                sources: m.sources ? JSON.parse(m.sources) : [],
-                sourceUrls: m.sourceUrls || []
-              },
-              matchedName: m.inci_name,
-              originalText: m.inci_name,
-              position: index,
-              section: ingredientsWithSections[index]?.section || 'unknown' as const
-            }));
+            // Build a map from raw ingredient index to section info
+            const indexToSection = new Map<number, { section: string; sectionPos: number }>();
+            const sectionCounters: Record<string, number> = {};
+            
+            for (let i = 0; i < ingredientsWithSections.length; i++) {
+              const section = ingredientsWithSections[i].section;
+              if (!sectionCounters[section]) sectionCounters[section] = 0;
+              indexToSection.set(i, { section, sectionPos: sectionCounters[section] });
+              sectionCounters[section]++;
+            }
+
+            const matches: MatchedIngredient[] = data.matches.map((m: { id: string; inci_name: string; rating: number | null; ratings?: { source_name: string; rating: number; irritancy: number | null; scale: string; evidence_level: string; sample_size: number | null; notes: string | null }[]; irritancy: number; category: string; category_group: string; description: string; flags: string | null; skinTypeNotes: Record<string, string> | undefined; sourceUrls: { name: string; url: string; type: string }[] | undefined; regulatory: { status: string; annex: string; restriction_details: string } | null | undefined; index: number }) => {
+              const originalIndex = m.index;
+              const sectionInfo = indexToSection.get(originalIndex) || { section: 'unknown', sectionPos: originalIndex };
+              return {
+                ingredient: {
+                  id: m.id,
+                  inciName: m.inci_name,
+                  commonNames: [],
+                  rating: m.rating,
+                  ratings: m.ratings || [],
+                  irritancy: m.irritancy,
+                  category: m.category,
+                  categoryGroup: m.category_group,
+                  function: [],
+                  description: m.description,
+                  skinTypeNotes: m.skinTypeNotes || {},
+                  flags: m.flags ? JSON.parse(m.flags) : [],
+                  sourceUrls: m.sourceUrls || [],
+                  regulatory: m.regulatory || null
+                },
+                matchedName: m.inci_name,
+                originalText: ingredientsWithSections[originalIndex]?.name || m.inci_name,
+                position: sectionInfo.sectionPos,
+                section: sectionInfo.section as "active" | "inactive" | "unknown"
+              };
+            });
+            
+            // Sort: banned first, then section order (active → unknown → inactive), then rating desc, then position asc
+            const sectionOrder = { active: 0, unknown: 1, inactive: 2 };
+            matches.sort((a, b) => {
+              // Banned ingredients always go to the top
+              const aBanned = a.ingredient.regulatory?.status === 'banned' ? 1 : 0;
+              const bBanned = b.ingredient.regulatory?.status === 'banned' ? 1 : 0;
+              if (bBanned !== aBanned) {
+                return bBanned - aBanned;
+              }
+              if (a.section !== b.section) {
+                return sectionOrder[a.section] - sectionOrder[b.section];
+              }
+              // Null ratings sort to bottom within same section
+              const ratingA = a.ingredient.rating ?? -1;
+              const ratingB = b.ingredient.rating ?? -1;
+              if (ratingB !== ratingA) {
+                return ratingB - ratingA;
+              }
+              return a.position - b.position;
+            });
+            
             setApiMatches(matches);
+            setMatchedRawNames(new Set((data.matchedNames || []).map((n: string) => n.toLowerCase().trim())));
           }
           setLoading(false);
         })
         .catch(() => setLoading(false));
-    }, 500);
+    }, 800);
 
     return () => clearTimeout(timeoutId);
   }, [ingredientText]);
@@ -475,11 +610,6 @@ export default function PoreChecker({ mode }: { mode: Mode }) {
       }
     }
     
-    // Build set of matched normalized names
-    const matchedNormalized = new Set(
-      apiMatches.map(m => m.matchedName.toLowerCase().trim())
-    );
-    
     const unmatched: string[] = [];
     
     for (const chunk of allChunks) {
@@ -487,7 +617,7 @@ export default function PoreChecker({ mode }: { mode: Mode }) {
       const normalizedChunk = chunk
         .toLowerCase()
         .trim()
-        .replace(/^(?:active|inactive)\s*(?:ingredients)?\s*:?\s*/i, '')
+        .replace(/^(?:active|inactive|ingredients)\s*:?\s*/i, '')
         .replace(/\s*[\(\[\{]\s*\d+(?:\.\d+)?\s*%?\s*[\)\]\}]\s*/g, ' ')
         .replace(/\s*\d+(?:\.\d+)?\s*%\s*/g, ' ')
         .replace(/\s*\([^)]*\)\s*/g, ' ')
@@ -495,26 +625,16 @@ export default function PoreChecker({ mode }: { mode: Mode }) {
         .trim();
       
       // Skip section headers
-      if (/^(?:active|inactive)\s*ingredients?$/i.test(normalizedChunk)) continue;
+      if (/^(?:active|inactive|ingredients)\s*:?$/i.test(normalizedChunk)) continue;
       if (normalizedChunk.length < 2) continue;
       
-      // Check if this chunk matches any matched ingredient
-      let found = false;
-      for (const matchedName of matchedNormalized) {
-        if (normalizedChunk === matchedName || 
-            matchedName.includes(normalizedChunk) || 
-            normalizedChunk.includes(matchedName)) {
-          found = true;
-          break;
-        }
-      }
-      
-      if (!found) {
+      // Check if this chunk was matched by the API (using the raw names the API returned)
+      if (!matchedRawNames.has(normalizedChunk)) {
         unmatched.push(chunk);
       }
     }
     return unmatched;
-  }, [ingredientText, apiMatches]);
+  }, [ingredientText, matchedRawNames]);
 
   const ratingCounts = useMemo(() => {
     // This is now computed server-side, we'll fetch it
@@ -535,20 +655,13 @@ export default function PoreChecker({ mode }: { mode: Mode }) {
       5: 0,
     };
     matchedIngredients.forEach((m) => {
-      counts[m.ingredient.rating] = (counts[m.ingredient.rating] || 0) + 1;
+      const r = m.ingredient.rating;
+      if (r !== null && r !== undefined) {
+        counts[r] = (counts[r] || 0) + 1;
+      }
     });
     return counts;
   }, [matchedIngredients]);
-
-  if (loading) {
-    return (
-      <div className="flex items-center justify-center h-64">
-        <div className="text-[var(--ds-color-text-subtle)]">
-          Loading ingredients database...
-        </div>
-      </div>
-    );
-  }
 
   return (
     <div className="space-y-6">
@@ -572,6 +685,11 @@ export default function PoreChecker({ mode }: { mode: Mode }) {
                 automatically check against our database — because your pores
                 deserve better than landfill.
               </p>
+              {loading && (
+                <p className="text-xs text-[var(--ds-color-text-subtle)] mt-2 animate-pulse">
+                  Checking ingredients...
+                </p>
+              )}
             </div>
 
             {/* Skin Type Filter */}
@@ -745,18 +863,32 @@ export default function PoreChecker({ mode }: { mode: Mode }) {
                             )}
                           </div>
                         )}
-                        {section.items.map((matched) => (
+                        {section.items.map((matched) => {
+                          const isBanned = matched.ingredient.regulatory?.status === 'banned';
+                          return (
                           <div
                             key={matched.ingredient.id}
                             onClick={() =>
                               setSelectedIngredient(matched.ingredient)
                             }
-                            className={`p-4 rounded-xl border cursor-pointer transition-all hover:shadow-sm border-(--ds-color-accent-border-default) hover:border-(--ds-color-accent-border-strong)`}
+                            className={`p-4 rounded-xl border cursor-pointer transition-all hover:shadow-sm ${
+                              isBanned
+                                ? 'border-[var(--ds-color-danger-border-default)] bg-[var(--ds-color-danger-surface-default)]/10 hover:border-[var(--ds-color-danger-border-strong)]'
+                                : 'border-(--ds-color-accent-border-default) hover:border-(--ds-color-accent-border-strong)'
+                            }`}
                           >
+                            {isBanned && (
+                              <div className="flex items-center gap-2 mb-2">
+                                <ExclamationmarkTriangleFillIcon className="text-[var(--ds-color-danger-text-default)]" aria-label="Banned ingredient warning" />
+                                <span className="text-sm font-bold text-[var(--ds-color-danger-text-default)]">
+                                  Banned Ingredient
+                                </span>
+                              </div>
+                            )}
                             <div className="flex items-start justify-between gap-4">
                               <div className="flex-1 min-w-0">
                                 <div className="flex items-center gap-2 flex-wrap">
-                                  <h3 className="font-semibold text-[var(--ds-color-text-default)]">
+                                  <h3 className={`font-semibold ${isBanned ? 'text-[var(--ds-color-danger-text-default)]' : 'text-[var(--ds-color-text-default)]'}`}>
                                     {matched.ingredient.inciName}
                                   </h3>
                                   {matched.matchedName !==
@@ -810,6 +942,19 @@ export default function PoreChecker({ mode }: { mode: Mode }) {
                                       /5
                                     </span>
                                   )}
+                                  {matched.ingredient.regulatory && (
+                                    <span className={`inline-flex items-center gap-1 text-xs px-2 py-1 rounded-full font-semibold ${
+                                      matched.ingredient.regulatory.status === 'banned'
+                                        ? 'bg-[var(--ds-color-danger-surface-default)] text-[var(--ds-color-danger-text-default)]'
+                                        : 'bg-[var(--ds-color-warning-surface-default)] text-[var(--ds-color-warning-text-default)]'
+                                    }`}>
+                                      {matched.ingredient.regulatory.status === 'banned' && (
+                                        <ExclamationmarkTriangleFillIcon className="w-3 h-3" aria-label="Banned" />
+                                      )}
+                                      {matched.ingredient.regulatory.status === 'banned' ? 'BANNED' : 'RESTRICTED'}
+                                      {matched.ingredient.regulatory.annex && ` (Annex ${matched.ingredient.regulatory.annex})`}
+                                    </span>
+                                  )}
                                   {selectedSkinType !== "all" && (
                                     <span
                                       className={`text-xs font-medium ${getSkinTypeAdviceColor(matched.ingredient, selectedSkinType)}`}
@@ -831,7 +976,8 @@ export default function PoreChecker({ mode }: { mode: Mode }) {
                               </div>
                             </div>
                           </div>
-                        ))}
+                        )}
+                        )}
                       </div>
                     ));
                   })()}
@@ -995,7 +1141,7 @@ export default function PoreChecker({ mode }: { mode: Mode }) {
                 className={`px-3 py-2 rounded-lg text-center ${getRatingColor(selectedIngredient.rating)}`}
               >
                 <div className="text-2xl font-bold">
-                  {selectedIngredient.rating}
+                  {selectedIngredient.rating ?? '-'}
                 </div>
                 <div className="text-xs">
                   {getRatingLabel(selectedIngredient.rating)}
@@ -1033,6 +1179,8 @@ export default function PoreChecker({ mode }: { mode: Mode }) {
                 )}
 
               {selectedIngredient.skinTypeNotes &&
+                selectedIngredient.rating !== null &&
+                selectedIngredient.rating !== undefined &&
                 Object.keys(selectedIngredient.skinTypeNotes).length > 0 && (
                   <div>
                     <h4 className="font-semibold text-[var(--ds-color-text-default)] mb-2">
@@ -1102,47 +1250,149 @@ export default function PoreChecker({ mode }: { mode: Mode }) {
                   </div>
                 )}
 
-              <div className="text-xs space-y-2">
-                <div className="text-[var(--ds-color-text-subtle)]">
-                  Evidence level:{" "}
-                  {selectedIngredient.evidenceLevel || "unknown"}
-                </div>
-
-                {selectedIngredient.sourceUrls &&
-                  selectedIngredient.sourceUrls.length > 0 && (
-                    <div>
-                      <h4 className="font-semibold text-[var(--ds-color-text-subtle)] mb-1.5">
-                        Sources
-                      </h4>
-                      <div className="flex flex-wrap gap-2">
-                        {selectedIngredient.sourceUrls.map((source) => {
-                          const typeColors: Record<string, string> = {
-                            government:
-                              "bg-[var(--ds-color-info-surface-default)] text-[var(--ds-color-info-text-default)]",
-                            study:
-                              "bg-[var(--ds-color-success-surface-default)] text-[var(--ds-color-success-text-default)]",
-                            regulatory:
-                              "bg-[var(--ds-color-accent-surface-default)] text-[var(--ds-color-accent-text-default)]",
-                            database:
-                              "bg-[var(--ds-color-neutral-surface-default)] text-[var(--ds-color-neutral-text-default)]",
-                            reference:
-                              "bg-[var(--ds-color-neutral-surface-default)] text-[var(--ds-color-neutral-text-default)]",
-                          };
-                          return (
-                            <a
-                              key={source.url}
-                              href={source.url}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className={`text-xs px-2 py-1 rounded-full hover:opacity-80 transition-opacity ${typeColors[source.type] || typeColors.database}`}
-                            >
-                              {source.name}
-                            </a>
-                          );
-                        })}
-                      </div>
+              {selectedIngredient.regulatory && (
+                <div>
+                  <h4 className="font-semibold text-[var(--ds-color-text-default)] mb-1">
+                    Regulatory Status
+                  </h4>
+                  <div className={`p-3 rounded-lg ${
+                    selectedIngredient.regulatory.status === 'banned'
+                      ? 'bg-[var(--ds-color-danger-surface-default)] border border-[var(--ds-color-danger-border-default)]'
+                      : 'bg-[var(--ds-color-warning-surface-default)] border border-[var(--ds-color-warning-border-default)]'
+                  }`}>
+                    <div className={`flex items-center gap-2 font-bold text-sm ${
+                      selectedIngredient.regulatory.status === 'banned'
+                        ? 'text-[var(--ds-color-danger-text-default)]'
+                        : 'text-[var(--ds-color-warning-text-default)]'
+                    }`}>
+                      {selectedIngredient.regulatory.status === 'banned' && (
+                        <ExclamationmarkTriangleFillIcon aria-label="Banned" />
+                      )}
+                      {selectedIngredient.regulatory.status === 'banned' ? 'BANNED' : 'RESTRICTED'}
+                      {selectedIngredient.regulatory.annex && ` — Annex ${selectedIngredient.regulatory.annex}`}
                     </div>
-                  )}
+                    {selectedIngredient.regulatory.restriction_details && (
+                      <p className={`text-xs mt-1 ${
+                        selectedIngredient.regulatory.status === 'banned'
+                          ? 'text-[var(--ds-color-danger-text-subtle)]'
+                          : 'text-[var(--ds-color-warning-text-subtle)]'
+                      }`}>
+                        {selectedIngredient.regulatory.restriction_details}
+                      </p>
+                    )}
+                    {selectedIngredient.regulatory.chemical_name && selectedIngredient.regulatory.chemical_name !== selectedIngredient.inciName && (
+                      <p className={`text-xs mt-1 ${
+                        selectedIngredient.regulatory.status === 'banned'
+                          ? 'text-[var(--ds-color-danger-text-subtle)]'
+                          : 'text-[var(--ds-color-warning-text-subtle)]'
+                      }`}>
+                        Chemical name: {selectedIngredient.regulatory.chemical_name}
+                      </p>
+                    )}
+                    {selectedIngredient.regulatory.glossary_name && (
+                      <p className={`text-xs mt-1 ${
+                        selectedIngredient.regulatory.status === 'banned'
+                          ? 'text-[var(--ds-color-danger-text-subtle)]'
+                          : 'text-[var(--ds-color-warning-text-subtle)]'
+                      }`}>
+                        Also known as: {selectedIngredient.regulatory.glossary_name}
+                      </p>
+                    )}
+                    {selectedIngredient.regulatory.conditions && (
+                      <div className={`mt-2 p-2 rounded bg-[var(--ds-color-surface-default)]/50 ${
+                        selectedIngredient.regulatory.status === 'banned'
+                          ? 'text-[var(--ds-color-danger-text-subtle)]'
+                          : 'text-[var(--ds-color-warning-text-subtle)]'
+                      }`}>
+                        <p className="text-xs font-semibold mb-1">Conditions:</p>
+                        <p className="text-xs">{explainConditions(selectedIngredient.regulatory.conditions)}</p>
+                      </div>
+                    )}
+                    <a
+                      href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32009R1223"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`inline-flex items-center gap-1 text-xs mt-2 underline hover:opacity-80 ${
+                        selectedIngredient.regulatory.status === 'banned'
+                          ? 'text-[var(--ds-color-danger-text-subtle)]'
+                          : 'text-[var(--ds-color-warning-text-subtle)]'
+                      }`}
+                    >
+                      EU Cosmetics Regulation (EC) No 1223/2009
+                    </a>
+                  </div>
+                </div>
+              )}
+
+              <div className="text-xs space-y-2">
+                {selectedIngredient.ratings && selectedIngredient.ratings.length > 0 && (
+                  <div>
+                    <h4 className="font-semibold text-[var(--ds-color-text-subtle)] mb-1.5">
+                      Source Ratings
+                    </h4>
+                    <div className="space-y-1.5">
+                      {selectedIngredient.ratings.map((r) => {
+                        // Find the source URL for this rating
+                        const sourceUrl = selectedIngredient.sourceUrls?.find(
+                          s => s.name === r.source_name
+                        );
+                        const typeColors: Record<string, string> = {
+                          government:
+                            "bg-[var(--ds-color-info-surface-default)] text-[var(--ds-color-info-text-default)]",
+                          study:
+                            "bg-[var(--ds-color-success-surface-default)] text-[var(--ds-color-success-text-default)]",
+                          regulatory:
+                            "bg-[var(--ds-color-accent-surface-default)] text-[var(--ds-color-accent-text-default)]",
+                          database:
+                            "bg-[var(--ds-color-neutral-surface-default)] text-[var(--ds-color-neutral-text-default)]",
+                          reference:
+                            "bg-[var(--ds-color-neutral-surface-default)] text-[var(--ds-color-neutral-text-default)]",
+                        };
+                        const chipColor = sourceUrl
+                          ? (typeColors[sourceUrl.type] || typeColors.database)
+                          : "bg-[var(--ds-color-neutral-surface-default)] text-[var(--ds-color-neutral-text-default)]";
+                        return (
+                          <div key={r.source_name} className="flex items-center justify-between">
+                            {sourceUrl ? (
+                              <a
+                                href={sourceUrl.url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className={`text-xs px-2 py-1 rounded-full hover:opacity-80 transition-opacity ${chipColor}`}
+                              >
+                                {r.source_name}
+                              </a>
+                            ) : (
+                              <span className={`text-xs px-2 py-1 rounded-full ${chipColor}`}>
+                                {r.source_name}
+                              </span>
+                            )}
+                            <div className="flex items-center gap-3">
+                              <span className={`font-bold ${
+                                r.rating >= 4 ? 'text-[var(--ds-color-danger-text-default)]' :
+                                r.rating >= 3 ? 'text-[var(--ds-color-warning-text-default)]' :
+                                'text-[var(--ds-color-success-text-default)]'
+                              }`}>
+                                {r.rating}/5
+                              </span>
+                              {r.irritancy !== null && r.irritancy !== undefined && (
+                                <span className="text-xs text-[var(--ds-color-text-subtle)] opacity-70">
+                                  irritancy: {r.irritancy}/5
+                                </span>
+                              )}
+                              <span className="text-[var(--ds-color-text-subtle)] opacity-60 text-xs">
+                                confidence: {r.evidence_level}
+                              </span>
+                            </div>
+                          </div>
+                        );
+                      })}
+                    </div>
+                    <p className="text-xs text-[var(--ds-color-text-subtle)] opacity-50 mt-3">
+                      Confidence reflects how much evidence supports this rating (high = multiple studies, low = limited data)
+                    </p>
+                  </div>
+                )}
               </div>
             </div>
 

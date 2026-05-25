@@ -13,7 +13,7 @@ function normalizeIngredientName(name: string): string {
     .toLowerCase()
     .trim()
     // Strip leading section headers (e.g., "active ingredients:", "inactive ingredients:")
-    .replace(/^(?:active|inactive)\s*(?:ingredients)?\s*:?\s*/i, '')
+    .replace(/^(?:active|inactive|ingredients)\s*:?\s*/i, '')
     // Strip concentrations in various formats
     .replace(/\s*[\(\[\{]\s*\d+(?:\.\d+)?\s*%?\s*[\)\]\}]\s*/g, ' ')
     // Strip standalone percentages like "8 %" or "(8%)" that weren't caught above
@@ -37,7 +37,8 @@ export async function POST(request: NextRequest) {
     const matches = [];
     const matchedRawNames = new Set<string>();
 
-    for (const rawName of ingredients) {
+    for (let i = 0; i < ingredients.length; i++) {
+      const rawName = ingredients[i];
       const normalizedName = normalizeIngredientName(rawName);
       
       // Skip empty or too-short after normalization
@@ -50,8 +51,8 @@ export async function POST(request: NextRequest) {
       
       // Try exact match on normalized name
       result = db.prepare(`
-        SELECT i.id, i.inci_name, i.rating, i.irritancy, i.category, i.category_group, 
-               i.description, i.evidence_level, i.flags, i.sources
+        SELECT i.id, i.inci_name, i.irritancy, i.category, i.category_group, 
+               i.description, i.flags
         FROM ingredients i
         WHERE LOWER(i.inci_name) = ?
         LIMIT 1
@@ -60,8 +61,8 @@ export async function POST(request: NextRequest) {
       // Try synonym match
       if (!result) {
         result = db.prepare(`
-          SELECT i.id, i.inci_name, i.rating, i.irritancy, i.category, i.category_group,
-                 i.description, i.evidence_level, i.flags, i.sources
+          SELECT i.id, i.inci_name, i.irritancy, i.category, i.category_group,
+                 i.description, i.flags
           FROM ingredients i
           JOIN ingredient_synonyms s ON i.id = s.ingredient_id
           WHERE LOWER(s.synonym) = ?
@@ -72,8 +73,8 @@ export async function POST(request: NextRequest) {
       // Try partial match (normalized name is substring of INCI)
       if (!result) {
         result = db.prepare(`
-          SELECT i.id, i.inci_name, i.rating, i.irritancy, i.category, i.category_group,
-                 i.description, i.evidence_level, i.flags, i.sources
+          SELECT i.id, i.inci_name, i.irritancy, i.category, i.category_group,
+                 i.description, i.flags
           FROM ingredients i
           WHERE LOWER(i.inci_name) LIKE ?
           LIMIT 1
@@ -83,8 +84,8 @@ export async function POST(request: NextRequest) {
       // Try reverse: INCI name is substring of normalized (for truncated inputs)
       if (!result) {
         result = db.prepare(`
-          SELECT i.id, i.inci_name, i.rating, i.irritancy, i.category, i.category_group,
-                 i.description, i.evidence_level, i.flags, i.sources
+          SELECT i.id, i.inci_name, i.irritancy, i.category, i.category_group,
+                 i.description, i.flags
           FROM ingredients i
           WHERE ? LIKE '%' || LOWER(i.inci_name) || '%'
           LIMIT 1
@@ -92,14 +93,28 @@ export async function POST(request: NextRequest) {
       }
 
       if (result) {
-        matchedRawNames.add(rawName.toLowerCase().trim());
-        
-        // Get regulatory status
+        matchedRawNames.add(normalizedName);
+
+        // Get ratings from all sources
+        const ratings = db.prepare(`
+          SELECT source_name, rating, irritancy, scale, evidence_level, sample_size, notes
+          FROM ingredient_ratings
+          WHERE ingredient_id = ?
+        `).all(result.id);
+
+        // Compute consensus rating (use highest for safety/conservatism)
+        const ratingValues = (ratings as { rating: number }[]).map(r => r.rating).filter(r => r !== null);
+        const consensusRating = ratingValues.length > 0 ? Math.max(...ratingValues) : null;
+
+        // Get regulatory status - search inci_name, glossary_name, and chemical_name
         const regulatory = db.prepare(`
-          SELECT status, annex, restriction_details
+          SELECT status, annex, restriction_details, conditions, regulation_source
           FROM regulatory_status
           WHERE LOWER(inci_name) = LOWER(?)
-        `).get(result.inci_name);
+             OR LOWER(chemical_name) = LOWER(?)
+             OR LOWER(glossary_name) LIKE '%' || LOWER(?) || '%'
+          LIMIT 1
+        `).get(result.inci_name, result.inci_name, result.inci_name);
 
         // Get skin type notes
         const skinTypeNotes = db.prepare(`
@@ -117,13 +132,89 @@ export async function POST(request: NextRequest) {
 
         matches.push({
           ...result,
+          rating: consensusRating,
+          ratings: ratings,
+          index: i,
           regulatory: regulatory || null,
-          skinTypeNotes: skinTypeNotes.reduce((acc: Record<string, string>, note: any) => {
+          skinTypeNotes: skinTypeNotes.reduce((acc: Record<string, string>, note: { skin_type: string; advice: string }) => {
             acc[note.skin_type] = note.advice;
             return acc;
           }, {}),
           sourceUrls: sources
         });
+      } else {
+        // Try regulatory-only match (banned/restricted ingredients not in main DB)
+        // Search inci_name, glossary_name, and chemical_name
+        const regulatory = db.prepare(`
+          SELECT inci_name, status, annex, restriction_details, conditions, regulation_source
+          FROM regulatory_status
+          WHERE LOWER(inci_name) = ?
+             OR LOWER(chemical_name) = ?
+             OR LOWER(glossary_name) LIKE '%' || LOWER(?) || '%'
+          LIMIT 1
+        `).get(normalizedName, normalizedName, normalizedName);
+
+        if (!regulatory) {
+          // Try partial match on regulatory names
+          const regulatoryPartial = db.prepare(`
+            SELECT inci_name, status, annex, restriction_details, conditions, regulation_source
+            FROM regulatory_status
+            WHERE LOWER(inci_name) LIKE ?
+               OR LOWER(chemical_name) LIKE ?
+               OR LOWER(glossary_name) LIKE ?
+            LIMIT 1
+          `).get(`%${normalizedName}%`, `%${normalizedName}%`, `%${normalizedName}%`);
+
+          if (regulatoryPartial) {
+            matchedRawNames.add(normalizedName);
+            matches.push({
+              id: `regulatory-${regulatoryPartial.inci_name.toLowerCase().replace(/\s+/g, '-')}`,
+              inci_name: regulatoryPartial.inci_name,
+              rating: null,
+              irritancy: 0,
+              category: 'Regulatory',
+              category_group: null,
+              description: regulatoryPartial.restriction_details || `This ingredient is ${regulatoryPartial.status} in the EU Cosmetics Regulation.`,
+              evidence_level: 'high',
+              flags: JSON.stringify([regulatoryPartial.status]),
+              sources: null,
+              index: i,
+              regulatory: {
+                status: regulatoryPartial.status,
+                annex: regulatoryPartial.annex,
+                restriction_details: regulatoryPartial.restriction_details,
+                conditions: regulatoryPartial.conditions,
+                regulation_source: regulatoryPartial.regulation_source
+              },
+              skinTypeNotes: {},
+              sourceUrls: []
+            });
+          }
+        } else {
+          matchedRawNames.add(normalizedName);
+          matches.push({
+            id: `regulatory-${regulatory.inci_name.toLowerCase().replace(/\s+/g, '-')}`,
+            inci_name: regulatory.inci_name,
+            rating: null,
+            irritancy: 0,
+            category: 'Regulatory',
+            category_group: null,
+            description: regulatory.restriction_details || `This ingredient is ${regulatory.status} in the EU Cosmetics Regulation.`,
+            evidence_level: 'high',
+            flags: JSON.stringify([regulatory.status]),
+            sources: null,
+            index: i,
+            regulatory: {
+              status: regulatory.status,
+              annex: regulatory.annex,
+              restriction_details: regulatory.restriction_details,
+              conditions: regulatory.conditions,
+              regulation_source: regulatory.regulation_source
+            },
+            skinTypeNotes: {},
+            sourceUrls: []
+          });
+        }
       }
     }
 

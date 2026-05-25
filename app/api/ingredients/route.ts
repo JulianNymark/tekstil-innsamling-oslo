@@ -44,20 +44,34 @@ export async function GET(request: NextRequest) {
 
   // Get ingredients
   const ingredients = db.prepare(`
-    SELECT i.id, i.inci_name, i.rating, i.irritancy, i.category, i.category_group,
-           i.description, i.evidence_level, i.flags, i.sources
+    SELECT i.id, i.inci_name, i.irritancy, i.category, i.category_group,
+           i.description, i.flags
     FROM ingredients i
     ${whereClause}
     ORDER BY ${orderColumn} ${orderDirection}
     LIMIT ? OFFSET ?
   `).all(...params, limit, offset);
 
+  // If searching, also include regulatory-only matches
+  let regulatoryIngredients: any[] = [];
+  if (search) {
+    const searchPattern = `%${search.toLowerCase()}%`;
+    regulatoryIngredients = db.prepare(`
+      SELECT inci_name, chemical_name, glossary_name, status, annex, restriction_details, conditions, regulation_source
+      FROM regulatory_status
+      WHERE LOWER(inci_name) LIKE ?
+         OR LOWER(chemical_name) LIKE ?
+         OR LOWER(glossary_name) LIKE ?
+      LIMIT ? OFFSET ?
+    `).all(searchPattern, searchPattern, searchPattern, limit, offset);
+  }
+
   // Get categories
   const categories = db.prepare(`
     SELECT DISTINCT category FROM ingredients WHERE category IS NOT NULL ORDER BY category
   `).all() as { category: string }[];
 
-  // Enrich with synonyms, sources, and skin type notes
+  // Enrich with synonyms, sources, ratings, and skin type notes
   const enrichedIngredients = ingredients.map((ing: any) => {
     const synonyms = db.prepare(`
       SELECT synonym FROM ingredient_synonyms WHERE ingredient_id = ?
@@ -71,11 +85,22 @@ export async function GET(request: NextRequest) {
       SELECT skin_type, advice FROM skin_type_notes WHERE ingredient_id = ?
     `).all(ing.id) as { skin_type: string; advice: string }[];
 
+    const ratings = db.prepare(`
+      SELECT source_name, rating, irritancy, scale, evidence_level, sample_size, notes
+      FROM ingredient_ratings
+      WHERE ingredient_id = ?
+    `).all(ing.id) as { source_name: string; rating: number; irritancy: number | null; scale: string; evidence_level: string; sample_size: number | null; notes: string | null }[];
+
+    // Compute consensus rating (use max for safety)
+    const ratingValues = ratings.map(r => r.rating).filter(r => r !== null);
+    const consensusRating = ratingValues.length > 0 ? Math.max(...ratingValues) : null;
+
     return {
       id: ing.id,
       inciName: ing.inci_name,
       commonNames: synonyms.map(s => s.synonym),
-      rating: ing.rating,
+      rating: consensusRating,
+      ratings: ratings,
       irritancy: ing.irritancy,
       category: ing.category,
       categoryGroup: ing.category_group,
@@ -86,11 +111,42 @@ export async function GET(request: NextRequest) {
         return acc;
       }, {}),
       flags: ing.flags ? JSON.parse(ing.flags) : [],
-      evidenceLevel: ing.evidence_level,
-      sources: ing.sources ? JSON.parse(ing.sources) : [],
       sourceUrls: sources
     };
   });
+
+  // Merge regulatory-only ingredients, avoiding duplicates
+  const existingIds = new Set(enrichedIngredients.map(i => i.inciName.toLowerCase()));
+  const mergedIngredients = [
+    ...enrichedIngredients,
+    ...regulatoryIngredients
+      .filter((r: any) => !existingIds.has(r.inci_name.toLowerCase()))
+      .map((r: any) => ({
+        id: `regulatory-${r.inci_name.toLowerCase().replace(/\s+/g, '-')}`,
+        inciName: r.inci_name,
+        commonNames: [],
+        rating: null,
+        irritancy: 0,
+        category: 'Regulatory',
+        categoryGroup: null,
+        function: [],
+        description: r.restriction_details || `This ingredient is ${r.status} in the EU Cosmetics Regulation.`,
+        skinTypeNotes: {},
+        flags: [r.status],
+        evidenceLevel: 'high',
+        sources: [],
+        sourceUrls: [],
+        regulatory: {
+          status: r.status,
+          annex: r.annex,
+          restriction_details: r.restriction_details,
+          conditions: r.conditions,
+          regulation_source: r.regulation_source,
+          chemical_name: r.chemical_name,
+          glossary_name: r.glossary_name
+        }
+      }))
+  ];
 
   return NextResponse.json({
     version: '1.4.0',
@@ -109,12 +165,12 @@ export async function GET(request: NextRequest) {
         '5': 'Very high risk'
       }
     },
-    ingredients: enrichedIngredients,
+    ingredients: mergedIngredients,
     pagination: {
       page,
       limit,
-      total: countResult.total,
-      totalPages: Math.ceil(countResult.total / limit)
+      total: countResult.total + regulatoryIngredients.length,
+      totalPages: Math.ceil((countResult.total + regulatoryIngredients.length) / limit)
     },
     categories: categories.map(c => c.category)
   });

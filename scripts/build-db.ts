@@ -28,15 +28,26 @@ db.exec(`
   CREATE TABLE ingredients (
     id TEXT PRIMARY KEY,
     inci_name TEXT NOT NULL,
-    rating INTEGER,
     irritancy INTEGER DEFAULT 0,
     category TEXT,
     category_group TEXT,
     description TEXT,
-    evidence_level TEXT CHECK(evidence_level IN ('high', 'medium', 'low')),
     flags TEXT,
-    sources TEXT,
     created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+  );
+
+  CREATE TABLE ingredient_ratings (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    ingredient_id TEXT NOT NULL,
+    source_name TEXT NOT NULL,
+    rating INTEGER CHECK(rating >= 0 AND rating <= 5),
+    irritancy INTEGER CHECK(irritancy >= 0 AND irritancy <= 5),
+    scale TEXT DEFAULT 'fulton-0-5',
+    evidence_level TEXT CHECK(evidence_level IN ('high', 'medium', 'low')),
+    sample_size INTEGER,
+    notes TEXT,
+    FOREIGN KEY (ingredient_id) REFERENCES ingredients(id),
+    UNIQUE(ingredient_id, source_name)
   );
 
   CREATE TABLE ingredient_synonyms (
@@ -69,9 +80,12 @@ db.exec(`
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     ingredient_id TEXT,
     inci_name TEXT NOT NULL,
+    chemical_name TEXT,
+    glossary_name TEXT,
     status TEXT NOT NULL CHECK(status IN ('banned', 'restricted', 'allowed')),
     annex TEXT,
     restriction_details TEXT,
+    conditions TEXT,
     regulation_source TEXT,
     effective_date TEXT,
     UNIQUE(inci_name)
@@ -83,10 +97,12 @@ db.exec(`
     content_rowid='rowid'
   );
 
-  CREATE INDEX idx_ingredients_rating ON ingredients(rating);
   CREATE INDEX idx_ingredients_category ON ingredients(category);
+  CREATE INDEX idx_ingredients_irritancy ON ingredients(irritancy);
   CREATE INDEX idx_synonyms_synonym ON ingredient_synonyms(synonym);
   CREATE INDEX idx_regulatory_status ON regulatory_status(inci_name, status);
+  CREATE INDEX idx_ratings_ingredient ON ingredient_ratings(ingredient_id);
+  CREATE INDEX idx_ratings_source ON ingredient_ratings(source_name);
 `);
 
 // Load JSON
@@ -96,8 +112,13 @@ console.log(`Inserting ${data.ingredients.length} ingredients...`);
 
 // Prepare statements
 const insertIngredient = db.prepare(`
-  INSERT INTO ingredients (id, inci_name, rating, irritancy, category, category_group, description, evidence_level, flags, sources)
-  VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+  INSERT INTO ingredients (id, inci_name, irritancy, category, category_group, description, flags)
+  VALUES (?, ?, ?, ?, ?, ?, ?)
+`);
+
+const insertRating = db.prepare(`
+  INSERT OR IGNORE INTO ingredient_ratings (ingredient_id, source_name, rating, irritancy, scale, evidence_level, notes)
+  VALUES (?, ?, ?, ?, ?, ?, ?)
 `);
 
 const insertSynonym = db.prepare(`
@@ -142,15 +163,29 @@ for (let i = 0; i < data.ingredients.length; i += batchSize) {
     insertIngredient.run(
       ing.id,
       ing.inciName,
-      ing.rating ?? null,
       ing.irritancy ?? 0,
       ing.category ?? 'Unknown',
       ing.categoryGroup ?? null,
       ing.description ?? null,
-      ing.evidenceLevel ?? 'low',
-      ing.flags ? JSON.stringify(ing.flags) : null,
-      ing.sources ? JSON.stringify(ing.sources) : null
+      ing.flags ? JSON.stringify(ing.flags) : null
     );
+
+    // Insert rating if present
+    if (ing.rating !== null && ing.rating !== undefined) {
+      // Use the source name from sourceUrls if available, otherwise 'our-database'
+      const sourceName = ing.sourceUrls && ing.sourceUrls.length > 0
+        ? ing.sourceUrls[0].name
+        : (ing.sources && ing.sources.length > 0 ? ing.sources[0] : 'our-database');
+      insertRating.run(
+        ing.id,
+        sourceName,
+        ing.rating,
+        ing.irritancy ?? null,
+        'fulton-0-5',
+        ing.evidenceLevel ?? 'low',
+        null
+      );
+    }
 
     // Insert synonyms
     if (ing.commonNames && ing.commonNames.length > 0) {
@@ -251,13 +286,15 @@ const regulatoryData = [
 ];
 
 const insertRegulatory = db.prepare(`
-  INSERT OR IGNORE INTO regulatory_status (inci_name, status, annex, restriction_details, regulation_source, effective_date)
-  VALUES (?, ?, ?, ?, ?, ?)
+  INSERT OR IGNORE INTO regulatory_status (inci_name, chemical_name, glossary_name, status, annex, restriction_details, regulation_source, effective_date)
+  VALUES (?, ?, ?, ?, ?, ?, ?, ?)
 `);
 
 for (const reg of regulatoryData) {
   insertRegulatory.run(
     reg.inci_name,
+    null, // chemical_name
+    null, // glossary_name
     reg.status,
     reg.annex,
     reg.restriction_details,
@@ -273,11 +310,13 @@ db.exec('ANALYZE;');
 // Stats
 const stats = db.prepare('SELECT COUNT(*) as count FROM ingredients').get() as { count: number };
 const synonymStats = db.prepare('SELECT COUNT(*) as count FROM ingredient_synonyms').get() as { count: number };
+const ratingStats = db.prepare('SELECT COUNT(*) as count FROM ingredient_ratings').get() as { count: number };
 const regulatoryStats = db.prepare('SELECT COUNT(*) as count FROM regulatory_status').get() as { count: number };
 
 console.log(`\nDatabase created successfully!`);
 console.log(`  Ingredients: ${stats.count}`);
 console.log(`  Synonyms: ${synonymStats.count}`);
+console.log(`  Ratings: ${ratingStats.count}`);
 console.log(`  Regulatory entries: ${regulatoryStats.count}`);
 console.log(`  Skipped duplicates: ${skippedDuplicates}`);
 console.log(`  DB size: ${(fs.statSync(DB_PATH).size / 1024 / 1024).toFixed(2)} MB`);

@@ -12,10 +12,13 @@ export async function GET(request: NextRequest) {
   const db = getDb();
   
   const result = db.prepare(`
-    SELECT inci_name, status, annex, restriction_details, regulation_source, effective_date
+    SELECT inci_name, chemical_name, glossary_name, status, annex, restriction_details, conditions, regulation_source, effective_date
     FROM regulatory_status
     WHERE LOWER(inci_name) = LOWER(?)
-  `).get(ingredient);
+       OR LOWER(chemical_name) = LOWER(?)
+       OR LOWER(glossary_name) LIKE '%' || LOWER(?) || '%'
+    LIMIT 1
+  `).get(ingredient, ingredient, ingredient);
 
   if (!result) {
     return NextResponse.json({ status: 'unknown', message: 'No regulatory data available' });

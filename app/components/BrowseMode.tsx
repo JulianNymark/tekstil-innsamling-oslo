@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect, useMemo } from 'react';
+import { ExclamationmarkTriangleFillIcon } from "@navikt/aksel-icons";
 import {
   getRatingColor,
   getRatingLabel,
@@ -11,7 +12,7 @@ interface Ingredient {
   id: string;
   inciName: string;
   commonNames: string[];
-  rating: number;
+  rating: number | null;
   irritancy: number;
   category: string;
   categoryGroup: string;
@@ -19,8 +20,6 @@ interface Ingredient {
   description: string;
   skinTypeNotes: Record<string, string>;
   flags: string[];
-  evidenceLevel: string;
-  sources?: string[];
   sourceUrls?: { name: string; url: string; type: string }[];
 }
 
@@ -28,6 +27,8 @@ type SkinType = "all" | "oily" | "dry" | "sensitive" | "acneProne" | "normal";
 
 function getSkinTypeAdvice(ingredient: Ingredient, skinType: SkinType): string {
   if (skinType === "all") return "";
+  // Don't show skin type advice for ingredients with no rating data
+  if (ingredient.rating === null || ingredient.rating === undefined) return "";
   const advice = ingredient.skinTypeNotes[skinType];
   if (!advice) return "";
   const adviceMap: Record<string, string> = {
@@ -73,7 +74,10 @@ export default function BrowseMode({
         // Calculate rating counts
         const counts: Record<number, number> = { 0: 0, 1: 0, 2: 0, 3: 0, 4: 0, 5: 0 };
         data.ingredients.forEach((ing: Ingredient) => {
-          counts[ing.rating] = (counts[ing.rating] || 0) + 1;
+          const r = ing.rating;
+          if (r !== null && r !== undefined) {
+            counts[r] = (counts[r] || 0) + 1;
+          }
         });
         setRatingCounts(counts);
         setLoading(false);
@@ -105,7 +109,7 @@ export default function BrowseMode({
 
     const sorted = [...filtered];
     if (sortBy === "rating") {
-      sorted.sort((a, b) => b.rating - a.rating);
+      sorted.sort((a, b) => (b.rating ?? -1) - (a.rating ?? -1));
     } else if (sortBy === "name") {
       sorted.sort((a, b) => a.inciName.localeCompare(b.inciName));
     } else if (sortBy === "category") {
@@ -224,16 +228,30 @@ export default function BrowseMode({
 
       {/* Ingredient List */}
       <div className="space-y-3">
-        {filteredIngredients.map((ingredient) => (
+        {filteredIngredients.map((ingredient) => {
+          const isBanned = (ingredient as any).regulatory?.status === 'banned';
+          return (
           <div
             key={ingredient.id}
             onClick={() => onSelectIngredient(ingredient)}
-            className="p-4 bg-[var(--ds-color-surface-tinted)] rounded-xl border border-[var(--ds-color-border-default)] hover:border-[var(--ds-color-border-strong)] cursor-pointer transition-all hover:shadow-sm"
+            className={`p-4 rounded-xl border cursor-pointer transition-all hover:shadow-sm ${
+              isBanned
+                ? 'bg-[var(--ds-color-danger-surface-default)]/10 border-[var(--ds-color-danger-border-default)] hover:border-[var(--ds-color-danger-border-strong)]'
+                : 'bg-[var(--ds-color-surface-tinted)] border-[var(--ds-color-border-default)] hover:border-[var(--ds-color-border-strong)]'
+            }`}
           >
+            {isBanned && (
+              <div className="flex items-center gap-2 mb-2">
+                <ExclamationmarkTriangleFillIcon className="text-[var(--ds-color-danger-text-default)]" aria-label="Banned ingredient warning" />
+                <span className="text-sm font-bold text-[var(--ds-color-danger-text-default)]">
+                  Banned Ingredient
+                </span>
+              </div>
+            )}
             <div className="flex items-start justify-between gap-4">
               <div className="flex-1 min-w-0">
                 <div className="flex items-center gap-2 flex-wrap">
-                  <h3 className="font-semibold text-[var(--ds-color-text-default)]">
+                  <h3 className={`font-semibold ${isBanned ? 'text-[var(--ds-color-danger-text-default)]' : 'text-[var(--ds-color-text-default)]'}`}>
                     {ingredient.inciName}
                   </h3>
                   {ingredient.commonNames.length > 0 && (
@@ -249,6 +267,18 @@ export default function BrowseMode({
                   <span className="text-xs px-2 py-1 bg-[var(--ds-color-surface-hover)] text-[var(--ds-color-text-subtle)] rounded-full">
                     {ingredient.category}
                   </span>
+                  {(ingredient as any).regulatory && (
+                    <span className={`inline-flex items-center gap-1 text-xs px-2 py-1 rounded-full font-semibold ${
+                      (ingredient as any).regulatory.status === 'banned'
+                        ? 'bg-[var(--ds-color-danger-surface-default)] text-[var(--ds-color-danger-text-default)]'
+                        : 'bg-[var(--ds-color-warning-surface-default)] text-[var(--ds-color-warning-text-default)]'
+                    }`}>
+                      {(ingredient as any).regulatory.status === 'banned' && (
+                        <ExclamationmarkTriangleFillIcon className="w-3 h-3" aria-label="Banned" />
+                      )}
+                      {(ingredient as any).regulatory.status === 'banned' ? 'BANNED' : 'RESTRICTED'}
+                    </span>
+                  )}
                   {ingredient.irritancy > 0 && (
                     <span className="text-xs px-2 py-1 bg-[var(--ds-color-warning-surface-tinted)] text-[var(--ds-color-warning-text-default)] rounded-full">
                       Irritancy: {ingredient.irritancy}/5
@@ -273,7 +303,8 @@ export default function BrowseMode({
               </div>
             </div>
           </div>
-        ))}
+        )}
+        )}
       </div>
 
       {/* Empty state */}

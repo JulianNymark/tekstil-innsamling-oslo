@@ -68,4 +68,13 @@ describe("parseIngredientSections", () => {
     expect(result[0].name).toBe("active");
     expect(result[0].content).toBe("Zinc Oxide, Titanium Dioxide");
   });
+
+  it("treats bare 'ingredients:' as unknown (not active)", () => {
+    const text = "ingredients: Water, Glycerin";
+    const result = parseIngredientSections(text);
+
+    expect(result).toHaveLength(1);
+    expect(result[0].name).toBe("unknown");
+    expect(result[0].content).toBe("Water, Glycerin");
+  });
 });
