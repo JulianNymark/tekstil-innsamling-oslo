@@ -31,14 +31,6 @@ const Map = dynamic(() => import("./Map"), {
 });
 
 function getInitialTab(): Tab {
-  if (typeof window === "undefined") return "map";
-  const hash = window.location.hash.replace("#", "");
-  if (hash === "check" || hash === "browse" || hash === "map") {
-    return hash;
-  }
-  if (hash === "porechecker") {
-    return "check";
-  }
   return "map";
 }
 
@@ -46,6 +38,16 @@ export default function Home() {
   const [locations, setLocations] = useState<Location[]>([]);
   const [updatedAt, setUpdatedAt] = useState<string | null>(null);
   const [activeTab, setActiveTab] = useState<Tab>(getInitialTab);
+
+  // Sync tab from URL hash after hydration (client-only)
+  useEffect(() => {
+    const hash = window.location.hash.replace("#", "");
+    if (hash === "check" || hash === "browse" || hash === "map") {
+      setActiveTab(hash);
+    } else if (hash === "porechecker") {
+      setActiveTab("check");
+    }
+  }, []);
 
   // Update URL hash when tab changes
   const handleTabChange = (tab: Tab) => {

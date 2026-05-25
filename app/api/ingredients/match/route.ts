@@ -151,87 +151,79 @@ export async function POST(request: NextRequest) {
           }, {}),
           sourceUrls: sources
         });
-      } else {
-        // Try regulatory-only match (banned/restricted ingredients not in main DB)
-        // Search inci_name, glossary_name, and chemical_name
-        const regulatory = db.prepare(`
-          SELECT inci_name, status, annex, restriction_details, conditions, regulation_source
-          FROM regulatory_status
-          WHERE LOWER(inci_name) = ?
-             OR LOWER(chemical_name) = ?
-             OR LOWER(glossary_name) LIKE '%' || LOWER(?) || '%'
-          LIMIT 1
-        `).get(normalizedName, normalizedName, normalizedName);
-
-        if (!regulatory) {
-          // Try word-boundary match on regulatory names to avoid false positives
-          const regulatoryPartial = db.prepare(`
+        } else {
+          // Try regulatory-only match (banned/restricted ingredients not in main DB)
+          // Search inci_name, glossary_name, and chemical_name
+          const regulatory = db.prepare(`
             SELECT inci_name, status, annex, restriction_details, conditions, regulation_source
             FROM regulatory_status
-            WHERE ? LIKE '% ' || LOWER(inci_name) || ' %'
-               OR ? LIKE LOWER(inci_name) || ' %'
-               OR ? LIKE '% ' || LOWER(inci_name)
-               OR LOWER(inci_name) = ?
-               OR ? LIKE '% ' || LOWER(chemical_name) || ' %'
-               OR ? LIKE LOWER(chemical_name) || ' %'
-               OR ? LIKE '% ' || LOWER(chemical_name)
+            WHERE LOWER(inci_name) = ?
                OR LOWER(chemical_name) = ?
+               OR LOWER(glossary_name) LIKE '%' || LOWER(?) || '%'
             LIMIT 1
-          `).get(
-            normalizedName, normalizedName, normalizedName, normalizedName,
-            normalizedName, normalizedName, normalizedName, normalizedName
-          );
+          `).get(normalizedName, normalizedName, normalizedName);
 
-          if (regulatoryPartial) {
+          if (!regulatory) {
+            // Try partial match on regulatory names (e.g., "mercury" matches "Mercury and its compounds...")
+            const regulatoryPartial = db.prepare(`
+              SELECT inci_name, status, annex, restriction_details, conditions, regulation_source
+              FROM regulatory_status
+              WHERE LOWER(inci_name) LIKE '%' || LOWER(?) || '%'
+                 OR LOWER(chemical_name) LIKE '%' || LOWER(?) || '%'
+                 OR LOWER(glossary_name) LIKE '%' || LOWER(?) || '%'
+              LIMIT 1
+            `).get(normalizedName, normalizedName, normalizedName);
+
+            if (regulatoryPartial) {
+              matchedRawNames.add(normalizedName);
+              matches.push({
+                id: `regulatory-${regulatoryPartial.inci_name.toLowerCase().replace(/\s+/g, '-')}`,
+                inci_name: regulatoryPartial.inci_name,
+                rating: null,
+                irritancy: 0,
+                category: 'Regulatory',
+                category_group: null,
+                description: regulatoryPartial.restriction_details || `This ingredient is ${regulatoryPartial.status} in the EU Cosmetics Regulation.`,
+                evidence_level: 'high',
+                flags: JSON.stringify([regulatoryPartial.status]),
+                sources: null,
+                index: i,
+                regulatory: {
+                  status: regulatoryPartial.status,
+                  annex: regulatoryPartial.annex,
+                  restriction_details: regulatoryPartial.restriction_details,
+                  conditions: regulatoryPartial.conditions,
+                  regulation_source: regulatoryPartial.regulation_source
+                },
+                skinTypeNotes: {},
+                sourceUrls: []
+              });
+            }
+          } else {
             matchedRawNames.add(normalizedName);
             matches.push({
-              id: `regulatory-${regulatoryPartial.inci_name.toLowerCase().replace(/\s+/g, '-')}`,
-              inci_name: regulatoryPartial.inci_name,
+              id: `regulatory-${regulatory.inci_name.toLowerCase().replace(/\s+/g, '-')}`,
+              inci_name: regulatory.inci_name,
               rating: null,
               irritancy: 0,
               category: 'Regulatory',
               category_group: null,
-              description: regulatoryPartial.restriction_details || `This ingredient is ${regulatoryPartial.status} in the EU Cosmetics Regulation.`,
+              description: regulatory.restriction_details || `This ingredient is ${regulatory.status} in the EU Cosmetics Regulation.`,
               evidence_level: 'high',
-              flags: JSON.stringify([regulatoryPartial.status]),
+              flags: JSON.stringify([regulatory.status]),
               sources: null,
               index: i,
               regulatory: {
-                status: regulatoryPartial.status,
-                annex: regulatoryPartial.annex,
-                restriction_details: regulatoryPartial.restriction_details,
-                conditions: regulatoryPartial.conditions,
-                regulation_source: regulatoryPartial.regulation_source
+                status: regulatory.status,
+                annex: regulatory.annex,
+                restriction_details: regulatory.restriction_details,
+                conditions: regulatory.conditions,
+                regulation_source: regulatory.regulation_source
               },
               skinTypeNotes: {},
               sourceUrls: []
             });
           }
-        } else {
-          matchedRawNames.add(normalizedName);
-          matches.push({
-            id: `regulatory-${regulatory.inci_name.toLowerCase().replace(/\s+/g, '-')}`,
-            inci_name: regulatory.inci_name,
-            rating: null,
-            irritancy: 0,
-            category: 'Regulatory',
-            category_group: null,
-            description: regulatory.restriction_details || `This ingredient is ${regulatory.status} in the EU Cosmetics Regulation.`,
-            evidence_level: 'high',
-            flags: JSON.stringify([regulatory.status]),
-            sources: null,
-            index: i,
-            regulatory: {
-              status: regulatory.status,
-              annex: regulatory.annex,
-              restriction_details: regulatory.restriction_details,
-              conditions: regulatory.conditions,
-              regulation_source: regulatory.regulation_source
-            },
-            skinTypeNotes: {},
-            sourceUrls: []
-          });
-        }
       }
     }
 

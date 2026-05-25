@@ -199,7 +199,7 @@ pnpm install
 pnpm dev
 
 # Production build
-pnpm build
+pnpm build:iso
 
 # Database commands
 pnpm db:list                          # List all sources and their counts
@@ -252,7 +252,7 @@ fly deploy
 Before committing changes:
 - [ ] `pnpm lint` passes without errors
 - [ ] `pnpm knip` passes without issues
-- [ ] `pnpm build` passes without errors
+- [ ] `pnpm build:iso` passes without errors
 - [ ] `data/ingredients.db` is committed if you changed data
 
 ## Version History

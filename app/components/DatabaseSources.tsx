@@ -25,23 +25,23 @@ export default function DatabaseSources() {
   }, []);
 
   if (loading) {
-    return <div className="text-sm text-gray-500">Loading sources...</div>;
+    return <div className="text-sm text-[var(--ds-color-text-subtle)]">Loading sources...</div>;
   }
 
   const getTypeLabel = (type: string) => {
     const labels: Record<string, { text: string; color: string }> = {
-      reference: { text: 'Reference', color: 'bg-blue-100 text-blue-800' },
-      regulatory: { text: 'Regulatory', color: 'bg-green-100 text-green-800' },
-      study: { text: 'Study', color: 'bg-purple-100 text-purple-800' },
-      github: { text: 'Open Data', color: 'bg-gray-100 text-gray-800' },
+      reference: { text: 'Reference', color: 'bg-[var(--ds-color-info-surface-tinted)] text-[var(--ds-color-info-text-default)]' },
+      regulatory: { text: 'Regulatory', color: 'bg-[var(--ds-color-success-surface-tinted)] text-[var(--ds-color-success-text-default)]' },
+      study: { text: 'Study', color: 'bg-[var(--ds-color-accent-surface-tinted)] text-[var(--ds-color-accent-text-default)]' },
+      github: { text: 'Open Data', color: 'bg-[var(--ds-color-neutral-surface-tinted)] text-[var(--ds-color-neutral-text-default)]' },
     };
-    return labels[type] || { text: type, color: 'bg-gray-100 text-gray-800' };
+    return labels[type] || { text: type, color: 'bg-[var(--ds-color-neutral-surface-tinted)] text-[var(--ds-color-neutral-text-default)]' };
   };
 
   return (
     <div className="space-y-3">
       <h3 className="text-lg font-semibold">Data Sources</h3>
-      <p className="text-sm text-gray-600">
+      <p className="text-sm text-[var(--ds-color-text-subtle)]">
         Our ingredient database combines multiple authoritative sources:
       </p>
       
@@ -54,7 +54,7 @@ export default function DatabaseSources() {
               href={source.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="block p-3 rounded-lg border border-gray-200 hover:border-gray-300 hover:bg-gray-50 transition-colors"
+              className="block p-3 rounded-lg border border-[var(--ds-color-border-default)] hover:border-[var(--ds-color-border-strong)] hover:bg-[var(--ds-color-surface-hover)] transition-colors"
             >
               <div className="flex items-start justify-between">
                 <div className="flex-1">
@@ -64,10 +64,10 @@ export default function DatabaseSources() {
                       {typeInfo.text}
                     </span>
                   </div>
-                  <p className="text-xs text-gray-600">{source.description}</p>
-                  <p className="text-xs text-gray-500 mt-1">{source.managedBy}</p>
+                  <p className="text-xs text-[var(--ds-color-text-subtle)]">{source.description}</p>
+                  <p className="text-xs text-[var(--ds-color-text-subtle)] mt-1">{source.managedBy}</p>
                 </div>
-                <svg className="w-4 h-4 text-gray-400 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-4 h-4 text-[var(--ds-color-text-subtle)] mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                 </svg>
               </div>
@@ -76,9 +76,9 @@ export default function DatabaseSources() {
         })}
       </div>
 
-      <div className="mt-4 p-3 bg-blue-50 rounded-lg text-sm">
-        <p className="font-medium text-blue-900 mb-1">EU Regulatory Status</p>
-        <p className="text-blue-800">
+      <div className="mt-4 p-3 bg-[var(--ds-color-info-surface-tinted)] rounded-lg text-sm">
+        <p className="font-medium text-[var(--ds-color-info-text-default)] mb-1">EU Regulatory Status</p>
+        <p className="text-[var(--ds-color-info-text-subtle)]">
           We track EU Cosmetics Regulation (EC) No 1223/2009 banned and restricted ingredients 
           from Annexes II, III, V, and VI. This helps identify ingredients that are prohibited 
           or have concentration limits in the European Union.
