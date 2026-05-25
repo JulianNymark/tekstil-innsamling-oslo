@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect, useCallback } from 'react';
-import { ExclamationmarkTriangleFillIcon } from "@navikt/aksel-icons";
+import { ExclamationmarkTriangleFillIcon, MagnifyingGlassIcon } from "@navikt/aksel-icons";
 import {
   getRatingColor,
   getRatingLabel,
@@ -349,7 +349,9 @@ export default function BrowseMode({
       {/* Empty state */}
       {!loading && ingredients.length === 0 && (
         <div className="text-center py-12">
-          <div className="text-4xl mb-3">🔍</div>
+          <div className="text-4xl mb-3">
+            <MagnifyingGlassIcon className="w-10 h-10 mx-auto text-[var(--ds-color-text-subtle)]" aria-label="Search" />
+          </div>
           <h3 className="text-lg font-semibold text-[var(--ds-color-text-default)] mb-1">
             No ingredients found
           </h3>

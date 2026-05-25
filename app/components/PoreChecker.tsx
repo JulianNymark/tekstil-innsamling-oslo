@@ -4,7 +4,7 @@ import {
   PopoverTrigger,
   PopoverTriggerContext,
 } from "@digdir/designsystemet-react";
-import { InformationSquareFillIcon, ExclamationmarkTriangleFillIcon } from "@navikt/aksel-icons";
+import { InformationSquareFillIcon, ExclamationmarkTriangleFillIcon, QuestionmarkCircleFillIcon, XMarkOctagonFillIcon, LightningFillIcon, CheckmarkCircleFillIcon, MinusCircleFillIcon, TestFlaskFillIcon } from "@navikt/aksel-icons";
 import {
   getRatingColor,
   getRatingColorBorder,
@@ -313,7 +313,7 @@ function escapeRegex(str: string): string {
 function getProductVerdict(matched: MatchedIngredient[]): {
   verdict: "safe" | "low-risk" | "caution" | "not-suitable";
   label: string;
-  emoji: string;
+  icon: "QuestionmarkCircleFillIcon" | "XMarkOctagonFillIcon" | "ExclamationmarkTriangleFillIcon" | "LightningFillIcon" | "CheckmarkCircleFillIcon" | "MinusCircleFillIcon";
   semanticColor: "success" | "warning" | "danger" | "neutral" | "info";
   summary: string;
   details: string[];
@@ -322,7 +322,7 @@ function getProductVerdict(matched: MatchedIngredient[]): {
     return {
       verdict: "safe",
       label: "No data",
-      emoji: "🤷",
+      icon: "QuestionmarkCircleFillIcon",
       semanticColor: "neutral",
       summary:
         "Ingen ingredienser funnet i databasen. Dette betyr ikke at produktet er utrygt — bare at vi ikke har nok info.",
@@ -336,7 +336,7 @@ function getProductVerdict(matched: MatchedIngredient[]): {
     return {
       verdict: "not-suitable",
       label: "Contains Banned Ingredient",
-      emoji: "🚫",
+      icon: "XMarkOctagonFillIcon",
       semanticColor: "danger",
       summary: `This product contains ${banned.length === 1 ? banned[0].ingredient.inciName : banned.length + ' banned ingredients'} prohibited under EU Cosmetics Regulation (EC) No 1223/2009.`,
       details: [
@@ -371,7 +371,7 @@ function getProductVerdict(matched: MatchedIngredient[]): {
     return {
       verdict: "not-suitable",
       label: "Use with caution",
-      emoji: "⚠️",
+      icon: "ExclamationmarkTriangleFillIcon",
       semanticColor: "danger",
       summary: hasMultiple
         ? `This product contains ${highRisk.length} ingredients with high comedogenic risk (rating 4–5). These are known pore-cloggers.`
@@ -391,7 +391,7 @@ function getProductVerdict(matched: MatchedIngredient[]): {
     return {
       verdict: "caution",
       label: "Moderate risk",
-      emoji: "⚡",
+      icon: "LightningFillIcon",
       semanticColor: "warning",
       summary: `This product contains ${moderateRisk.length} ingredient(s) with moderate comedogenic risk (rating 3).`,
       details: [
@@ -413,7 +413,7 @@ function getProductVerdict(matched: MatchedIngredient[]): {
     return {
       verdict: "safe",
       label: "Likely safe",
-      emoji: "✅",
+      icon: "CheckmarkCircleFillIcon",
       semanticColor: "success",
       summary: `This product contains ${fattyAlcohols.length} fatty alcohol(s) with low comedogenic risk (rating 2). These are moisturizing and safe for most people.`,
       details: [
@@ -428,7 +428,7 @@ function getProductVerdict(matched: MatchedIngredient[]): {
     return {
       verdict: "low-risk",
       label: "Low risk",
-      emoji: "🟡",
+      icon: "MinusCircleFillIcon",
       semanticColor: "warning",
       summary: `This product contains ${lowRisk.length} ingredient(s) with low comedogenic risk (rating 2).`,
       details: [
@@ -446,7 +446,7 @@ function getProductVerdict(matched: MatchedIngredient[]): {
     return {
       verdict: "safe",
       label: "No comedogenic data",
-      emoji: "🤷",
+      icon: "QuestionmarkCircleFillIcon",
       semanticColor: "neutral",
       summary: `We found ${matched.length} ingredient(s) in the database, but none have comedogenicity ratings.`,
       details: [
@@ -459,15 +459,34 @@ function getProductVerdict(matched: MatchedIngredient[]): {
   // All safe (0-1)
   return {
     verdict: "safe",
-    label: "Likely safe",
-    emoji: "✅",
-    semanticColor: "success",
+      label: "Likely safe",
+      icon: "CheckmarkCircleFillIcon",
+      semanticColor: "success",
     summary: `No comedogenic ingredients found among the ${matched.length} we know of in the database.`,
     details: [
       "All known ingredients have rating 0–1 (non-comedogenic).",
       "This looks like a well-formulated product for most skin types.",
     ],
   };
+}
+
+function getVerdictIcon(iconName: string) {
+  switch (iconName) {
+    case "QuestionmarkCircleFillIcon":
+      return <QuestionmarkCircleFillIcon className="w-7 h-7" />;
+    case "XMarkOctagonFillIcon":
+      return <XMarkOctagonFillIcon className="w-7 h-7" />;
+    case "ExclamationmarkTriangleFillIcon":
+      return <ExclamationmarkTriangleFillIcon className="w-7 h-7" />;
+    case "LightningFillIcon":
+      return <LightningFillIcon className="w-7 h-7" />;
+    case "CheckmarkCircleFillIcon":
+      return <CheckmarkCircleFillIcon className="w-7 h-7" />;
+    case "MinusCircleFillIcon":
+      return <MinusCircleFillIcon className="w-7 h-7" />;
+    default:
+      return <QuestionmarkCircleFillIcon className="w-7 h-7" />;
+  }
 }
 
 export default function PoreChecker({ mode }: { mode: Mode }) {
@@ -736,7 +755,7 @@ export default function PoreChecker({ mode }: { mode: Mode }) {
                         <div
                           className={`flex-shrink-0 w-12 h-12 rounded-xl ${styles.iconBg} flex items-center justify-center text-2xl`}
                         >
-                          {productVerdict.emoji}
+                          {getVerdictIcon(productVerdict.icon)}
                         </div>
                         <div className="flex-1 min-w-0">
                           <h3 className={`text-lg font-bold ${styles.text}`}>
@@ -1020,7 +1039,7 @@ export default function PoreChecker({ mode }: { mode: Mode }) {
               {/* Draelos 2006 Disclaimer */}
               <div className="p-4 bg-[var(--ds-color-info-surface-default)] rounded-xl border border-[var(--ds-color-info-border-default)]">
                 <h4 className="text-sm font-semibold text-[var(--ds-color-info-text-default)] mb-2 flex items-center gap-2">
-                  <span>🧪</span>
+                  <TestFlaskFillIcon className="w-5 h-5" aria-label="Science disclaimer" />
                   <span>Important: Raw ingredient vs. finished product</span>
                 </h4>
                 <p className="text-sm text-[var(--ds-color-info-text-subtle)] leading-relaxed">
