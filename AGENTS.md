@@ -131,6 +131,9 @@ pnpm dev
 # Isolated production build (agents must use this)
 pnpm build:iso
 
+# Find unused dependencies, exports, and files (run before committing)
+pnpm knip
+
 # The `out/` directory contains static files for deployment
 ```
 
@@ -166,6 +169,8 @@ pnpm build:iso
 ## Testing Checklist
 
 Before committing changes:
+- [ ] `pnpm lint` passes without errors
+- [ ] `pnpm knip` passes without issues
 - [ ] `pnpm build:iso` passes without errors
 
 ## Version History

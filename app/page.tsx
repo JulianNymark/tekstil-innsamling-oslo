@@ -2,7 +2,7 @@
 
 import dynamic from "next/dynamic";
 import { useEffect, useState } from "react";
-import TabBar from "./components/TabBar";
+import { ToggleGroup } from "@digdir/designsystemet-react";
 import PoreChecker from "./components/PoreChecker";
 
 interface Location {
@@ -18,7 +18,9 @@ interface LocationsData {
   locations: Location[];
 }
 
-type Tab = "map" | "porechecker";
+type Tab = "map" | "check" | "browse";
+
+type PoreCheckerMode = "check" | "browse";
 
 const Map = dynamic(() => import("./Map"), {
   ssr: false,
@@ -29,18 +31,22 @@ const Map = dynamic(() => import("./Map"), {
   ),
 });
 
+function getInitialTab(): Tab {
+  if (typeof window === "undefined") return "map";
+  const hash = window.location.hash.replace("#", "");
+  if (hash === "check" || hash === "browse" || hash === "map") {
+    return hash;
+  }
+  if (hash === "porechecker") {
+    return "check";
+  }
+  return "map";
+}
+
 export default function Home() {
   const [locations, setLocations] = useState<Location[]>([]);
   const [updatedAt, setUpdatedAt] = useState<string | null>(null);
-  const [activeTab, setActiveTab] = useState<Tab>("map");
-
-  // Read tab from URL hash on mount
-  useEffect(() => {
-    const hash = window.location.hash.replace("#", "");
-    if (hash === "porechecker" || hash === "map") {
-      setActiveTab(hash);
-    }
-  }, []);
+  const [activeTab, setActiveTab] = useState<Tab>(getInitialTab);
 
   // Update URL hash when tab changes
   const handleTabChange = (tab: Tab) => {
@@ -76,9 +82,16 @@ export default function Home() {
         </div>
 
         {/* Tab Navigation */}
-        <div className="w-full max-w-md px-4">
-          <TabBar activeTab={activeTab} onTabChange={handleTabChange} />
-        </div>
+
+        <ToggleGroup
+          data-toggle-group="Velg side"
+          value={activeTab}
+          onChange={(value) => handleTabChange(value as Tab)}
+        >
+          <ToggleGroup.Item value="map">Sorter Klær</ToggleGroup.Item>
+          <ToggleGroup.Item value="check">Check Product</ToggleGroup.Item>
+          <ToggleGroup.Item value="browse">Browse Database</ToggleGroup.Item>
+        </ToggleGroup>
 
         {/* Tab Content */}
         {activeTab === "map" && (
@@ -112,9 +125,9 @@ export default function Home() {
           </>
         )}
 
-        {activeTab === "porechecker" && (
+        {(activeTab === "check" || activeTab === "browse") && (
           <div className="w-full max-w-4xl px-4">
-            <PoreChecker />
+            <PoreChecker mode={activeTab as PoreCheckerMode} />
           </div>
         )}
 

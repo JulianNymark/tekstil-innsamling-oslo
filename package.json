@@ -6,15 +6,14 @@
     "dev": "next dev",
     "build": "next build",
     "build:iso": "bash scripts/build-isolated.sh",
+    "knip": "knip --no-progress",
     "start": "next start",
     "lint": "eslint",
     "geocode": "node scripts/geocode.mjs"
   },
   "dependencies": {
-    "@digdir/designsystemet": "^1.14.0",
     "@digdir/designsystemet-css": "^1.14.0",
     "@digdir/designsystemet-react": "^1.14.0",
-    "@digdir/designsystemet-web": "^1.14.0",
     "@navikt/aksel-icons": "^8.11.0",
     "leaflet": "^1.9.4",
     "next": "16.1.6",
@@ -23,7 +22,6 @@
     "react-leaflet": "^5.0.0"
   },
   "devDependencies": {
-    "@flydotio/dockerfile": "^0.7.10",
     "@tailwindcss/postcss": "^4",
     "@types/leaflet": "^1.9.21",
     "@types/node": "^20",
@@ -31,6 +29,7 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.1.6",
+    "knip": "^6.14.2",
     "tailwindcss": "^4",
     "typescript": "^5"
   }

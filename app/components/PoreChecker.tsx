@@ -341,10 +341,7 @@ function escapeRegex(str: string): string {
   return str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 }
 
-function getProductVerdict(
-  matched: MatchedIngredient[],
-  skinType: SkinType,
-): {
+function getProductVerdict(matched: MatchedIngredient[]): {
   verdict: "safe" | "low-risk" | "caution" | "not-suitable";
   label: string;
   emoji: string;
@@ -364,12 +361,9 @@ function getProductVerdict(
     };
   }
 
-  const ratings = matched.map((m) => m.ingredient.rating);
-  const maxRating = Math.max(...ratings);
   const highRisk = matched.filter((m) => m.ingredient.rating >= 4);
   const moderateRisk = matched.filter((m) => m.ingredient.rating === 3);
   const lowRisk = matched.filter((m) => m.ingredient.rating === 2);
-  const safe = matched.filter((m) => m.ingredient.rating <= 1);
 
   // Fatty alcohols that are commonly rating 2 but actually safe
   const fattyAlcohols = lowRisk.filter((m) =>
@@ -383,12 +377,6 @@ function getProductVerdict(
         m.ingredient.id,
       ),
   );
-
-  // Check skin-type specific concerns
-  const skinTypeAvoids = matched.filter((m) => {
-    if (skinType === "all") return false;
-    return m.ingredient.skinTypeNotes[skinType] === "avoid";
-  });
 
   // Determine verdict
   if (highRisk.length > 0) {
@@ -478,11 +466,10 @@ function getProductVerdict(
   };
 }
 
-export default function PoreChecker() {
+export default function PoreChecker({ mode }: { mode: Mode }) {
   const [ingredients, setIngredients] = useState<Ingredient[]>([]);
   const [ingredientText, setIngredientText] = useState("");
   const [selectedSkinType, setSelectedSkinType] = useState<SkinType>("all");
-  const [mode, setMode] = useState<Mode>("check");
   const [selectedIngredient, setSelectedIngredient] =
     useState<Ingredient | null>(null);
   const [loading, setLoading] = useState(true);
@@ -553,8 +540,8 @@ export default function PoreChecker() {
   }, [ingredients]);
 
   const productVerdict = useMemo(() => {
-    return getProductVerdict(matchedIngredients, selectedSkinType);
-  }, [matchedIngredients, selectedSkinType]);
+    return getProductVerdict(matchedIngredients);
+  }, [matchedIngredients]);
 
   const matchedRatingCounts = useMemo(() => {
     const counts: Record<number, number> = {
@@ -583,30 +570,6 @@ export default function PoreChecker() {
 
   return (
     <div className="space-y-6">
-      {/* Mode Toggle */}
-      <div className="flex gap-1 p-1 bg-[var(--ds-color-surface-tinted)] rounded-xl border border-[var(--ds-color-border-default)]">
-        <button
-          onClick={() => setMode("check")}
-          className={`flex-1 px-4 py-2.5 rounded-lg text-sm font-medium transition-all duration-200 ${
-            mode === "check"
-              ? "bg-[var(--ds-color-surface-default)] text-[var(--ds-color-text-default)] shadow-sm border border-[var(--ds-color-border-subtle)]"
-              : "text-[var(--ds-color-text-subtle)] hover:text-[var(--ds-color-text-default)]"
-          }`}
-        >
-          Check Product
-        </button>
-        <button
-          onClick={() => setMode("browse")}
-          className={`flex-1 px-4 py-2.5 rounded-lg text-sm font-medium transition-all duration-200 ${
-            mode === "browse"
-              ? "bg-[var(--ds-color-surface-default)] text-[var(--ds-color-text-default)] shadow-sm border border-[var(--ds-color-border-subtle)]"
-              : "text-[var(--ds-color-text-subtle)] hover:text-[var(--ds-color-text-default)]"
-          }`}
-        >
-          Browse Database
-        </button>
-      </div>
-
       {mode === "check" ? (
         <>
           {/* Textarea Input */}
