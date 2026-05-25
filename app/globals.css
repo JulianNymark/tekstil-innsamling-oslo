@@ -8,6 +8,89 @@
   --foreground: #171717;
 }
 
+/*
+  Slate accent overrides — minimal, muted palette.
+  Success / Warning / Danger / Info remain untouched.
+  Unlayered styles override the designsystemet layer rules.
+*/
+
+/* Light mode accent overrides (darker slate) */
+:root,
+[data-color-scheme="light"] {
+  --ds-color-accent-background-default: #f8fafc;
+  --ds-color-accent-background-tinted: #f1f5f9;
+  --ds-color-accent-surface-default: #f1f5f9;
+  --ds-color-accent-surface-tinted: #e2e8f0;
+  --ds-color-accent-surface-hover: #cbd5e1;
+  --ds-color-accent-surface-active: #94a3b8;
+  --ds-color-accent-border-subtle: #94a3b8;
+  --ds-color-accent-border-default: #64748b;
+  --ds-color-accent-border-strong: #475569;
+  --ds-color-accent-text-subtle: #475569;
+  --ds-color-accent-text-default: #0f172a;
+  --ds-color-accent-base-default: #334155;
+  --ds-color-accent-base-hover: #1e293b;
+  --ds-color-accent-base-active: #0f172a;
+  --ds-color-accent-base-contrast-subtle: #94a3b8;
+  --ds-color-accent-base-contrast-default: #f8fafc;
+
+  /* Danger — more vibrant red */
+  --ds-color-danger-background-default: #fff;
+  --ds-color-danger-background-tinted: #fef2f2;
+  --ds-color-danger-surface-default: #fff;
+  --ds-color-danger-surface-tinted: #fee2e2;
+  --ds-color-danger-surface-hover: #fecaca;
+  --ds-color-danger-surface-active: #fca5a5;
+  --ds-color-danger-border-subtle: #f87171;
+  --ds-color-danger-border-default: #ef4444;
+  --ds-color-danger-border-strong: #dc2626;
+  --ds-color-danger-text-subtle: #dc2626;
+  --ds-color-danger-text-default: #7f1d1d;
+  --ds-color-danger-base-default: #ff2d2d;
+  --ds-color-danger-base-hover: #e60000;
+  --ds-color-danger-base-active: #b30000;
+  --ds-color-danger-base-contrast-subtle: #fee2e2;
+  --ds-color-danger-base-contrast-default: #fff;
+}
+
+/* Dark mode accent overrides (deeper slate) */
+[data-color-scheme="dark"] {
+  --ds-color-accent-background-default: #020617;
+  --ds-color-accent-background-tinted: #0f172a;
+  --ds-color-accent-surface-default: #0f172a;
+  --ds-color-accent-surface-tinted: #1e293b;
+  --ds-color-accent-surface-hover: #334155;
+  --ds-color-accent-surface-active: #475569;
+  --ds-color-accent-border-subtle: #334155;
+  --ds-color-accent-border-default: #475569;
+  --ds-color-accent-border-strong: #64748b;
+  --ds-color-accent-text-subtle: #aaaabb;
+  --ds-color-accent-text-default: #e2e8f0;
+  --ds-color-accent-base-default: #64748b;
+  --ds-color-accent-base-hover: #94a3b8;
+  --ds-color-accent-base-active: #cbd5e1;
+  --ds-color-accent-base-contrast-subtle: #0f172a;
+  --ds-color-accent-base-contrast-default: #020617;
+
+  /* Danger — more vibrant red */
+  --ds-color-danger-background-default: #2a0a0a;
+  --ds-color-danger-background-tinted: #3d0f0f;
+  --ds-color-danger-surface-default: #521414;
+  --ds-color-danger-surface-tinted: #661818;
+  --ds-color-danger-surface-hover: #7a1c1c;
+  --ds-color-danger-surface-active: #8f2020;
+  --ds-color-danger-border-subtle: #a82525;
+  --ds-color-danger-border-default: #d93636;
+  --ds-color-danger-border-strong: #f87171;
+  --ds-color-danger-text-subtle: #f87171;
+  --ds-color-danger-text-default: #fecaca;
+  --ds-color-danger-base-default: #ff4444;
+  --ds-color-danger-base-hover: #ff6666;
+  --ds-color-danger-base-active: #ff8888;
+  --ds-color-danger-base-contrast-subtle: #2a0a0a;
+  --ds-color-danger-base-contrast-default: #000;
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -15,93 +98,69 @@
   --font-mono: var(--font-geist-mono);
 
   /*
-    Rating scale colors — symmetric diverging scale.
-    Both edges (0 and 5) are strongest; the middle (2, 3) is most subtle.
-    Mix % increases gradually toward each edge for a smooth visual ramp.
+    Rating scale colors — 3-tier system:
+    Danger (4-5): strong red, Warning (2-3): plain white/black, Success (0-1): green
   */
 
-  /* 5 — Very High (left edge, strongest danger) */
+  /* 5 — Very High (strongest danger) */
   --color-rating-5-bg: color-mix(
     in oklch,
-    var(--ds-color-danger-base-default) 35%,
+    var(--ds-color-danger-base-default) 75%,
     white
   );
   --color-rating-5-text: color-mix(
     in oklch,
-    var(--ds-color-danger-base-default) 90%,
+    var(--ds-color-danger-base-default) 25%,
     black
   );
 
-  /* 4 — High (medium danger) */
+  /* 4 — High (danger) */
   --color-rating-4-bg: color-mix(
     in oklch,
-    var(--ds-color-danger-base-default) 22%,
+    var(--ds-color-danger-base-default) 35%,
     white
   );
   --color-rating-4-text: color-mix(
     in oklch,
-    var(--ds-color-danger-base-default) 75%,
+    var(--ds-color-danger-base-default) 45%,
     black
   );
 
-  /* 3 — Moderate (subtle warning) */
-  --color-rating-3-bg: color-mix(
-    in oklch,
-    var(--ds-color-warning-base-default) 17%,
-    white
-  );
-  --color-rating-3-text: color-mix(
-    in oklch,
-    var(--ds-color-warning-base-default) 45%,
-    black
-  );
+  /* 3 — Moderate (neutral, same as 2) */
+  --color-rating-3-bg: white;
+  --color-rating-3-text: black;
 
-  /* 2 — Low (subtle warning) */
-  --color-rating-2-bg: color-mix(
-    in oklch,
-    var(--ds-color-warning-base-default) 0%,
-    white
-  );
-  --color-rating-2-text: color-mix(
-    in oklch,
-    var(--ds-color-warning-base-default) 55%,
-    black
-  );
+  /* 2 — Low (neutral, same as 3) */
+  --color-rating-2-bg: white;
+  --color-rating-2-text: black;
 
   /* 1 — Very Low (medium success) */
   --color-rating-1-bg: color-mix(
     in oklch,
-    var(--ds-color-success-base-default) 5%,
+    var(--ds-color-success-base-default) 15%,
     white
   );
   --color-rating-1-text: color-mix(
     in oklch,
-    var(--ds-color-success-base-default) 75%,
+    var(--ds-color-success-base-default) 45%,
     black
   );
 
-  /* 0 — Non-comedogenic (right edge, strongest success) */
+  /* 0 — Non-comedogenic (strongest success) */
   --color-rating-0-bg: color-mix(
     in oklch,
-    var(--ds-color-success-base-default) 35%,
+    var(--ds-color-success-base-default) 50%,
     white
   );
   --color-rating-0-text: color-mix(
     in oklch,
-    var(--ds-color-success-base-default) 65%,
+    var(--ds-color-success-base-default) 45%,
     black
   );
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background: var(--ds-color-neutral-background-default);
+  color: var(--ds-color-neutral-text-default);
   font-family: Arial, Helvetica, sans-serif;
 }

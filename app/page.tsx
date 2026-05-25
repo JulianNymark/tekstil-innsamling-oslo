@@ -20,8 +20,6 @@ interface LocationsData {
 
 type Tab = "map" | "check" | "browse";
 
-type PoreCheckerMode = "check" | "browse";
-
 const Map = dynamic(() => import("./Map"), {
   ssr: false,
   loading: () => (
@@ -68,7 +66,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-[var(--ds-color-background-tinted)] font-sans p-4 sm:p-8">
+    <div className="flex min-h-screen items-center justify-center bg-[var(--ds-color-neutral-background-default)] font-sans p-4 sm:p-8">
       <main className="flex min-h-screen w-full max-w-5xl flex-col items-center gap-8 py-8 px-4">
         {/* Compact Header */}
         <div className="flex flex-col items-center gap-2 text-center">
@@ -127,7 +125,7 @@ export default function Home() {
 
         {(activeTab === "check" || activeTab === "browse") && (
           <div className="w-full max-w-4xl px-4">
-            <PoreChecker mode={activeTab as PoreCheckerMode} />
+            <PoreChecker mode={activeTab as Tab} />
           </div>
         )}
 

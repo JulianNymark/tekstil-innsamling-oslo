@@ -1,5 +1,3 @@
-"use client";
-
 import { useState, useEffect, useMemo } from "react";
 import {
   Popover,
@@ -7,6 +5,7 @@ import {
   PopoverTriggerContext,
 } from "@digdir/designsystemet-react";
 import { InformationSquareFillIcon } from "@navikt/aksel-icons";
+import { getRatingColor, getRatingLabel } from "../utils/ratingColors";
 
 interface Ingredient {
   id: string;
@@ -48,26 +47,7 @@ interface MatchedIngredient {
 }
 
 type SkinType = "all" | "oily" | "dry" | "sensitive" | "acneProne" | "normal";
-type Mode = "check" | "browse";
-
-function getRatingColor(rating: number): string {
-  switch (rating) {
-    case 0:
-      return "bg-rating-0-bg text-rating-0-text";
-    case 1:
-      return "bg-rating-1-bg text-rating-1-text";
-    case 2:
-      return "bg-rating-2-bg text-rating-2-text";
-    case 3:
-      return "bg-rating-3-bg text-rating-3-text";
-    case 4:
-      return "bg-rating-4-bg text-rating-4-text";
-    case 5:
-      return "bg-rating-5-bg text-rating-5-text";
-    default:
-      return "bg-rating-0-bg text-rating-0-text";
-  }
-}
+type Mode = "map" | "check" | "browse";
 
 function getVerdictStyles(semanticColor: string) {
   const styles: Record<
@@ -106,15 +86,6 @@ function getVerdictStyles(semanticColor: string) {
     },
   };
   return styles[semanticColor] || styles.neutral;
-}
-
-function getRatingLabel(rating: number): string {
-  if (rating === 0) return "Non-comedogenic";
-  if (rating === 1) return "Very Low";
-  if (rating === 2) return "Low";
-  if (rating === 3) return "Moderate";
-  if (rating === 4) return "High";
-  return "Very High";
 }
 
 function getSkinTypeLabel(type: SkinType): string {
@@ -1284,7 +1255,7 @@ function BrowseMode({
           matter.
         </p>
         <div className="flex flex-wrap gap-1.5">
-          {[0, 1, 2, 3, 4, 5].map((r) => (
+          {[5, 4, 3, 2, 1, 0].map((r) => (
             <span
               key={r}
               className={`text-xs px-2 py-1 rounded-full ${getRatingColor(r)}`}
@@ -1297,7 +1268,7 @@ function BrowseMode({
 
       {/* Stats */}
       <div className="grid grid-cols-3 sm:grid-cols-6 gap-2">
-        {[0, 1, 2, 3, 4, 5].map((rating) => (
+        {[5, 4, 3, 2, 1, 0].map((rating) => (
           <div
             key={rating}
             className={`p-3 rounded-xl text-center ${getRatingColor(rating)}`}
