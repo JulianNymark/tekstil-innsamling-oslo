@@ -31,6 +31,7 @@ SCRIPT_DIR = Path(__file__).parent
 PROJECT_DIR = SCRIPT_DIR.parent
 DB_PATH = PROJECT_DIR / "data" / "ingredients.db"
 BUNDLE_DIR = PROJECT_DIR / "data" / "bundles"
+MANUAL_SYNONYMS_PATH = PROJECT_DIR / "data" / "manual-synonyms.json"
 
 
 def get_db():
@@ -301,8 +302,7 @@ def rebuild_fts(conn):
     """Rebuild the FTS5 index after bulk changes."""
     print("\nRebuilding FTS index...")
     cursor = conn.cursor()
-    cursor.execute("DELETE FROM ingredients_fts")
-    cursor.execute("INSERT INTO ingredients_fts(rowid, inci_name) SELECT rowid, inci_name FROM ingredients")
+    cursor.execute("INSERT INTO ingredients_fts(ingredients_fts) VALUES('rebuild')")
     conn.commit()
     print("FTS index rebuilt.")
 
@@ -313,6 +313,44 @@ def vacuum_db(conn):
     conn.execute("VACUUM")
     conn.execute("ANALYZE")
     print("Database optimized.")
+
+
+def apply_manual_synonyms(conn, dry_run=False):
+    """Load manual synonyms from JSON and insert into the database."""
+    if not MANUAL_SYNONYMS_PATH.exists():
+        print(f"Warning: Manual synonyms file not found: {MANUAL_SYNONYMS_PATH}")
+        return 0
+
+    with open(MANUAL_SYNONYMS_PATH, "r", encoding="utf-8") as f:
+        manual_synonyms = json.load(f)
+
+    cursor = conn.cursor()
+    inserted = 0
+    skipped = 0
+
+    for ingredient_id, synonyms in manual_synonyms.items():
+        cursor.execute("SELECT 1 FROM ingredients WHERE id = ?", (ingredient_id,))
+        if not cursor.fetchone():
+            print(f"  Warning: Ingredient '{ingredient_id}' not found, skipping {len(synonyms)} synonyms")
+            skipped += len(synonyms)
+            continue
+
+        for synonym in synonyms:
+            if dry_run:
+                inserted += 1
+            else:
+                cursor.execute(
+                    "INSERT OR IGNORE INTO ingredient_synonyms (ingredient_id, synonym) VALUES (?, ?)",
+                    (ingredient_id, synonym)
+                )
+                if cursor.rowcount > 0:
+                    inserted += 1
+
+    if not dry_run:
+        conn.commit()
+
+    print(f"Manual synonyms: {inserted} inserted, {skipped} skipped")
+    return inserted
 
 
 def main():
@@ -340,6 +378,7 @@ def main():
         elif args.import_path:
             import_bundle(conn, args.import_path, dry_run=args.dry_run)
             if not args.dry_run and not args.no_vacuum:
+                apply_manual_synonyms(conn, dry_run=args.dry_run)
                 rebuild_fts(conn)
                 vacuum_db(conn)
 
