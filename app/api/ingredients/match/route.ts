@@ -154,9 +154,9 @@ export async function POST(request: NextRequest) {
           const regulatoryPartial = db.prepare(`
             SELECT inci_name, status, annex, restriction_details, conditions, regulation_source
             FROM regulatory_status
-            WHERE REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(LOWER(inci_name), '(', ' '), ')', ' '), ',', ' '), '-', ' '), '/', ' ') LIKE '% ' || LOWER(?) || ' %'
-               OR REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(LOWER(chemical_name), '(', ' '), ')', ' '), ',', ' '), '-', ' '), '/', ' ') LIKE '% ' || LOWER(?) || ' %'
-               OR REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(LOWER(glossary_name), '(', ' '), ')', ' '), ',', ' '), '-', ' '), '/', ' ') LIKE '% ' || LOWER(?) || ' %'
+            WHERE ' ' || REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(LOWER(inci_name), '(', ' '), ')', ' '), ',', ' '), '-', ' '), '/', ' ') || ' ' LIKE '% ' || LOWER(?) || ' %'
+               OR ' ' || REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(LOWER(chemical_name), '(', ' '), ')', ' '), ',', ' '), '-', ' '), '/', ' ') || ' ' LIKE '% ' || LOWER(?) || ' %'
+               OR ' ' || REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(LOWER(glossary_name), '(', ' '), ')', ' '), ',', ' '), '-', ' '), '/', ' ') || ' ' LIKE '% ' || LOWER(?) || ' %'
             LIMIT 1
           `).get(name, name, name);
 

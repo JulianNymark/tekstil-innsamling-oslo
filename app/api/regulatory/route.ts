@@ -17,8 +17,11 @@ export async function GET(request: NextRequest) {
     WHERE LOWER(inci_name) = LOWER(?)
        OR LOWER(chemical_name) = LOWER(?)
        OR LOWER(glossary_name) LIKE '%' || LOWER(?) || '%'
+       OR ' ' || REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(LOWER(inci_name), '(', ' '), ')', ' '), ',', ' '), '-', ' '), '/', ' ') || ' ' LIKE '% ' || LOWER(?) || ' %'
+       OR ' ' || REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(LOWER(chemical_name), '(', ' '), ')', ' '), ',', ' '), '-', ' '), '/', ' ') || ' ' LIKE '% ' || LOWER(?) || ' %'
+       OR ' ' || REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(LOWER(glossary_name), '(', ' '), ')', ' '), ',', ' '), '-', ' '), '/', ' ') || ' ' LIKE '% ' || LOWER(?) || ' %'
     LIMIT 1
-  `).get(ingredient, ingredient, ingredient);
+  `).get(ingredient, ingredient, ingredient, ingredient, ingredient, ingredient);
 
   if (!result) {
     return NextResponse.json({ status: 'unknown', message: 'No regulatory data available' });
