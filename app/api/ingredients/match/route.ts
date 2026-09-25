@@ -26,6 +26,8 @@ function normalizeIngredientName(name: string): string {
     .replace(/\s*\d+(?:\.\d+)?\s*%\s*/g, ' ')
     // Strip parenthetical content entirely (e.g., (SOYBEAN), (RICE))
     .replace(/\s*\([^)]*\)\s*/g, ' ')
+    // Convert interior periods to spaces (e.g., "HYDROXYETHYL.ACRYLATE" -> "HYDROXYETHYL ACRYLATE")
+    .replace(/\./g, ' ')
     // Collapse multiple spaces
     .replace(/\s+/g, ' ')
     .trim();
@@ -58,6 +60,141 @@ function getAlternativeNames(name: string): string[] {
   return alternatives;
 }
 
+/**
+ * True when the normalized name exactly matches an ingredient, a synonym or a
+ * regulatory entry. Used to decide whether adjacent fragments can be re-joined.
+ */
+function isExactKnown(name: string): boolean {
+  if (name.length < 2) return false;
+
+  const db = getDb();
+
+  const ingredient = db.prepare(`
+    SELECT i.id FROM ingredients i
+    WHERE LOWER(i.inci_name) = ?
+    LIMIT 1
+  `).get(name);
+  if (ingredient) return true;
+
+  const synonym = db.prepare(`
+    SELECT s.ingredient_id FROM ingredient_synonyms s
+    WHERE LOWER(s.synonym) = ?
+    LIMIT 1
+  `).get(name);
+  if (synonym) return true;
+
+  const regulatory = db.prepare(`
+    SELECT inci_name FROM regulatory_status
+    WHERE LOWER(inci_name) = ?
+       OR LOWER(chemical_name) = ?
+       OR LOWER(glossary_name) = ?
+    LIMIT 1
+  `).get(name, name, name);
+
+  return Boolean(regulatory);
+}
+
+/**
+ * Splits a single chunk into a chain of known ingredients when the chunk has
+ * lost its separators (e.g. "POLYSORBATE 60 SODIUM CITRATE"). Returns null
+ * unless every word is covered by an exact match and there are >= 2 parts.
+ */
+function splitIntoKnownIngredients(text: string): string[] | null {
+  const normalized = normalizeIngredientName(text);
+  if (isExactKnown(normalized)) return null;
+
+  const words = normalized.split(/\s+/).filter(Boolean);
+  if (words.length < 3) return null;
+
+  const parts: string[] = [];
+  let start = 0;
+
+  while (start < words.length) {
+    let matchedLength = 0;
+    for (let end = words.length; end > start; end--) {
+      const candidate = words.slice(start, end).join(' ');
+      if (isExactKnown(candidate)) {
+        matchedLength = end - start;
+        break;
+      }
+    }
+    if (matchedLength === 0) return null;
+    parts.push(words.slice(start, start + matchedLength).join(' '));
+    start += matchedLength;
+  }
+
+  return parts.length >= 2 ? parts : null;
+}
+
+interface MatchUnit {
+  text: string;
+  index: number;
+  consumed: string[];
+  raw: string;
+}
+
+/**
+ * Re-builds the input into units that can be matched 1:1:
+ * - adjacent fragments that together form a known ingredient are merged
+ * - a fragment holding several known ingredients is split apart
+ *
+ * `index` always points at the first original fragment so the frontend can map
+ * matches back to their section, `consumed` lists every normalized fragment the
+ * match covers, and `raw` is the original text shown to the user.
+ */
+function buildUnits(ingredients: string[]): MatchUnit[] {
+  const units: MatchUnit[] = [];
+  let i = 0;
+
+  while (i < ingredients.length) {
+    let merged = false;
+    for (let len = Math.min(3, ingredients.length - i); len >= 2; len--) {
+      const parts = ingredients.slice(i, i + len);
+      const combined = parts
+        .map(normalizeIngredientName)
+        .filter((part) => part.length >= 2)
+        .join(' ')
+        .replace(/\s+/g, ' ')
+        .trim();
+
+      if (combined.length < 2) continue;
+
+      if (isExactKnown(combined)) {
+        units.push({
+          text: combined,
+          index: i,
+          consumed: parts.map(normalizeIngredientName),
+          raw: parts.join(' '),
+        });
+        i += len;
+        merged = true;
+        break;
+      }
+    }
+    if (merged) continue;
+
+    const chain = splitIntoKnownIngredients(ingredients[i]);
+    if (chain) {
+      const consumed = [normalizeIngredientName(ingredients[i])];
+      for (const part of chain) {
+        units.push({ text: part, index: i, consumed, raw: ingredients[i] });
+      }
+      i++;
+      continue;
+    }
+
+    units.push({
+      text: ingredients[i],
+      index: i,
+      consumed: [normalizeIngredientName(ingredients[i])],
+      raw: ingredients[i],
+    });
+    i++;
+  }
+
+  return units;
+}
+
 export async function POST(request: NextRequest) {
   try {
     const { ingredients } = await request.json();
@@ -70,8 +207,9 @@ export async function POST(request: NextRequest) {
     const matches = [];
     const matchedRawNames = new Set<string>();
 
-    for (let i = 0; i < ingredients.length; i++) {
-      const rawName = ingredients[i];
+    const units = buildUnits(ingredients);
+    for (const unit of units) {
+      const rawName = unit.text;
       const alternativeNames = getAlternativeNames(rawName);
       
       let result = null;
@@ -118,7 +256,7 @@ export async function POST(request: NextRequest) {
           `).get(name, name, name);
 
           if (regulatoryExact) {
-            matchedRawNames.add(name);
+            for (const consumed of unit.consumed) matchedRawNames.add(consumed);
             matches.push({
               id: `regulatory-${regulatoryExact.inci_name.toLowerCase().replace(/\s+/g, '-')}`,
               inci_name: regulatoryExact.inci_name,
@@ -130,7 +268,8 @@ export async function POST(request: NextRequest) {
               evidence_level: 'high',
               flags: JSON.stringify([regulatoryExact.status]),
               sources: null,
-              index: i,
+              index: unit.index,
+              matched_text: unit.raw,
               regulatory: {
                 status: regulatoryExact.status,
                 annex: regulatoryExact.annex,
@@ -161,7 +300,7 @@ export async function POST(request: NextRequest) {
           `).get(name, name, name);
 
           if (regulatoryPartial) {
-            matchedRawNames.add(name);
+            for (const consumed of unit.consumed) matchedRawNames.add(consumed);
             matches.push({
               id: `regulatory-${regulatoryPartial.inci_name.toLowerCase().replace(/\s+/g, '-')}`,
               inci_name: regulatoryPartial.inci_name,
@@ -173,7 +312,8 @@ export async function POST(request: NextRequest) {
               evidence_level: 'high',
               flags: JSON.stringify([regulatoryPartial.status]),
               sources: null,
-              index: i,
+              index: unit.index,
+              matched_text: unit.raw,
               regulatory: {
                 status: regulatoryPartial.status,
                 annex: regulatoryPartial.annex,
@@ -220,9 +360,9 @@ export async function POST(request: NextRequest) {
     }
 
     if (result) {
-      // Add the original full normalized name (not just the matching alternative)
-      // so the frontend can correctly identify this chunk as matched
-      matchedRawNames.add(alternativeNames[0]);
+      // Mark every normalized fragment this unit covers so the frontend can
+      // correctly identify them as matched
+      for (const consumed of unit.consumed) matchedRawNames.add(consumed);
 
         // Get ratings from all sources
         const ratings = db.prepare(`
@@ -263,7 +403,8 @@ export async function POST(request: NextRequest) {
           ...result,
           rating: consensusRating,
           ratings: ratings,
-          index: i,
+          index: unit.index,
+          matched_text: unit.raw,
           regulatory: regulatory || null,
           skinTypeNotes: skinTypeNotes.reduce((acc: Record<string, string>, note: { skin_type: string; advice: string }) => {
             acc[note.skin_type] = note.advice;

@@ -310,6 +310,15 @@ function escapeRegex(str: string): string {
   return str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 }
 
+function normalizeForMatchDisplay(text: string): string {
+  return text
+    .toLowerCase()
+    .replace(/\s*\([^)]*\)\s*/g, " ")
+    .replace(/[^a-z0-9]+/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
 function getProductVerdict(matched: MatchedIngredient[]): {
   verdict: "safe" | "low-risk" | "caution" | "not-suitable";
   label: string;
@@ -552,7 +561,7 @@ export default function PoreChecker({ mode }: { mode: Mode }) {
               sectionCounters[section]++;
             }
 
-            const matches: MatchedIngredient[] = data.matches.map((m: { id: string; inci_name: string; rating: number | null; ratings?: { source_name: string; rating: number; irritancy: number | null; scale: string; evidence_level: string; sample_size: number | null; notes: string | null }[]; irritancy: number; category: string; category_group: string; description: string; flags: string | null; skinTypeNotes: Record<string, string> | undefined; sourceUrls: { name: string; url: string; type: string }[] | undefined; regulatory: { status: string; annex: string; restriction_details: string } | null | undefined; index: number }) => {
+            const matches: MatchedIngredient[] = data.matches.map((m: { id: string; inci_name: string; rating: number | null; ratings?: { source_name: string; rating: number; irritancy: number | null; scale: string; evidence_level: string; sample_size: number | null; notes: string | null }[]; irritancy: number; category: string; category_group: string; description: string; flags: string | null; skinTypeNotes: Record<string, string> | undefined; sourceUrls: { name: string; url: string; type: string }[] | undefined; regulatory: { status: string; annex: string; restriction_details: string } | null | undefined; index: number; matched_text?: string }) => {
               const originalIndex = m.index;
               const sectionInfo = indexToSection.get(originalIndex) || { section: 'unknown', sectionPos: originalIndex };
               return {
@@ -573,7 +582,7 @@ export default function PoreChecker({ mode }: { mode: Mode }) {
                   regulatory: m.regulatory || null
                 },
                 matchedName: m.inci_name,
-                originalText: ingredientsWithSections[originalIndex]?.name || m.inci_name,
+                originalText: m.matched_text || ingredientsWithSections[originalIndex]?.name || m.inci_name,
                 position: sectionInfo.sectionPos,
                 section: sectionInfo.section as "active" | "inactive" | "unknown"
               };
@@ -644,6 +653,7 @@ export default function PoreChecker({ mode }: { mode: Mode }) {
         .replace(/\s*[\(\[\{]\s*\d+(?:\.\d+)?\s*%?\s*[\)\]\}]\s*/g, ' ')
         .replace(/\s*\d+(?:\.\d+)?\s*%\s*/g, ' ')
         .replace(/\s*\([^)]*\)\s*/g, ' ')
+        .replace(/\./g, ' ')
         .replace(/\s+/g, ' ')
         .trim();
       
@@ -910,18 +920,27 @@ export default function PoreChecker({ mode }: { mode: Mode }) {
                             )}
                             <div className="flex items-start justify-between gap-4">
                               <div className="flex-1 min-w-0">
-                                <div className="flex items-center gap-2 flex-wrap">
-                                  <h3 className={`font-semibold ${isBanned ? 'text-[var(--ds-color-danger-text-default)]' : 'text-[var(--ds-color-text-default)]'}`}>
-                                    {matched.ingredient.inciName}
-                                  </h3>
-                                  {matched.matchedName !==
-                                    matched.ingredient.inciName && (
-                                    <span className="text-sm text-[var(--ds-color-text-subtle)]">
-                                      (matched as &quot;{matched.matchedName}
-                                      &quot;)
+                                <h3 className={`font-semibold ${isBanned ? 'text-[var(--ds-color-danger-text-default)]' : 'text-[var(--ds-color-text-default)]'}`}>
+                                  {matched.ingredient.inciName}
+                                </h3>
+                                {normalizeForMatchDisplay(matched.originalText) !==
+                                  normalizeForMatchDisplay(
+                                    matched.ingredient.inciName,
+                                  ) && (
+                                  <div className="mt-2 inline-flex max-w-full items-start gap-2 rounded-lg bg-[var(--ds-color-accent-surface-tinted)] py-1 pl-2 pr-3">
+                                    <span
+                                      aria-hidden="true"
+                                      className="mt-[3px] h-3.5 w-0.5 shrink-0 rounded-full bg-[var(--ds-color-accent-border-default)]"
+                                    />
+                                    <span className="font-mono text-[11px] leading-4 tracking-wide break-words text-[var(--ds-color-accent-text-default)]">
+                                      {matched.originalText}
+                                      <span className="sr-only">
+                                        {" "}
+                                        — matched from your ingredient list
+                                      </span>
                                     </span>
-                                  )}
-                                </div>
+                                  </div>
+                                )}
                                 <p className="text-sm text-[var(--ds-color-text-subtle)] mt-1">
                                   {matched.ingredient.description}
                                 </p>

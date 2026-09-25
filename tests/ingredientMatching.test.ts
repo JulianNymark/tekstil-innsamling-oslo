@@ -12,6 +12,7 @@ function normalizeIngredientName(name: string): string {
     .replace(/\s*[\(\[\{]\s*\d+(?:\.\d+)?\s*%?\s*[\)\]\}]\s*/g, " ")
     .replace(/\s*\d+(?:\.\d+)?\s*%\s*/g, " ")
     .replace(/\s*\([^)]*\)\s*/g, " ")
+    .replace(/\./g, " ")
     .replace(/\s+/g, " ")
     .trim();
 }
@@ -74,6 +75,69 @@ describe("splitIngredients", () => {
     const result = splitIngredients("Aqua, Glycerin.");
     expect(result).toEqual(["Aqua", "Glycerin"]);
   });
+
+  it("splits by period", () => {
+    const result = splitIngredients("Aqua. Glycerin. Niacinamide.");
+    expect(result).toEqual(["Aqua", "Glycerin", "Niacinamide"]);
+  });
+
+  it("does NOT split on an interior period without trailing space", () => {
+    const result = splitIngredients(
+      "HYDROXYETHYL.ACRYLATE/SODIUM. ACRYLOYLDIMETHYL TAURATE COPOLYMER."
+    );
+    expect(result).toEqual([
+      "HYDROXYETHYL.ACRYLATE/SODIUM",
+      "ACRYLOYLDIMETHYL TAURATE COPOLYMER",
+    ]);
+  });
+
+  it("does NOT split numeric commas (unquoted 1,2-diols)", () => {
+    const result = splitIngredients("1,2-HEXANEDIOL. GLYCERIN");
+    expect(result).toEqual(["1,2-HEXANEDIOL", "GLYCERIN"]);
+  });
+
+  it("splits a real period-separated INCI list", () => {
+    const text =
+      "WATER (AQUA). GLYCERIN. C9-12 ALKANE. HYDROXYETHYL.ACRYLATE/SODIUM. " +
+      "ACRYLOYLDIMETHYL TAURATE COPOLYMER. CAPRYLIC/CAPRIC TRIGLYCERIDE. " +
+      "ISOCETYL STEAROYL STEARATE. NIACINAMIDE. POLYGLYCERYL-10 MYRISTATE. " +
+      "1,2-HEXANEDIOL. 10-HYDROXYDECENOIC ACID. " +
+      "AVENA SATIVA (OAT) SPROUT OIL (AVENA SATIVA SPROUT OIL). " +
+      "CAPRYLYL GLYCOL. CITRIC ACID. COCO-CAPRYLATE/CAPRATE. " +
+      "ETHYLHEXYLGLYCERIN. " +
+      "HELIANTHUS ANNUUS (SUNFLOWER) SEED OIL (HELIANTHUS ANNUUS SEED OIL). " +
+      "HELICHRYSUM GYMNOCEPHALUM FLOWER/LEAF/STEM EXTRACT. MALTODEXTRIN. " +
+      "POLYSORBATE 60 SODIUM CITRATE. SODIUM HYALURONATE. " +
+      "SORBITAN ISOSTEARATE. SQUALANE.  TOCOPHEROL. XANTHAN GUM. ";
+
+    expect(splitIngredients(text)).toEqual([
+      "WATER (AQUA)",
+      "GLYCERIN",
+      "C9-12 ALKANE",
+      "HYDROXYETHYL.ACRYLATE/SODIUM",
+      "ACRYLOYLDIMETHYL TAURATE COPOLYMER",
+      "CAPRYLIC/CAPRIC TRIGLYCERIDE",
+      "ISOCETYL STEAROYL STEARATE",
+      "NIACINAMIDE",
+      "POLYGLYCERYL-10 MYRISTATE",
+      "1,2-HEXANEDIOL",
+      "10-HYDROXYDECENOIC ACID",
+      "AVENA SATIVA (OAT) SPROUT OIL (AVENA SATIVA SPROUT OIL)",
+      "CAPRYLYL GLYCOL",
+      "CITRIC ACID",
+      "COCO-CAPRYLATE/CAPRATE",
+      "ETHYLHEXYLGLYCERIN",
+      "HELIANTHUS ANNUUS (SUNFLOWER) SEED OIL (HELIANTHUS ANNUUS SEED OIL)",
+      "HELICHRYSUM GYMNOCEPHALUM FLOWER/LEAF/STEM EXTRACT",
+      "MALTODEXTRIN",
+      "POLYSORBATE 60 SODIUM CITRATE",
+      "SODIUM HYALURONATE",
+      "SORBITAN ISOSTEARATE",
+      "SQUALANE",
+      "TOCOPHEROL",
+      "XANTHAN GUM",
+    ]);
+  });
 });
 
 describe("normalizeIngredientName", () => {
@@ -88,6 +152,12 @@ describe("normalizeIngredientName", () => {
   it("strips trailing period", () => {
     expect(normalizeIngredientName("potassium sorbate.")).toBe(
       "potassium sorbate"
+    );
+  });
+
+  it("turns interior periods into spaces", () => {
+    expect(normalizeIngredientName("HYDROXYETHYL.ACRYLATE/SODIUM")).toBe(
+      "hydroxyethyl acrylate/sodium"
     );
   });
 
