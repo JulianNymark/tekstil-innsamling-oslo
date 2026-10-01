@@ -96,6 +96,63 @@ describe("splitIngredients", () => {
     expect(result).toEqual(["1,2-HEXANEDIOL", "GLYCERIN"]);
   });
 
+  it("splits by bullet glyph with spaces", () => {
+    const result = splitIngredients("WATER • GLYCERIN • NIACINAMIDE");
+    expect(result).toEqual(["WATER", "GLYCERIN", "NIACINAMIDE"]);
+  });
+
+  it("splits by bullet glyph without spaces", () => {
+    const result = splitIngredients("WATER•GLYCERIN•NIACINAMIDE");
+    expect(result).toEqual(["WATER", "GLYCERIN", "NIACINAMIDE"]);
+  });
+
+  it("splits real bullet-separated INCI list from the web", () => {
+    const text =
+      "WATER • HYDROGENATED POLYISOBUTENE • DIMETHICONE • GLYCERIN • " +
+      "BUTYROSPERMUM PARKII (SHEA) BUTTER • PANTHENOL • " +
+      "ZEA MAYS (CORN) STARCH • PROPANEDIOL • BUTYLENE GLYCOL";
+
+    expect(splitIngredients(text)).toEqual([
+      "WATER",
+      "HYDROGENATED POLYISOBUTENE",
+      "DIMETHICONE",
+      "GLYCERIN",
+      "BUTYROSPERMUM PARKII (SHEA) BUTTER",
+      "PANTHENOL",
+      "ZEA MAYS (CORN) STARCH",
+      "PROPANEDIOL",
+      "BUTYLENE GLYCOL",
+    ]);
+  });
+
+  it("splits by other bullet variants", () => {
+    expect(splitIngredients("AQUA · GLYCERIN")).toEqual(["AQUA", "GLYCERIN"]);
+    expect(splitIngredients("AQUA ● GLYCERIN")).toEqual(["AQUA", "GLYCERIN"]);
+    expect(splitIngredients("AQUA ▪ GLYCERIN")).toEqual(["AQUA", "GLYCERIN"]);
+    expect(splitIngredients("AQUA ◦ GLYCERIN")).toEqual(["AQUA", "GLYCERIN"]);
+  });
+
+  it("does NOT split hyphens or em dashes inside names", () => {
+    const result = splitIngredients(
+      "PENTAERYTHRITYL TETRA-DI-T-BUTYL HYDROXYHYDROCINNAMATE • TOCOPHEROL"
+    );
+    expect(result).toEqual([
+      "PENTAERYTHRITYL TETRA-DI-T-BUTYL HYDROXYHYDROCINNAMATE",
+      "TOCOPHEROL",
+    ]);
+  });
+
+  it("bullet inside parentheses or quotes is not a separator", () => {
+    expect(splitIngredients("FOO (BAR • BAZ), GLYCERIN")).toEqual([
+      "FOO (BAR • BAZ)",
+      "GLYCERIN",
+    ]);
+    expect(splitIngredients('"A • B", GLYCERIN')).toEqual([
+      '"A • B"',
+      "GLYCERIN",
+    ]);
+  });
+
   it("splits a real period-separated INCI list", () => {
     const text =
       "WATER (AQUA). GLYCERIN. C9-12 ALKANE. HYDROXYETHYL.ACRYLATE/SODIUM. " +

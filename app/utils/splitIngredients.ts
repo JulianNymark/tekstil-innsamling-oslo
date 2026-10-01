@@ -1,6 +1,7 @@
 /**
- * Splits an ingredient list string by commas/semicolons/newlines/pipes/periods,
- * but respects quoted strings and balanced parentheses.
+ * Splits an ingredient list string by commas/semicolons/newlines/pipes/periods
+ * and bullet glyphs (•, ·, ●, ▪, etc.), but respects quoted strings and
+ * balanced parentheses.
  *
  * Periods only act as separators when followed by whitespace or at the end of
  * the string, so interior periods (e.g. "HYDROXYETHYL.ACRYLATE") are preserved.
@@ -9,6 +10,26 @@
  * E.g. `"1,2-hexanediol", propylene glycol`
  *   -> `["1,2-hexanediol", "propylene glycol"]`
  */
+// Bullet glyphs web pages use to separate ingredients.
+// Hyphen/dash are intentionally NOT separators (ingredient names contain them).
+const BULLET_GLYPHS = new Set([
+  "\u2022", // • bullet
+  "\u2023", // ‣ triangular bullet
+  "\u2043", // ⁃ hyphen bullet
+  "\u2219", // ∙ bullet operator
+  "\u22C5", // ⋅ dot operator
+  "\u25AA", // ▪ black small square
+  "\u25AB", // ▫ white small square
+  "\u25CF", // ● black circle
+  "\u25E6", // ◦ white bullet
+  "\u2731", // ✱ heavy asterisk
+  "\u2736", // ✶ six-pointed star
+  "\u00B7", // · middle dot
+  "\u2027", // ‧ hyphenation point
+  "\u30FB", // ・ katakana middle dot
+  "\uFF65", // ･ halfwidth katakana middle dot
+]);
+
 export function splitIngredients(text: string): string[] {
   const result: string[] = [];
   let current = "";
@@ -57,7 +78,11 @@ export function splitIngredients(text: string): string[] {
           (i === text.length - 1 || /\s/.test(text[i + 1] ?? ""));
 
         const isSeparator =
-          char === "," || char === ";" || char === "|" || char === "\n";
+          BULLET_GLYPHS.has(char) ||
+          char === "," ||
+          char === ";" ||
+          char === "|" ||
+          char === "\n";
 
         if (!isNumericComma && (isSeparator || isPeriodSeparator)) {
           pushCurrent();
